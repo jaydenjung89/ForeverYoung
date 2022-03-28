@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="PersonalQnaDAO">
+ <resultMap type="personalQna" id="personalQnaList">
+ 	<result property="qna_personal_serial" column=""></result> 
+ 	<result property="user_id" column=""></result> 
+ 	<result property="user_name" column=""></result> 
+ 	<result property="order_details_order_serial" column=""></result> 
+ 	<result property="qna_personal_title" column=""></result> 
+ 	<result property="qna_personal_content" column=""></result> 
+ 	<result property="qna_personal_date" column=""></result> 
+ 	<result property="qna_personal_hit" column=""></result> 
+ 	<result property="qna_personal_answer" column=""></result> 
+ 	<result property="qna_personal_category" column=""></result> 
+ 	<result property="qna_personal_phone" column=""></result> 
+ 	<result property="qna_personal_email" column=""></result> 
+ 	<result property="qna_personal_answer_date" column=""></result> 
+ 	<result property="qna_personal_answer_title" column=""></result> 
+ 	<result property="qna_personal_image1" column=""></result> 
+ 	
+ </resultMap>
+ 	
+ 	<insert id="insertPersonalQna" parameterType="personalQna">
+ 		insert into qna_personal (user_id, user_name,qna_personal_serial, qna_personal_category, qna_personal_title, qna_personal_content, qna_personal_phone, qna_personal_email, qna_personal_date, qna_personal_hit) values( #{user_id}, #{user_name}, #{qna_personal_serial}, #{qna_personal_category}, #{qna_personal_title}, #{qna_personal_content}, #{qna_personal_phone}, #{qna_personal_email}, now(), #{qna_personal_hit})
+ 	</insert>
+ 	
+ 	<update id="updatePersonalQna" parameterType="personalQna">
+ 		update qna_personal set qna_personal_title=#{qna_personal_title},
+ 		qna_personal_content=#{qna_personal_content},
+ 		qna_personal_date=now(),
+ 		qna_personal_category=#{qna_personal_category}
+ 		where qna_personal_serial=#{qna_personal_serial}
+ 		
+ 	</update>
+ 	
+ 	<delete id="deletePersonalQna" parameterType="personalQna">
+ 		delete from qna_personal where qna_personal_serial=#{qna_personal_serial}
+ 	</delete>
+ 	
+ 	<select id="getPersonalQnaAllList" resultType="personalQna">
+ 		select * from qna_personal
+ 	</select>
+ 	
+ 	<select id="getPersonalQnaList" resultType="personalQna" parameterType="personalQna">
+ 		select * from qna_personal where user_id=#{user_id} 
+ 	</select>
+ 	
+ 	<select id="getPersonalQna" resultType="personalQna" parameterType="personalQna">
+ 		select * from qna_personal where qna_personal_serial=#{qna_personal_serial}
+ 	</select>
+ 	<select id="getBoard_personalList" resultType="personalQna">
+ 		select * from qna_personal where user_id=#{user_id} order by qna_personal_serial desc 
+ 	</select>
+ 	<select id="getBoardListCnt" resultType="int">
+ 		select count(*) as listCnt from qna_personal
+ 	</select>
+ </mapper>

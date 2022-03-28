@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="orderDAO">
+	<insert id="insertOrder">
+		INSERT INTO fyproject.ORDER VALUES(default, now(),
+		#{user_id},
+		#{user_name},#{user_email},#{user_phone},
+		#{user_address1},#{user_address2},#{user_zipcode},
+		#{order_goods_count},#{order_goods_price},
+		#{order_coupon_serial},#{order_delivery_status},
+		#{order_merchant_serial},#{master_goods_serial},#{order_point})
+	</insert>
+	<insert id="insertOrderDetail">
+		INSERT INTO ORDER_DETAILS (order_merchant_serial, category_goods_serial, order_goods_count, order_goods_price, user_id, order_goods_old_price)
+       VALUES (#{order_merchant_serial}, #{category_goods_serial}, #{order_goods_count},
+       #{order_goods_price}, #{user_id}, #{order_goods_old_price}
+       )
+	</insert>
+	<update id="updateUserPurchase">
+		UPDATE user_details SET USER_TOTAL_PURCHASE=#{user_total_purchase},
+		USER_POINT=#{user_point} WHERE USER_ID=#{user_id}
+	</update>
+	<select id="getUserDetails" resultType="userDetails">
+		SELECT * FROM user_details WHERE USER_ID=#{user_id}
+	</select>
+	<insert id="insertShippingInfo">
+		INSERT INTO SHIPPING_INFO
+       VALUES( default,#{shipping_address1}, #{shipping_address2}, #{shipping_zipcode}, #{shipping_recipient_name}, 
+          #{shipping_recipient_phone}, #{shipping_pickup_type}, #{shipping_pickup_detail}, #{shipping_message_time},
+          #{shipping_door_password}, #{shipping_sender_name}, #{shipping_sender_phone}, #{order_merchant_serial},#{shipping_recipient_place}
+       )
+	</insert>
+	<select id="getGoodsStocks" resultType="forever.young.user.vo.GoodsStockVO">
+		SELECT * FROM GOODS_STOCK WHERE CATEGORY_GOODS_SERIAL=#{value}
+		AND GOODS_STOCK_STOCK_QUANTITY>0 ORDER BY GOODS_STOCK_SERIAL ASC
+	</select>
+	<update id="reduceDetailStock">
+		UPDATE GOODS_DETAIL SET GOODS_DETAIL_STOCK_QUANTITY=#{goods_detail_stock_quantity}
+		WHERE CATEGORY_GOODS_SERIAL=#{category_goods_serial}
+	</update>
+	<update id="reduceStock">
+		UPDATE GOODS_STOCK SET GOODS_STOCK_STOCK_QUANTITY=#{goods_stock_stock_quantity}
+		WHERE GOODS_STOCK_SERIAL=#{goods_stock_serial}
+	</update>
+	<!-- 주문한 정보 가져오기  /주문취소에도 사용됨.-->
+    <select id="orderEndList" resultType="forever.young.vo.OrderVO">
+       SELECT * FROM
+      fyproject.ORDER as O JOIN ORDER_DETAILS AS OD
+      ON O.ORDER_MERCHANT_SERIAL = OD.ORDER_MERCHANT_SERIAL
+      JOIN GOODS_DETAIL AS GD 
+      ON 
+      GD.category_goods_serial = OD.category_goods_serial
+      WHERE O.order_merchant_serial= #{order_merchant_serial}
+    </select>
+</mapper>

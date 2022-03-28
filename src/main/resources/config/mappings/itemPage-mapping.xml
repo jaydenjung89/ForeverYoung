@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="ItemPageDAO">
+ 
+ 	<select id="getItemPage" resultType="itempage" parameterType="itempage">
+ 		SELECT * FROM
+ 		(SELECT first.*, second.GOODS_DETAIL_SERIAL, second.GOODS_DETAIL_PRICE, second.GOODS_DETAIL_DISCOUNTRATE,
+ 		second.GOODS_DETAIL_STATUS, second.GOODS_DETAIL_STOCK_QUANTITY, second.GOODS_DETAIL_PROMOTION_SERIAL,
+ 		(second.GOODS_DETAIL_PRICE*(((100-(second.GOODS_DETAIL_DISCOUNTRATE+(coalesce(NULLIF(second.GOODS_DETAIL_PROMOTION_SERIAL,0),0)*10))
+ 		)/100.0))) AS goods_last_price FROM CATEGORY_GOODS AS first JOIN GOODS_DETAIL as second ON
+ 		first.CATEGORY_GOODS_SERIAL=second.CATEGORY_GOODS_SERIAL) AS PRODUCT WHERE 1=1
+ 		AND PRODUCT.CATEGORY_GOODS_SERIAL=#{category_goods_serial}
+ 	</select>
+ 	<select id="getCategoryItemPage" resultType="itempage" parameterType="itempage">
+ 		SELECT A.CATEGORY_FIRST_SERIAL, A.CATEGORY_SECOND_SERIAL, A.CATEGORY_THIRD_SERIAL, A.CATEGORY_GOODS_SERIAL, A.CATEGORY_GOODS_NAME, A.CATEGORY_GOODS_THUM_IMG,
+ 		B.GOODS_DETAIL_PRICE FROM CATEGORY_GOODS AS A INNER JOIN GOODS_DETAIL AS B ON A.CATEGORY_GOODS_SERIAL=B.CATEGORY_GOODS_SERIAL
+ 	</select>
+ </mapper>

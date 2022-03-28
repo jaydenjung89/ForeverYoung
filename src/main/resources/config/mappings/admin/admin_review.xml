@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace = "adminReviewDAO">
+ 
+ <!-- review 상품 -->
+ <select id = "reviewGoodsName" resultType = "review">
+ 	SELECT R.category_goods_serial, R.review_serial, C.category_goods_name
+ 	FROM CATEGORY_GOODS C
+ 	JOIN REVIEW R
+ 	ON R.category_goods_serial = C.category_goods_serial
+ 	ORDER BY review_serial DESC
+ </select>
+ 
+ <!-- review 내용 가지고 오기 -->
+ <select id = "reviewContent" resultType = "review">
+ 	select * from REVIEW
+ 	where review_serial = #{review_serial}
+ </select>
+ 
+ <!-- review 내용 삭제 -->
+ <delete id = "deleteReview" parameterType="review">
+ 	delete from REVIEW
+ 	where review_serial = #{review_serial}
+ </delete>
+ 
+ <!-- review list -->
+ <select id = "reviewList" resultType="review">
+ 	select * from REVIEW
+ </select>
+ </mapper>

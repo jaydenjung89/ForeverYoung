@@ -1,0 +1,1251 @@
+@charset "utf-8";
+
+.today-inp {
+	margin-top: -2px
+}
+
+.tbl_inp_form tbody td .today-inp .chk_area {
+	line-height: 28px
+}
+
+.pickup-chk {
+	position: relative;
+	padding-right: 23px
+}
+
+.pickup-chk__about {
+	margin-top: -9px;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	font-size: 0;
+	color: transparent;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/project/icon_01.png")
+		no-repeat 0 0
+}
+
+.pickup-btn .btnMedium {
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px !important
+}
+
+.btnMedium.w155 {
+	width: 155px
+}
+
+.layer_pop_wrap .pickup-wrap .layer_title {
+	padding-bottom: 15px;
+	border-bottom: 2px solid #000;
+	line-height: 36px;
+	color: #333
+}
+
+.layer_pop_wrap .pickup-wrap .layer_close.type2 {
+	top: 32px;
+	right: 30px
+}
+
+.layer_pop_wrap .pickup-wrap {
+	position: relative;
+	padding: 27px 30px 20px
+}
+
+.layer_pop_wrap .pickup-wrap .layer_btn_area {
+	
+}
+
+.pickup-wrap__cont {
+	padding-top: 20px
+}
+
+.service-about {
+	margin-bottom: 19px;
+	font-size: 16px;
+	letter-spacing: normal;
+	line-height: 24px;
+	color: #333
+}
+
+.order-wrap {
+	overflow: hidden;
+	margin-bottom: 10px;
+	width: 100%;
+	padding: 10px 20px 12px;
+	border-radius: 13.6px;
+	text-align: center;
+	background: #f5f5f5
+}
+
+.service-order {
+	overflow: hidden;
+	position: relative;
+	display: inline-block
+}
+
+.service-order__list {
+	position: relative;
+	float: left;
+	padding-right: 20px;
+	margin-right: 9px
+}
+
+.service-order__list:last-child {
+	padding-right: 0;
+	margin-right: 0
+}
+
+.service-order__list:last-child::after {
+	content: none
+}
+
+.service-order__list::after {
+	display: block;
+	content: "";
+	width: 11px;
+	height: 18px;
+	position: absolute;
+	top: 34px;
+	right: 0;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_pickup_arr.png")
+		no-repeat 0 0
+}
+
+.service-order__list .order-img {
+	width: 76px;
+	padding-top: 73px;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 17px;
+	letter-spacing: normal;
+	text-align: center;
+	color: #555
+}
+
+.service-order__list:nth-child(1) .order-img {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_pickup_order01.png")
+		no-repeat center 0;
+	background-size: 76px 68px
+}
+
+.service-order__list:nth-child(2) .order-img {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_pickup_order02.png")
+		no-repeat center 0;
+	background-size: 77px 69px
+}
+
+.service-order__list:nth-child(3) .order-img {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_pickup_order03.png")
+		no-repeat center 0;
+	background-size: 76px 68px
+}
+
+.service-order__list:nth-child(4) .order-img {
+	margin-left: -1px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_pickup_order04.png")
+		no-repeat center 0;
+	background-size: 77px 69px
+}
+
+.service-etc {
+	padding-left: 11px;
+	position: relative;
+	font-size: 13px;
+	line-height: 15px;
+	letter-spacing: normal;
+	color: #888
+}
+
+.service-etc::after {
+	display: block;
+	content: "";
+	width: 3px;
+	height: 3px;
+	position: absolute;
+	top: 6px;
+	left: 0;
+	background: #888
+}
+
+.tbl_inp_form tbody td.pickup-area {
+	padding: 0
+}
+/* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.tbl_inp_form tbody td.pickup-area .contTopArea {
+	padding: 18px 0 20px 24px;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .toggleMenu {
+	display: inline-block;
+	width: 104px;
+	height: 32px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .toggleMenu ul {
+	width: 104px;
+	height: 32px;
+	font-size: 0px;
+	background-color: #fff;
+	border: 1px solid #f0f1f4;
+	border-radius: 16px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .toggleMenu ul li {
+	height: 32px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .toggleMenu ul li a {
+	display: block;
+	width: 62px;
+	height: 32px;
+	font-size: 12px;
+	color: #99a1a8;
+	line-height: 30px;
+	font-weight: 400;
+	text-align: center;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .toggleMenu ul li:nth-child(1) a span
+	{
+	display: block;
+	padding-left: 10px;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .toggleMenu ul li.active a
+	{
+	color: #fff;
+	font-weight: 700;
+	background-color: #e95294;
+	border: 1px solid #e95294;
+	border-radius: 16px;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .toggleMenu ul li.active a span
+	{
+	padding-left: 0;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .toggleMenu ul li:last-child a
+	{
+	width: 40px;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .toggleMenu ul li:last-child a span
+	{
+	display: block;
+	padding-right: 5px;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .toggleMenu ul li:last-child.active a span
+	{
+	padding-right: 0;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .pickupTxt {
+	display: inline-block;
+	font-size: 13px;
+	color: #131518;
+	line-height: 15px;
+	font-weight: 400;
+	vertical-align: middle;
+	margin-left: 10px;
+	overflow: hidden;
+}
+
+.tbl_inp_form tbody td.pickup-area .contTopArea .pickupTxt a {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+	vertical-align: middle;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_info_btn.png")
+		0 0 no-repeat;
+	background-size: 12px 12px;
+	margin: -3px 0 0 4px;
+	overflow: hidden;
+}
+/* //[3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.pickup-box {
+	position: relative;
+	overflow: hidden;
+	padding-left: 390px
+}
+
+.pickup-area__left {
+	padding: 0 21px 0 24px;
+	width: 390px;
+	height: 528px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.2);
+	background: #fff
+}
+
+.pickup-area__right {
+	position: relative;
+	width: 460px;
+	height: 528px;
+	background: #f5f5f5
+}
+/* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.pickup-tab {
+	height: 37px;
+	font-size: 0;
+	background-color: #f0f1f4;
+	border-radius: 4px;
+	overflow: hidden;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.pickup-tab__list {
+	display: inline-block;
+	width: 115px;
+	height: 37px;
+}
+
+.pickup-tab__list a {
+	display: inline-block;
+	width: 100%;
+	height: 31px;
+	line-height: 31px;
+	font-size: 13px;
+	font-weight: 400;
+	text-align: center;
+	letter-spacing: 0;
+	word-spacing: normal;
+	color: #99a1a8;
+	margin-top: 3px;
+	overflow: hidden;
+}
+
+.pickup-tab__list.active a {
+	color: #131518;
+	background-color: #fff;
+	border-radius: 2px;
+}
+
+.pickup-tab__list:nth-child(1) {
+	padding-left: 3px;
+}
+
+.pickup-tab__list:nth-child(3) {
+	padding-right: 3px;
+}
+/* //[3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.pickup-noti {
+	margin-top: 12px;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 500;
+	letter-spacing: normal;
+	text-align: center;
+	color: #888;
+	background: #f5f5f5
+}
+
+.picup-map__list.recomm-store {
+	margin-top: 15px;
+	height: 407px
+}
+
+.picup-map__list {
+	overflow-y: auto;
+	position: relative;
+	margin-top: 10px;
+	padding: 0 14px 0 12px;
+	height: 470px
+} /* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.picup-map__list li {
+	position: relative;
+	padding: 15px 0 15px 0;
+	border-top: 1px solid #f5f5f5;
+	line-height: 16px;
+} /* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.picup-map__list li:first-child {
+	border-top: none
+}
+
+.picup-map__list li input[type=radio] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0 !important;
+	height: 0 !important
+}
+
+.picup-map__list .store-name {
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 16px;
+	color: #131518;
+	max-width: 145px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-block;
+	padding-left: 19px;
+} /* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.picup-map__list li input[type=radio]:checked+.store-name:before {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/inp_radio_on.png")
+		no-repeat 0 0
+}
+
+.picup-map__list .store-name:before {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 16px;
+	left: 0;
+	width: 12px;
+	height: 12px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/inp_radio.png")
+		no-repeat 0 0
+}
+
+.picup-map__list .store-distance {
+	margin: 0 0 0 8px;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: normal;
+	line-height: 14px;
+	color: #8b8b8b;
+	vertical-align: top;
+}
+
+.picup-map__list .posible-pick {
+	position: absolute;
+	top: 13px;
+	right: 20px;
+	color: #999999;
+	font-size: 12px;
+	letter-spacing: normal
+}
+
+.picup-map__list .posible-pick:before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/icon_order_pickUp.png")
+		no-repeat;
+	margin-right: 2px;
+	background-size: contain;
+	vertical-align: top;
+	position: relative;
+	top: -1px;
+}
+
+.picup-map__list .store-add {
+	position: absolute;
+	top: 14px;
+	right: 1px;
+	display: block;
+	width: 15px;
+	height: 15px;
+	font-size: 0;
+	color: transparent;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_star.png")
+		no-repeat 0 0
+}
+
+.picup-map__list .store-add.active {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_star_on.png")
+		no-repeat 0 0
+}
+
+.picup-map__list li.disabled .store-name {
+	cursor: pointer;
+	color: #b2b8be;
+} /* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.picup-map__list li.disabled .store-name:before {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/inp_radio_disabled.png")
+		no-repeat 0 0
+}
+
+.picup-map__list li.disabled .store-distance {
+	color: #aaa
+}
+
+.picup-map__list li.selected .store-add.active {
+	top: 15px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_star_select.png")
+		no-repeat 0 0
+}
+
+.picup-map__list li.selected .store-name {
+	font-weight: bold
+}
+
+.picup-map__list .store-info {
+	display: none;
+	margin-top: 10px
+}
+
+.picup-map__list li.selected .store-info {
+	display: block
+}
+
+.store-info .store-box {
+	position: relative
+}
+/* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.store-info__time {
+	position: relative;
+	font-size: 12px;
+	color: #757d86;
+	line-height: 18px;
+	margin-top: 9px;
+}
+/* //[3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.store-info__time .time-tit {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 13px;
+	line-height: 18px;
+	letter-spacing: normal;
+	font-weight: bold;
+	color: #666
+}
+
+.store-info__time .time-cnt {
+	padding-left: 55px
+}
+
+.store-info__time .time-cnt__list {
+	font-size: 13px;
+	line-height: 18px;
+	letter-spacing: normal;
+	font-weight: 500;
+	color: #666
+}
+
+.store-info__time .time-cnt__list strong {
+	font-weight: 300;
+	color: #666
+}
+
+.store-info__addr {
+	font-size: 12px;
+	letter-spacing: normal;
+	line-height: 18px;
+	color: #131518;
+} /* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.store-status {
+	position: absolute;
+	top: 0;
+	right: 0
+}
+/* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.store-status__open {
+	position: relative;
+	padding-left: 18px;
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: normal;
+	color: #131518;
+	text-align: right;
+}
+
+.store-status__open::before {
+	display: inline-block;
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+	background: #9bce26;
+	margin-right: 6px;
+}
+
+.store-status__close {
+	position: relative;
+	padding-left: 18px;
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: normal;
+	color: #888;
+	text-align: right;
+}
+
+.store-status__close::before {
+	display: inline-block;
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+	background: #777;
+	margin-right: 6px;
+}
+/* //[3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.noti-covid19 {
+	margin: 10px 0 0 0;
+	padding: 7px 10px;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: normal;
+	color: #555;
+	border-radius: 5px;
+	background: #f3f3f3
+} /* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.indif-store {
+	padding: 148px 15px 172px
+}
+
+.indif-store__top {
+	padding-top: 70px;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: normal;
+	line-height: 24px;
+	text-align: center;
+	color: #888;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_indif_store.png")
+		no-repeat center top
+}
+
+.indif-store__bottom {
+	margin-top: 10px;
+	font-size: 13px;
+	line-height: 18px;
+	letter-spacing: normal;
+	text-align: center;
+	color: #aaa
+}
+
+.nametail-box {
+	padding-bottom: 4px;
+	margin-top: -65px;
+	margin-left: 1px
+}
+
+.nametail-box__link {
+	display: inline-block;
+	padding: 8px 10px;
+	position: relative;
+	border-radius: 15px;
+	border: 1px solid #ccc;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 14px;
+	letter-spacing: normal;
+	color: #333;
+	background: #fff
+}
+
+.nametail-box__link::before {
+	display: block;
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 12px;
+	height: 7px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/name_tail.png")
+		no-repeat 0 0
+}
+
+.nametail-box__link.disabled {
+	cursor: default;
+	color: #999
+}
+
+.nametail-box__link.on {
+	padding: 8px 19px 8px 10px;
+	animation: pickup-bounce .5s infinite alternate;
+	-webkit-animation: pickup-bounce .5s infinite alternate;
+	border: none;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 15px;
+	color: #fff;
+	background: #000
+}
+
+.nametail-box__link.on::after {
+	display: block;
+	content: "";
+	width: 7px;
+	height: 11px;
+	position: absolute;
+	top: 10px;
+	right: 9px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/name_tail_arr.png")
+		no-repeat 0 0
+}
+
+.nametail-box__link.on::before {
+	width: 16px;
+	height: 7px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/name_tail_on.png")
+		no-repeat 0 0
+}
+
+to {
+	transform: translateY(-10px);
+}
+
+.search-store {
+	position: relative;
+	overflow: hidden
+}
+
+.search-store__top {
+	margin-top: 25px;
+	background: #fff
+} /* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.search-store__top--noti {
+	margin: 20px 0 0 9px;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: normal;
+	line-height: 16px;
+	color: #9bce26
+}
+
+.search-store__top--result {
+	margin: 18px 0 0 9px;
+	padding-bottom: 2px;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: normal;
+	line-height: 16px;
+	color: #888
+}
+
+.search-store__top--result strong {
+	font-weight: 600
+}
+
+.search-box {
+	position: relative
+}
+
+.search-box .search-box__inp {
+	padding: 0 28px 0 38px;
+	width: 100%;
+	height: 38px;
+	border-radius: 24px;
+	border: 1px solid #dadde0;
+	font-family: 'Montserrat', -apple-system, 'NotoSansCJKkr',
+		'AppleSDGothicNeo', 'Roboto', 'dotum', '돋움', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 36px;
+	color: #99a1a8;
+	background: #fff
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_detail_search.png")
+		12px 11px no-repeat;
+	background-size: 16px 16px;
+} /* [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+/*.search-box__btn {position:absolute;top:10px;right:19px;display:block;width:23px;height:25px;font-size:0;color:transparent;background:url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/ico_search_on.png") no-repeat 0 0} [3659045] 오늘드림 주문서 페이지 UI 변경 건 */
+.search-box.on .search-box__inp {
+	border: 1px solid #9bce26;
+	border-bottom: 0;
+	border-radius: 23.5px 23.5px 0 0
+}
+
+.search-box .search-box__inp::placeholder {
+	line-height: 45px;
+	font-weight: 400;
+	color: #aaa
+}
+
+.search-box.on .search-box__inp:focus {
+	color: #333;
+	border: 1px solid #9bce26;
+	border-bottom: none
+}
+
+.search-box.on .search-box__auto {
+	display: block
+}
+
+.search-box__auto {
+	z-index: 10;
+	overflow: hidden;
+	display: none;
+	padding-bottom: 2px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 47px;
+	border: 1px solid #9bce26;
+	border-top: 1px solid #e6e6e6;
+	border-radius: 0 0 23.5px 23.5px;
+	background: #fff
+}
+
+.search-box__auto>ul {
+	height: 183px;
+	overflow-y: auto
+}
+
+.search-box__auto li {
+	padding: 0 0;
+	margin-top: 4px
+}
+
+.search-box__auto li:first-child {
+	margin-top: 0
+}
+
+.search-box__auto li a {
+	display: block;
+	padding: 15px 20px;
+	width: 100%;
+	font-size: 12px;
+}
+
+.search-box__auto li a:hover {
+	color: #fff !important;
+	background: #9acd26 !important
+}
+
+.search-box__auto li a:hover span {
+	color: #fff !important
+}
+
+.search-box__auto li a span {
+	color: #9acd26
+}
+
+.picup-map__list.etc-store {
+	margin-top: 6px;
+	height: 375px
+}
+
+.pickup-store {
+	padding: 23px 36px 20px;
+	font-size: 0
+}
+
+.pickup-store .store-tit {
+	height: 18px
+}
+
+.pickup-store .store-name {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+	letter-spacing: normal;
+	color: #222
+}
+
+.pickup-store .store-distance {
+	padding: 2px 0 0 8px;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: normal;
+	line-height: 14px;
+	color: #8b8b8b
+}
+
+.pickup-store .store-change {
+	display: inline-block;
+	padding: 0 6px;
+	margin: -3px 0 0 18px;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	font-size: 12px;
+	letter-spacing: normal;
+	line-height: 22px;
+	color: #555
+}
+
+.pickup-store .store-info__addr {
+	margin-top: 10px;
+	font-size: 13px;
+	line-height: 15px;
+	letter-spacing: normal;
+	color: #555
+}
+
+.pickup-store .store-info__time {
+	margin-top: 10px;
+	font-size: 13px;
+	line-height: 15px;
+	font-weight: 500;
+	letter-spacing: normal;
+	color: #666
+}
+
+.pickup-store .store-info__time strong {
+	font-weight: bold
+}
+
+.pickup-store .store-info__time span {
+	font-weight: 300
+}
+
+.pickup-store .noti-covid19 {
+	display: inline-block;
+	margin: 10px 0 0;
+	padding: 7px 10px;
+	border-radius: 5px;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 13px;
+	letter-spacing: normal;
+	color: #555;
+	background: #f3f3f3
+}
+
+.pickup-store-about {
+	padding: 18px 36px;
+	border-top: 1px solid #e6e6e6
+}
+
+.pickup-store-about__list li {
+	padding-left: 8px;
+	position: relative;
+	font-size: 12px;
+	letter-spacing: normal;
+	line-height: 18px;
+	color: #888
+}
+
+.pickup-store-about__list li:before {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 0;
+	width: 2px;
+	height: 2px;
+	background: #999
+}
+
+.pickup-store-about__list li span {
+	color: #9bce26
+}
+
+.service-noti {
+	margin-top: -5px
+}
+
+.service-noti__top {
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: normal;
+	line-height: 24px;
+	color: #333
+}
+
+.service-noti__top span {
+	letter-spacing: normal;
+	color: #f27370
+}
+
+.stock-list {
+	margin-top: 15px
+}
+
+.stock-list+.pickup-btn {
+	margin: 20px 0 0
+}
+
+.stock-list__tit {
+	padding-bottom: 10px;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: normal;
+	color: #555
+}
+
+.stock-list__tit span {
+	letter-spacing: normal;
+	font-weight: 500
+}
+
+.stock-list__cnt {
+	overflow-y: auto;
+	padding: 20px;
+	width: 100%;
+	height: 300px;
+	border: 1px solid #e7e7e7;
+	border-radius: 5px;
+	background: #fff
+}
+
+.stock-info {
+	display: table;
+	margin-top: 15px;
+	position: relative;
+	padding-left: 110px;
+	min-height: 100px
+}
+
+.stock-info:first-child {
+	margin-top: 0
+}
+
+.stock-info__thum {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+
+.stock-info__thum img {
+	width: 100px;
+	height: 100px
+}
+
+.stock-info__thum::after {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	opacity: 0.03;
+}
+
+.stock-info__cnt {
+	display: table-cell;
+	vertical-align: middle
+}
+
+.stock-info__cnt--tit {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: normal;
+	color: #333
+}
+
+.stock-info__cnt--count {
+	margin-top: 3px;
+	font-size: 12px;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #666
+}
+
+.stock-info__cnt--count span {
+	font-weight: 300
+}
+
+.stock-list+.pickup-btn .btnMedium {
+	font-size: 14px !important;
+	font-weight: bold
+}
+
+.pament-noti li {
+	margin-top: 15px;
+	padding-left: 11px;
+	position: relative;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: normal;
+	color: #333
+}
+
+.pament-noti li::before {
+	display: block;
+	content: "";
+	width: 3px;
+	height: 3px;
+	position: absolute;
+	top: 10.5px;
+	left: 0;
+	background: #333
+}
+
+.pament-noti li:first-child {
+	margin-top: 0
+}
+
+.pament-noti+.pickup-btn .btnMedium {
+	height: 50px;
+	line-height: 50px
+}
+
+.infor-data li.today {
+	margin-left: 30px
+}
+
+.infor-data li.today strong {
+	border-bottom: none;
+	color: #222
+}
+
+.layer_pop_wrap .pickup_cont {
+	position: relative;
+	padding: 30px
+}
+
+.pickup_cont .contInner .box_dt .tit_dt {
+	font-size: 24px
+}
+
+.pickup_cont .step_box .step_list li.state_01 .icon {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/mypage/icon_dt_normal.png")
+		no-repeat 50% -335px;
+	background-size: 67px auto;
+}
+
+.pickup_cont .step_box .step_list li.state_02 .icon {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/icon_dt_pickup.png")
+		no-repeat 0 0
+}
+
+.pickup_cont .step_box .step_list li.state_03 .icon {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/mypage/icon_dt_normal.png")
+		no-repeat 50% -201px;
+	background-size: 67px auto;
+}
+
+.pickup_cont .step_box .step_list li.state_01.off .icon {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/mypage/icon_dt_base_off.png")
+		no-repeat 50% -335px;
+	background-size: 67px auto;
+}
+
+.pickup_cont .step_box .step_list li.state_02.off .icon {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/icon_dt_pickup_off.png")
+		no-repeat center
+}
+
+.pickup_cont .step_box .step_list li.state_03.off .icon {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/mypage/icon_dt_base_off.png")
+		no-repeat 50% -201px;
+	background-size: 67px auto;
+}
+
+.pickup_cont .step_box .step_list li.state_01.on .icon {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/mypage/icon_dt_base_on.png")
+		no-repeat 50% -335px;
+	background-size: 67px auto;
+}
+
+.pickup_cont .step_box .step_list li.state_02.on .icon {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/pickup/icon_dt_pickup_on.png")
+		no-repeat center;
+}
+
+.pickup_cont .step_box .step_list li.state_03.on .icon {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/mypage/icon_dt_base_on.png")
+		no-repeat 50% -201px;
+	background-size: 67px auto;
+}
+
+.box_dt_info .boxArea.pickupArea {
+	border: 0;
+	margin: 0;
+	float: left;
+	width: 100%
+}
+
+.pickupArea__about {
+	padding: 20px 21px 21px
+}
+
+.pickupArea__about p {
+	font-size: 14px;
+	letter-spacing: normal;
+	line-height: 14px;
+	color: #333
+}
+
+.pickupArea__about p em {
+	font-style: normal;
+	padding-right: 6px;
+	color: #8f8f8f
+}
+
+.pickupArea__about p.pickupArea__about--point {
+	margin-top: 23px;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: normal;
+	line-height: 14px;
+	color: #f27370
+}
+
+.choice-noti {
+	padding-bottom: 10px
+}
+
+.choice-store {
+	padding: 30px 0 20px;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	letter-spacing: normal;
+	line-height: 24px;
+	color: #333
+}
+
+.choice-store__name {
+	color: #9bce26
+}
+
+.imp_data .chk_area {
+	position: relative;
+}
+
+.imp_data .chk_area .ico_info_view {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%)
+}
+
+.imp_data .chk_area.disabled label {
+	color: #aaa;
+}

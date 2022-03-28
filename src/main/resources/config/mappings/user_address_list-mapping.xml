@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="user_address_listDAO">
+ 	<select id="getAddress" resultType="addressListVO">
+ 		SELECT * FROM USER_ADDRESS_LIST WHERE USER_ID=#{user_id} ORDER BY ADDRESS_SERIAL ASC, ADDRESS_DEFAULT DESC
+ 	</select>
+ 	<insert id="address_new">
+ 		INSERT INTO USER_ADDRESS_LIST (USER_ADDRESS1, USER_ADDRESS2, USER_ZIPCODE, USER_ID, ADDRESS_DEFAULT)
+ 		VALUES(#{user_address1},#{user_address2},#{user_zipcode},#{user_id},#{address_default})
+ 	</insert>
+ 	<update id="address_update">
+ 		UPDATE USER_ADDRESS_LIST SET USER_ADDRESS2=#{user_address2}, USER_NAME=#{user_name}, USER_PHONE=#{user_phone}
+ 		WHERE ADDRESS_SERIAL=#{address_serial}
+ 	</update>
+ 	<update id="setDefaultAddress">
+ 		UPDATE USER_ADDRESS_LIST SET ADDRESS_DEFAULT=TRUE WHERE ADDRESS_SERIAL=#{address_serial}
+ 	</update>
+ 	<update id="setDefaultAllFalse">
+ 		UPDATE USER_ADDRESS_LIST SET ADDRESS_DEFAULT=FALSE WHERE USER_ID=#{user_id}
+ 	</update>
+ 	<delete id="deleteAddress">
+ 		DELETE FROM USER_ADDRESS_LIST WHERE ADDRESS_SERIAL=#{address_serial}
+ 	</delete>
+ </mapper>

@@ -1,0 +1,7086 @@
+.tit_type03 {
+	margin: 60px 30px 0;
+	font-weight: 700;
+	font-size: 24px;
+	color: #000;
+	position: relative;
+	line-height: 1.3;
+	letter-spacing: 0;
+}
+
+.tit_type03 .moreBtn {
+	position: absolute;
+	bottom: 3px;
+	right: 0px;
+	background: #fff;
+}
+
+.tit_type03 .moreBtn span {
+	padding-right: 11px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_more_5x10.png")
+		no-repeat center right 0px;
+	background-size: 5px auto;
+	font-size: 15px;
+	font-weight: 500;
+	color: #aaa
+}
+
+.curation_area.two .inner {
+	overflow: hidden;
+	float: left;
+	width: 50%;
+	height: 575px;
+}
+
+.curation_area.two .curation_slide.type03 {
+	min-height: 360px;
+	margin-top: 26px;
+	margin-bottom: 27px;
+}
+
+.curation_area.two .tit_type03 {
+	height: 62px
+}
+
+.curation_area.two .curation_slide.type03 .slick-list {
+	overflow: hidden;
+	height: 328px;
+}
+
+.curation_area.two .curation_slide.type03 .slide_list>li {
+	width: 50%;
+}
+
+.curation_area.two .curation_slide.type03 .slick-dots {
+	top: auto;
+	bottom: -43px;
+	left: 0;
+	right: 0px;
+	text-align: center;
+}
+
+.curation_area.two .curation_slide.type03 .slick-dots>li {
+	float: none;
+	display: inline-block;
+}
+
+/* �뙘�뾽 */
+.layer_pop_wrap .layer_cont4 {
+	position: relative;
+	padding: 30px 30px 0;
+}
+
+.layer_pop_wrap .layer_title4 {
+	padding: 0 0 13px;
+	font-size: 21px;
+	line-height: 28px;
+	color: #000;
+	border-bottom: 2px solid #000;
+	letter-spacing: 0;
+}
+
+.layer_pop_wrap .layer_close.type4 {
+	top: 30px;
+	right: 30px;
+	width: 25px;
+	height: 25px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_close_25x25.png")
+		no-repeat 0 0;
+	background-size: 25px auto;
+}
+
+.curation_topInfo {
+	position: relative;
+	background-color: #fff;
+	margin: 30px auto 0px
+}
+
+.curation_topInfo .topTtl {
+	padding-right: 4px;
+	color: #000;
+	font-size: 26px;
+	font-weight: 700;
+	position: relative;
+	letter-spacing: 0;
+	display: inline-block;
+	display: inline-block;
+}
+
+.curation_topInfo .topTtl span {
+	padding-left: 15px;
+	color: #000;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 0;
+}
+
+.curation_topInfo .topTtl .curation_toolTip {
+	margin-left: 0px;
+	width: 17px;
+	height: 17px;;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_info_gray_17x17.png")
+		no-repeat center;
+	background-size: 17px auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.curation_topInfo .toolTipArea {
+	display: inline-block;
+	position: relative;
+}
+
+.curation_topInfo .toolTipBox {
+	display: none;
+	width: max-content;
+	min-width: 297px;
+	padding: 10px 15px;
+	position: absolute;
+	top: 5px;
+	left: 20px;;
+	z-index: 10;
+	border: 1px solid #999999;
+	background-color: #fff;
+	font-size: 13px;
+	letter-spacing: 0;
+	line-height: 1.4;
+	color: #666666;
+	font-weight: 500;
+}
+
+.curation_topInfo .curation_toolTip.on+.toolTipBox {
+	display: block;
+}
+
+.curation_topInfo .toolTipInner {
+	min-width: 290px;
+}
+
+.curation_topInfo .toolTipBox strong {
+	color: #000;
+	font-weight: 700;
+}
+
+.curation_topInfo .curation_recomendBox {
+	margin: 20px auto 0px;
+	padding: 20px 20px 12px;
+	background-color: #f5f5f5;
+	position: relative;
+	border-radius: 5px;
+}
+
+.curation_topInfo .curation_recomendBox>div {
+	overflow: hidden;
+}
+
+.curation_topInfo .curation_recomendBox .subTtl {
+	font-size: 18px;
+	color: #666666;
+	letter-spacing: 0;
+	padding-bottom: 8px;
+}
+
+.curation_topInfo .curation_recomendBox .tagList {
+	margin-left: -11px;
+	padding-right: 50px;
+}
+
+.curation_topInfo .curation_recomendBox .tagList li {
+	position: relative;
+	padding: 0 11px;
+	margin-bottom: 8px;
+	float: left;
+	font-size: 15px;
+	color: #888;
+	letter-spacing: 0;
+}
+
+.curation_topInfo .curation_recomendBox .tagList li:after {
+	content: '';
+	display: block;
+	width: 1px;
+	height: 15px;
+	border-right: 1px solid #bbbbbb;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -7.5px
+}
+
+.curation_topInfo .curation_recomendBox .tagList li:first-child:after {
+	display: none;
+}
+
+.curation_topInfo .curation_recomendBox .tagBtn {
+	padding-right: 12px;
+	position: absolute;
+	top: 20px;
+	right: 29px;
+	display: inline-block;
+	font-size: 15px;
+	color: #333;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_more_5x10.png")
+		no-repeat center right 0px;
+	background-size: 5px auto;
+}
+
+.curation_topInfo_none .itemNone {
+	padding: 280px 0;
+}
+
+.curation_topInfo_none .itemNone .txt {
+	padding-top: 83px;
+	font-size: 16px;
+	line-height: 22px;
+	color: #888;
+	font-weight: 700;
+	text-align: center;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_nodata104x104.png")
+		no-repeat 50% 0;
+	background-size: 62px auto;
+}
+
+.curaListBox {
+	max-height: 505px;
+	margin-top: 30px;
+}
+
+.curaListBox .curation_area {
+	margin-top: 0;
+	padding-right: 18px;
+	padding-left: 10px;
+	padding-bottom: 30px;
+	height: auto;
+	min-height: 500px;
+}
+
+.curaListBox .curaList li {
+	margin-left: -38px;
+	margin-top: 30px;
+}
+
+.curaListBox .curaList li:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.curaListBox .curaList li:first-child {
+	margin-top: 0
+}
+
+.curaListBox .curaList li .box {
+	float: left;
+	width: 160px;
+	margin-left: 38px;
+	position: relative;
+}
+
+.curaListBox .curation_area .slide_list .item .thumImg {
+	width: 160px;
+	height: 160px;
+	position: relative;
+}
+
+.curaListBox .curation_area .slide_list .item .thumImg:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.06);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0;
+	bottom: 0;
+}
+
+.curaListBox .curation_area .slide_list .item .thumImg>img {
+	max-width: 160px;
+	max-height: 160px
+}
+
+.curaListBox .curation_area .slide_list .item .prd_name {
+	width: inherit;
+	padding: 0;
+	margin-top: 6px;
+}
+
+.curaListBox .curation_area .slide_list .item .prd_name .tx_name {
+	text-align: left;
+	color: #333;
+	font-size: 13px;
+}
+
+.curaListBox .curation_area .slide_list .item .prd_price {
+	text-align: left;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	line-height: 18px;
+	width: 100%;
+}
+
+.curaListBox .curation_area .slide_list .item .prd_price .tx_org {
+	display: block;
+	font-size: 11px;
+}
+
+.curaListBox .curation_area .slide_list .item .prd_price .tx_org+.tx_cur
+	{
+	margin-top: 0
+}
+
+.curaListBox .curation_area .slide_list .item .prd_price .tx_cur {
+	margin-top: 20px;
+	margin-left: 0;
+	font-size: 12px;
+}
+
+.curaListBox .curation_area .slide_list .item .prd_flag {
+	text-align: left;
+	padding: 0;
+}
+
+.curation_area .slide_list .btnbag2 {
+	position: absolute;
+	z-index: 10;
+	top: 270px;
+	right: 30px;
+	width: 16px;
+	height: 18px;
+	margin: 0;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/icon_bag.png")
+		no-repeat 0;
+	font-size: 0;
+	color: transparent;
+}
+
+.curaListBox .curation_area .slide_list .btnbag2 {
+	top: 227px;
+	right: 1px;
+}
+
+.curaListBox .btn_zzim {
+	position: absolute;
+	top: 120px;
+	right: 0px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #ebebeb;
+	text-indent: -999999px;
+	font-size: 0;
+	background: #fff
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_zzim.png")
+		no-repeat 50% 50%
+}
+
+.curaListBox .btn_zzim.on {
+	background-image:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_zzim_on.png")
+}
+
+.curaListBox .curation_area .slide_list .item .prd_flag {
+	width: 100%
+}
+
+.curaListBox .icon_flag {
+	font-size: 11px !important;
+	line-height: 18px !important;
+	width: auto;
+	min-width: 35px;
+	padding: 0 7px;
+	font-weight: 700;
+}
+
+.curaListBox .icon_flag.delivery {
+	width: 55px
+}
+
+.curaListBox .mCSB_inside>.mCSB_container {
+	margin-right: 6px;
+}
+
+.curaListBox .mCSB_scrollTools {
+	right: -5px;
+	bottom: 30px;
+}
+
+.curaListBox .mCSB_scrollTools .mCSB_draggerRail {
+	width: 5px;
+	background: #f5f5f5;
+}
+
+.curaListBox .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	width: 5px;
+	background-color: #b8b8b8;
+}
+
+.advCategoryBox .curation_area .slide_list .btnbag2 {
+	top: inherit;
+	right: 0px;
+	bottom: 23px;
+}
+/* �긽�꽭 �뒳�씪�씠�뱶 ���씠�� */
+.cura_pord .tit_h4, .basket_btmBox .tit_h4 {
+	position: relative;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.cura_pord .tit_h4 strong, .basket_btmBox .tit_h4 strong {
+	font-weight: 700;
+}
+
+.cura_pord .tit_h4 .moreBtn, .basket_btmBox .tit_h4 .moreBtn {
+	padding-right: 10px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_more_5x10.png")
+		no-repeat top 3.5px right 0px;
+	background-size: 5px auto;
+	position: absolute;
+	bottom: 1px;
+	right: 17px;
+	font-size: 15px;
+	font-weight: 500;
+	color: #aaa;
+	line-height: 17px;
+}
+
+.cura_pord.crtBtm .inner_cont {
+	padding-bottom: 40px;
+	border-bottom: 2px solid #ddd;
+}
+/* 二쇰Ц痍⑥냼 �쁺�뿭 */
+.mypage-ix .cura_pord.crtBtm {
+	margin-top: 65px
+}
+
+.mypage-ix .cura_pord.crtBtm .inner_cont {
+	border-top: 0;
+	padding-top: 15px;
+	padding-bottom: 37px;
+}
+
+.mypage-ix .cura_pord.crtBtm .tit_h4 {
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+.mypage-ix .cura_pord.crtBtm .tit_h4 strong {
+	font-weight: 700;
+}
+
+.mypage-ix .cura_pord.crtBtm .tit_h4 .moreBtn {
+	right: 16px
+}
+
+.mypage-ix .cura_pord.crtBtm .slick-list {
+	padding: 0 20% 0 0;
+}
+
+.mypage-ix .curation_basket li {
+	margin: 0 5px 0 15px;
+	padding: 0;
+}
+/* �옣踰꾧뎄�땲 */
+.order_btn_area.order_cart+.basket_btmBox .inner_cont {
+	border-top: 0;
+	padding-top: 20px;
+}
+/* 二쇰Ц�셿猷� */
+.order_end_box .order_btn_area+.cura_pord {
+	margin-top: 65px;
+}
+
+.order_end_box .order_btn_area+.cura_pord .tit_h4 {
+	margin-bottom: 30px;
+}
+
+/* �꽭�씪�쁺�뿭 */
+.sale-area .cura_pord {
+	padding-bottom: 20px;
+}
+
+/* 寃��깋 �끂�뜲�씠�꽣 */
+.curation_area.search .tit_type01 {
+	text-align: left;
+}
+
+.curation_area.search .tit_type01 .moreBtn {
+	right: 19px
+}
+
+/* �옣諛붽뎄�땲 */
+.tbl_prd_list tbody .add_gift_area .moreBtn {
+	height: 20px;
+	padding-right: 15px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_more_5x10.png")
+		no-repeat #f8f8f8 top 5px right 0px;
+	background-size: 5px auto;
+	position: absolute;
+	top: 50%;
+	right: 28px;
+	margin-top: -10px;
+	font-size: 13px;
+	font-weight: 500;
+	color: #666;
+	font-weight: 700;
+}
+
+/* 異붿쿇寃��깋�뼱 �꽭濡쒗삎 */
+.cate_prd_list .cura_resultsList {
+	padding: 43px 44px 35px;
+}
+
+.cura_ttl {
+	padding-top: 10px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #000;
+	letter-spacing: 0;
+}
+
+.curation_btnArea {
+	margin: 18px 0 0 0;
+	max-height: 285px;
+	overflow: hidden;
+}
+
+.curation_btnArea button {
+	width: auto;
+	height: 28px;
+	padding: 0px 12px;
+	background-color: #fff;
+	color: #555555;
+	border: solid 1px #dddddd;
+	border-radius: 19px;
+	display: block;;
+	max-width: 100%;
+	text-align: left;
+}
+
+.curation_btnArea button span {
+	font-size: 12px;
+	max-width: 100%;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+
+.curation_btnArea button+button {
+	margin: 8px 0 0 0;
+}
+
+/* 異붿쿇寃��깋�뼱 媛�濡쒗삎  */
+.cura_resultsList .cura_pord {
+	margin-top: 0
+}
+
+.cura_resultsList {
+	height: inherit;
+	min-height: 130px;
+	margin: 0 auto;
+	padding: 22px 40px 35px;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+}
+
+.cura_resultsList .curation_btnArea {
+	margin-top: 13px;
+	max-height: 28px;
+	overflow: hidden;
+}
+
+.cura_resultsList .curation_btnArea button {
+	display: inline-block;
+	margin: 0 0 5px 4px;
+	width: auto;
+	max-width: inherit;
+	text-align: center;
+}
+
+.cura_resultsList .curation_btnArea button span {
+	max-width: inherit;
+	display: inline-block;
+	overflow: initial;
+	text-overflow: unset;
+	white-space: nowrap;
+}
+
+.cura_resultsList .curation_btnArea  button:first-child {
+	margin-left: 0;
+}
+
+/* 異붿쿇寃��깋�뼱 ���씠�� */
+.ul_curation .cura_pord {
+	margin-top: 0;
+	padding-top: 35px;
+	border-top: 0px;
+	border-bottom: solid 5px #eeeeee;
+}
+
+.ul_curation .cura_pord.crtBtm .inner_cont {
+	margin: 0 5px;
+	padding-bottom: 30px;
+	border-bottom: 0
+}
+
+.ul_curation .cura_pord .tit_h4 {
+	margin-bottom: 25px;
+	padding: 0 40px;
+	font-weight: 700;
+}
+
+.ul_curation .cura_pord .tit_h4 .moreBtn {
+	right: 18px;
+}
+
+.search_no_data {
+	padding: 190px 15px 48px;
+	border-bottom: 0;
+}
+
+.ul_curation.ul_noResult .cura_pord {
+	margin-top: 0;
+	padding-top: 0px;
+	border-top: 0;
+	border-bottom: solid 1px #eeeeee;
+}
+
+.ul_curation.ul_noResult .cura_pord .tit_h4 {
+	padding: 0;
+}
+
+.ul_curation.ul_underThree {
+	margin-top: -1px;
+	padding-top: 31px;
+	background: #fff;
+}
+
+.ul_curation.ul_underThree .cura_pord {
+	margin-top: 0;
+	padding-top: 34px;
+	border-top: solid 2px #e5e5e5;
+	border-bottom: solid 2px #e5e5e5;
+}
+
+/* �긽�꽭 �씪�떆�뭹�젅 */
+.prd_btn_area button.btnSoldout.recoPopBtn {
+	background: #f5f5f5;
+	color: #ababab;
+	font-size: 16px;
+}
+
+.prd_btn_area button.btnSoldout.recoPopBtn .moreBtn {
+	text-align: center;
+}
+
+.prd_btn_area button.btnSoldout.recoPopBtn .moreBtn span {
+	padding-right: 8px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_more_4x9.png")
+		no-repeat center right 0px;
+	background-size: 4px auto;
+	font-size: 12px;
+	font-weight: 500;
+	color: #666
+}
+
+/* �긽�꽭 �샃�뀡 �꽑�깮 */
+.prd_option_box.optionType1 .sel_option_list>li+li {
+	border-top: 1px solid #e9e9e9;
+}
+
+.prd_option_box.optionType1 .sel_option_list>li>a {
+	color: #333;
+	padding: 11px 115px 11px 20px;
+	min-height: 60px;
+}
+
+.prd_option_box.optionType1 .sel_option_list>li.soldout>a {
+	color: #999
+}
+
+.prd_option_box.optionType1 .sel_option_list.new>li.type1>a {
+	padding: 0px 115px 0px 0px;
+}
+
+.prd_option_box.optionType1 .sel_option_list.new>li .color {
+	width: 60px;
+	height: 60px;
+}
+
+.prd_option_box.optionType1 .sel_option_list.new>li.type1 .color img {
+	width: 60px;
+	height: 60px;
+}
+
+.prd_option_box.optionType1 .sel_option_list.new>li .option_value {
+	max-width: 293px;
+}
+
+.prd_option_box.optionType1 .sel_option_list.new>li.type1 .option_value
+	{
+	max-width: 238px;
+}
+
+.prd_option_box.optionType1 .sel_option_list.new>li .option_price .tx_num
+	{
+	color: #000
+}
+
+.prd_option_box.optionType1 .sel_option_list>li .btn_restock {
+	position: absolute;
+	right: 9px;
+	top: 10px;
+}
+
+.prd_option_box.optionType1 .sel_option_list>li.type1 .btn_restock {
+	right: 20px
+}
+
+.prd_option_box.optionType1 .sel_option_list>li .btn_restock button {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	min-width: 80px;
+	height: 24px;
+	border: 0;
+	display: block;
+}
+
+.prd_option_box.optionType1 .sel_option_list>li .btn_restock button span
+	{
+	color: #555;
+	font-size: 10px;
+	line-height: 22px;
+}
+
+.prd_option_box.optionType1 .sel_option_list>li .btn_restock .restock_alarm
+	{
+	border: 1px solid #cccccc;
+	border-radius: 13px;
+}
+
+.prd_option_box.optionType1 .sel_option_list>li .btn_restock .restock_alarm span
+	{
+	padding-left: 15px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_alarm_11x13.png")
+		no-repeat center left 0px;
+	background-size: 11px auto;
+	font-weight: 500;
+}
+
+.prd_option_box.optionType1 .sel_option_list>li .btn_restock .restock_more
+	{
+	margin-top: 1px;
+	overflow: hidden;
+	height: 22px;
+}
+
+.prd_option_box.optionType1 .sel_option_list>li .btn_restock .restock_more span
+	{
+	padding: 5px 9px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_restockArrow.png")
+		no-repeat 100% 50%;
+	background-size: 5px auto;
+	font-weight: 400;
+}
+
+/* �븿猿� 援щℓ�븯硫� 醫뗭��긽�뭹 */
+.lay-cu-box .tit_type .moreBtn {
+	position: absolute;
+	top: 5px;
+	right: 0px;
+	background: #fff;
+}
+
+.lay-cu-box .tit_type .moreBtn span {
+	padding-right: 11px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_more_5x10.png")
+		no-repeat center right 0px;
+	background-size: 5px auto;
+	font-size: 15px;
+	font-weight: 500;
+	color: #aaa
+}
+
+.prd_dim {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/bg_trans50.png")
+		repeat 0 0;
+	z-index: 99
+}
+
+/* -------------------------------- 2李� ---------------------------------- */
+/* 硫붿씤 */
+.viewRk {
+	position: relative;
+}
+
+.viewRk .main_sub_tit {
+	letter-spacing: 0;
+	margin-bottom: 8px;
+	line-height: 28px;
+	height: 40px;
+}
+
+.viewRk .main_sub_tit strong .mBold {
+	font-size: 27px;
+	line-height: 40px;
+}
+
+.liveRankArea {
+	height: 236px;
+	overflow: hidden;
+}
+
+.viewRk .curation_basket {
+	padding: 0;
+	border-top: 1px solid #d8d8d8;
+	border-bottom: 1px solid #d8d8d8;
+	height: 236px;
+	overflow: hidden;
+}
+
+.viewRk .slick-list {
+	height: min-content !important;
+}
+
+.viewRk .viewRk_list {
+	float: left;
+	width: 50%;
+}
+/* 泥댄겕 */
+.viewRk .viewRk_single li {
+	margin: 30px 0;
+	width: 100%;
+	padding: 0 40px 0 20px;
+	position: relative;
+	height: 236px;
+	transition: ease 300ms !important;
+}
+
+.viewRk .viewRk_single li {
+	opacity: 1 !important;
+}
+
+.viewRk .viewRk_single li .viewRk_inner {
+	transition: ease 300ms !important;
+	height: 236px;
+	position: absolute;
+	top: 236px;
+	left: 0;
+}
+
+.viewRk .viewRk_single li.slick-active .viewRk_inner {
+	top: 0;
+}
+
+.viewRk .curation_basket li .thum {
+	width: 175px;
+	text-align: left;
+	position: absolute;
+	top: 0px;
+	left: 20px
+}
+
+.viewRk .curation_basket li .thum>a {
+	display: block;
+	width: 175px;
+	height: 175px;
+	text-align: center
+}
+
+.viewRk .curation_basket li .thum img {
+	max-width: 175px;
+	max-height: 175px;
+	height: 100% !important;
+	object-fit: contain;
+}
+
+.viewRk .curation_basket li .info {
+	width: 235px;
+	height: 175px;
+	padding-top: 0px;
+	margin-left: 215px;
+	position: relative;
+	display: table;
+}
+
+.viewRk .curation_basket li .info dl dt, .viewRk .curation_basket li .info dl dd
+	{
+	letter-spacing: 0;
+	margin-top: 0;
+}
+
+.viewRk .curation_basket .tx_brand {
+	margin-top: 8px;;
+	color: #777777;
+	font-weight: 700;
+	line-height: 15px;
+}
+
+.viewRk .curation_basket .tx_name {
+	margin-top: 5px;;
+	color: #000000;
+	line-height: 18px;
+	min-height: 36px;
+}
+
+.viewRk .curation_basket li .info .price del {
+	margin-top: 0px;;
+	display: block;
+	color: #777777;
+	line-height: 26px
+}
+
+.viewRk .curation_basket li .info .price del span {
+	font-weight: 700;
+}
+
+.viewRk .curation_basket li .info .price>strong {
+	margin-top: 0px;
+	display: block;
+	line-height: 26px;
+}
+
+.viewRk .curation_basket li .info .price strong span {
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.viewRk .curation_basket li .info .icon {
+	position: relative;
+	bottom: inherit;
+}
+
+.viewRk_topBox {
+	position: absolute;
+	right: 1px;
+	top: 4px;
+}
+
+.viewRk_topBox .refreshBtn {
+	margin-right: 12px;
+	vertical-align: super;
+}
+
+.viewRk_topBox .refreshBtn .refreshTxt {
+	padding-left: 19px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_refresh_circle.png")
+		no-repeat top 0px left;
+	background-size: 18px auto;
+	color: #666666;
+	letter-spacing: 0;
+	line-height: 20px;
+}
+
+.viewRk_topBox .viewRk_tab {
+	display: inline-block;
+}
+
+.viewRk_topBox .viewRk_tab::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.viewRk_topBox .viewRk_tab li {
+	float: left;
+}
+
+.viewRk_topBox .viewRk_tab button {
+	width: 24px;
+	height: 24px;
+	font-size: 14px;
+	line-height: 24px;
+	border-radius: 50%;
+	color: #888888;
+	background: #fff;
+}
+
+.viewRk_topBox .viewRk_tab .act button {
+	color: #fff;
+	background: #2f3030;
+}
+
+.viewRk_nav {
+	letter-spacing: 0;
+	margin: 18px 0;
+	padding-right: 20px;
+}
+
+.viewRk_nav li {
+	width: 100%;
+	padding: 0;
+	font-size: 14px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.viewRk_nav li a {
+	padding: 0 20px;
+	height: 40px;
+	display: block;
+	overflow: hidden;
+	color: #777777;
+}
+
+.viewRk_nav .rkNum {
+	padding-right: 14px;
+	font-size: 18px;
+	color: #999999;
+	line-height: 40px;
+}
+
+.viewRk_nav .rkTxt {
+	max-width: 90%;
+	vertical-align: top;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 40px;
+}
+
+.viewRk_nav li.act {
+	border: 1px solid #555;
+}
+
+.viewRk_nav li.act a {
+	color: #333333;
+}
+
+.viewRk_nav li.act .rkNum {
+	font-weight: 700;
+	color: #333333;
+}
+
+.liveRankArea .viewArea>span {
+	padding-left: 21px;
+	background-position: center left;
+}
+
+/* 留ㅼ옣異붿쿇 */
+.newOpenStore img {
+	font-size: 혻0;
+	line-height: 0;
+	text-indent: -9999px;
+	width: 100%;
+	height: 100%;
+}
+
+.newOpenStore .main_sub_tit {
+	margin: 52px 0 17px;
+	letter-spacing: 0;
+}
+
+.newOpenStore:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.newOpenStore .newOpen_info {
+	width: 668px;
+	height: 211px;
+	float: left;
+	position: relative;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	border-left: 1px solid #e5e5e5;
+	letter-spacing: 0;
+	display: table;
+}
+
+.newOpenStore .newOpen_info .imgSec {
+	width: 305px;
+	height: 209px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/newOpen_bg.png")
+		no-repeat center #f2f2f2;
+	background-size: 81px auto;
+	letter-spacing: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.newOpenStore .newOpen_info .infoSec {
+	padding-left: 333px;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.newOpenStore .newOpen_info:before {
+	content: '';
+	display: inline-block;
+	width: 1px;
+	height: 145px;
+	margin-top: -72.5px;
+	border-right: 1px solid #eeeeee;
+	position: absolute;
+	top: 50%;
+	right: 0px
+}
+
+.newOpenStore .newOpen_info .infoSec .tit {
+	margin-top: 8px;
+}
+
+.newOpenStore .newOpen_info .infoSec .tit a {
+	padding-right: 15px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_arrow_newstore.png")
+		no-repeat center right;
+	background-size: 10px auto;
+	font-size: 20px;
+	color: #000000;
+}
+
+.newOpenStore .newOpen_info .infoSec .time {
+	height: 15px;
+	margin-top: 9px;
+	padding-left: 17px;
+	position: relative;
+	font-size: 13px;
+	color: #555555;
+	display: inline-block;
+	line-height: 15px;
+}
+
+.newOpenStore .newOpen_info .infoSec .time:after {
+	content: '';
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin-top: -6px;
+	background: #888888;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+
+.newOpenStore .newOpen_info .infoSec .time.on:after {
+	background: #9bce26;
+}
+
+.newOpenStore .newOpen_info .infoSec .star {
+	height: 15px;
+	margin-top: 9px;
+	margin-left: 5px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_storeP.png")
+		no-repeat center left 5px #fff;
+	background-size: 14px auto;
+	border-left: 1px solid #eeeeee;;
+}
+
+.newOpenStore .newOpen_info .infoSec .star.on {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_storeP_on.png")
+		no-repeat center left 5px #fff;
+	background-size: 14px auto;
+}
+
+.newOpenStore .newOpen_info .infoSec .fv_reShop_in {
+	margin-top: 0px;
+	padding-left: 22px;
+	font-size: 13px;
+	color: #777777;
+	line-height: 15px;
+	font-weight: 400;
+}
+
+.newOpenStore .newOpen_info .infoSec .newOpenStore_txt {
+	margin-top: 20px;
+	font-size: 13px;
+	font-weight: 700;
+	color: #555555;
+	line-height: 13px;
+}
+
+.newOpenStore .newOpen_info .infoSec .newOpenStore_txt .moreInfo_ttl {
+	padding-left: 5px;
+	font-size: 10px;
+	color: #aaaaaa;
+	vertical-align: bottom;
+	font-weight: 500;
+	line-height: 12px;
+}
+
+.newOpenStore .newOpen_info .infoSec .newOpenStore_sale dl {
+	margin-top: 8px;
+	width: 100%;
+	display: table;
+	font-size: 11px;
+	color: #555555;
+}
+
+.newOpenStore .newOpen_info .infoSec .newOpenStore_sale dt {
+	margin-right: 7px;
+	padding: 0 5px;
+	width: 113px;
+	height: 18px;
+	line-height: 18px;;
+	text-align: center;
+	border-radius: 9px;
+	display: inline-block;
+	background: #f5f5f5;
+	vertical-align: top;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.newOpenStore .newOpen_info .infoSec .newOpenStore_sale dd {
+	width: 55%;
+	display: inline-block;
+	line-height: 1.6;
+}
+
+.newOpenStore .newOpen_info .infoSec .newOpenStore_sale .noSaleTxt {
+	margin-top: 11px;
+	font-size: 11px;
+	color: #555555;
+	line-height: 13px;
+}
+
+.newOpenStore .newOpen_sl {
+	width: 352px;
+	height: 211px;
+	padding-top: 36px;
+	float: left;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+}
+
+.newOpenStore .newOpen_sl .newOpenStore_txt {
+	font-size: 13px;
+	color: #555555;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 0;
+}
+
+.newOpenStore .newOpen_sl .newOpen_slBox {
+	margin: 0 30px;
+}
+
+.newOpenStore .newOpen_sl .circleSl {
+	margin-top: 13px;
+}
+
+.newOpenStore .newOpen_sl .circleSl li {
+	text-align: center;
+}
+
+.newOpenStore .newOpen_sl .circleSl li .img {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/newOpen_bg.png")
+		no-repeat center #f2f2f2;
+	background-size: 48px auto;
+}
+
+.newOpenStore .newOpen_sl .circleSl li .img img {
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+}
+
+.newOpenStore .newOpen_sl .circleSl li .txt {
+	margin-top: 2px;
+	width: 95px;
+	height: 20px;
+	isplay: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 12px;
+	color: #333333
+}
+
+.newOpenStore .newOpen_sl .slick-arrow {
+	width: 100%;
+	position: absolute;
+	top: 14px;
+	width: 40px;
+	height: 40px
+}
+
+.newOpenStore .newOpen_sl .slick-arrow.slick-arrow.slick-disabled {
+	opacity: 0;
+}
+
+.newOpenStore .newOpen_sl .slick-arrow.slick-prev {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_arrow_left_circle.png")
+		no-repeat center;
+	background-size: 12px auto;
+	left: -25px;
+	opacity: 1;
+}
+
+.newOpenStore .newOpen_sl .slick-arrow.slick-next {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_arrow_right_circle.png")
+		no-repeat center;
+	background-size: 12px auto;
+	right: -25px
+}
+
+/* �긽�뭹�긽�꽭 �떎�떆媛� */
+.viewArea {
+	margin-top: 4px;
+}
+
+.viewArea>span {
+	padding-left: 25px;
+	display: inline-block;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_viewEye.png")
+		no-repeat center left 4px;
+	background-size: 18px auto;
+	font-size: 13px;
+	color: #f27370;
+	letter-spacing: 0;
+	line-height: 15px;
+}
+
+.viewArea span .viewNum {
+	font-weight: 700;
+	display: inline-block;
+	vertical-align: initial;
+}
+
+.tab_subTtl {
+	position: relative;
+}
+
+.tab_subTtl .refreshBtn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: #fff;
+}
+
+.tab_subTtl .refreshBtn .refreshTxt {
+	padding-right: 20px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_refresh_circle_17.png")
+		no-repeat center right;
+	background-size: 17px auto;
+	color: #888888;
+	font-size: 14px;
+	letter-spacing: 0;
+	font-weight: 300;
+	line-height: 16px;
+}
+
+/* 踰좎뒪�듃 �떎�떆媛� �옲�궧 */
+.comm5sTabs.tabN3 li {
+	width: 33.3%;
+	border-left: 1px solid #e6e6e6;
+}
+
+.comm5sTabs.tabN3 li:first-child {
+	border: 0
+}
+
+.comm5sTabs.tabN3 li.on {
+	border: 0;
+}
+
+.tab_subTtl {
+	font-size: 24px;
+	font-weight: 700;
+	color: #000;
+	letter-spacing: 0;
+	line-height: 26px;
+}
+
+.best_liveSm {
+	margin-top: 27px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.best_liveSm .tab_subTtl {
+	padding: 10px 0;
+}
+
+.liveSm_tab {
+	position: absolute;
+	top: 18px;
+	right: -2px;
+}
+
+.liveSm_tab:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.liveSm_tab li {
+	padding: 0 12px;
+	float: left;
+	position: relative;
+}
+
+.liveSm_tab li a {
+	font-size: 14px;
+	color: #888888;
+	letter-spacing: 0;
+}
+
+.liveSm_tab li.on a {
+	color: #f27370;
+	font-weight: 700;
+}
+
+.liveSm_tab li+li:after {
+	content: '';
+	display: block;
+	width: 1px;
+	height: 14px;
+	margin-top: -7px;
+	border-left: 2px solid #d8d8d8;
+	position: absolute;
+	left: 0;
+	top: 50%
+}
+
+.liveSm_sl .liveSm_slList {
+	margin-top: 10px;
+	padding-bottom: 12px;
+}
+
+.liveSm_sl .liveSm_slList li {
+	position: relative;
+}
+
+.liveSm_sl .liveSm_slList li a {
+	height: 140px;
+	display: table;
+	padding-right: 150px;
+}
+
+.liveSm_sl .liveSm_slList li a .infoBox {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.liveSm_sl .slick-arrow {
+	position: absolute;
+	top: 69px;
+	z-index: 10;
+}
+
+.liveSm_sl .slick-arrow.slick-prev {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_arrowLeft_live.png")
+		no-repeat center;
+	background-size: 10px auto;
+	left: -45px;
+}
+
+.liveSm_sl .slick-arrow.slick-next {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_arrowRight_live.png")
+		no-repeat center;
+	background-size: 10px auto;
+	right: -45px;
+}
+
+.liveSm_sl .img {
+	width: 140px;
+	height: 140px;
+	margin: 0 auto;
+	position: absolute;
+	top: 18px;
+	right: 18px;
+	text-align: center;
+}
+
+.liveSm_sl .img:before {
+	content: '';
+	display: block;
+	width: 140px;
+	height: 140px;
+	background-color: rgba(0, 0, 0, 0.03);
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.liveSm_sl .img img {
+	width: auto;
+	max-width: 100%;
+	height: 100%;
+}
+
+.liveSm_sl .rating {
+	margin-top: 4px
+}
+
+.liveSm_sl .rating .point {
+	padding-left: 15px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_star_one.png")
+		no-repeat center left;
+	background-size: 13px auto;
+	font-size: 13px;
+	color: #555555;
+}
+
+.liveSm_sl .text {
+	margin-top: 6px;
+	height: 40px;
+	display: block;
+	font-size: 14px;
+	letter-spacing: -0.2px;
+	color: #333333;
+	line-height: 20px;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.liveSm_sl .viewArea {
+	margin-top: 12px;
+	margin-bottom: 7px;
+	font-weight: 700;
+}
+
+.liveSm_sl .viewArea span {
+	font-size: 12px;
+	line-height: 17px;
+}
+
+.liveSm_sl .viewArea>span {
+	height: 20px;
+	padding-right: 5px;
+	padding-left: 24px;
+	border: 1px solid #f27370;
+	border-radius: 10px;
+}
+
+.liveSm_sl .buyArea {
+	margin-top: 13px;
+	margin-bottom: 9px;
+}
+
+.liveSm_sl .buyArea span {
+	letter-spacing: 0;
+	font-weight: 700;
+	color: #f27370;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.liveSm_sl .buyArea>span {
+	padding: 0 7px;
+	height: 20px;
+	display: inline-block;
+	border: 1px solid #f27370;
+	border-radius: 20px;
+	letter-spacing: 0;
+}
+
+.liveSm_sl .buyArea strong {
+	margin-right: 4px;
+	letter-spacing: 0;
+}
+
+.liveSm_sl .slick-dots {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.liveSm_sl .slick-dots li {
+	display: inline-block;
+}
+
+.liveSm_sl .slick-dots li button {
+	width: 24px;
+	height: 24px;
+	line-height: 22px;
+	border-radius: 50%;
+	overflow: hidden;
+	background: #ffffff;
+	color: #888888;
+	font-size: 14px;
+}
+
+.liveSm_sl .slick-dots li.slick-active button {
+	background: #2f3030;
+	color: #fff;
+}
+
+.common-menu .tab_subTtl {
+	margin: 35px auto 22px;
+}
+
+.liveSm_sl .liveSm_slList .slick-list {
+	margin-left: -15px;
+}
+
+.liveSm_sl .liveSm_slList .slick-list li {
+	height: 176px;
+	padding: 18px;
+	border-radius: 6px;
+	border: solid 1px #e8e8e8;
+	position: relative;
+	margin-left: 15px;
+}
+
+.liveSm_option {
+	text-align: center;
+}
+
+.liveSm_option .liveSm_refresh {
+	display: inline-block;
+	height: 17px;
+	padding-right: 20px;
+	background: #ffffff;;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_refresh_circle_17.png")
+		no-repeat center right;
+	background-size: 17px auto;
+}
+
+.liveSm_option .liveSm_refresh span {
+	font-size: 14px;
+	line-height: 16px;
+	color: #666666;
+	letter-spacing: 0;
+	font-weight: 400;
+}
+
+.liveSm_btnArea {
+	margin-left: 8px;
+	width: 17px;
+	height: 17px;
+	position: relative;
+	display: inline-block;
+}
+
+.liveSm_btnArea .liveSmBtn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 17px;
+	height: 17px;
+	vertical-align: middle;
+	z-index: 0;
+}
+
+.liveSm_btnArea .liveSm_start {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_livesm_play.png")
+		no-repeat center #fff;
+	background-size: 17px auto;
+	z-index: 0;
+}
+
+.liveSm_btnArea .liveSm_stop {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_livesm_pause.png")
+		no-repeat center #fff;
+	background-size: 17px auto;
+	z-index: 1;
+}
+
+.liveSm_btnArea.stop .liveSm_start {
+	z-index: 1;
+}
+
+.liveSm_btnArea.stop .liveSm_stop {
+	z-index: 0;
+}
+
+.prd_name .viewArea {
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.prd_name .viewNum {
+	font-weight: 400;
+}
+
+.prd_name .viewArea>span {
+	padding-left: 21px;
+	background-position: center left;
+}
+
+/* 由щ럭 */
+.reviewCate {
+	min-height: 56px;
+	padding: 18px 0px;
+	background-color: #f5f5f5;
+}
+
+.reviewCate ul {
+	padding: 0px 30px;
+	background-color: #f5f5f5;
+}
+
+.reviewCate ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.reviewCate li {
+	float: left;
+	position: relative;
+	padding: 0 10px;
+}
+
+.reviewCate li a {
+	color: #888888;
+	letter-spacing: 0;
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	position: relative;
+}
+
+.reviewCate li:first-child {
+	padding-left: 0;
+}
+
+.reviewCate li:after {
+	content: '';
+	display: block;
+	width: 1px;
+	height: 14px;
+	margin-top: -7px;
+	border-left: 1px solid #dddddd;
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+
+.reviewCate li.on a {
+	color: #0cc7b8;
+	display: inline-block;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+.reviewCate li.on a:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	border-top: 1px solid #0cc7b8;
+	position: absolute;
+	bottom: -2px;
+}
+
+.reviewCate li:first-child:after {
+	display: none;
+}
+
+.renew .review_cont .txt_inner span.highlight {
+	background-color: rgba(88, 193, 180, 0.3);
+}
+
+/* �뼱�뱶諛붿씠�� */
+.forYou_Wrap {
+	margin-top: 50px;
+}
+
+.forYou_Wrap .ttlBox {
+	position: relative;
+}
+
+.forYou_Wrap .moreBtn {
+	position: absolute;
+	bottom: 5px;
+	right: 0px;
+	background: #fff;
+}
+
+.forYou_Wrap .moreBtn span {
+	position: relative;
+	padding-right: 13px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_foryou_more.png")
+		no-repeat center right 0px;
+	background-size: 7px auto;
+	font-size: 14px;
+	font-weight: 500;
+	color: #555555;
+}
+
+.forYou_Wrap .foryouTtl {
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: 0;
+	color: #000000;
+	font-weight: 700;
+}
+
+.forYou_Wrap .foryouTtl strong {
+	color: #f27370;
+}
+
+.forYou_Wrap .brand_tab .brand_more {
+	font-size: 16px;
+	text-align: center;
+	border-top: 1px solid #ddd
+}
+
+.forYou_Wrap .brand_tab .brand_more>a {
+	display: inline-block;
+	width: 340px;
+	margin: 0 auto;
+	line-height: 40px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	color: #666;
+	white-space: nowrap;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+
+.forYou_Wrap .brand_tab .brand_more>a>span {
+	color: #9bce26
+}
+
+.forYou_Wrap .brand_tab .brand_more>a:after {
+	content: '';
+	display: inline-block;
+	width: 10px;
+	height: 16px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_brand_more.png")
+		no-repeat top 5px right 0px;
+	background-size: 4px auto;
+}
+
+.forYou_Wrap .slick-dots {
+	position: absolute;
+	top: -47px;
+	right: 0;
+	overflow: hidden
+}
+
+.forYou_Wrap .slick-dots li {
+	display: inline-block;
+}
+
+.forYou_Wrap .slick-dots button {
+	float: left;
+	display: inline-block;
+	color: #666;
+	width: 24px;
+	height: 24px;
+	background: none;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	font-weight: 700
+}
+
+.forYou_Wrap .slick-dots .slick-active button {
+	color: #fff;
+	background: #2f3030;
+	border-radius: 12px
+}
+
+.forYou_Wrap .slick-arrow {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px
+}
+
+.forYou_Wrap .slick-arrow.slick-prev {
+	left: -29px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_foryou_prev.png")
+		no-repeat center;
+	background-size: 8px auto;
+}
+
+.forYou_Wrap .slick-arrow.slick-next {
+	right: -29px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_foryou_next.png")
+		no-repeat center;
+	background-size: 8px auto;
+}
+
+.forYou_Wrap .curation_area {
+	margin-top: 0;
+	height: auto
+}
+
+.forYou_Wrap .curation_area .curation_slide {
+	margin-top: 0;
+	width: 1020px;
+}
+
+.forYou_Wrap .curation_slide .slide_list li {
+	padding: 0 20px
+}
+
+.forYou_Wrap .curation_slide .slide_list li .thumImg {
+	position: relative;
+}
+
+.forYou_Wrap .curation_slide .slide_list li .thumImg:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.03);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0;
+	bottom: 0;
+}
+
+.forYou_Wrap .curation_slide .slide_list .slick-arrow {
+	top: 33%
+}
+
+.forYou_Wrap .curation_slide .slide_list .slick-arrow.slick-prev {
+	left: -43px
+}
+
+.forYou_Wrap .curation_slide .slide_list .slick-arrow.slick-next {
+	right: -43px;
+}
+
+.forYou_Wrap .btn_zzim {
+	position: absolute;
+	top: 175px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #ebebeb;
+	text-indent: -999999px;
+	font-size: 0;
+	background: #fff
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_zzim.png")
+		no-repeat 50% 50%;
+}
+
+.forYou_Wrap .forYou_bdBox .btn_zzim {
+	right: 0
+}
+
+.forYou_Wrap .btn_zzim.on {
+	background: #fff
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_zzim_on.png")
+		no-repeat 50% 50%;
+}
+
+.forYou_Wrap .curation_area .slide_list .btnbag {
+	right: 30px;
+}
+
+.forYou_Wrap .forYou_bdBox .curation_area .slide_list .btnbag {
+	right: 10px
+}
+
+.adviser_Wrap {
+	border-bottom: 2px solid #dddddd;
+	margin-top: 0px
+}
+
+.adviser_Wrap:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.adviser_Wrap .typeBox, .adviser_Wrap .graphArea {
+	float: left;
+}
+
+.adviser_Wrap>.inner:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.adviser_Wrap .typeBox {
+	padding: 32px 10px 26px;
+	width: 508px
+}
+
+.adviser_Wrap .graphArea {
+	width: 512px;
+	position: relative;
+}
+
+.adviser_Wrap .typeBox .typeSec {
+	position: relative;
+	min-height: 130px;
+}
+
+.inImg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: auto;
+	min-height: 130px;
+	z-index: 2;
+}
+
+.groupSeg1 {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/groupStart.png")
+		no-repeat top 10px left 9px;
+	background-size: 91px auto;
+}
+
+.groupSeg2 {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/groupSale.png")
+		no-repeat top 10px left 6px;
+	background-size: 99px auto;
+}
+
+.groupSeg3 {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/groupNew.png")
+		no-repeat top 18px left -6px;
+	background-size: 112px auto;
+}
+
+.groupSeg4 {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/groupbest.png")
+		no-repeat top 7px left -2px;
+	background-size: 110px auto;
+}
+
+.groupSeg5 {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/groupLike.png")
+		no-repeat top 28px left -3px;
+	background-size: 105px auto;
+}
+
+.adviser_Wrap .typeBox .infoArea {
+	padding: 20px 0px 26px 130px;
+	min-height: 141px
+}
+
+.adviser_Wrap .typeBox .infoArea .infoTtl {
+	font-size: 24px;
+	color: #333333;
+	line-height: 32px;
+}
+
+.adviser_Wrap .typeBox .infoArea .infoCm {
+	margin-top: 5px;
+	position: relative;
+	display: block;
+	z-index: 7;
+}
+
+.adviser_Wrap .typeBox .infoArea .infoCm>span {
+	display: inline-block;
+	font-size: 24px;
+	font-weight: 700;
+	color: #222222;
+	line-height: 26px;
+}
+
+.adviser_Wrap .toolTipArea {
+	height: 26px;
+	vertical-align: bottom;
+	display: inline-block;
+	position: relative;
+	text-indent: 0;
+}
+
+.adviser_Wrap .toolTipBox {
+	display: none;
+	text-indent: 0;
+	padding: 15px;
+	position: absolute;
+	top: 31px;
+	left: 4px;
+	z-index: 9;
+	border: 1px solid #aaaaaa;
+	background-color: #fff;
+	font-size: 14px;
+	letter-spacing: 0;
+	line-height: 20px;
+	color: #888888;
+	font-weight: 400;
+	letter-spacing: 0;
+}
+
+.adviser_Wrap .toolTipArea.on .toolTipBox {
+	display: block
+}
+
+.adviser_Wrap .toolTipInner {
+	letter-spacing: 0;
+	width: max-content;
+	white-space: nowrap
+}
+
+.adviser_Wrap .toolTipBox strong {
+	color: #888888;
+	letter-spacing: 0;
+	display: inline-block;
+	vertical-align: bottom;
+	max-width: 180px;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.adviser_Wrap .typeBox .infoArea .infoCm .advPopBtn {
+	width: 20px;
+	height: 26px;
+	margin-left: 4px;
+	display: inline-block;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_advInfo.png")
+		no-repeat center left 1px;
+	background-size: 18px auto;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	vertical-align: bottom;
+}
+
+.advBtn {
+	margin: 0 10px;
+	width: 419px;
+	height: 80px;
+	padding: 0 46px;
+	border-radius: 50.3px;
+	border: solid 1px #aaaaaa;
+	color: #333333;
+	text-align: left;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_arrow_advBtn.png")
+		no-repeat center right 36px #ffffff;
+	background-size: 12px auto;
+	font-size: 18px;
+	line-height: 21.3px;
+	font-weight: 400;
+}
+
+.advBtn .topTxt {
+	margin-top: -2px;
+}
+
+.advBtn .botTxt {
+	margin-top: 1px;
+	position: relative;
+	display: inline-block;
+}
+
+.advBtn .botTxt strong {
+	display: inline-block;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.advBtn .advMsg {
+	height: 26px;
+	margin-left: 6px;
+	padding: 0 7px 0 26px;
+	display: inline-block;
+	border-radius: 15.2px;
+	border: solid 1px #e5e5e5;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_alarm_advMsg.png")
+		no-repeat center left 5px;
+	background-size: 18px auto;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0;
+	line-height: 26px;
+}
+
+.adviser_Wrap.trans1>.inner {
+	position: relative
+}
+
+.adviser_Wrap.trans1 .typeBox .typeSec {
+	position: inherit
+}
+
+.adviser_Wrap.trans1 .inImg {
+	top: 50%;
+	bottom: inherit;
+	transform: translateY(-50%);
+	z-index: 1
+}
+
+.adviser_Wrap.trans1 .typeBox .infoArea {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 11
+}
+
+.toppickSL {
+	margin-top: 15px;
+	margin-left: -15px;
+}
+
+.toppickSL .slick-slide {
+	padding-left: 15px;
+}
+
+.toppickSL .slick-slide:first-child {
+	margin-left: 0px;
+}
+
+.toppickSL .slick-slide a {
+	padding: 18px;
+	border-radius: 5px;
+	border: solid 1px #e5e5e5;
+	display: block;
+	height: 176px;
+	width: 100%
+}
+
+.toppickSL .slick-slide a>div {
+	float: left;
+}
+
+.toppickSL .infoSec {
+	width: 144px;
+	font-weight: 500;
+}
+
+.toppickSL .infoSec span {
+	font-weight: 500;
+}
+
+.toppickSL .slick-slide:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.toppickSL .infoSec {
+	height: 100%;
+	padding-top: 17px;
+	font-size: 16px;
+	color: #222222;
+	letter-spacing: 0;
+	font-weight: 500;
+	line-height: 16px;
+}
+
+.toppickSL .infoSec .ttlNum span {
+	font-weight: 400;
+}
+
+.toppickSL .infoSec .tpdTtl {
+	margin-top: 10px;
+	color: #555555;
+	font-weight: 400;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	word-break: keep-all;
+	-webkit-line-clamp: 1;
+}
+
+.toppickSL .infoSec .pdTxt {
+	margin-top: 10px;
+	height: 50px;
+	overflow: hidden;
+	line-height: 25px;
+	font-size: 17px;
+	font-weight: 500;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-break: keep-all;
+}
+
+.toppickSL .img {
+	margin-left: 8px;
+	width: 140px;
+	height: 140px;
+	position: relative;
+	text-align: center;
+}
+
+.toppickSL .img:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.03);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0;
+	bottom: 0;
+}
+
+.toppickSL .img img {
+	width: auto;
+	height: 100%;
+	max-width: 140px;
+	max-height: 140px;
+}
+
+.forYou_Wrap .toppickSL .slick-arrow.slick-next {
+	right: -44px;
+}
+
+.forYou_Wrap .forYou_bdCd {
+	background: #f3f4f7;
+	padding-bottom: 50px;
+	height: 289px;
+}
+
+.forYou_Wrap .forYou_bdCd .bdCdInner {
+	padding-bottom: 50px;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	background: #f3f4f7;
+	z-index: 0;
+	height: 289px;
+	min-width: 1020px;
+	overflow: hidden;
+}
+
+.forYou_Wrap .forYou_bdCd .ttlBox {
+	text-align: center;
+}
+
+.forYou_Wrap .forYou_bdCd .ttlBox .foryouTtl {
+	padding-top: 50px;
+	margin-bottom: 23px;
+}
+
+.forYou_Wrap .forYou_bdCd .circleSl {
+	font-size: 0;
+	width: 1020px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.forYou_Wrap .forYou_bdCd .circleSl:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.forYou_Wrap .forYou_bdCd .circleSl li {
+	position: relative;
+	margin-left: 20px;
+	width: 110px;
+	height: 110px;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+.forYou_Wrap .forYou_bdCd .circleSl li:first-child {
+	margin-left: 0;
+}
+
+.forYou_Wrap .forYou_bdCd .circleSl li .img {
+	width: 110px;
+	height: 110px;
+	position: relative;
+	background: #ffffff;
+	background-size: contain;
+	display: block;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.forYou_Wrap .forYou_bdCd .circleSl li .img img {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.forYou_Wrap .forYou_bdCd .circleSl li .txt {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: 0;
+	color: #333;
+	white-space: unset;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	word-break: break-word;
+	-webkit-line-clamp: 1;
+}
+
+.forYou_Wrap .forYou_bdCd .circleSl li a:after {
+	content: '';
+	display: block;
+	width: 115px;
+	height: 115px;
+	position: absolute;
+	top: -2.5px;
+	left: -2.5px;
+	border-radius: 50%;
+	border: 2.5px solid rgba(0, 0, 0, 0);
+	box-sizing: border-box;
+}
+
+.forYou_Wrap .forYou_bdCd .circleSl li.on a:after {
+	content: '';
+	display: block;
+	width: 115px;
+	height: 115px;
+	position: absolute;
+	top: -2.5px;
+	left: -2.5px;
+	border-radius: 50%;
+	border: 2.5px solid #9bce26;
+	box-sizing: border-box;
+}
+
+.forYou_Wrap .brand_like {
+	margin: 0px;
+	padding: 22px 0 21px
+}
+
+.forYou_Wrap .brand_like a {
+	display: block;
+	padding: 0px;
+	text-align: center;
+}
+
+.forYou_Wrap .brand_like .brand {
+	display: inline-block;
+	font-size: 18px;
+	line-height: 27px;
+	color: #777;
+	font-weight: 500;
+}
+
+.forYou_Wrap .brand_like .brand span {
+	font-weight: 500
+}
+
+.forYou_Wrap .brand_like .brand .icon {
+	display: inline-block;
+	padding-left: 32px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/icon_like_brd_off.png")
+		no-repeat 0 50%;
+	background-size: 27px auto;
+	letter-spacing: 0;
+	font-weight: 500;
+}
+
+.forYou_Wrap .brand_like .on .brand .icon {
+	display: inline-block;
+	padding-left: 32px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/icon_like_brand.png")
+		no-repeat 0 50%;
+	background-size: 27px auto;
+}
+
+.forYou_Wrap .brand_tab {
+	text-align: center;
+}
+
+.forYou_Wrap .brand_tab.trans1 { /*margin-left:20px;*/
+	text-align: left
+}
+
+.forYou_Wrap .brand_tab .curation_area {
+	display: inline-block; /*margin:0 auto;*/
+	margin-left: 20px;
+}
+
+.forYou_Wrap .brand_tab .curation_area .slide_list>li {
+	margin-left: 40px;
+	padding: 0
+}
+
+.forYou_Wrap .brand_tab .curation_area .slide_list>li:first-of-type {
+	margin-left: 0;
+}
+
+.forYou_Wrap .curation_topInfo {
+	margin: 0 auto 20px;
+	background-color: #f5f5f5;
+	position: relative;
+	border-radius: 5px;
+	padding: 19px 25px 12px;
+}
+
+.forYou_Wrap.adviser_Wrap .curation_topInfo {
+	margin-bottom: 40px;
+}
+
+.forYou_Wrap .curation_topInfo .curation_recomendBox {
+	padding: 0;
+	margin-top: 0;
+	overflow: hidden;
+}
+
+.forYou_Wrap .curation_topInfo .curation_recomendBox .subTtl {
+	font-size: 18px;
+	color: #555555;
+	font-weight: 500;
+	padding-bottom: 8px;
+	padding-right: 50px;
+}
+
+.forYou_Wrap .curation_topInfo .curation_recomendBox .tagList_box {
+	overflow: hidden;
+}
+
+.forYou_Wrap .curation_topInfo .curation_recomendBox .tagList {
+	margin-left: -10px;
+	margin-top: 2px;
+	padding-right: 145px;
+}
+
+.forYou_Wrap .curation_topInfo .curation_recomendBox .tagList li {
+	color: #666666;
+	padding: 0 10px;
+	margin: 2px 0;
+	margin-bottom: 8px;
+	line-height: 17px;
+}
+
+.forYou_Wrap .curation_topInfo .curation_recomendBox .tagList li:after {
+	top: 3px;
+	margin: 0
+}
+
+.forYou_Wrap .curation_topInfo .curation_recomendBox .tagBtn {
+	padding-right: 16px;
+	letter-spacing: 0;
+	line-height: 17px;
+	font-weight: 500;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_profile_arrow.png")
+		no-repeat center right;
+	background-size: 7px auto;
+	top: 2px;;
+	right: 25px;
+}
+
+.forYou_Wrap .curation_topInfo .curation_recomendBox .tagList+.tagBtn {
+	top: 35%
+}
+
+.liveRk_cateList {
+	margin: -10px 0 20px;
+	margin-left: -5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.liveRk_cateList:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.liveRk_cateList li {
+	margin-left: 5px;
+	text-align: center;
+	float: left;
+	margin-top: 10px
+}
+
+.liveRk_cateList li a {
+	height: 40px;
+	padding: 0 27.5px;
+	border-radius: 20px;
+	border: 1px solid #bbbbbb;
+	color: #888888;
+	font-size: 16px;
+	display: inline-block;
+	line-height: 40px;
+	letter-spacing: -0.55px;
+}
+
+.liveRk_cateList li.on a {
+	border: 1px solid #9bce26;
+	color: #ffffff;
+	font-weight: 700;
+	border: 1px solid #9bce26;
+	background: #9bce26;
+}
+
+.forYou_Wrap .shap_tag_box {
+	
+}
+
+.forYou_Wrap .shap_tag_box .inner {
+	padding: 5px 0 6px 0;
+}
+
+.forYou_Wrap .shap_tag_box .inner>li {
+	display: inline-block;
+	padding: 0 30px 15px 0;
+}
+
+.forYou_Wrap .shap_tag_box .inner>li a {
+	display: inline-block;
+	font-size: 18px;
+	color: #888;
+}
+
+.forYou_Wrap .shap_tag_box .inner>li.on a {
+	font-size: 18px;
+	color: #9bce26;
+	font-weight: 700;
+	border-bottom: #9bce26 1px solid
+}
+
+.forYou_Wrap .shap_tag_box.hotkey .inner {
+	padding: 5px 0 16px 0;
+}
+
+.forYou_Wrap .helfRv_sl {
+	padding-top: 10px;
+}
+
+.forYou_Wrap .helfRv_sl .slick-arrow.slick-next {
+	right: -41px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_list {
+	padding: 0 15px;
+}
+
+.forYou_Wrap .helfRv_sl .slick-slide {
+	margin: 0 15px;
+	padding: 19px;
+	height: 440px;
+	border: solid 1px #ffffff;
+	border-radius: 5px;
+}
+
+.forYou_Wrap .helfRv_sl .slick-slide.slick-active {
+	border: solid 1px #dddddd;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd {
+	display: table;
+	width: 100%;
+	height: 85px
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner {
+	display: table-cell;
+	vertical-align: middle;
+	position: relative;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .vitem {
+	position: absolute;
+	top: 0;
+	left: 0;;
+	width: 95px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .thum {
+	width: 95px;
+	height: 95px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .thum:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.03);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0;
+	bottom: 0;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .thum img {
+	width: 100%;
+	height: 100%;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .opt {
+	padding-left: 105px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .opt .text {
+	margin-top: 3px;
+	max-height: 40px;
+	font-size: 14px;
+	letter-spacing: -0.22px;
+	line-height: 20px;
+	color: #333333;
+	font-weight: 500;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	word-break: keep-all;
+	text-align: left;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .opt .optionBox {
+	margin-top: 5px;
+	position: relative;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .opt .optionBox span {
+	font-size: 14px;
+	letter-spacing: 0;
+	color: #666666;
+	line-height: 16px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .opt .optionBox .optionName {
+	padding-left: 37px;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	word-break: break-word;
+	-webkit-line-clamp: 1;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .opt .optionBox span:first-child
+	{
+	padding-right: 5px;
+	margin-right: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .inner .opt .optionBox span:first-child:after
+	{
+	content: '';
+	display: block;
+	width: 1px;
+	height: 10px;
+	margin-top: -5px;
+	border-right: 1px solid #d8d8d8;
+	position: absolute;
+	right: 0;
+	top: 50%;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item a {
+	display: table;
+	width: 100%;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .thum {
+	display: table-cell;
+	position: relative;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .thum img {
+	max-width: 100px;
+	width: auto;
+	max-height: 100px;
+	height: auto;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info {
+	position: relative;
+	padding: 0 0 0 15px;
+	min-height: 100px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .bn {
+	margin-bottom: 4px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #777;
+	font-weight: 700;
+	letter-spacing: -0.2px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .txt {
+	font-size: 13px;
+	line-height: 16px;
+	color: #333;
+	font-weight: 500;
+	letter-spacing: -0.2px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	max-height: 40px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .price {
+	font-weight: 500;
+	letter-spacing: -0.2px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .price del {
+	margin-right: 11px;
+	font-size: 14px;
+	color: #b5b5b5;
+	vertical-align: 1px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .price del .won {
+	font-size: 12px;
+	color: #b5b5b5;
+	vertical-align: 1px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .price em {
+	font-style: normal;
+	font-size: 19px;
+	color: #e02020;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .price em .won {
+	font-size: 14px;
+	color: #e02020;
+	vertical-align: 1px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .prod-func {
+	text-align: right;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .prod-func button {
+	width: 20px;
+	height: 20px;
+	font-size: 0;
+	background-color: transparent;
+	margin-top: -3px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .prod-func .favorite::before
+	{
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/brand/icon_wish_36.png")
+		no-repeat center center;
+	background-size: 18px auto;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .prod-func .favorite.on::before
+	{
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/icon_my_see2.png")
+		no-repeat center center
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .prod-func .cart {
+	margin-left: 4px
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .prod-func .cart::before
+	{
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/brand/icon_sb_30.png")
+		no-repeat center center;
+	background-size: 15px auto;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .prod-name {
+	overflow: hidden;
+	display: block;
+	letter-spacing: -0.2px;
+	max-height: 36px;
+	-webkit-box-orient: vertical;
+	line-height: 16px;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	color: #333;
+	font-size: 13px;
+	font-weight: 500
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .discount {
+	height: 18px
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .rate-of {
+	font-size: 12px;
+	line-height: 14px;
+	color: #e02020;
+	margin-right: 5px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .origin {
+	font-size: 12px;
+	line-height: 14px;
+	color: #888;
+	text-decoration: line-through
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .price {
+	margin-top: 3px;
+	height: 24px;
+	color: #000;
+	font-weight: 500
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .price .total {
+	font-size: 17px;
+	line-height: 19px;
+	font-weight: 500;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .price .total .won {
+	font-size: 18px;
+	font-weight: 700;
+	vertical-align: 1px;
+}
+
+.forYou_Wrap .helfRv_sl .helfRv_pd .item .info .oneday {
+	display: inline-block;
+	margin-left: 5px;
+	padding-left: 18px;
+	font-size: 10px;
+	color: #e95294;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/icon_onedayX2.png")
+		no-repeat left center;
+	background-size: 17px auto;
+	vertical-align: 1px
+}
+
+.forYou_Wrap .helfRv_sl .info_list {
+	margin-top: 19px;
+	padding-top: 21px;
+	position: relative;
+}
+
+.forYou_Wrap .helfRv_sl .info_list:after {
+	content: '';
+	display: block;
+	width: 260px;
+	border-top: 2px dashed #cfcfcf;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+
+.forYou_Wrap .helfRv_sl .info_list .userThum {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.forYou_Wrap .helfRv_sl .info_list .userThum img {
+	width: 100%;
+	height: 100%
+}
+
+.forYou_Wrap .helfRv_sl .info_list .info_user {
+	display: block;
+	left: 48px;
+	height: auto;
+}
+
+.forYou_Wrap .helfRv_sl .info_list .info_user .id {
+	font-size: 15px;
+	color: #000000;
+	letter-spacing: 0;
+	display: block;
+	font-weight: 500;
+}
+
+.forYou_Wrap .helfRv_sl .info_list .date {
+	margin-left: 11px;
+	padding-left: 10px;
+	font-size: 14px;
+	font-weight: 300;
+	color: #888888;
+	display: inline-block;
+	position: relative;
+	line-height: 16px;
+}
+
+.forYou_Wrap .helfRv_sl .info_list .date:after {
+	content: '';
+	display: block;
+	width: 2px;
+	height: 2px;
+	margin-top: -1px;
+	background: #cccccc;
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+
+.forYou_Wrap .helfRv_sl .info_list .review_point {
+	width: 87px;
+	background-size: 87px auto;
+	vertical-align: middle;
+}
+
+.forYou_Wrap .helfRv_sl .info_list .review_point .point {
+	background-size: 87px auto;
+}
+
+.forYou_Wrap .renew .review_thum {
+	position: relative;
+	border-bottom: 0
+}
+
+.forYou_Wrap .review_thum ul.inner>li a>span>img {
+	height: 100%
+}
+
+.forYou_Wrap .renew .review_thum ul.inner {
+	width: 300px;
+	height: 85px;
+	overflow: hidden;
+}
+
+.forYou_Wrap .renew .review_thum ul.inner>li {
+	width: 85px;
+	height: 85px;
+	margin-left: 3px
+}
+
+.forYou_Wrap .renew .review_thum ul.inner>li:first-child {
+	margin-left: 0;
+}
+
+.forYou_Wrap .renew .review_thum ul.inner>li a>span {
+	width: 85px;
+	height: 85px
+}
+
+.forYou_Wrap .renew .review_thum {
+	padding: 15px 0;
+}
+
+.forYou_Wrap .renew .review_thum .thumSum {
+	min-width: 29px;
+	height: 16px;
+	border-radius: 8px;
+	background-color: rgba(51, 51, 51, 0.6);
+	position: absolute;
+	top: 20px;
+	right: 5px
+}
+
+.forYou_Wrap .renew .review_thum .thumSum>div {
+	padding: 1px 5px;
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: 500;
+	letter-spacing: normal;
+}
+
+.helfRv_list .txt_inner {
+	margin-top: 14px;
+	max-height: 110px;
+	line-height: 22px;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	word-break: break-word;
+	text-align: left;
+}
+
+/* 硫붿꽭吏� �쁺�뿭 */
+.w850 {
+	width: 850px;
+}
+
+.layer_pop_wrap .layer_cont4.advPop {
+	padding: 30px 0px;
+}
+
+.layer_pop_wrap .advPop .layer_title4 {
+	margin: 0 30px;
+	padding: 0 0 15px;
+}
+
+.advMsgArea {
+	max-height: 784px;
+	position: relative;
+}
+
+.advMsgArea:after {
+	content: '';
+	display: block;
+	width: 790px;
+	position: absolute;
+	bottom: 0px;
+	left: 30px;
+	right: 30px;
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.advMsgArea .mCSB_inside>.mCSB_container {
+	margin-right: 0px;
+}
+
+.advMsgArea .mCSB_scrollTools {
+	right: 9px;
+	top: 46px;
+}
+
+.advMsgArea .mCSB_scrollTools .mCSB_draggerRail {
+	width: 5px;
+	background: #f5f5f5;
+}
+
+.advMsgArea .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	width: 5px;
+	background-color: #b8b8b8;
+}
+
+.advMsg {
+	padding: 7px 30px 0px;
+}
+
+.advMsg>li {
+	padding-top: 10px;
+}
+
+.advMsg>li>div {
+	width: 100%;
+	margin-top: 10px;
+	padding-top: 16px;
+	border: 1px solid #bbbbbb;
+	border-radius: 5px;
+	background: #ffffff;
+	position: relative;
+}
+
+.advMsg .advDate {
+	font-size: 16px;
+	color: #666666;
+	letter-spacing: 0;
+}
+
+.advMsg div.act:after {
+	content: '';
+	display: block;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #e02020;
+	position: absolute;
+	top: 18px;
+	left: 15px
+}
+
+.advMsg .advMsgInner {
+	margin: 0 20px;
+	padding: 0 61px 20px 47px;
+	position: relative;
+	cursor: pointer;
+}
+
+.advMsg .adv_type1 .advMsgInner {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_star.png")
+		no-repeat top left;
+	background-size: 39px auto;
+}
+
+.advMsg .adv_type2 .advMsgInner {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_best.png")
+		no-repeat top left;
+	background-size: 39px auto;
+}
+
+.advMsg .adv_type3 .advMsgInner {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_caution.png")
+		no-repeat top left;
+	background-size: 39px auto;
+}
+
+.advMsg .topTtl {
+	font-size: 14px;
+	letter-spacing: 0;
+	font-weight: 700;
+	line-height: 15px;
+}
+
+.advMsg .adv_type1 .topTtl {
+	color: #02c4b5;
+}
+
+.advMsg .adv_type2 .topTtl {
+	color: #9bce26;
+}
+
+.advMsg .adv_type3 .topTtl {
+	color: #f27370;
+}
+
+.advMsg .txt {
+	margin-top: 5px;
+	height: 18px;
+	font-size: 16px;
+	letter-spacing: 0;
+	color: #000000;
+	line-height: 18px;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	word-break: break-word;
+	-webkit-line-clamp: 1;
+}
+
+.advMsg .advArrow {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: -1px;
+	right: -6px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_advMsg_arrowBot.png")
+		no-repeat center;
+	background-size: 18px auto;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.advMsg .advArrow.show {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_advMsg_arrowTop.png")
+		no-repeat center;
+	background-size: 18px auto;
+}
+
+.advShowBox .howAbout {
+	margin: 0 20px;
+	background: #f9f9f9;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.advShowBox .howAbout dl {
+	padding: 0 20px 32px 101px;
+}
+
+.advShowBox .howAbout dt {
+	padding-top: 32px;
+	line-height: 18px;
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+	font-weight: 700;
+}
+
+.advShowBox .howAbout dd {
+	padding-top: 5px;
+	line-height: 24px;
+	font-size: 16px;
+	color: #000000;
+	letter-spacing: 0;
+}
+
+.advShowBox .adv_body {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_body.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_cleansing {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_cleansing.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_default {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_default.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_dermo {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_dermo.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_etc {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_etc.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_food {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_food.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_health {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_health.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_hair {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_hair.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_hygiene {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_hygiene.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_makeup {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_makeup.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_men {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_men.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_perfume {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_perfume.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_pet {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_pet.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_props {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_props.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_recomend {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_recomend.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_skin {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_skin.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advShowBox .adv_baby {
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_baby.png")
+		no-repeat center left 10px;
+	background-size: 80px auto;
+}
+
+.advCategoryBox {
+	margin: 15px 0;
+	min-height: 350px;
+}
+
+.advCategoryBox:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.advCategoryBox .advTtl {
+	margin: 0 auto 15px;
+	width: 100%;
+	height: 52px;
+	font-size: 17px;
+	line-height: 26px;
+	letter-spacing: 0;
+	color: #000000;
+	font-weight: 500;
+	text-align: center;
+	display: table;
+}
+
+.advCategoryBox .advTtl .redTxt {
+	color: #f27370;
+	font-weight: 500;
+}
+
+.advCategoryBox .advTtl>div {
+	display: table-cell;
+	vertical-align: middle;
+	word-break: keep-all;
+}
+
+.advCategoryBox .advCateBlock .advTtl {
+	height: auto;
+	padding: 0 30px;
+	display: block;
+	text-align: left;
+}
+
+.advCategoryBox .advCateBlock .advTtl>div {
+	display: block;
+	word-break: keep-all
+}
+
+.advCategoryBox .advCateLeft, .advCategoryBox .advCateRight {
+	width: 50%;
+	float: left;
+	min-height: 350px;
+}
+
+.advCategoryBox .advCateLeft .advTtl, .advCategoryBox .advCateRight .advTtl
+	{
+	width: 335px;
+}
+
+.advCategoryBox .advCateRight {
+	position: relative;
+}
+
+.advCategoryBox .advCateRight::after {
+	content: '';
+	display: block;
+	width: 1px;
+	height: 100%;
+	border-left: 1px dashed #bbbbbb;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+
+.advCategoryBox .advCateBlock {
+	padding-bottom: 23px;
+}
+
+.advCategoryBox .advCateBlock+.advCateBlock {
+	padding: 15px 0 8px;
+	position: relative;
+}
+
+.advCategoryBox .advCateBlock+.advCateBlock:after {
+	content: '';
+	display: block;
+	width: 730px;
+	height: 1px;
+	border-top: 1px dashed #bbbbbb;
+	position: absolute;
+	top: 0;
+	left: 30px;
+}
+
+.advCategoryBox .curation_area {
+	height: auto;
+	margin-top: 15px;
+	padding: 0 64px 13px;
+	min-height: 282px;
+}
+
+.advCategoryBox .curation_area .curation_slide {
+	margin-top: 0;
+}
+
+.advCategoryBox .curation_area .curation_slide .slick-slider {
+	margin-left: -20px;
+	text-align: center;
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list li.slick-slide
+	{
+	padding: 0;
+	margin-left: 20px;
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .item .thumImg
+	{
+	width: 150px;
+	height: 150px;
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .item .thumImg:after
+	{
+	content: '';
+	display: block;
+	width: 150px;
+	height: 150px;
+	background-color: rgba(0, 0, 0, 0.06);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .item .thumImg>img
+	{
+	max-width: 150px;
+	max-height: 150px;
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .item .prd_name
+	{
+	width: 150px;
+	padding: 0 2px;
+	text-align: center;
+	font-size: 14px;
+	min-height: 38px;
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .item .prd_name .tx_name
+	{
+	height: 38px
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .item .prd_price
+	{
+	width: 150px;
+	height: auto;;
+	margin: 0 auto;
+	padding: 0 2px;
+	line-height: inherit;
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .item .prd_price .tx_org
+	{
+	font-size: 14px;
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .item .prd_price .tx_org+.tx_cur
+	{
+	margin-left: 0px;
+	display: block;
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .item .prd_price .tx_cur>span
+	{
+	font-size: 14px;
+	margin-left: 0px;
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .item .prd_flag
+	{
+	width: 150px;
+	padding: 0;
+	margin-top: 0px
+}
+
+.advCategoryBox .curation_area .curation_slide .slide_list .btnbag {
+	top: inherit;
+	right: 0px;
+	bottom: 23px
+}
+
+.advCategoryBox .btn_zzim {
+	position: absolute;
+	top: 110px;
+	left: 110px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #ebebeb;
+	text-indent: -999999px;
+	font-size: 0;
+	background: #fff
+		url(https://image.oliveyoung.co.kr/pc-static-root/image/comm/ico_zzim.png)
+		no-repeat 50% 50%;
+}
+
+.advCategoryBox .btn_zzim.on {
+	background: #fff
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_zzim_on.png")
+		no-repeat 50% 50%;
+}
+
+.advCategoryBox .slick-arrow {
+	position: absolute;
+	top: 55px;
+	z-index: 1;
+	margin-top: 0px;
+}
+
+.advCategoryBox .slick-arrow.slick-prev {
+	left: -34px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_arrowL.png")
+		no-repeat center;
+	background-size: 8px auto;
+}
+
+.advCategoryBox .slick-arrow.slick-next {
+	right: -53px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_adv_arrowL.png")
+		no-repeat center;
+	background-size: 8px auto;
+	transform: rotate(180deg);
+}
+
+.advCategoryBox .curation_slide .slick-dots {
+	position: absolute;
+	left: 0;
+	top: inherit;
+	right: 0;
+	bottom: -22px;
+	width: 100%;
+	text-align: center;
+}
+
+.advCategoryBox .curation_slide .slick-dots li {
+	height: 6px;
+	overflow: hidden;
+	margin-left: 5px;
+	display: inline-block;
+	float: inherit;
+}
+
+.advCategoryBox .curation_slide .slick-dots li:first-child {
+	margin-left: 0;
+}
+
+.advCategoryBox .curation_slide .slick-dots li button {
+	width: 6px;
+	height: 6px;
+	background-color: #dddddd;
+	border-radius: 6px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.advCategoryBox .curation_slide .slick-dots li.slick-active button {
+	width: 20px;
+	background-color: #9bce26
+}
+
+.advCategoryBox .advCateRight .curation_area {
+	padding: 0 42px 13px;
+}
+
+.advCategoryBox .advCateRight .curation_area .curation_slide .slick-slider
+	{
+	margin-left: -10px;
+}
+
+.advCategoryBox .advCateRight .curation_area .curation_slide .slide_list li.slick-slide
+	{
+	margin-left: 10px;
+}
+
+.advCategoryBox .advCateRight .curation_slide .slick-arrow.slick-prev {
+	left: -35px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.advCategoryBox .advCateRight .curation_slide .slick-arrow.slick-next {
+	right: -40px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.advCategoryBox .advCateRight .curation_slide .slick-dots {
+	bottom: -28px;
+}
+
+.advCategoryBox .advCateRight .slick-slide {
+	opacity: 0
+}
+
+.advCategoryBox .advCateRight .slick-slide.slick-active {
+	opacity: 1
+}
+
+.advCategoryBox .liveRk_cateList {
+	margin: 15px 0 15px -5px;
+}
+
+.advCategoryBox .liveRk_cateList ul {
+	margin: -5px 30px 0;
+}
+
+.advCategoryBox .liveRk_cateList li {
+	margin-top: 5px;
+}
+
+.advCategoryBox .liveRk_cateList li a {
+	height: 30px;
+	line-height: 28px;
+	padding: 0 9.5px;
+	font-size: 13px;
+	letter-spacing: 0;
+	font-weight: 400
+}
+
+.advCategoryBox .liveRk_cateList li a span {
+	font-weight: 300;
+}
+
+.advCategoryBox .liveRk_cateList li.on a {
+	border: 1px solid #f27370;
+	color: #ffffff;
+	background-color: #f27370;
+	font-weight: 700
+}
+
+.advCategoryBox .liveRk_cateList li.on a span {
+	font-weight: 500;
+}
+
+/* 留ㅼ옣 異붿쿇 �뙘�뾽 */
+.recoStore.notabVer .mCustomScrollbar {
+	max-height: 656px;
+}
+
+.recoStore.notabVer .store_vArea {
+	padding: 0px 35px
+}
+
+.recoStore {
+	letter-spacing: 0;
+}
+
+.recoStore .mCSB_inside>.mCSB_container {
+	margin-right: 0
+}
+
+.recoStore .mCustomScrollbar {
+	max-height: 605px !important;
+}
+
+.recoStore .mCSB_scrollTools {
+	right: 4.5px
+}
+
+.recoStore .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	Width: 3px;
+	border-radius: 1.5px;
+}
+
+.layer_cont5 {
+	padding: 36px 0 40px;
+}
+
+.layer_pop_wrap .layer_cont5 .layer_close {
+	top: 36px;
+	background-size: 21px auto;
+}
+
+.layer_cont5 .layer_title5 {
+	margin: 0 30px 35px;
+	padding: 0 0px 15px;
+	font-size: 24px;
+	line-height: 26px;
+	color: #000;
+	border-bottom: 2px solid #000;
+	letter-spacing: -0.4px;
+}
+
+.recoStore .store_handleTab {
+	margin: 35px 30px 0;
+}
+
+.recoStore .depth1 {
+	padding: 0 30px
+}
+
+.recoStore .store_vArea {
+	padding: 33px 35px 0;
+}
+
+.layer_pop_wrap .recoStore .store_vArea .tit {
+	color: #333333;
+}
+
+.recoStore .store_vArea .addr {
+	color: #555555
+}
+
+.recoStore .store_vArea .area .time {
+	columns: #888888;
+}
+
+.recoStore .api_mapArea {
+	height: 200px;
+	margin-top: 20px;
+}
+
+.recoStore .api_mapArea .store_wayP {
+	width: 430px;
+	height: 200px;
+}
+
+.layer_pop_wrap .recoStore .store_infoBox h2 {
+	letter-spacing: 0;
+	line-height: 18px;
+}
+
+.layer_pop_wrap .recoStore .store_infoBox h2 span {
+	margin-left: 6px;
+	font-size: 10px;
+	line-height: 16px;
+	letter-spacing: 0;
+	vertical-align: bottom;
+	color: #666666;
+	font-weight: 400;
+}
+
+.recoStore .newOpenStore_sale {
+	padding: 10px 15px;
+	background: #f7f7f7;
+	border-radius: 5px;
+}
+
+.recoStore .newOpenStore_sale dl {
+	margin-top: 10px
+}
+
+.recoStore .newOpenStore_sale dl:first-child {
+	margin-top: 0
+}
+
+.recoStore .newOpenStore_sale dt {
+	font-size: 12px;
+	color: #666666;
+	letter-spacing: 0;
+	font-weight: 500;
+	line-height: 18px;
+	word-break: keep-all;
+}
+
+.recoStore .newOpenStore_sale dd {
+	line-height: 18px;
+	font-size: 12px;
+	color: #777777;
+	letter-spacing: 0;
+}
+
+.store_sl .slick-arrow {
+	width: 20px;
+	z-index: 10;
+}
+
+.store_sl .slick-arrow.slick-prev {
+	left: -21px;
+	background-color: #fff;
+}
+
+.store_sl .slick-arrow.slick-next {
+	right: -21px;
+	background-color: #fff;
+}
+
+.store_infoBox .swiper-container {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	-ms-transition-property: -ms-transform;
+	transition-property: transform
+}
+
+.store_infoBox .swiper-wrapper {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+}
+
+.store_infoBox .swiper-scrollbar {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0;
+	height: 2px;
+	background-color: #e5e5e5;
+}
+
+.store_infoBox .swiper-scrollbar .swiper-scrollbar-drag {
+	height: 2px;
+	background-color: #000;
+}
+
+.recoStore .store_sl {
+	position: relative;
+	padding: 0;
+}
+
+.recoStore .store_sl ul {
+	padding: 0 0 7px 0;
+}
+
+.recoStore .store_sl li {
+	width: 210px;
+	min-width: 210px;
+	height: 128px;
+}
+
+.recoStore .store_sl li:last-child {
+	margin-right: 0px;
+}
+
+.recoStore .store_sl li img {
+	width: 100%;
+	height: 100%;
+}
+
+.recoStBtn {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	width: 430px;
+}
+
+.recoStBtn button {
+	width: 15px;
+	height: 128px;
+	position: absolute;
+	top: 0
+}
+
+.recoStBtn_next {
+	right: -21px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/store_next.png")
+		no-repeat center 51px;
+	background-size: 5px auto;
+}
+
+.recoStBtn_prev {
+	left: -21px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/store_prev.png")
+		no-repeat center 51px;
+	background-size: 5px auto;
+}
+
+.recoStore .store_slTxt {
+	margin-top: 10px;
+	padding: 0;
+	font-size: 10px;
+	line-height: 16px;
+	letter-spacing: 0;
+	color: #666666
+}
+
+.recoStore .store_btn {
+	text-align: center;
+	color: #fff;
+	line-height: 30px;
+	width: 88px;
+	height: 30px;
+	display: block;
+	background: #777;
+	margin: 25px auto;
+	padding: 0 20px;
+	font-size: 12px;
+	border-radius: 2px;
+	font-weight: 700;
+	letter-spacing: 0;
+}
+
+.recoStore .store_sv {
+	margin-top: -3px;
+	padding-left: 2px
+}
+
+.recoStore .store_sv li {
+	padding: 0px;
+	margin-left: 8px;
+	width: 196px
+}
+
+.recoStore .store_sv dl {
+	height: 69px
+}
+
+.recoStore .liveRk_bestPd {
+	margin-top: 25px;
+	padding: 0 30px;
+}
+
+.recoStore .topCate {
+	margin-left: -10px
+}
+
+.recoStore .topCate:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.recoStore .topCate>span {
+	float: left;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0;
+	color: #333333;
+}
+
+.recoStore .topCate>span:last-child {
+	margin-left: 10px
+}
+
+.recoStore .bestSelect {
+	margin-left: 10px;
+	line-height: 18px;
+	border-bottom: 1px solid #888888;
+}
+
+.recoStore .bestSelect select {
+	width: auto;
+	height: 24px;
+	margin-left: -3px;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: 0;
+	color: #333333;
+	font-weight: 700;
+}
+
+.recoStore .bestPd_date {
+	margin-top: 7px;
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0;
+	color: #999999
+}
+
+.recoStore .bestPd_date span {
+	font-weight: 300;
+	letter-spacing: 0;
+}
+
+.recoStore .curation_area .slide_list .item .thumb_flag {
+	width: 44px;
+	height: 44px;
+	line-height: 40px !important;
+	font-size: 18px;
+	font-weight: 400;
+	top: 10px;
+	left: 10px;
+}
+
+.recoStore .btn_zzim {
+	position: absolute;
+	top: 205px;
+	right: 0px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #ebebeb;
+	text-indent: -999999px;
+	font-size: 0;
+	background: #fff
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_zzim.png")
+		no-repeat 50% 50%;
+	background-size: 24px auto;
+}
+
+.recoStore .btn_zzim.on {
+	background: #fff
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_zzim_on.png")
+		no-repeat 50% 50%;
+	background-size: 24px auto;
+}
+
+.recoStore .curation_area {
+	height: auto;
+	margin-top: 0px;
+	padding: 0 15px;
+	min-height: 274px;
+}
+
+.recoStore .curation_area .slide_list {
+	margin-left: -40px;
+}
+
+.recoStore .curation_area li {
+	width: 215px;
+	padding: 30px 0px 0;
+	margin-left: 40px;
+}
+
+.recoStore .curation_area .slide_list .item .prd_price {
+	margin: 7px auto 0;
+}
+
+.recoStore .curation_area .slide_list .btnbag2 {
+	top: 300px;
+	right: 10px
+}
+
+.recoStore .icon_flag {
+	font-size: 11px !important;
+	width: auto;
+	padding: 0 7px
+}
+
+.unOpenedTxt {
+	margin: 40px auto;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 0;
+}
+/* 留ㅼ옣�븞�궡臾멸뎄 */
+.no_strPrd {
+	margin-top: 180px;
+	margin-bottom: 180px;
+}
+
+.no_strPrd .no_list {
+	text-align: center;
+	padding-top: 76px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/store/ico_storeP_05.gif")
+		no-repeat center top;
+	background-size: 64px auto;
+	margin: 0 auto
+}
+
+.no_strPrd .no_list.reset, .no_store .no_login.reset {
+	margin: 0 auto
+}
+
+.no_strPrd .no_list dt {
+	font-size: 16px;
+	font-weight: bold;
+	color: #888;
+	line-height: 22px;
+}
+
+.no_strPrd .no_list dd {
+	font-size: 13px;
+	color: #aaa;
+	margin-top: 10px;
+}
+
+.recoStore .curation_area li.no_strPrd {
+	width: 100%;
+	padding: 0;
+	margin: 180px auto 0px;
+	padding-left: 40px;
+}
+
+.advMsgArea .no_strPrd {
+	width: 100%;
+	min-height: 660px;
+	margin: 0;
+	padding: 0;
+	display: table;
+	vertical-align: middle;
+	margin-top: 0px;
+	margin-bottom: 87px;
+}
+
+.advMsgArea .no_strPrd .no_list {
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	padding-top: 0;
+	background: #fff;
+}
+
+.advMsgArea .no_strPrd .no_list dt {
+	padding-top: 76px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/store/ico_storeP_05.gif")
+		no-repeat center top;
+	background-size: 64px auto;
+}
+/* �뼱�뱶諛붿씠�� 洹몃옒�봽 */
+.chartMenu {
+	position: absolute;
+	top: 40px;
+	right: 20px;
+}
+
+.chartMenu li {
+	margin-left: 15px;
+	line-height: 18px;
+	font-size: 16px;
+	color: #777777;
+	display: inline-block;
+	position: relative;
+	padding-left: 17px;
+	line-height: 16px;
+}
+
+.chartMenu li:before {
+	content: '';
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin-top: -6px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	background: #cccccc;
+}
+
+.chartMenu li:first-child {
+	margin-left: 0;
+}
+
+.chartMenu li:first-child:before {
+	content: '';
+	display: block;
+	background: #f27370;
+}
+
+.graphBox {
+	padding-top: 73px;
+	height: 278px;
+	position: relative;
+}
+
+.graphBox ul {
+	width: max-content;
+	font-size: 0;
+	padding: 0 10px;
+	position: absolute;
+	bottom: 16px;
+}
+
+.graphBox ul:after {
+	content: '';
+	display: block;
+	width: 492px;
+	position: absolute;
+	bottom: 38px;
+	left: 0;
+	right: 0;
+	border-top: 1px solid #d8d8d8;
+}
+
+.graphBox li {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+
+.graphBox .columnBox {
+	font-size: 0;
+	padding-left: 20px;
+	text-align: center;
+}
+
+.graphBox li:first-child .columnBox {
+	padding-left: 0;
+}
+
+.graphBox p {
+	margin-top: -10px;
+	padding-top: 11px;
+	padding-left: 20px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #777777;
+}
+
+.graphBox li:first-child p {
+	padding-left: 0;
+}
+
+.graphBox .redSec {
+	margin-right: 3px;
+	font-size: 0;
+}
+
+.graphBox .graySec {
+	font-size: 0;
+}
+
+.graphBox .redCol {
+	background: rgba(242, 115, 112, 0.2);
+}
+
+.graphBox .grayCol {
+	background: #f5f5f5;
+}
+
+.graphBox .act .columnBox {
+	padding-top: 40px;
+}
+
+.columnBox>div {
+	position: relative;
+	display: inline-block;
+	font-size: 0;
+}
+
+.graphBox .column {
+	width: 50px;
+	max-height: 130px;
+}
+
+.graphBox .topBox {
+	width: 55px;
+	position: absolute;
+	top: -38px;
+	left: -2px;
+	display: none;
+}
+
+.graphBox .redTopBox:after {
+	content: '';
+	display: inline-block;
+	width: 11px;
+	height: 7px;
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	margin-left: -5.5px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_redArrow.png")
+		no-repeat center;
+	background-size: 11px auto; /*z-index:10;*/
+}
+
+.graphBox .topBox span {
+	margin: 0 auto;
+	padding: 0 4px;
+	width: 55px;
+	height: 26px;
+	display: inline-block;
+	border-radius: 26px;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 26px;
+	letter-spacing: 0;
+}
+
+.graphBox .redTopBox span {
+	border-radius: 20px;
+	background: #f27370;
+	color: #ffffff;
+}
+
+.graphBox .grayTopBox {
+	max-width: 36px;
+	left: 0;
+	top: -21px;
+}
+
+.graphBox .grayTopBox span {
+	padding: 0px;
+	color: #aaaaaa;
+	height: auto;
+	line-height: 16px;
+}
+
+.graphBox .act .topBox {
+	display: block;
+}
+
+.graphBox .act .redCol {
+	background: #e84947;
+}
+
+.graphBox .act .grayCol {
+	background: #cccccc;
+}
+
+.hrChart {
+	margin: 0 30px;
+}
+
+.hrChart li {
+	margin-top: 15px;
+}
+
+.hrChart li:first-child {
+	margin-top: 0px;
+}
+
+.hrChart .numberTxt {
+	width: 100%;
+	display: table;
+	font-size: 15px;
+	color: #777777;
+	letter-spacing: 0;
+}
+
+.hrChart .numberTxt dt, .hrChart .numberTxt dd {
+	width: 50%;
+	display: table-cell;
+	line-height: 13px;
+}
+
+.hrChart .numberTxt dt {
+	font-weight: 500
+}
+
+.hrChart .numberTxt dt span {
+	font-weight: 400;
+	line-height: 13px;
+}
+
+.hrChart .numberTxt dd {
+	text-align: right;
+}
+
+.hrChart .numberTxt dd span {
+	padding-left: 7px;
+	letter-spacing: 0;
+	font-weight: 500;
+	line-height: 14px;
+}
+
+.hrChart .numberTxt dd span+span {
+	font-weight: 400
+}
+
+.hrChart .no_1 .numberTxt {
+	color: #f27370;
+}
+
+.hrChart .rangeBar {
+	width: 100%;
+	height: 12px;
+	margin-top: 10px;
+	background-color: #f2f2f2;
+	border-radius: 7.5px;
+	position: relative;
+}
+
+.hrChart .topRangeBar {
+	height: 12px;
+	border-radius: 7.5px;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+
+.hrChart .no_1 .topRangeBar {
+	background-color: #f27370;
+}
+
+.hrChart .no_2 .topRangeBar {
+	background-color: #aaaaaa;
+}
+
+.hrChart .no_3 .topRangeBar {
+	background-color: #bfbfbf;
+}
+
+.hrChart .no_4 .topRangeBar {
+	background-color: #cecece;
+}
+
+.hrChart .no_5 .topRangeBar {
+	background-color: #dedede;
+}
+
+.sec_chart {
+	background-color: #fff;
+	position: relative;
+}
+
+.area_chart_v2 {
+	position: relative;
+	margin: -10px auto 0;
+	font-size: 0;
+	padding-top: 0px;
+}
+
+.area_chart_v2 .p_chart {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	margin-left: 22px;
+}
+
+.area_chart_v2 .p_chart+.p_chart {
+	margin-left: -28px;
+}
+
+.area_chart_v2 .per {
+	position: absolute;
+	left: 48%;
+	top: 50%;
+	font-size: 18px;
+	font-weight: 500;
+	text-indent: -5px;
+	color: #f27370;
+	transform: translate(-50%, -50%);
+}
+
+.area_chart_v2 .txt {
+	margin-left: -8px;
+	position: absolute;
+	left: 50%;
+	bottom: -13px;
+	font-size: 14px;
+	color: #333;
+	transform: translate(-50%, -50%);
+}
+
+.sec_chart .chartMenu {
+	z-index: 10;
+	top: -2px;
+	right: 40px;
+	z-index: 10;
+}
+
+.sec_chart .chartMenu li {
+	padding-left: 13px;
+	font-size: 12px;
+}
+
+.sec_chart .chart_v2_date {
+	margin-right: 40px;
+	padding-top: 18px;
+	font-size: 10px;
+	text-align: right;
+	color: #aaaaaa;
+	font-size: 12px;
+	position: relative;
+	z-index: 1;
+	font-weight: 300;
+}
+
+.sec_chart .chart_v2_date span {
+	font-weight: 400;
+}
+
+.halfCircleBox {
+	height: 190px;
+}
+
+.halfCircleBox .sec_chart {
+	background-color: #fff;
+}
+
+.halfCircleBox .area_chart_v1 {
+	position: relative;
+	margin: -10px auto 0;
+	padding-left: 7px;
+}
+
+.halfCircleBox .area_chart_v1 .per {
+	position: absolute;
+	left: 50%;
+	bottom: 24%;
+	font-size: 24px;
+	font-weight: 500;
+	color: #f27370;
+	transform: translate(-50%, -50%);
+}
+
+.columnBox.typeOne {
+	margin: 0 auto;
+}
+
+.columnBox.typeOne ul {
+	margin: 40px auto 20px;
+	min-height: 155px;
+	width: 335px;
+	font-size: 0;
+	position: relative;
+}
+
+.columnBox.typeOne ul:after {
+	content: '';
+	display: block;
+	width: 335px;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	border-bottom: 1px solid #d8d8d8;
+	z-index: 1;
+}
+
+.columnBox.typeOne li {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+.columnBox.typeOne li:first-child p {
+	margin-left: 0;
+}
+
+.columnBox.typeOne li:nth-child(1) .column:after {
+	content: attr(data-content);
+	display: block;
+	position: absolute;
+	top: -20px;
+	right: 0;
+	left: 0;
+	text-align: center;
+	font-size: 15px;
+	color: #777777;
+	font-weight: 300;
+}
+
+.columnBox.typeOne li:nth-child(2) .column:after {
+	content: attr(data-content);
+	display: block;
+	position: absolute;
+	top: -20px;
+	right: 0;
+	left: 0;
+	text-align: center;
+	font-size: 15px;
+	color: #777777;
+	font-weight: 300;
+}
+
+.columnBox.typeOne li:nth-child(3) .column:after {
+	content: attr(data-content);
+	display: block;
+	position: absolute;
+	top: -20px;
+	right: 0;
+	left: 0;
+	text-align: center;
+	font-size: 15px;
+	color: #777777;
+	font-weight: 300;
+}
+
+.columnBox.typeOne li:nth-child(4) .column:after {
+	content: attr(data-content);
+	display: block;
+	position: absolute;
+	top: -20px;
+	right: 0;
+	left: 0;
+	text-align: center;
+	font-size: 15px;
+	color: #777777;
+	font-weight: 300;
+}
+
+.columnBox.typeOne li:nth-child(5) .column:after {
+	content: attr(data-content);
+	display: block;
+	position: absolute;
+	top: -20px;
+	right: 0;
+	left: 0;
+	text-align: center;
+	font-size: 15px;
+	color: #777777;
+	font-weight: 300;
+}
+
+.columnBox.typeOne .colSec {
+	height: 155px;
+	width: 55px;
+	font-size: 0;
+	margin-left: 15px;
+	text-align: center;
+	position: relative;
+}
+
+.columnBox.typeOne li:first-child .colSec {
+	margin-left: 0px;
+}
+
+.columnBox.typeOne .colSec .column {
+	width: 100%;
+	background: #cccccc;
+	position: relative;
+	display: inline-block;
+	font-size: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 85px;
+}
+
+.columnBox.typeOne li.act .column:after {
+	color: #f27370;
+	font-weight: 500;
+}
+
+.columnBox.typeOne .act .colSec .column {
+	background: #f27370;
+}
+
+.advChartSl {
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.advChartSl .chartBox {
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+.advChartSl .chartBox .chartTtl {
+	font-size: 17px;
+	color: #000000;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+
+.advChartSl .chartBox .chartNom {
+	font-size: 14px;
+	color: #555555;
+}
+
+.advChartSl .chartBox .chartNom span {
+	font-weight: 300;
+}
+
+.advCategoryBox .advChartSl button {
+	top: 0
+}
+
+.advCategoryBox .advChartSl .slick-arrow.slick-prev {
+	left: 0px;
+}
+
+.advCategoryBox .advChartSl .slick-arrow.slick-next {
+	right: 0px;
+}
+
+.advRange {
+	margin: 35px 29px 0 30px;
+	height: 90px;
+	position: relative;
+}
+
+.advRange .rangeBar {
+	width: 100%;
+	height: 2px;
+	padding-top: 37px;
+	border-bottom: 2px solid #d8d8d8;
+}
+
+.advRange .todayRangeBar {
+	height: 2px;
+	border-bottom: 2px solid #f27370;
+	position: absolute;
+	top: 37px;
+	right: 0;
+}
+
+.advRange .rangePoint {
+	padding-top: 42px;
+	position: absolute;
+}
+
+.advRange .rangePoint:after {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	position: absolute;
+	top: 33px;
+}
+
+.advRange .rangePoint.todayRange:after {
+	background-color: #f27370;
+	right: 0;
+}
+
+.advRange .rangePoint.averageRange:after {
+	background-color: #555555;
+	left: 50%;
+}
+
+.advRange .rangePoint.endRange:after {
+	background-color: #d8d8d8;
+	left: 0;
+}
+
+.advRange .todayRange {
+	right: 0;
+	top: 0;
+	text-align: right;
+	z-index: 2;
+}
+
+.advRange .averageRange {
+	top: 0;
+	text-align: center;
+	text-align: right;
+	margin-left: -50px;
+}
+
+.advRange .endRange {
+	top: 0;
+	left: 0;
+	text-indent: -2px;
+}
+
+.advRange .rangeTip {
+	position: absolute;
+	top: -10px;
+}
+
+.advRange .rangeTip span {
+	margin: 0 auto;
+	border: 1px solid #bbb;
+	color: #555555;
+	background: #fff;
+	width: max-content;
+	height: 30px;
+	line-height: 28px;
+	border-radius: 30px 30px 0 30px;
+	font-size: 14px;
+	letter-spacing: 0;
+	display: block;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.advRange .todayRange .rangeTip {
+	right: 3px
+}
+
+.advRange .todayRange .rangeTip:after {
+	content: '';
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-right: 7px solid #f27370;
+	position: absolute;
+	bottom: -5px;
+	right: 0px;
+}
+
+.advRange .todayRange .rangeTip span {
+	padding: 0 9px 0 7px;
+	border: 1px solid #f27370;
+	background-color: #f27370;
+	color: #ffffff;
+}
+
+.advRange .averageRange .rangeTip {
+	right: 43px;
+}
+
+.advRange .averageRange .rangeTip span {
+	padding: 0 8px 0 9px;
+}
+
+.advRange .rangeTip::before {
+	content: '';
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-right: 5px solid #bbbbbb;
+	position: absolute;
+	bottom: -6px;
+	right: 0px;
+}
+
+.advRange .rangeTip::after {
+	content: '';
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-top: 8.5px solid transparent;
+	border-bottom: 8.5px solid transparent;
+	border-right: 6.5px solid #ffffff;
+	position: absolute;
+	bottom: -4px;
+	right: 1px;
+}
+
+.advRange .rangeTxt {
+	margin-top: 6px;
+	font-size: 15px;
+	line-height: 13px;
+	font-weight: 500;
+	letter-spacing: 0;
+	word-break: keep-all;
+	text-indent: 1px;
+}
+
+.advRange .todayRange .rangeTxt {
+	color: #f27370;
+	background: #fff;
+}
+
+.advRange .averageRange .rangeTxt {
+	margin: 6px auto 0;
+	color: #555555;
+	text-align: center;
+	line-height: 13px;
+	text-indent: 9px;
+	width: max-content;
+}
+
+.advRange .endRange .rangeTxt {
+	color: #999999;
+}
+
+.advRange .rangeDate {
+	margin-top: 5px;
+	font-size: 16px;
+	line-height: 14px;
+	letter-spacing: 0;
+	color: #999999;
+	text-indent: 1px;
+}
+
+.advPdBox {
+	margin: 15px 30px 0;
+}
+
+.advPdBox .innerBox {
+	width: 100%;
+	min-height: 134px;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	position: relative;
+	display: table;
+}
+
+.advPdBox .inner {
+	padding-left: 114px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.advPdBox a {
+	min-height: 110px;
+	width: 90%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+.advPdBox .vitem {
+	width: 104px;
+	height: 104px;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+
+.advPdBox .vitem .img {
+	position: relative;
+	display: block;
+}
+
+.advPdBox .vitem .img:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 104px;
+	background-color: rgba(0, 0, 0, 0.06);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.advPdBox .vitem img {
+	width: 100%;
+	height: 100%;
+}
+
+.advPdBox .opt {
+	position: relative;
+}
+
+.advPdBox .text {
+	margin-bottom: 9px;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 500;
+	color: #222222;
+	letter-spacing: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+}
+
+.advPdBox .dateTxt {
+	font-size: 11px;
+	color: #555555;
+	letter-spacing: 0;
+	line-height: 16px;
+}
+
+.advPdBox .dateTxt+.dateTxt {
+	margin-top: 5px;
+}
+
+.advPdBox .dateTxt dt, .dateTxt dd {
+	display: table-cell;
+	font-size: 13px;
+	line-height: 13px;;
+	color: #555555;
+	letter-spacing: 0;
+}
+
+.advPdBox .dateTxt dt {
+	width: 50%;
+	min-width: 77px;
+}
+
+.advPdBox .dateTxt dd {
+	width: 50%;
+	padding-left: 10px;
+	font-weight: 300;
+}
+
+.advPdBox .dateTxt dd.averageDate {
+	color: #333333;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+
+.advPdBox .dateTxt dd.averageDate span {
+	font-weight: 400;
+}
+
+.advPdBox .prod-func {
+	position: absolute;
+	bottom: -2px;
+	right: 0px
+}
+
+.advPdBox .btnbag {
+	width: 20px;
+	height: 20px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/icon_bag.png")
+		no-repeat center;
+	font-size: 0;
+	color: transparent;
+}
+
+.advPdBox .btnbag2 {
+	width: 20px;
+	height: 20px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/comm/icon_bag.png")
+		no-repeat center;
+	font-size: 0;
+	color: transparent;
+}
+
+.curaListBox .curaList li .box .thumb_flag {
+	z-index: 1;
+}
+
+.forYou_Wrap .curation_area .slide_list .item .thumb_flag {
+	z-index: 1;
+}
+
+.advCategoryBox .thumb_flag {
+	z-index: 1;
+}
+
+.advMsg .icon_flag {
+	width: 32px;
+	font-size: 11px !important;
+}
+
+.advMsg .icon_flag.delivery {
+	width: 50px;
+	font-size: 11px !important;
+}
+
+.tui-chart {
+	position: relative;
+	font-family: Arial;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.tui-chart, .tui-chart * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.tui-chart svg line, .tui-chart svg path, .tui-chart svg rect {
+	shape-rendering: crispEdges;
+}
+
+.tui-chart svg .auto-shape-rendering {
+	shape-rendering: auto;
+}
+
+.tui-chart svg .stroke-dasharray {
+	stroke-dasharray: 4;
+}
+
+.tui-chart .tui-chart-icon {
+	background-color: '#f4f4f4';
+}
+
+.tui-chart .tui-chart-icon:hover {
+	background-color: '#eeeeee';
+}
+
+.tui-chart .tui-chart-icon:active {
+	background-color: '#e5e5e5';
+}
+
+.tui-chart .tui-chart-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+	z-index: 350;
+}
+
+.tui-chart .tui-chart-axis-area {
+	z-index: 300;
+	position: absolute;
+}
+
+.tui-chart .tui-chart-axis-area * {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.tui-chart .tui-chart-axis-area .tui-chart-title-area {
+	position: absolute;
+}
+
+.tui-chart .tui-chart-axis-area .tui-chart-tick-area, .tui-chart .tui-chart-axis-area .tui-chart-label-area
+	{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.tui-chart .tui-chart-axis-area .tui-chart-tick-area .tui-chart-tick {
+	position: absolute;
+	background-color: #000;
+}
+
+.tui-chart .tui-chart-axis-area .tui-chart-label-area .tui-chart-label {
+	position: absolute;
+}
+
+.tui-chart .tui-chart-axis-area .tui-chart-label-area .tui-chart-label>span
+	{
+	line-height: 1.2;
+}
+
+.tui-chart .tui-chart-axis-area.vertical {
+	top: 10px;
+}
+
+.tui-chart .tui-chart-axis-area.vertical .tui-chart-title-area {
+	text-align: center;
+	white-space: nowrap;
+	top: 0;
+}
+
+.tui-chart .tui-chart-axis-area.vertical .tui-chart-title-area.rotation
+	{
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-o-transform-origin: top left;
+	transform-origin: top left;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.tui-chart .tui-chart-axis-area.vertical .tui-chart-tick-area {
+	right: 0;
+}
+
+.tui-chart .tui-chart-axis-area.vertical .tui-chart-tick-area .tui-chart-tick
+	{
+	right: 1px;
+	width: 5px;
+	height: 1px;
+}
+
+.tui-chart .tui-chart-axis-area.vertical .tui-chart-tick-area .tui-chart-tick-line
+	{
+	left: auto;
+	right: 0;
+	width: 1px;
+	background-color: #000;
+	position: absolute;
+}
+
+.tui-chart .tui-chart-axis-area.vertical .tui-chart-label-area {
+	right: 10px;
+}
+
+.tui-chart .tui-chart-axis-area.vertical .tui-chart-label-area .tui-chart-label
+	{
+	left: 0;
+	width: 100%;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.tui-chart .tui-chart-axis-area.vertical.right .tui-chart-title-area {
+	text-align: center;
+	white-space: nowrap;
+	top: 0;
+}
+
+.tui-chart .tui-chart-axis-area.vertical.right .tui-chart-title-area.rotation
+	{
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-o-transform-origin: top left;
+	transform-origin: top left;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+.tui-chart .tui-chart-axis-area.vertical.right .tui-chart-tick-area,
+	.tui-chart .tui-chart-axis-area.vertical.right .tui-chart-label-area {
+	left: 0;
+}
+
+.tui-chart .tui-chart-axis-area.vertical.right .tui-chart-label-area .tui-chart-label
+	{
+	text-align: left;
+	padding-right: 0;
+	padding-left: 10px;
+}
+
+.tui-chart .tui-chart-axis-area.vertical.center .tui-chart-title-area {
+	width: 100% !important;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	filter: none;
+	top: auto;
+}
+
+.tui-chart .tui-chart-axis-area.vertical.center .tui-chart-label-area {
+	left: 0;
+	width: 100% !important;
+}
+
+.tui-chart .tui-chart-axis-area.vertical.center .tui-chart-label-area .tui-chart-label
+	{
+	text-align: center;
+}
+
+.tui-chart .tui-chart-axis-area.vertical.right .tui-chart-tick-area,
+	.tui-chart .tui-chart-axis-area.vertical.center .tui-chart-tick-area.opposite-side
+	{
+	border-right: none;
+}
+
+.tui-chart .tui-chart-axis-area.vertical.right .tui-chart-tick-area .tui-chart-tick,
+	.tui-chart .tui-chart-axis-area.vertical.center .tui-chart-tick-area.opposite-side .tui-chart-tick
+	{
+	left: 1px;
+}
+
+.tui-chart .tui-chart-axis-area.vertical.right .tui-chart-tick-area .tui-chart-tick-line,
+	.tui-chart .tui-chart-axis-area.vertical.center .tui-chart-tick-area.opposite-side .tui-chart-tick-line
+	{
+	right: auto;
+	left: 0;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal {
+	right: 10px;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-title-area {
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal.division .tui-chart-title-area
+	{
+	left: 0;
+	width: auto;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal.division .tui-chart-title-area.right
+	{
+	left: auto;
+	right: 0;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-tick-area,
+	.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area {
+	left: 0;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-tick-area .tui-chart-tick-line
+	{
+	top: 0;
+	height: 1px;
+	background-color: #000;
+	position: absolute;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-tick-area .tui-chart-ticks
+	{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-tick-area .tui-chart-tick
+	{
+	top: 0;
+	width: 1px;
+	height: 6px;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label
+	{
+	top: 10px;
+	text-align: center;
+	word-wrap: break-word;
+	word-break: keep-all;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation
+	{
+	text-align: right;
+	white-space: nowrap;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation span
+	{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation25
+	{
+	-webkit-transform: rotate(-25deg);
+	-moz-transform: rotate(-25deg);
+	-ms-transform: rotate(-25deg);
+	-o-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation25 span
+	{
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.9063077870366499, M12=0.42261826174069944, M21=-0.42261826174069944, M22=0.9063077870366499)";
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation45
+	{
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation45 span
+	{
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.7071067811865476, M12=0.7071067811865475, M21=-0.7071067811865475, M22=0.7071067811865476)";
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation65
+	{
+	-webkit-transform: rotate(-65deg);
+	-moz-transform: rotate(-65deg);
+	-ms-transform: rotate(-65deg);
+	-o-transform: rotate(-65deg);
+	transform: rotate(-65deg);
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation65 span
+	{
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.42261826174069944, M12=0.9063077870366499, M21=-0.9063077870366499, M22=0.42261826174069944)";
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation85
+	{
+	-webkit-transform: rotate(-85deg);
+	-moz-transform: rotate(-85deg);
+	-ms-transform: rotate(-85deg);
+	-o-transform: rotate(-85deg);
+	transform: rotate(-85deg);
+}
+
+.tui-chart .tui-chart-axis-area.horizontal .tui-chart-label-area .tui-chart-label.tui-chart-xaxis-rotation85 span
+	{
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.08715574274765814, M12=0.9961946980917455, M21=-0.9961946980917455, M22=0.08715574274765814)";
+}
+
+.tui-chart .tui-chart-plot-area {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: -100;
+}
+
+.tui-chart .tui-chart-plot-area .tui-chart-plot-optional-lines-area {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.tui-chart .tui-chart-plot-area .tui-chart-plot-lines-area {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.tui-chart .tui-chart-plot-area .tui-chart-plot-line {
+	background-color: #ccc;
+	position: absolute;
+}
+
+.tui-chart .tui-chart-plot-area .tui-chart-plot-line.vertical {
+	top: 0px;
+	width: 1px;
+}
+
+.tui-chart .tui-chart-plot-area .tui-chart-plot-line.horizontal {
+	left: 0px;
+	height: 1px;
+}
+
+.tui-chart .tui-chart-series-area {
+	z-index: 200;
+	position: absolute;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.tui-chart .tui-chart-series-area:first-child {
+	overflow: visible;
+}
+
+.tui-chart .tui-chart-series-area .tui-chart-series-block-area {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.tui-chart .tui-chart-series-area .tui-chart-series-block-area .tui-chart-series-block
+	{
+	position: absolute;
+}
+
+.tui-chart .tui-chart-series-area .tui-chart-series-label-area {
+	position: absolute;
+	overflow: visible;
+	left: 0px;
+	top: 0px;
+	display: none;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity = 0);
+	opacity: 0;
+}
+
+.tui-chart .tui-chart-series-area .tui-chart-series-label-area .tui-chart-series-label
+	{
+	position: absolute;
+	cursor: default;
+	text-align: center;
+	white-space: nowrap;
+	text-shadow: #fff 0px 0px 3px;
+}
+
+.tui-chart .tui-chart-series-area .tui-chart-series-label-area.show {
+	display: block;
+}
+
+.tui-chart .tui-chart-series-area .tui-chart-series-label-area.opacity {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity = 100);
+	opacity: 1;
+}
+
+.tui-chart .tui-chart-series-area .tui-chart-series-graph-area {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.tui-chart .tui-chart-zoom-area {
+	z-index: 1500;
+	position: absolute;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	background-clip: padding-box;
+}
+
+.tui-chart .tui-chart-zoom-area>.tui-chart-zoom-btn {
+	width: 24px;
+	height: 24px;
+	display: block;
+	background-color: #f4f4f4;
+	border-radius: 1px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+.tui-chart .tui-chart-zoom-area>.tui-chart-zoom-btn.zoom-in {
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAAHqHuX9AAAADFBMVEX19fX19fVVVVX09PSSNEQ7AAAAAnRSTlO0tU0x4YcAAABCSURBVAjXY6hh+AOGb4D4/weGXx9AJBwhuP//Q/BvKIbx//9FYgPxeyheBaX/Y2A81L/9YGrVKmQelMKioR5E/gEA8IGRuVetr4kAAAAASUVORK5CYII=);
+}
+
+.tui-chart .tui-chart-zoom-area>.tui-chart-zoom-btn.zoom-in:hover {
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAAHqHuX9AAAADFBMVEXu7u7u7u5VVVXu7u6LRCi7AAAAAnRSTlO0tU0x4YcAAABCSURBVAjXY6hh+AOGb4D4/weGXx9AJBwhuP//Q/BvKIbx//9FYgPxeyheBaX/Y2A81L/9YGrVKmQelMKioR5E/gEA8IGRuVetr4kAAAAASUVORK5CYII=);
+}
+
+.tui-chart .tui-chart-zoom-area>.tui-chart-zoom-btn.zoom-in:active {
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAAHqHuX9AAAADFBMVEXm5ubm5uZVVVXl5eUH/eecAAAAAnRSTlO0tU0x4YcAAABCSURBVAjXY6hh+AOGb4D4/weGXx9AJBwhuP//Q/BvKIbx//9FYgPxeyheBaX/Y2A81L/9YGrVKmQelMKioR5E/gEA8IGRuVetr4kAAAAASUVORK5CYII=);
+}
+
+.tui-chart .tui-chart-zoom-area>.tui-chart-zoom-btn.zoom-out {
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAAHqHuX9AAAADFBMVEX19fX19fVVVVX09PSSNEQ7AAAAAnRSTlO0tU0x4YcAAAAuSURBVAjXY6hh+AOH/z8w/PoAIuEIwf3/Hwf+i118FS71/wlTq1YRp7IeRP4BADPMksSlXC3ZAAAAAElFTkSuQmCC);
+}
+
+.tui-chart .tui-chart-zoom-area>.tui-chart-zoom-btn.zoom-out:hover {
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAAHqHuX9AAAADFBMVEXu7u7u7u5VVVXu7u6LRCi7AAAAAnRSTlO0tU0x4YcAAAAuSURBVAjXY6hh+AOH/z8w/PoAIuEIwf3/Hwf+i118FS71/wlTq1YRp7IeRP4BADPMksSlXC3ZAAAAAElFTkSuQmCC);
+}
+
+.tui-chart .tui-chart-zoom-area>.tui-chart-zoom-btn.zoom-out:active {
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAAHqHuX9AAAADFBMVEXm5ubm5uZVVVXl5eUH/eecAAAAAnRSTlO0tU0x4YcAAAAuSURBVAjXY6hh+AOH/z8w/PoAIuEIwf3/Hwf+i118FS71/wlTq1YRp7IeRP4BADPMksSlXC3ZAAAAAElFTkSuQmCC);
+}
+
+.tui-chart .tui-chart-series-custom-event-area {
+	z-index: 1000;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.tui-chart .tui-chart-series-custom-event-area.hide {
+	display: none;
+}
+
+.tui-chart .tui-chart-series-custom-event-area.drag {
+	cursor: move;
+}
+
+.tui-chart .tui-chart-series-custom-event-area .tui-chart-drag-selection
+	{
+	top: 10px;
+	height: 100%;
+	background-color: gray;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity = 30);
+	opacity: 0.3;
+	position: absolute;
+	display: none;
+}
+
+.tui-chart .tui-chart-series-custom-event-area .tui-chart-drag-selection.show
+	{
+	display: block;
+}
+
+.tui-chart .tui-chart-series-custom-event-area .tui-chart-reset-zoom-btn
+	{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAAGXcA1uAAAAAXNSR0IArs4c6QAAAclJREFUSA21VT2LAjEQnZUFwZ9haWWvtcVhJwpiZSdY+AMEOxs7C8FCsBfERq/QVntbC/0B1iooQs43XkKym+wROAObTN7Mm49kltD1el1dLheBLyWE+JrP54QRAGEpukkBbTabrHSbsfp3YgpkSZOrQdcZToVypVtDVgr4lv4NxXQ6ZdJkMuGVZOG9Xo8PQO6dwZ2Kt7/4rJKKq+xIjKBXstlsaDAYGMwYAVoYYuRyOToejyzL6fM1eEUIguDbi4A6rEXLAm2rNyGMetHvoVwuU6VSMU1k82BFQy0WC9VU1WpVydLOSOl0OlGhUGCPsj31iKyQTKzb7VbU63VxPp/Zc6PREIfDwYgSO9b9fk/j8Zg/M/n3LkawGemYUYOucMneBO+UXJFduHdGLkcu/OMBYq1qywRXv16vCY2Gkc1mqVQqUT6ft5kbWOIdwPFwOKQwDKlWq6ku3u12NJvN6Pl8UqfTSQyUGKDVatH9fqfRaESZTMbI7Ha7UbvdpnQ67WxqEBLvAEeBgYz18Xg8qN/vM4QEut0uAbONxApAwLO6XC4VV75FAF7/MuPFYlHpo8KfAaIE333iEfk6s9l/PgCeElvk/8Bevlc/uNwgcfw7KQUAAAAASUVORK5CYII=);
+	border-radius: 1px;
+	font-size: 11px;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.tui-chart .tui-chart-series-custom-event-area .tui-chart-reset-zoom-btn:hover
+	{
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAAGgrv1cAAAAM1BMVEXu7u7u7u5VVVVZWVlbW1tcXFxubm59fX2Ojo6enp6rq6u0tLTAwMDU1NTk5OTo6Oju7u5AkNcdAAAAAnRSTlO0tU0x4YcAAACCSURBVCjPtY/BDoQgDERhsCKI+P7/az0IJuqa9bBLQuibmbbBeXAkHLSro94fNeUkdk87acJBvEWeQJCPtDLL8L2nHf8u1kZLqUPMoA5WmaQGJVSGpfcUezX6I/zKKNEslptRFHKtOahcDFMFqLKLEZWBdZTG9bwjSQLm+Q//8A/6BjkPISqrVth/AAAAAElFTkSuQmCC);
+}
+
+.tui-chart .tui-chart-series-custom-event-area .tui-chart-reset-zoom-btn:active
+	{
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAAGgrv1cAAAAM1BMVEXm5ubm5uZVVVVYWFhaWlpcXFxsbGx6enqLi4uampqmpqaurq66urrNzc3c3Nzg4ODl5eUljSS/AAAAAnRSTlO0tU0x4YcAAACCSURBVCjPtY/BDoQgDERhsCKI+P7/az0IJuqa9bBLQuibmbbBeXAkHLSro94fNeUkdk87acJBvEWeQJCPtDLL8L2nHf8u1kZLqUPMoA5WmaQGJVSGpfcUezX6I/zKKNEslptRFHKtOahcDFMFqLKLEZWBdZTG9bwjSQLm+Q//8A/6BjkPISqrVth/AAAAAElFTkSuQmCC);
+}
+
+.tui-chart .tui-chart-legend-rect {
+	margin-top: 2px;
+	width: 10px;
+	height: 10px;
+}
+
+.tui-chart .tui-chart-legend-rect.line {
+	padding: 3px 0;
+}
+
+.tui-chart .tui-chart-chartExportMenu-area {
+	position: absolute;
+	font-family: Verdana;
+	margin: 0;
+	z-index: 1010;
+}
+
+.tui-chart .tui-chart-chartExportMenu-area .tui-chart-chartExportMenu-button
+	{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	right: 0;
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAAHqHuX9AAAADFBMVEX19fX19fVVVVX09PSSNEQ7AAAAAnRSTlO0tU0x4YcAAAAwSURBVAjXY6hh+AOGb4Dw/weGfx9AJBb0/z8O/BeV/x4HjcDYqH/7ieUhU/Ug8g8ALeuSuXF73FYAAAAASUVORK5CYII=);
+	background-color: #f4f4f4;
+	border: 0px;
+	font-size: 12px;
+	padding: 3px 5px;
+	margin: 0;
+	cursor: pointer;
+}
+
+.tui-chart .tui-chart-chartExportMenu-area .tui-chart-chartExportMenu-button:hover
+	{
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAAHqHuX9AAAADFBMVEXu7u7u7u5VVVXu7u6LRCi7AAAAAnRSTlO0tU0x4YcAAAAwSURBVAjXY6hh+AOGb4Dw/weGfx9AJBb0/z8O/BeV/x4HjcDYqH/7ieUhU/Ug8g8ALeuSuXF73FYAAAAASUVORK5CYII=);
+}
+
+.tui-chart .tui-chart-chartExportMenu-area .tui-chart-chartExportMenu-button:active
+	{
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAAHqHuX9AAAADFBMVEXm5ubm5uZVVVXl5eUH/eecAAAAAnRSTlO0tU0x4YcAAAAwSURBVAjXY6hh+AOGb4Dw/weGfx9AJBb0/z8O/BeV/x4HjcDYqH/7ieUhU/Ug8g8ALeuSuXF73FYAAAAASUVORK5CYII=);
+}
+
+.tui-chart .tui-chart-chartExportMenu-area.menu-opened .tui-chart-chartExportMenu-button
+	{
+	background-image:
+		url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAAGXcA1uAAAAAXNSR0IArs4c6QAAAU5JREFUSA3NVTuOhDAMNSMEDeICnI6CK1AhGqi4Apegmb0RHABBAULaxZl1FJPPDEisNlJix37Pjp0IYJ7n5zRN3zg9XLquAxwPsf4uwkMG5mEbBiM4SoZK01T6rAyrg4WScdQc4zgCThqSsZcHOGn4pERRRKqQ1uRWB6MrG5lbsTlVjYCVYMeGYRBSrQwjaQRn+N15fw2nMnie93WKcKno013SCEVRyM6qOhnlYyIDShOQ/MaisywT/rZtCSelRjhGr+taglHRakAjgo5AtOPQMrzM9tWYwQ63HMlFOH0kVzCT73QJpiAu2/9IsK6r8ZA2uwo2Pm0CLMsCVVVB3/eQJAnkeQ5xHIsvcNM00l6WJQRBQDQmP7pk/PBRQN/3Yds2lpBFPGxuvwNnBX/WIrxMU4/xAGEYHprCt84KOPTa7vY7eOCv5NrZ3rP22M8fyPG11kibO+MAAAAASUVORK5CYII=');
+}
+
+.tui-chart .tui-chart-chartExportMenu-area.menu-opened .tui-chart-chartExportMenu-button:hover
+	{
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAFlXhBdAAAAIVBMVEXu7u7u7u5VVVVZWVlvb2+hoaHV1dXh4eHn5+fo6Oju7u75trgQAAAAAnRSTlO0tU0x4YcAAABlSURBVBjTY5BawLA0AIRWLYChVasYVi1aBaFhuByI06A0RAyFKkqqQqJWoStZiE0QRHktAVMuLmBqsRUyDyqHVR8CEOCsBCMIZ4WT+3InT5jMcicj91XYOKjKgLpXELBHCsFeAACm5rR2c72cZwAAAABJRU5ErkJggg==);
+}
+
+.tui-chart .tui-chart-chartExportMenu-area.menu-opened .tui-chart-chartExportMenu-button:active
+	{
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAFlXhBdAAAAIVBMVEXm5ubm5uZVVVVZWVltbW2dnZ3Ozs7Z2dnf39/g4ODl5eV33AFxAAAAAnRSTlO0tU0x4YcAAABlSURBVBjTY5BawLA0AIRWLYChVasYVi1aBaFhuByI06A0RAyFKkqqQqJWoStZiE0QRHktAVMuLmBqsRUyDyqHVR8CEOCsBCMIZ4WT+3InT5jMcicj91XYOKjKgLpXELBHCsFeAACm5rR2c72cZwAAAABJRU5ErkJggg==);
+}
+
+.tui-chart .tui-chart-chartExportMenu-area ul {
+	display: none;
+	position: absolute;
+	top: 28px;
+	right: 0;
+	width: 150px;
+	background: #fff;
+	border: 1px solid #bab9ba;
+	font-size: 11px;
+	padding: 0;
+	margin: 0;
+}
+
+.tui-chart .tui-chart-chartExportMenu-area ul>li {
+	margin: 0;
+	border-collapse: collapse;
+	text-align: center;
+	list-style-type: none;
+}
+
+.tui-chart .tui-chart-chartExportMenu-area ul>li.tui-chart-chartExportMenu-head
+	{
+	padding: 10px;
+	text-align: left;
+	background-color: #f3f3f3;
+	margin: 1px 1px 0 0;
+}
+
+.tui-chart .tui-chart-chartExportMenu-area ul>li.tui-chart-chartExportMenu-body
+	{
+	display: inline-block;
+	width: 100%;
+	padding: 7px 0;
+}
+
+.tui-chart .tui-chart-chartExportMenu-area ul>li.tui-chart-chartExportMenu-body>li
+	{
+	padding: 12px 3px;
+	line-height: 1;
+	cursor: pointer;
+	width: 50%;
+	float: left;
+}
+
+.tui-chart .tui-chart-chartExportMenu-area ul>li.tui-chart-chartExportMenu-body>li:hover
+	{
+	font-weight: bold;
+}
+
+.tui-chart .tui-chart-legend-area {
+	z-index: 400;
+	position: absolute;
+	padding: 10px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend {
+	clear: both;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend>div {
+	float: left;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend .tui-chart-legend-checkbox-area
+	{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend .tui-chart-legend-checkbox-area input
+	{
+	left: 2px;
+	top: 2px;
+	*left: -2px;
+	*top: -2px;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend .tui-chart-legend-label
+	{
+	padding: 2px 0 2px 4px;
+	cursor: pointer;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	line-height: 1;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend.unselected .tui-chart-legend-rect
+	{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity = 30);
+	opacity: 0.3;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend.unselected .tui-chart-legend-label
+	{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity = 30);
+	opacity: 0.3;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend-tick-area {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend-tick-area .tui-chart-map-legend-tick
+	{
+	width: 15px;
+	height: 1px;
+	background-color: #ccc;
+	position: absolute;
+	left: 0px;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend-tick-area .tui-chart-map-legend-tick-label
+	{
+	position: absolute;
+	left: 30px;
+	text-align: left;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend-tick-area.horizontal .tui-chart-map-legend-tick
+	{
+	top: 0px;
+	width: 1px;
+	height: 15px;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-legend-tick-area.horizontal .tui-chart-map-legend-tick-label
+	{
+	top: 30px;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-map-legend-wedge {
+	position: absolute;
+	width: 19px;
+	height: 4px;
+	border-left: 2px solid #777;
+	border-right: 2px solid #777;
+	left: 8px;
+	top: 30px;
+	display: none;
+}
+
+.tui-chart .tui-chart-legend-area .tui-chart-map-legend-wedge.show {
+	display: block;
+}
+
+.tui-chart .tui-chart-legend-area.horizontal {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.tui-chart .tui-chart-legend-area.horizontal .tui-chart-legend {
+	clear: none;
+	float: left;
+	white-space: nowrap;
+}
+
+.tui-chart .tui-chart-circle-legend-area {
+	position: absolute;
+	z-index: 400;
+}
+
+.tui-chart .tui-chart-circle-legend-area .tui-chart-circle-legend-label-area
+	{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.tui-chart .tui-chart-circle-legend-area .tui-chart-circle-legend-label-area .tui-chart-circle-legend-label
+	{
+	position: absolute;
+	font-size: 9px;
+	white-space: nowrap;
+	text-shadow: #fff 0px 0px 3px;
+}
+
+.tui-chart .tui-chart-tooltip-area {
+	position: absolute;
+	z-index: 500;
+}
+
+.tui-chart .tui-chart-tooltip-area * {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip {
+	z-index: 100;
+	position: absolute;
+	display: none;
+	user-select: none;
+	font-size: 12px;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip.show {
+	display: block;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip
+	{
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background-clip: padding-box;
+	background-color: #5f5f5f;
+	background-color: rgba(85, 85, 85, 0.95);
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip>*
+	{
+	text-align: left;
+	white-space: nowrap;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip>.tui-chart-tooltip-head
+	{
+	padding: 8px 15px;
+	border-bottom: 1px solid #565656;
+	font-size: 13px;
+	font-weight: bold;
+	border-bottom: 1px solid #000000;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip>table
+	{
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: separate;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip>table tr
+	{
+	padding-bottom: 5px;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip>.tui-chart-tooltip-body
+	{
+	border-bottom: 1px solid #000000;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 11px 15px;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip>.tui-chart-tooltip-body span
+	{
+	display: inline-block;
+	height: 10px;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip>.tui-chart-tooltip-body span.tui-chart-legend-rect
+	{
+	width: 10px;
+	margin-right: 8px;
+	vertical-align: text-top;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip>.tui-chart-tooltip-body span.tui-chart-legend-rect.line
+	{
+	padding: 0;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip>.tui-chart-tooltip-body .tui-chart-tooltip-value
+	{
+	padding-left: 44px;
+	text-align: right;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip>*
+	{
+	text-align: left;
+	position: relative;
+	padding-left: 18px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip>table
+	{
+	border-spacing: 0;
+	border-collapse: separate;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip>table tr
+	{
+	padding-bottom: 5px;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip>table tr:last-child
+	{
+	padding-bottom: 0;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip>.tui-chart-tooltip-body
+	{
+	padding: 11px 15px;
+	font-size: 12px;
+	font-weight: lighter;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip>.tui-chart-tooltip-body>span
+	{
+	display: inline-block;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip>.tui-chart-tooltip-body .tui-chart-tooltip-value
+	{
+	padding-left: 44px;
+	text-align: right;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip .tui-chart-legend-rect
+	{
+	position: relative;
+	left: 0px;
+	top: -2px;
+	margin-right: 5px;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip>.tui-chart-tooltip-head
+	{
+	padding: 8px 15px;
+	text-align: left;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip.tui-chart-group-tooltip>.tui-chart-tooltip-type
+	{
+	padding-left: 7px;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-tooltip .tui-chart-default-tooltip .hide
+	{
+	display: none;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-group-tooltip-sector {
+	z-index: 50;
+	position: absolute;
+	background-color: #aaa;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity = 30);
+	opacity: 0.3;
+	display: none;
+}
+
+.tui-chart .tui-chart-tooltip-area .tui-chart-group-tooltip-sector.show
+	{
+	display: block;
+}
+
+.tui-chart.tui-map-chart .tui-chart-series-area {
+	overflow: hidden;
+}
+
+.tui-chart.tui-map-chart .tui-chart-tooltip-area .tui-chart-default-tooltip>:first-child
+	{
+	font-weight: normal;
+}
+
+.tui-chart.tui-treemap-chart .tui-chart-reset-zoom-btn {
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAFlXhBdAAAAMFBMVEX19fX19fVVVVVbW1tgYGBkZGRvb2+CgoKNjY2QkJC4uLi5ubnZ2dnj4+Pu7u709PQ6Nl8lAAAAAnRSTlO0tU0x4YcAAABxSURBVBjTY5D/wPDtA8N/GPoEJP//Z/j/Ph5CI+O/QKwB5yNTv5WU7oN53/sx5EDgIzZBIPVHH0x9VlIBC87/BJG7BKaUYv//x6EPCRDgvETiLFZSUu2Fcf4k/f9b1I+k51I8jPNJSUnlPgn2yCPYHwBOuQ5rod0HXAAAAABJRU5ErkJggg==);
+}
+
+.tui-chart.tui-treemap-chart .tui-chart-reset-zoom-btn:hover {
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAFlXhBdAAAAMFBMVEXu7u7u7u5VVVVbW1tfX19kZGRubm6BgYGLi4uOjo60tLS1tbXU1NTd3d3o6Oju7u6bzfGZAAAAAnRSTlO0tU0x4YcAAABxSURBVBjTY5D/wPDtA8N/GPoEJP//Z/j/Ph5CI+O/QKwB5yNTv5WU7oN53/sx5EDgIzZBIPVHH0x9VlIBC87/BJG7BKaUYv//x6EPCRDgvETiLFZSUu2Fcf4k/f9b1I+k51I8jPNJSUnlPgn2yCPYHwBOuQ5rod0HXAAAAABJRU5ErkJggg==);
+}
+
+.tui-chart.tui-treemap-chart .tui-chart-reset-zoom-btn:active {
+	background-image:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAFlXhBdAAAAMFBMVEXm5ubm5uZVVVVaWlpfX19jY2NsbGx+fn6Hh4eLi4uurq6vr6/Nzc3V1dXg4ODl5eWoWcyYAAAAAnRSTlO0tU0x4YcAAABxSURBVBjTY5D/wPDtA8N/GPoEJP//Z/j/Ph5CI+O/QKwB5yNTv5WU7oN53/sx5EDgIzZBIPVHH0x9VlIBC87/BJG7BKaUYv//x6EPCRDgvETiLFZSUu2Fcf4k/f9b1I+k51I8jPNJSUnlPgn2yCPYHwBOuQ5rod0HXAAAAABJRU5ErkJggg==);
+}
+
+.tui-chart-size-check-element {
+	clear: both;
+	position: absolute;
+	word-wrap: break-word;
+	word-break: keep-all;
+	top: 100000px;
+	left: 100000px;
+	width: 1000px;
+	height: 100px;
+	padding: 0;
+	line-height: 1;
+}
+
+.tui-chart-size-check-element>span {
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 0;
+}
+
+:root .tui-chart .tui-chart-axis-area.vertical .tui-chart-title-area {
+	filter: none \0;
+}
+
+:root .tui-chart .tui-chart-axis-area.horizontal .tui-chart-label.tui-chart-xaxis-rotation25 span,
+	:root .tui-chart .tui-chart-axis-area.horizontal .tui-chart-label.tui-chart-xaxis-rotation45 span,
+	:root .tui-chart .tui-chart-axis-area.horizontal .tui-chart-label.tui-chart-xaxis-rotation65 span,
+	:root .tui-chart .tui-chart-axis-area.horizontal .tui-chart-label.tui-chart-xaxis-rotation85 span
+	{
+	filter: none \0;
+}
+
+.box-shadow {
+	filter: shadow(0 4px 4px);
+}
+
+/* 3461788 �삤�뒛 �븯猷� 泥댄겕諛뺤뒪 S */
+.pop-conts .noSeeToday {
+	margin: 12px 0 -30px 0;
+}
+
+.pop-conts .noSeeToday .inner {
+	height: 53px;
+	padding-top: 16px;
+	border-top: 1px solid #ccc;
+}
+
+.pop-conts .noSeeToday .inner label {
+	font-size: 16px;
+	color: #333;
+	font-weight: 500;
+}
+/* 3461788 �삤�뒛 �븯猷� 泥댄겕諛뺤뒪 E */
+
+/* 寃��깋寃곌낵 �븯�떒 �씤湲곌��깋�뼱 蹂�寃� S */
+.search_btm_results {
+	position: relative;
+	margin-top: 19px;
+}
+
+.search_btm_results .inner .tit {
+	padding: 23px 0;
+	font-size: 20px;
+	color: #000;
+	font-weight: 700;
+	text-align: center;
+}
+
+.search_btm_results .inner .cont {
+	border-top: 2px solid #9bce26;
+}
+
+.search_btm_results .inner .list:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.search_btm_results .inner .list li {
+	position: relative;
+	float: left;
+	width: 50%;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.search_btm_results .inner .list li>a {
+	display: block;
+	height: 54px;
+}
+
+.search_btm_results .inner .list li>a>.num, .search_btm_results .inner .list li>a>.rate,
+	.search_btm_results .inner .list li>a>.rate>span {
+	display: inline-block;
+	line-height: 54px;
+	font-weight: 500;
+}
+
+.search_btm_results .inner .list li>a>.num {
+	float: left;
+	width: 50px;
+	font-size: 16px;
+	color: #555;
+	text-align: center;
+	letter-spacing: -0.2px;
+}
+
+.search_btm_results .inner .list li>a>.num.top {
+	color: #f27370;
+}
+
+.search_btm_results .inner .list li>a>.txt {
+	margin: 0 65px 0 50px;
+	font-size: 13px;
+	color: #777;
+	line-height: 54px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal
+}
+
+.search_btm_results .inner .list li>a>.rate {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 65px;
+	padding-right: 20px;
+	text-align: right
+}
+
+.search_btm_results .inner .list li>a>.rate>span {
+	position: relative;
+	padding-right: 11px;
+}
+
+.search_btm_results .inner .list li>a>.rate>span:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 26px;
+	right: 7px;
+	width: 9px;
+	height: 1px;
+	background-color: #ccc;
+}
+
+.search_btm_results .inner .list li>a>.rate.new>span {
+	padding: 0;
+}
+
+.search_btm_results .inner .list li>a>.rate.new, .search_btm_results .inner .list li>a>.rate.up,
+	.search_btm_results .inner .list li>a>.rate.dn {
+	font-size: 13px;
+	letter-spacing: -0.2px;
+}
+
+.search_btm_results .inner .list li>a>.rate.new>span:after {
+	display: none;
+}
+
+.search_btm_results .inner .list li>a>.rate.new {
+	color: #e02020;
+	letter-spacing: -0.6px;
+}
+
+.search_btm_results .inner .list li>a>.rate.up {
+	color: #e02020;
+}
+
+.search_btm_results .inner .list li>a>.rate.dn {
+	color: #183efe;
+}
+
+.search_btm_results .inner .list li>a>.rate.up>span:after,
+	.search_btm_results .inner .list li>a>.rate.dn>span:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 0;
+	height: 0;
+	margin-top: -4px;
+	background: none;
+}
+
+.search_btm_results .inner .list li>a>.rate.up>span:after {
+	border-bottom: 7px solid #e02020;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+}
+
+.search_btm_results .inner .list li>a>.rate.dn>span:after {
+	border-top: 7px solid #183efe;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+}
+
+/* .line10eee{display:block;margin:0;padding:0;height:10px;border:0;border-top:10px solid #eee;}
+.search_btm_results{position:relative;border-top:1px solid #e5e5e5;}
+.search_btm_results *{letter-spacing:0;}
+.search_btm_results .inner .tit{padding:0 16px;height:47px;line-height:46px;font-size:16px;color:#000;font-weight:700;border-bottom:1px solid #e5e5e5;}
+.search_btm_results .inner .cont{}
+.search_btm_results .inner .list:after{content:'';display:block;clear:both;}
+.search_btm_results .inner .list li{position:relative;float:left;width:50%;border-bottom:1px solid #e5e5e5;}
+.search_btm_results .inner .list li>a{display:block;height:48px;}
+.search_btm_results .inner .list li>a>.num,
+.search_btm_results .inner .list li>a>.rate,
+.search_btm_results .inner .list li>a>.rate>span{display:inline-block;line-height:47px;font-weight:500;}
+.search_btm_results .inner .list li>a>.num{float:left;width:40px;font-size:18px;color:#555;text-align:center;letter-spacing:-0.5px;}
+.search_btm_results .inner .list li>a>.num.top{color:#f27370;}
+.search_btm_results .inner .list li>a>.txt{margin:0 54px 0 40px;font-size:14px;color:#333;line-height:47px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.search_btm_results .inner .list li>a>.rate{position:absolute;top:0;right:0;width:54px;padding-right:16px;text-align:right}
+.search_btm_results .inner .list li>a>.rate>span{position:relative;padding-right:10px;}
+.search_btm_results .inner .list li>a>.rate>span:after{content:'';display:block;position:absolute;top:23px;right:7px;width:9px;height:1px;background-color:#ccc;}
+.search_btm_results .inner .list li>a>.rate.new>span{padding:0;}
+.search_btm_results .inner .list li>a>.rate.new,
+.search_btm_results .inner .list li>a>.rate.up,
+.search_btm_results .inner .list li>a>.rate.dn{font-size:14px;letter-spacing:-0.2px;}
+.search_btm_results .inner .list li>a>.rate.new>span:after{display:none;}
+.search_btm_results .inner .list li>a>.rate.new{color:#e02020;letter-spacing:-0.6px;}
+.search_btm_results .inner .list li>a>.rate.up{color:#e02020;}
+.search_btm_results .inner .list li>a>.rate.dn{color:#183efe;}
+.search_btm_results .inner .list li>a>.rate.up>span:after,
+.search_btm_results .inner .list li>a>.rate.dn>span:after{content:'';display:block;position:absolute;top:50%;right:0;width:0;height:0;margin-top:-4px;background:none;}
+.search_btm_results .inner .list li>a>.rate.up>span:after{border-bottom:7px solid #e02020;border-left:4px solid transparent;border-right:4px solid transparent;}
+.search_btm_results .inner .list li>a>.rate.dn>span:after{border-top:7px solid #183efe;border-left:4px solid transparent;border-right:4px solid transparent;} */
+/* //寃��깋寃곌낵 �븯�떒 �씤湲곌��깋�뼱 蹂�寃� E */
+
+/* [3502851] (�걧�젅�씠�뀡) PC 硫붿씤>留ㅼ옣異붿쿇 湲곕뒫媛쒖꽑 �슂泥��쓽 嫄� S */
+.newOpenStoreType2 {
+	overflow: hidden;
+	margin-top: 50px
+}
+
+.newOpenStoreType2 .titSec {
+	float: left;
+	width: 345px;
+	margin-top: 32px
+}
+
+.newOpenStoreType2 .titSec>h3 {
+	font-size: 26px;
+	line-height: 32px;
+	color: #000
+}
+
+.newOpenStoreType2 .titSec>p {
+	margin-top: 6px;
+	font-size: 16px;
+	color: #777
+}
+
+.newOpenStoreType2 .titSec>button {
+	overflow: hidden;
+	height: 44px;
+	margin-top: 70px;
+	padding: 0 17px 0 20px;
+	background: #aaa
+}
+
+.newOpenStoreType2 .titSec>button>span {
+	font-size: 16px;
+	line-height: 46px;
+	color: #fff
+}
+
+.newOpenStoreType2 .titSec>button>span:after {
+	display: inline-block;
+	width: 10px;
+	height: 14px;
+	margin-left: 19px;
+	vertical-align: -1px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/main/ico_arRW_10x14.png")
+		no-repeat;
+	content: ''
+}
+
+.newOpenStoreType2 .nStoreSlide {
+	float: right;
+	width: calc(100% - 345px)
+}
+
+.newOpenStoreType2 .nStoreSlide>button {
+	position: absolute;
+	bottom: 0;
+	width: 25px;
+	height: 25px;
+	border: #e5e5e5 1px solid;
+	background: #fff;
+	z-index: 9
+}
+
+.newOpenStoreType2 .nStoreSlide>button:after {
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	width: 25px;
+	height: 25px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/main/ico_arRG_8x13.png")
+		no-repeat 50% 50%;
+	content: ''
+}
+
+.newOpenStoreType2 .nStoreSlide>button.slick-prev {
+	right: 25px
+}
+
+.newOpenStoreType2 .nStoreSlide>button.slick-prev:after {
+	transform: rotate(-180deg)
+}
+
+.newOpenStoreType2 .nStoreSlide>button.slick-next {
+	right: 0;
+	border-left: 0
+}
+
+.newOpenStoreType2 .nStoreSlide>button.slick-disabled {
+	cursor: auto
+}
+
+.newOpenStoreType2 .nStoreSlide>button.slick-disabled:after {
+	opacity: .3
+}
+
+.newOpenStoreType2 .slideItem {
+	position: relative;
+	width: 305px;
+	height: 236px;
+	border: #e5e5e5 1px solid;
+	overflow: hidden;
+}
+
+.newOpenStoreType2 .slideItem:after {
+	display: block;
+	clear: both;
+	content: ''
+}
+/*.newOpenStoreType2 .slideItem img{float:left;width:305px;height:236px;margin:-1px 0 -1px -1px;}*/
+.newOpenStoreType2 .slideItem img {
+	float: left;
+	width: 305px;
+	height: 236px;
+	margin: -1px 0 -1px -1px;
+	cursor: pointer;
+} /* [3550713] (�걧�젅�씠�뀡) PC 硫붿씤>留ㅼ옣異붿쿇 留ㅼ옣�씠誘몄� 媛쒖꽑 �슂泥��쓽 嫄� */
+.newOpenStoreType2 .nSInfo {
+	position: absolute;
+	top: 50%;
+	left: 334px;
+	width: calc(100% - 360px);
+	transform: translateY(-50%)
+}
+
+.newOpenStoreType2 .nSInfo .tit>b {
+	display: block;
+	color: #9bce26;
+	letter-spacing: 0;
+	font-weight: 500
+}
+
+.newOpenStoreType2 .nSInfo .tit>span {
+	display: block;
+	margin-top: 3px
+}
+
+.newOpenStoreType2 .nSInfo .tit>span:after {
+	display: inline-block;
+	width: 10px;
+	height: 14px;
+	margin-left: 7px;
+	vertical-align: 3px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/main/ico_arRG_10x14.png")
+		no-repeat;
+	content: ''
+}
+
+.newOpenStoreType2 .nSInfo .tit>span>a {
+	overflow: hidden;
+	display: inline-block;
+	max-width: calc(100% - 20px);
+	font-size: 20px;
+	color: #000;
+	font-weight: 400;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal
+}
+
+.newOpenStoreType2 .nSInfo .nStatus {
+	margin-top: 2px
+}
+
+.newOpenStoreType2 .nSInfo .nStatus>* {
+	display: inline-block;
+	font-size: 13px;
+	line-height: 15px;
+	font-weight: 400;
+	vertical-align: middle
+}
+
+.newOpenStoreType2 .nSInfo .nStatus .time {
+	color: #555
+}
+
+.newOpenStoreType2 .nSInfo .nStatus .time:before {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 6px;
+	border-radius: 50%;
+	vertical-align: middle;
+	background: #888;
+	content: ''
+}
+
+.newOpenStoreType2 .nSInfo .nStatus .time.on:before {
+	background: #9bce26
+}
+
+.newOpenStoreType2 .nSInfo .nStatus .star {
+	position: relative;
+	margin-left: 4px;
+	padding-left: 5px;
+	color: #777;
+	background: none
+}
+
+.newOpenStoreType2 .nSInfo .nStatus .star:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 15px;
+	background: #eee;
+	content: ''
+}
+
+.newOpenStoreType2 .nSInfo .nStatus .star:before {
+	display: inline-block;
+	width: 14px;
+	height: 13px;
+	vertical-align: -2px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/main/ico_fav.png")
+		no-repeat;
+	content: ''
+}
+
+.newOpenStoreType2 .nSInfo .nStatus .star.checked:before {
+	background-image:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/main/ico_fav_on.png")
+}
+
+.newOpenStoreType2 .nSInfo .nStatus .star em {
+	font-weight: 500;
+	font-style: normal
+}
+
+.newOpenStoreType2 .nSInfo .subTit {
+	margin-top: 20px;
+	font-size: 13px;
+	color: #555;
+	font-weight: 700
+}
+
+.newOpenStoreType2 .nSInfo .subTit>span {
+	margin-left: 5px;
+	font-size: 10px;
+	color: #aaa;
+	font-weight: 400
+}
+
+.newOpenStoreType2 .nSInfo dl {
+	overflow: hidden;
+	margin-top: 7px
+}
+
+.newOpenStoreType2 .nSInfo dl+dl {
+	margin-top: 9px
+}
+
+.newOpenStoreType2 .nSInfo dt {
+	float: left;
+	display: block;
+	width: 113px;
+	height: 18px;
+	text-align: center;
+	border-radius: 9px;
+	background: #f5f5f5
+}
+
+.newOpenStoreType2 .nSInfo dt>span {
+	font-size: 11px;
+	padding-top: 1px;
+	color: #555;
+	font-weight: 400;
+	vertical-align: top
+}
+
+.newOpenStoreType2 .nSInfo dd {
+	float: left;
+	display: block;
+	width: 180px;
+	margin: 2px 0 0 6px;
+	font-size: 11px;
+	line-height: 15px;
+	color: #555
+}
+/* [3502851] (�걧�젅�씠�뀡) PC 硫붿씤>留ㅼ옣異붿쿇 湲곕뒫媛쒖꽑 �슂泥��쓽 嫄� E */
+
+/* [3507003] (�걧�젅�씠�뀡) MO/PC 異붿쿇愿� 湲곕뒫 媛쒖꽑 �슂泥��쓽 嫄� S */
+.zzimTrans .curation_area .slide_list .btn_zzim, .zzimTrans .curation_area .slide_list .btnbag
+	{
+	top: 224px
+}
+
+.zzimTrans .curation_area .slide_list .btn_zzim {
+	right: 34px;
+	width: 18px;
+	height: 17px;
+	border: 0;
+	background: transparent
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_zzim.png")
+		no-repeat
+}
+
+.zzimTrans .curation_area .slide_list .btn_zzim.on {
+	background-image:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_zzim_on.png")
+}
+
+.zzimTrans .curation_area .slide_list .btnbag {
+	right: 9px !important;
+	width: 15px;
+	height: 17px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_bag.png")
+		no-repeat
+}
+
+.zzimTrans .curation_area .slide_list .item .prd_name {
+	margin-top: 32px
+}
+/*.zzimTrans .curation_area .slide_list .item .prd_name .tx_name{line-height:18px;color:#333;letter-spacing:-.2px;font-weight:500}*/
+.adviser_Wrap.trans2 .typeBox {
+	padding-bottom: 40px
+}
+
+.adviser_Wrap.trans2 .typeBox.txtOnly {
+	margin-top: 40px;
+}
+
+.adviser_Wrap.trans2 .advBtn {
+	display: flex;
+	margin-top: 6px;
+	padding: 0 50px 0 30px;
+	line-height: 78px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/arr_12x20.png")
+		no-repeat calc(100% - 29px) 50%
+}
+
+.adviser_Wrap.trans2 .advBtn>* {
+	display: inline-block;
+	margin: 0;
+	font-size: 20px
+}
+
+.adviser_Wrap.trans2 .advBtn>.botTxt {
+	margin-left: 8px
+}
+
+.toppickSL.trans1 .slick-slide {
+	position: relative
+}
+
+.toppickSL.trans1 .slick-slide a>div {
+	float: left
+}
+
+.toppickSL.trans1 .img {
+	width: 140px;
+	height: 140px;
+	margin: 0 10px 0 0
+}
+
+.toppickSL.trans1 .img img {
+	width: 140px;
+	height: 140px
+}
+
+.toppickSL.trans1 .infoSec {
+	width: calc(100% - 150px);
+	padding-top: 16px
+}
+
+.toppickSL.trans1 .infoSec .ttlNum {
+	color: #f27370
+}
+
+.toppickSL.trans1 .infoSec .pdTxt {
+	height: 44px;
+	margin-top: 7px;
+	font-size: 15px;
+	line-height: 22px
+}
+
+.toppickSL.trans1 .infoSec .priceG {
+	margin-top: 5px
+}
+
+.toppickSL.trans1 .infoSec .priceG .salePr {
+	font-size: 14px;
+	color: #e02020;
+	font-weight: 700
+}
+
+.toppickSL.trans1 .infoSec .priceG .price {
+	margin-left: 6px;
+	color: #000
+}
+
+.toppickSL.trans1 .infoSec .priceG .price b {
+	position: relative;
+	top: 1px;
+	font-size: 19px
+}
+
+.toppickSL.trans1 .infoSec .priceG .price em {
+	font-size: 14px;
+	font-style: normal
+}
+
+.toppickSL.trans1 .infoSec .star {
+	margin-top: 4px;
+	padding-left: 14px;
+	font-size: 12px;
+	color: #333;
+	font-weight: 400;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_star.png")
+		no-repeat 0 4px
+}
+
+.toppickSL.trans1 .infoSec .star em {
+	margin-left: 2px;
+	color: #888;
+	font-style: normal
+}
+
+.toppickSL.trans1 .prod-func {
+	display: flex;
+	position: absolute;
+	top: 33px;
+	right: 17px;
+	z-index: 2
+}
+
+.toppickSL.trans1 .prod-func button {
+	font-size: 0;
+	color: transparent;
+	border: 0
+}
+
+.toppickSL.trans1 .prod-func button.btn_zzim {
+	position: relative;
+	top: 0;
+	right: inherit;
+	width: 18px;
+	height: 17px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_zzim.png")
+		no-repeat
+}
+
+.toppickSL.trans1 .prod-func button.btn_zzim.on {
+	background-image:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_zzim_on.png")
+}
+
+.toppickSL.trans1 .prod-func button.btnbag {
+	width: 15px;
+	height: 17px;
+	margin-left: -7px;
+	background:
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/ico_bag.png")
+		no-repeat
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .helfRv_list {
+	margin: 0 0 0 -15px;
+	padding: 0
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .slick-track {
+	display: flex
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .slick-arrow.slick-prev {
+	left: -28px
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .slick-arrow.slick-next {
+	right: -43px
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .slick-slide {
+	width: 340px;
+	height: auto;
+	margin: 0 0 0 15px;
+	padding: 0;
+	border: 0;
+	border-radius: 0
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .slick-slide .slideCrad {
+	padding: 20px 20px 19px;
+	border: #ddd 1px solid;
+	border-radius: 5px
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .info_list {
+	margin: 0;
+	padding: 0
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .info_list:after {
+	display: none
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .flexCon {
+	overflow: hidden;
+	margin-top: 14px
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .flexCon .txt_inner {
+	float: left;
+	width: calc(100% - 100px);
+	max-height: 88px;
+	margin: 1px 0 0;
+	color: #333;
+	-webkit-line-clamp: 4
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .flexCon .review_thum {
+	float: right;
+	display: block;
+	width: 90px;
+	height: 90px;
+	padding: 0
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .flexCon .review_thum img {
+	width: 100%;
+	height: 100%
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .flexCon .review_thum .thumSum_num {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 15px;
+	padding: 0 5px 0 4px;
+	line-height: 13px;
+	font-size: 12px;
+	color: #fff;
+	font-weight: 400;
+	background: rgba(0, 0, 0, .7)
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .flexCon+.helfRv_pd {
+	position: relative;
+	margin-top: 14px;
+	padding-top: 15px
+}
+
+.forYou_Wrap .helfRv_sl.trans1 .flexCon+.helfRv_pd:before {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	border-top: #cfcfcf 1px dashed;
+	content: ''
+}
+
+.forYou_Wrap .ttlBox.select {
+	display: flex;
+	align-items: flex-start
+}
+
+.forYou_Wrap .ttlBox.select .foryouTtl {
+	padding-right: 20px
+}
+
+.forYou_Wrap .ttlBox.select label {
+	position: relative;
+	display: inline-block; /*max-width:184px;*/
+	padding-right: 32px;
+	margin-top: -3px;
+	border-bottom: #9bce26 1px solid
+}
+
+.forYou_Wrap .ttlBox.select label:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 32px;
+	background: #fff
+		url("https://www.oliveyoung.co.kr/pc-static-root/image/curation/arrD_G_12x7.png")
+		no-repeat 50% 50%;
+	content: ''
+}
+
+.forYou_Wrap .ttlBox.select select {
+	width: inherit;
+	max-width: 100%;
+	height: 33px;
+	padding: 0 12px 0 6px;
+	font-size: 22px;
+	line-height: 31px;
+	letter-spacing: 0;
+	color: #9bce26;
+	font-weight: 700;
+	border: 0;
+	border-radius: 0;
+	-webkit-appearance: none
+}
+
+.forYou_Wrap .ttlBox.select select:active {
+	color: #9bce26
+}
+
+.shap_tag_box.trans1 .inner {
+	overflow: hidden;
+	margin: -9px 0 -1px;
+	padding: 0
+}
+
+.shap_tag_box.trans1 .inner>li {
+	float: left;
+	display: block;
+	margin: 0 5px 5px 0;
+	padding: 0
+}
+
+.shap_tag_box.trans1 .inner>li a {
+	height: 36px;
+	padding: 0 23px;
+	font-size: 16px;
+	line-height: 34px;
+	font-weight: 400;
+	border: #bbb 1px solid;
+	border-radius: 20px
+}
+
+.shap_tag_box.trans1 .inner>li.on a {
+	font-size: 16px;
+	border-color: #9bce26
+}
+/* [3507003] (�걧�젅�씠�뀡) MO/PC 異붿쿇愿� 湲곕뒫 媛쒖꽑 �슂泥��쓽 嫄� E */

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="User_shipping_listDAO">
+ 	<select id="getAddress" resultType="shippingListVO">
+ 		SELECT * FROM USER_SHIPPING_LIST WHERE USER_ID=#{user_id} ORDER BY USER_SHIPPING_SERIAL ASC, ADDRESS_DEFAULT DESC
+ 	</select>
+ 	<insert id="address_new">
+ 		INSERT INTO USER_SHIPPING_LIST VALUES(default,#{user_id},#{user_shipping_place_name},#{user_shipping_name},#{user_shipping_phone},#{user_shipping_zipcode}
+ 		,#{user_shipping_address1},#{user_shipping_address2},#{user_shipping_detail_address},#{address_default})
+ 	</insert>
+ 	<update id="address_update">
+ 		UPDATE USER_SHIPPING_LIST SET USER_SHIPPING_PLACE_NAME=#{user_shipping_place_name}, USER_SHIPPING_NAME=#{user_shipping_name},
+ 		USER_SHIPPING_PHONE=#{user_shipping_phone}, USER_SHIPPING_ZIPCODE=#{user_shipping_zipcode}, USER_SHIPPING_ADDRESS1=#{user_shipping_address1},
+ 		USER_SHIPPING_ADDRESS2=#{user_shipping_address2}, USER_SHIPPING_DETAIL_ADDRESS=#{user_shipping_detail_address}, ADDRESS_DEFAULT=#{address_default}
+ 		WHERE USER_SHIPPING_SERIAL=#{user_shipping_serial}
+ 	</update>
+ 	<update id="setDefaultAddress">
+ 		UPDATE USER_SHIPPING_LIST SET ADDRESS_DEFAULT=TRUE WHERE USER_SHIPPING_SERIAL=#{user_shipping_serial}
+ 	</update>
+ 	<update id="setDefaultAllFalse">
+ 		UPDATE USER_SHIPPING_LIST SET ADDRESS_DEFAULT=FALSE WHERE USER_ID=#{user_id}
+ 	</update>
+ 	<delete id="deleteAddress">
+ 		DELETE FROM USER_SHIPPING_LIST WHERE USER_SHIPPING_SERIAL=#{user_shipping_serial}
+ 	</delete>
+ 	<select id="getShipping" resultType="shippingListVO" >
+ 		SELECT * FROM USER_SHIPPING_LIST WHERE USER_SHIPPING_SERIAL=#{user_shipping_serial}
+ 	</select>
+ 	<select id="selectAddress" resultType="shippingListVO">
+ 		SELECT * FROM USER_SHIPPING_LIST WHERE USER_ID=#{user_id} AND USER_SHIPPING_SERIAL=#{user_shipping_serial}
+ 	</select>
+ </mapper>

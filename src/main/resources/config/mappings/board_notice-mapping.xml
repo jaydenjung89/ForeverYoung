@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- ㅡ*.ㅡmapping.xml 만들때 이거 가져가서 사용하세요 -->
+ 
+ <mapper namespace="Board_noticeDAO">
+    
+    
+    <!-- 게시글 상세내용 가져오기 -->
+    <select id="getBoard" resultType="notice" parameterType="notice">
+       SELECT * FROM notice WHERE notice_serial = #{notice_serial}
+    </select>
+    
+    <!-- 게시글 조회수 증가 -->
+    <update id="noticeHitUp" parameterType="int">
+       UPDATE notice SET notice_hit = notice_hit+1 
+       WHERE notice_serial=#{notice_serial}
+    
+    </update>
+    
+    <!-- 게시글 목록 가져오기 -->
+    <select id="getBoardNoticeList" resultType="notice">
+       SELECT notice_serial, notice_title, notice_id, notice_date,
+       notice_hit
+       FROM notice
+    </select>
+ </mapper>

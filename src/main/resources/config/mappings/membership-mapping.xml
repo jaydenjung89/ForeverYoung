@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="membershipDAO">
+ 	<select id="getMembershipData" resultType="forever.young.user.vo.MembershipVO">
+ 		SELECT * FROM USER_MEMBERSHIP WHERE USER_MEMBERSHIP_NAME=#{value}
+ 	</select>
+ 	<select id="getMembershipOfUser" resultType="String">
+ 		SELECT USER_MEMBERSHIP_NAME FROM user_details WHERE USER_ID=#{VALUE}
+ 	</select>
+ </mapper>

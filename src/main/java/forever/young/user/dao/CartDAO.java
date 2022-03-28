@@ -1,0 +1,48 @@
+package forever.young.user.dao;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import forever.young.user.vo.CartVO;
+import forever.young.user.vo.user_address_listVO;
+import forever.young.vo.ProductVO;
+
+@Repository
+public class CartDAO {
+	@Autowired
+	private SqlSessionTemplate sqlSession;
+	
+	public List<CartVO> getCartList(String userId){
+		return sqlSession.selectList("CategoryDAO.getCartList", userId);
+	}
+	public ProductVO getCartItem(CartVO cartVO) {
+		return sqlSession.selectOne("CategoryDAO.getCartItem", cartVO);
+	}
+	public void insertCartItem(CartVO cartVO) {
+		sqlSession.insert("CategoryDAO.insertCartItem", cartVO);
+	}
+	public void updateCartItem(CartVO cartVO) {
+		sqlSession.update("CategoryDAO.updateCartItem", cartVO);
+	}
+	public void deleteCartItem(CartVO cartVO) {
+		sqlSession.delete("CategoryDAO.deleteCartItem", cartVO);
+	}
+	public user_address_listVO getDefaultAddress(String userId) {
+		return sqlSession.selectOne("UserDAO.getDefaultAddress", userId);
+	}
+	public void allCheckItem(CartVO cartVO) {
+		sqlSession.update("CategoryDAO.AllCheckItem", cartVO);
+	}
+	public void updateCheckStatus(CartVO cartVO) {
+		sqlSession.update("CategoryDAO.updateCheckStatus", cartVO);
+	}
+	public List<CartVO> getPurchaseGoods(String userId){
+		return sqlSession.selectList("CategoryDAO.getPurchaseGoods", userId);
+	}
+	public ProductVO getGoodsStock(CartVO cartVO) {
+		return sqlSession.selectOne("CategoryDAO.getStock", cartVO);
+	}
+}

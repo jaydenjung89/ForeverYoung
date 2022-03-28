@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<context:component-scan
+		base-package="forever.young.user"></context:component-scan>
+	<mvc:annotation-driven></mvc:annotation-driven>	
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/user/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<!-- 이메일 인증 -->
+    <bean id="mailSender" class ="org.springframework.mail.javamail.JavaMailSenderImpl" >
+      <property name="host" value="smtp.gmail.com" />
+      <property name="port" value="587" />
+      <property name="defaultEncoding" value="utf-8"/>
+      <property name="username" value="kkmm0298@gmail.com" />
+      <property name="password" value="sho^^0125" />
+      <property name="javaMailProperties" >
+         <props>
+         <!--    <prop key="mail.transport.protocol">smtp</prop>  -->
+            <prop key="mail.smtp.auth">true</prop>
+            <prop key="mail.smtp.starttls.enable">true</prop>
+            <prop key="mail.debug">true</prop>
+         </props>
+      </property>
+   </bean>
+     
+    <bean id="email" class="forever.young.email.Email" />
+    <bean id="emailSender" class="forever.young.email.EmailSender" />
+	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
+	<bean id="loginInterceptor" class="forever.young.interceptor.LoginInterceptor"/>
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="main"/>
+			
+			<ref bean="loginInterceptor"/>
+		
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	
+</beans>
+
+

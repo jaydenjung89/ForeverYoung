@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- ㅡ*.ㅡmapping.xml 만들때 이거 가져가서 사용하세요 -->
+ 
+ <mapper namespace="UserDAO">
+ 	<select id="login" resultType="user" parameterType="user">
+ 		select * from user where user_id=#{user_id}
+ 	</select>
+ 	<select id="checkEmail" resultType="user" parameterType="user">
+ 		select * from user where user_email=#{user_email}
+ 	</select>
+ 	<insert id="register" parameterType="user">
+		insert into user values(#{user_id},#{user_password},#{user_name},
+		#{user_email},#{user_phone},#{user_address1},#{user_address2},#{user_zipcode},
+		#{user_gender},#{user_birth},now())
+
+	</insert>
+	<select id="getUser" resultType="user" parameterType="user">
+ 		SELECT * FROM user WHERE user_id=#{user_id}
+ 	</select>
+ 	
+ 	<update id="updateUser" parameterType="user">
+ 		update user set
+ 		<if test="user_password !='' and user_new_pw !=null">
+ 		user_password=#{user_password},
+ 		</if>
+ 		<if test="user_name !='' and user_name !=null">
+ 		user_name=#{user_name},
+ 		</if>
+ 		<if test="user_email !='' and user_email !=null">
+ 		user_email=#{user_email},
+ 		</if>
+ 		<if test="user_phone !='' and user_phone !=null">
+ 		user_phone=#{user_phone},
+ 		</if>
+ 		user_gender=#{user_gender},
+  		<if test="user_birth !='' and user_birth !=null">
+ 		user_birth=#{user_birth}
+ 		</if>
+ 		where user_id=#{user_id}
+ 	</update>
+ 	<delete id="deleteUser" parameterType="user">
+ 	delete from user where user_id=#{user_id}
+ 	</delete>
+ 	<select id="getDefaultAddress" resultType="addressListVO">
+ 		SELECT * FROM user_address_list WHERE USER_ID=#{value} AND ADDRESS_DEFAULT=TRUE
+ 	</select>
+ 	 <select id="idFind" resultType="String">
+       SELECT user_id FROM user WHERE user_name = #{user_name} AND user_email = #{user_email}
+    </select>
+    
+    <!-- 이메일 키값 받아오기 -->
+    <select id="getEmailKey">
+       SELECT * FROM sendemail_key
+    </select>
+    <select id="getUserInfo" resultType="user">
+       SELECT * FROM user WHERE user_id = #{user_id}
+    </select>
+    <!-- 이메일 찾기 -->
+    <select id="pwFind" resultType="String">
+       SELECT user_email 
+       FROM user 
+       WHERE user_email = #{user_email} AND user_id = #{user_id}
+    </select>
+       
+    <select id="getSendEmailKey" resultType="forever.young.user.vo.EmailSendVO">
+       SELECT * FROM sendemail_key
+    </select>
+    <insert id="newPW">
+       UPDATE user SET user_password = #{user_password }
+       WHERE user_id = #{user_id}
+    </insert>
+    <select id="getUserShipping" resultType="shippingListVO" >
+ 		SELECT * FROM USER_SHIPPING_LIST WHERE user_id=#{user_id}
+ 	</select>
+ 	
+ </mapper>

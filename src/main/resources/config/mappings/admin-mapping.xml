@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- ㅡ*.ㅡmapping.xml 만들때 이거 가져가서 사용하세요 -->
+<mapper namespace="AdminDAO">
+
+	<select id="getAdmin" resultType="admin" parameterType="admin">     
+		select * from admin WHERE admin_id=#{admin_id}
+	</select>
+
+	<insert id="insertAdmin" parameterType="admin">
+		insert into admin values
+		(#{admin_id},#{admin_name},#{admin_position},#{admin_pw},
+		#{admin_email},#{admin_phone},#{admin_address1},#{admin_address2})
+	</insert>
+
+	<!-- <select id="getAdminList" resultType="admin">
+		SELECT (ROW_NUMBER() OVER(Order by admin_position DESC)) AS ROWNUM ,* FROM
+		ADMIN
+	</select> -->
+
+	<select id="getUserlist" resultType="adminUser">
+		select
+		(ROW_NUMBER() OVER(Order by B.user_serial)) AS ROWNUM,
+		B.user_serial, A.user_id, A.user_name, A.user_phone,
+		B.user_last_login, B.user_point,
+		B.user_status, B.user_total_purchase
+		FROM user A
+		JOIN user_details B
+		ON A.user_id = B.user_id; 
+	</select>    
+	
+	<select id="getAdminList" resultType="admin" >
+ 		SELECT * FROM admin
+ 	</select>
+	
+	<!-- 회원 수정 출력 --> 
+	<select id="getUser" parameterType="user" resultType="adminUser">
+		SELECT U.USER_ID, U.USER_NAME, U.USER_PHONE,  UD.user_grade, UD.USER_STATUS
+		FROM USER U
+		JOIN USER_DETAILS UD
+		ON U.USER_ID = UD.USER_ID
+	</select>
+	
+	<!-- 회원 삭제 -->
+ 	<delete id="deleteUser" parameterType="user">
+ 		delete from user where user_id = #{user_id}
+ 	</delete>
+	<!-- 관리자 삭제 -->
+ 	<delete id="deleteAdmin" parameterType="admin">
+ 		delete from admin where admin_id = #{admin_id}
+ 	</delete>
+
+	<!-- <update id="update" parameterType="admin">
+		UPDATE
+		ADMIN
+		SET
+		ADMIN_NAME = #{admin_name},
+		ADMIN_POSITION= #{admin_position},
+		ADMIN_EMAIL= #{admin_email},
+		ADMIN_PHONE= #{admin_phone},
+		ADMIN_ADDRESS1= #{admin_address1},
+		ADMIN_ADDRESS2= #{admin_address2}
+		WHERE
+		ADMIN_ID = #{admin_id}
+	</update>-->
+</mapper>

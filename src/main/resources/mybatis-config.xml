@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<properties resource="config/database.properties"/>
+	<typeAliases>
+		<typeAlias type="forever.young.user.vo.UserVO" alias="user"/>
+		<typeAlias type="forever.young.user.vo.PersonalQnaVO" alias="personalQna"/>
+		<typeAlias type="forever.young.user.vo.Board_noticeVO" alias="notice"/>
+		<typeAlias type="forever.young.vo.CategoryFirstVO" alias="categoryFirst"/>
+		<typeAlias type="forever.young.vo.CategorySecondVO" alias="categorySecond"/>
+		<typeAlias type="forever.young.vo.CategoryThirdVO" alias="categoryThird"/>
+		<typeAlias type="forever.young.vo.ProductVO" alias="product"/>
+		<typeAlias type="forever.young.user.vo.ItemPageVO" alias="itemPage"/>
+		<typeAlias type="forever.young.user.vo.GoodsQnaVO" alias="goodsqna"/>
+		<typeAlias type="forever.young.user.vo.BannerVO" alias = "banner" />
+		<typeAlias type="forever.young.user.vo.CartVO" alias="cart"/>
+		<typeAlias type="forever.young.user.vo.user_address_listVO" alias="addressListVO"/>
+		<typeAlias type="forever.young.vo.OrderVO" alias="orderClient"/>
+		<typeAlias type="forever.young.user.vo.GoodsStockVO" alias="goodsStock"/>
+		<typeAlias type="forever.young.user.vo.ShippingVO" alias="shippingVO"/>
+		<typeAlias type="forever.young.user.vo.User_order_listVO" alias="orderListVO"/>
+		<typeAlias type="forever.young.user.vo.UserDetailVO" alias="userDetails"/>
+		<typeAlias type="forever.young.user.vo.User_shipping_listVO" alias="shippingListVO"/>
+		<typeAlias type="forever.young.admin.vo.AdminVO" alias="admin" />
+     	<typeAlias type="forever.young.admin.vo.AdminUserVO" alias="adminUser" />
+     	<typeAlias type="forever.young.admin.vo.QnaPersonalVO" alias="qna" />
+    	<typeAlias type="forever.young.user.vo.FaqVO" alias="faq" />
+    	<typeAlias type="forever.young.admin.vo.NoticeVO" alias="adminNotice" />
+   		<typeAlias type="forever.young.admin.vo.AdminFaqVO" alias="adminFaq" />
+        <typeAlias type="forever.young.admin.vo.AdminRegistVO" alias = "regist" />
+		<typeAlias type="forever.young.admin.vo.AdminReviewVO" alias="review" />
+		<typeAlias type="forever.young.admin.vo.GoodsQnaVO" alias="gqna"/>
+		<typeAlias type="forever.young.admin.vo.AdminOrderVO" alias="order" />
+		<typeAlias type="forever.young.admin.vo.AdminBannerVO" alias="banners" />
+		<typeAlias type="forever.young.admin.vo.AdminSalesVO" alias="sales"/>
+		<typeAlias type="forever.young.admin.vo.AdminTermsVO" alias="terms"/>
+		</typeAliases>
+	
+	<mappers>
+		<mapper resource="config/mappings/terms-mapping.xml"/>
+		<mapper resource="config/mappings/admin/sales-mapping.xml" />
+		<mapper resource="config/mappings/user-mapping.xml"/>
+		<mapper resource="config/mappings/personalQna-mapping.xml"/>
+		<mapper resource="config/mappings/board_notice-mapping.xml"/>
+		<mapper resource="config/mappings/category-mapping.xml"/>
+		<mapper resource="config/mappings/itemPage-mapping.xml"/> 
+		<mapper resource="config/mappings/GoodsQna-mapping.xml"/>
+		<mapper resource="config/mappings/banner-mapping.xml" />
+		<mapper resource="config/mappings/user_address_list-mapping.xml"/>
+		<mapper resource="config/mappings/order-mapping.xml"/>
+		<mapper resource="config/mappings/user_order_list-mapping.xml"/>
+		<mapper resource="config/mappings/user_shipping_list-mapping.xml"/>
+		<mapper resource="config/mappings/admin-mapping.xml" />
+      	<mapper resource="config/mappings/admin/qnaPersonal-mapping.xml" />
+      	<mapper resource="config/mappings/review-mapping.xml" />
+      	<mapper resource="config/mappings/faq-mapping.xml" />
+		<mapper resource="config/mappings/point-mapping.xml"/>
+		<mapper resource="config/mappings/membership-mapping.xml"/>
+		<mapper resource="config/mappings/notice-mapping.xml"/>
+		<mapper resource="config/mappings/admin/adminNotice-mapping.xml" />
+      	<mapper resource="config/mappings/admin/adminFaq-mapping.xml" />
+      	<mapper resource="config/mappings/admin/product-mapping.xml" />
+      	<mapper resource="config/mappings/admin/admin_review.xml" />
+		<mapper resource="config/mappings/admin/goodsQna-mapping.xml" />
+		<mapper resource="config/mappings/admin/adminOrder-mapping.xml" />
+	</mappers>
+</configuration>

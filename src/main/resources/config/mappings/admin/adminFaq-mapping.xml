@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- ㅡ*.ㅡmapping.xml 만들때 이거 가져가서 사용하세요 -->
+<mapper namespace="AdminDAO">
+	<!-- list 가져오기 -->
+	<select id="getFaqList" resultType="adminFaq">
+		select faq_serial_num,
+		faq_category, faq_title, faq_content
+		from FAQ
+		order by
+		faq_serial_num desc
+	</select>
+
+	<delete id="deleteFaq" parameterType="adminFaq">
+		DELETE FROM
+		FAQ WHERE
+		faq_serial_num =
+		#{faq_serial_num};
+	</delete>
+
+	<!-- notice Detail 읽어오기-->
+	<select id="getFaq" resultType="adminFaq">
+		select * from FAQ
+		where
+		faq_serial_num = #{faq_serial_num}
+	</select>
+	
+	
+	<insert id="insertFaq" parameterType="adminFaq">
+		INSERT INTO fyproject.FAQ (faq_serial_num, faq_category, faq_title, faq_content)
+		VALUES (default, #{faq_category}, #{faq_title}, #{faq_content})
+	</insert>
+	
+	<update id="updateFaq" parameterType="adminFaq">
+		UPDATE FAQ SET
+		faq_title = #{faq_title},
+		faq_content = #{faq_content}
+		WHERE
+		faq_serial_num=#{faq_serial_num};
+	</update>
+</mapper>

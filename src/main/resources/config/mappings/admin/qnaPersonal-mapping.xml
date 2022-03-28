@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- ㅡ*.ㅡmapping.xml 만들때 이거 가져가서 사용하세요 -->
+<mapper namespace="qnaDAO">
+	<!-- 1:1문의 답변 대기 쿼리 -->
+	<select id="getQnaPersonalList" resultType="qna">
+		SELECT
+		* FROM
+		qna_personal
+	</select>
+
+	<!-- 게시글 하나 불러오기 -->
+	<select id="getQnaPersonalWrite" resultType="qna"
+		parameterType="qna">
+		SELECT * FROM qna_personal WHERE
+		qna_personal_serial=#{qna_personal_serial};
+	</select>
+	
+	<!-- 답변달기 -->
+	<update id="qnaPersonalUpdate" parameterType="qna">
+ 		UPDATE qna_personal SET 
+ 		QNA_PERSONAL_ANSWER_TITLE = #{qna_personal_answer_title},
+ 		QNA_PERSONAL_ANSWER = #{qna_personal_answer},
+ 		QNA_PERSONAL_ANSWER_DATE = now()
+ 		WHERE qna_personal_serial = #{qna_personal_serial}
+ 	</update>
+</mapper>

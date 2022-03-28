@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="reviewDAO">
+
+	<!-- 마이페이지 -> 리뷰작성가능리스트 -->
+	<select id="myreviewList" resultType="orderListVO">
+		SELECT * FROM
+		ORDER_DETAILS as OD JOIN CATEGORY_GOODS as C
+		ON
+		OD.category_goods_serial = C.category_goods_serial
+		JOIN fyproject.ORDER AS O
+		ON OD.order_merchant_serial = O.order_merchant_serial
+		WHERE OD.user_id = #{user_id}
+		AND OD.order_details_serial NOT IN (SELECT order_details_serial FROM REVIEW)
+	</select>
+	<!-- 작성 가능 리뷰 개수 -->
+	<select id="count" resultType="Integer">
+	 SELECT count(*) 
+	 FROM ORDER_DETAILS
+	 WHERE user_id = #{user_id}
+	 AND order_details_serial not in (SELECT order_details_serial FROM REVIEW)
+	</select>
+	
+	<!-- 후기 작성 눌렀을 때 상품정보 물고가는 리스트 -->
+	<select id="reviewWrite" resultType="orderListVO">
+		SELECT * 
+		FROM
+		CATEGORY_GOODS AS C JOIN GOODS_DETAIL AS G
+		ON
+		C.category_goods_serial = G.category_goods_serial
+		JOIN
+		ORDER_DETAILS AS OD
+		ON
+		G.category_goods_serial = OD.category_goods_serial
+		WHERE
+		OD.order_details_serial = #{order_details_serial}
+	</select>
+	
+	<!-- 리뷰 작성(insert)-->
+	<insert id="reviewInsert"  >
+		INSERT INTO REVIEW 
+		VALUES ( default, #{user_id},#{review_title}, #{review_content}, now(), 
+					#{review_image_main}, #{review_hit}, #{review_best_up},
+					 #{category_goods_serial},#{order_details_serial}, #{category_first_serial}, #{category_second_serial}, #{category_third_serial},#{order_date})
+	</insert>
+	<!-- 작성한 리뷰 개수 -->
+	<select id="reviewCount" resultType="Integer">
+		SELECT count(*) from REVIEW
+		WHERE user_id = #{user_id}
+	</select>
+	<!-- 작성완료된 리뷰리스트 -->
+	<select id="reviewCompleteList" resultType="forever.young.user.vo.ReviewVO">
+		SELECT * 
+		FROM REVIEW AS R
+		LEFT JOIN CATEGORY_GOODS AS C
+		ON R.category_goods_serial = C.category_goods_serial
+		WHERE user_id = #{user_id}
+		ORDER BY review_serial
+	</select>
+	<!-- 리뷰 수정하기 위해 물고올 데이터들 -->
+	<select id="updateData" resultType="forever.young.user.vo.ReviewVO">
+		SELECT * FROM REVIEW as R
+		JOIN CATEGORY_GOODS as C
+		ON R.category_goods_serial = C.category_goods_serial
+		WHERE R.review_serial = #{review_serial} AND C.category_goods_serial = #{category_goods_serial}
+	</select>
+	<!-- 리뷰 수정(update) 저장 -->
+	<update id="updateReview" parameterType="forever.young.user.vo.ReviewVO">
+		UPDATE REVIEW SET
+		review_title=#{review_title} , review_content = #{review_content}, review_date = now()
+		WHERE review_serial = #{review_serial}
+	</update>
+	<!-- 리뷰 삭제(delete) -->
+	<delete id="reviewDelete">
+		DELETE FROM REVIEW WHERE review_serial = #{review_serial}
+	</delete>
+	<!-- 리뷰 목록 리스트 불러오기-->
+	<select id="getGoodsReview" resultType="forever.young.user.vo.ReviewVO">
+		SELECT *, (ROW_NUMBER() OVER (ORDER BY REVIEW_SERIAL ASC)) as rnum
+		FROM REVIEW
+		WHERE CATEGORY_GOODS_SERIAL = #{category_goods_serial}
+		ORDER BY REVIEW_SERIAL ASC
+	    LIMIT 5 OFFSET #{start}
+	</select>
+	<select id="getReviewCount" resultType="String">
+		SELECT count(*) FROM REVIEW
+		WHERE category_goods_serial = #{value}
+	</select>
+	<!-- 제품 페이지용 리뷰리스트 -->
+	
+	
+	
+</mapper>

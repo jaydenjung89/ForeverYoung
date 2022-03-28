@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace = "adminOrderDAO">
+ 
+ 	<!-- 결제 완료 ~ 배송 준비 중 -->
+ 	<select id = "getOrderWaitList" resultType="order">
+ 		SELECT * FROM fyproject.ORDER
+ 		WHERE order_delivery_status
+ 		IN ('결제완료')
+ 		ORDER BY order_merchant_serial;
+ 	</select>
+ 	
+ 	<!-- 취소요청 ~ 취소완료 -->
+ 	<select id = "getOrderCancleList" resultType="order">
+ 		SELECT * FROM fyproject.ORDER
+ 		WHERE order_delivery_status
+ 		IN ('결제취소')
+ 		ORDER BY order_date
+ 	</select>
+ 	
+ 	<!-- order table -->
+ 	<select id = "getOrderWait" resultType = "order">
+ 		SELECT * FROM fyproject.ORDER
+ 		WHERE order_merchant_serial = #{order_merchant_serial}
+ 	</select>
+ 	
+ 	<select id ="getOrderWaitDetail" resultType = "order" parameterType = "order">
+ 		SELECT C.category_goods_name, G.goods_detail_price, O.order_goods_count, O.order_goods_price, O.order_goods_old_price
+ 		FROM CATEGORY_GOODS C
+ 		JOIN GOODS_DETAIL G
+ 		ON C.category_goods_serial = G.category_goods_serial
+ 		JOIN ORDER_DETAILS O
+ 		ON G.category_goods_serial = O.category_goods_serial
+ 		WHERE O.order_merchant_serial = #{order_merchant_serial}
+ 	</select>
+ 	<!-- order table -->
+ 	
+ </mapper>

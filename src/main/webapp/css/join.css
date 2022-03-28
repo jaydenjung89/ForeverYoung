@@ -1,0 +1,1070 @@
+@charset "UTF-8";
+
+/* html */
+
+element.style {
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    display: block;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+
+/* 회원가입 타이틀 */
+
+.tit_page h2.tit {
+    font-weight: 700;
+    font-size: 28px;
+    color: #333;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+
+/* body class="member-join" */
+
+body, input, select, textarea, button {
+    font-family: noto sans,malgun gothic,AppleGothic,dotum;
+    line-height: 1;
+    letter-spacing: -.05em;
+    color: #4c4c4c;
+    font-size: 12px;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+
+/* wrap */
+
+div, th, td, li, dt, dd, p {
+    word-break: break-all;
+}
+
+div {
+    display: block;
+}
+
+
+/* container */
+
+#header, #container, #content {
+    position: relative;
+}
+
+
+/* main */
+
+#main {
+    border-bottom: 1px solid #f7f7f7;
+}
+
+
+/* content */
+
+#content {
+    min-width: 1050px;
+    padding-bottom: 60px;
+}
+
+
+/* page_aticle */
+
+.page_aticle {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.page_aticle button, .page_aticle input, .page_aticle select, .page_aticle * {
+    font-family: noto sans;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+
+/* type_form member_join */
+
+.member_join {
+    width: 640px;
+    margin: 0 auto;
+}
+
+
+/* form */
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+
+/* input type="hidden" */
+
+input {
+    line-height: normal;
+}
+
+input[type="hidden" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    display: none !important;
+    padding: initial;
+    border: initial;
+}
+
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    font-style: "";
+    font-variant-ligatures: "";
+    font-variant-caps: "";
+    font-variant-numeric: "";
+    font-variant-east-asian: "";
+    font-weight: "";
+    font-stretch: "";
+    font-size: "";
+    font-family: "";
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+
+/* page_sub */
+
+.member_join .page_sub {
+    padding-bottom: 10px;
+    font-size: 12px;
+    color: #666;
+    line-height: 17px;
+    text-align: right;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+/* p태그 안에 ico */
+
+.member_join .page_sub .ico {
+    padding-right: 2px;
+    color: #ee6a7b;
+}
+
+
+/* tbl_comm */
+
+.member_join .tbl_comm {
+    width: 100%;
+    border-top: 2px solid #333;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+
+/* tbody */
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+
+/* tr class="fst" */
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+
+/* th */
+.member_join th {
+    width: 159px;
+    padding: 20px 0 0 20px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: left;
+}
+
+td, th {
+    padding: 0;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+
+
+/* th태그 안에 span class="ico" */
+
+.member_join th .ico {
+    color: #ee6a7b;
+}
+
+
+/* screen_out */
+
+.screen_out {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+
+/* td */
+
+
+
+.member_join td {
+    padding: 10px 0;
+    border-top: 0;
+    font-size: 14px;
+    vertical-align: top;
+    text-align: left;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+
+/* td태그 안에 input type="text" */
+
+.member_join input[type=text], .member_join input[type=password] {
+    width: 332px;
+}
+
+.type_form textarea, .type_form input[type=text], .type_form input[type=password] {
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    border-radius: 3px;
+    background: #fff;
+    outline: none;
+    vertical-align: top;
+}
+
+input[type="text" i] {
+    padding: 1px 2px;
+}
+
+
+/* btn default */
+
+.type_form .btn.default {
+    border: 1px solid rgb(63, 186, 72);
+    background-color: #fff;
+    color: rgb(63, 186, 72);
+}
+
+.member_join .btn {
+    display: inline-block;
+    width: 120px;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.type_form .btn {
+    height: 44px;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    outline: none;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* txt_guide square */
+
+.member_join .txt_guide {
+    width: 332px;
+}
+
+.type_form .txt_guide {
+    display: none;
+    padding: 10px 0 9px;
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    word-break: break-all;
+    letter-spacing: -.1px;
+    clear: both;
+}
+
+
+/* txt txt_case1 */
+
+.type_form .txt_guide .txt {
+    display: block;
+}
+
+.type_form .square .txt:before {
+    content: '\2022';
+    display: inline-block;
+    padding: 0 4px 0 2px;
+    font-size: 12px;
+    vertical-align: 0;
+}
+
+.type_form .txt_guide .txt:before {
+    font-size: 0;
+}
+
+input[type="password" i] {
+    -webkit-text-security: disc !important;
+    padding: 1px 2px;
+}
+
+
+/* 필드_폰 안에 input 태그 */
+
+.member_join .field_phone .phone_num input[type=text] {
+    margin: 0;
+}
+
+.type_form .btn.disabled {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #ddd;
+}
+
+button {
+    outline: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button {
+    overflow: visible;
+    border-radius: 0;
+}
+
+button {
+    appearance: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    font-style: "";
+    font-variant-ligatures: "";
+    font-variant-caps: "";
+    font-variant-numeric: "";
+    font-variant-east-asian: "";
+    font-weight: "";
+    font-stretch: "";
+    font-size: "";
+    font-family: "";
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+
+/* div id="codeNum" */
+
+.member_join .field_phone .code_num {
+    display: none;
+    position: relative;
+    padding-top: 10px;
+}
+
+
+/* codeNum 안에 input 태그 */
+
+.member_join .field_phone .code_num input[type=text] {
+    margin: 0;
+}
+
+.type_form input[type=text]:disabled, .type_form input[type=password]:disabled {
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    color: #999;
+}
+
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+
+input:disabled {
+    cursor: default;
+    background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
+    color: -internal-light-dark(rgb(84, 84, 84), rgb(170, 170, 170));
+    border-color: rgba(118, 118, 118, 0.3);
+}
+
+
+/* countdown */
+
+.member_join .field_phone .code_num .count_down {
+    position: absolute;
+    left: 216px;
+    top: 21px;
+    width: 100px;
+    font-size: 14px;
+    color: #b3130b;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: -.5px;
+}
+
+
+/* field_address */
+
+.member_join .field_address {
+    padding-bottom: 20px;
+}
+
+
+/* selectAddress */
+
+.member_join #selectAddress {
+    float: left;
+    padding-right: 10px;
+}
+
+.member_join #selectAddress, .member_join #selectAddressSub {
+    display: none;
+}
+
+
+/* search */
+
+.member_join #addressSearch {
+    display: block;
+    overflow: hidden;
+    width: 332px;
+    height: 44px;
+    border: 1px solid rgb(63, 186, 72);
+    border-radius: 3px;
+    text-align: center;
+}
+
+
+/* address_no */
+
+.member_join #addressNo {
+    display: inline-block;
+    height: 100%;
+    margin-left: -14px;
+    padding-left: 24px;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(63, 186, 72);
+    line-height: 40px;
+    /* background: url(https://res.kurly.com/pc/service/common/2006/ico_search.svg) no-repeat 0 50%; */
+    background-size: 25px 24px;
+    vertical-align: top;
+}
+
+
+/* selectAddressSub */
+
+.member_join #selectAddressSub {
+    overflow: hidden;
+    width: 332px;
+    padding-top: 10px;
+}
+
+
+/* delivery */
+
+.member_join #delivery {
+    float: left;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+
+/* txt_guide */
+
+.member_join .field_address .txt_guide {
+    display: block;
+    padding-bottom: 0;
+}
+
+
+/* 성별 안에 라벨 태그 */
+
+.member_join .select_sex label {
+    display: inline-block;
+    padding: 10px 52px 10px 0;
+    vertical-align: top;
+}
+
+.type_form label {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+label {
+    cursor: default;
+}
+
+
+/* 성별 안에 라벨 안에 라디오 태그 */
+
+.type_form input[type=radio] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+
+
+/* 성별 안에 라벨 안에 라디오 태그 안에 span 태그 */
+
+.type_form input[type=radio]+.ico {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 100%;
+    vertical-align: -7px;
+}
+
+
+/* checked안에 span 태그 ico */
+
+.type_form input[type=radio]:checked+.ico {
+    border: 1px solid rgb(63, 186, 72);
+    background-color: rgb(63, 186, 72);
+}
+
+.type_form input[type=radio]:checked+.ico:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+
+/* birth_day & birth_day 안에 input 태그 */
+
+.member_join .birth .birth_day {
+    overflow: hidden;
+    width: 332px;
+    padding-left: 18px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.member_join .birth .birth_day input[type=text] {
+    float: left;
+    width: 84px;
+    height: 40px;
+    border: 0;
+    text-align: center;
+}
+
+
+/* class="bar" */
+
+.member_join .birth .bar {
+    float: left;
+}
+
+.member_join .birth .bar:after {
+    content: "/";
+    float: left;
+    width: 22px;
+    height: 100%;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 42px;
+    text-align: center;
+}
+
+
+/* class="txt bad" */
+
+.type_form .txt_guide .txt.bad {
+    color: #b3130b;
+}
+
+
+/* class="group_radio" */
+
+.member_join .route .group_radio {
+    padding: 10px 0 20px;
+}
+
+
+/* class="radio_wrapper" */
+
+.member_join .route .radio_wrapper {
+    padding-right: 65px;
+}
+
+
+/* class="input_wrapper" */
+
+.member_join .route .input_wrapper {
+    display: none;
+}
+
+
+/* route 안에 txt_guide p태그 */
+
+.member_join .route .txt_guide {
+    display: block;
+    padding-bottom: 20px;
+}
+
+
+/* reg_agree 안에 th 태그 */
+
+.reg_agree th, .reg_agree td {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+/* reg_agree 안에 td 태그 */
+
+.member_join .reg_agree td {
+    padding-bottom: 19px;
+}
+
+
+/*  bg_dim */
+
+.reg_agree .bg_dim {
+    display: none;
+    position: fixed;
+    z-index: 9998;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+}
+
+
+/* reg_agree 안에 check */
+
+.member_join .reg_agree .check {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 0 10px;
+}
+
+
+/* check_agree label_all_check label_block */
+
+.member_join .reg_agree .label_all_check {
+    padding: 12px 0 4px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.type_form label.label_block {
+    display: block;
+    padding: 15px 0 13px;
+}
+
+
+/* reg_agree 안에 check 안에 checkbox */
+
+.type_form input[type=checkbox] {
+    position: absolute;
+    z-index: -1;
+}
+
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+
+
+/* reg_agree 안에 ico */
+
+.member_join .reg_agree .label_all_check .ico {
+    vertical-align: -6px;
+}
+
+.type_form input[type=checkbox]+.ico {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border: 0;
+    background-size: 24px 24px;
+    vertical-align: -7px;
+}
+
+
+/* reg_agree 안에 sub */
+
+.member_join .check .sub {
+    padding-left: 36px;
+    font-size: 11px;
+    color: #666;
+    line-height: 17px;
+}
+
+
+/* check_view */
+
+.member_join .check_view {
+    position: relative;
+}
+
+
+/* check_agree label_block */
+
+.member_join .check_view .check_agree {
+    padding: 8px 0;
+}
+
+
+/* check_view 안에 sub 태그 */
+
+.member_join .check_view .sub {
+    color: #999;
+}
+
+
+/* link btn_link btn_agreement */
+
+.member_join .btn_link {
+    position: absolute;
+    right: 22px;
+    top: 0;
+    padding-top: 10px;
+    font-size: 14px;
+    color: rgb(63, 186, 72);
+    line-height: 18px;
+    letter-spacing: 0;
+}
+
+.member_join .btn_link:after {
+    content: '';
+    display: inline-block;
+    margin-top: 4px;
+    width: 6px;
+    height: 9px;
+    background: url(https://res.kurly.com/pc/service/common/2006/ico_arrow_6x9.svg) no-repeat 50% 0;
+    background-size: 6px 9px;
+    vertical-align: top;
+}
+
+
+/* layer layer_agreement */
+
+.reg_agree .layer {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 440px;
+    margin: 0 0 0 -220px;
+    border-radius: 12px;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+
+/* inner_layer */
+
+.member_join .reg_agree .inner_layer {
+    position: relative;
+    width: 440px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.reg_agree .layer .inner_layer {
+    border-radius: 12px;
+}
+
+
+/* inner_layer 안에 tit_layer */
+
+.member_join .reg_agree .tit_layer {
+    padding: 25px 88px 8px 30px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    color: #333;
+    letter-spacing: -1px;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.member_join .reg_agree .tit_layer .sub {
+    color: #999;
+}
+
+
+/* serviceView */
+
+.member_join .reg_agree .layer_agreement .inner_layer .box_tbl {
+    overflow-y: scroll;
+    height: 450px;
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+}
+
+.member_join .reg_agree .layer .box_tbl {
+    margin-top: 19px;
+    padding: 0 30px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* box_tit */
+
+.member_join .reg_agree .box_tit {
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+/* script */
+
+script {
+    display: none;
+}
+
+.member_join .reg_agree .layer .btn_ok {
+    display: block;
+    width: 100%;
+    height: 57px;
+    border: 0;
+    border-top: 1px solid #f7f7f7;
+    border-radius: 6px;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    color: rgb(63, 186, 72);
+    line-height: 32px;
+    letter-spacing: 0;
+}
+
+/* footer */
+
+.member_join .form_footer {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.member_join .form_footer .btn_join {
+    width: 240px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 54px;
+}
+
+.type_form .btn.active {
+    border: 1px solid rgb(63, 186, 72);
+    background-color: rgb(63, 186, 72);
+    color: #fff;
+}
+
+.member_join .btn {
+/*     display: inline-block; */
+    width: 120px;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.type_form .btn {
+    height: 44px;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    outline: none;
+}

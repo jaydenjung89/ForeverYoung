@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="bannerDAO">
+ 	<!-- 관리자 배너 list -->
+ 	<select id = "getBannerList" resultType = "banners" parameterType = "banners">
+ 		select * from BANNER
+ 	</select>
+ 	
+ 	<!-- 배너 삽입 -->
+ 	<insert id="insertBanner" parameterType="banners">
+ 		insert into BANNER values (default, #{banner_title}, #{banner_contents},#{banner_subcontents},#{banner_filepath});
+ 	</insert>
+ 	
+ 	<!-- 관리자 배너 상세페이지 이용  -->
+ 	<select id="getBanner" resultType = "banners" parameterType = "banners">
+ 		select * from BANNER where banner_serial = #{banner_serial}
+ 	</select>
+ 	
+ 	<!-- 관리자 배너 삭제 -->
+ 	<delete id = "deleteBanner" parameterType = "banners">
+ 		delete from BANNER where banner_serial = #{banner_serial}
+ 	</delete>
+ 	
+ 	<!-- 관리자 배너 수정 -->
+ 	<update id = "updateBanner1" parameterType="banners">
+ 		update BANNER
+ 		set
+ 		banner_title = #{banner_title},
+ 		banner_contents = #{banner_contents},
+ 		banner_subcontents = #{banner_subcontents},
+ 		banner_filepath = #{banner_filepath}
+ 		where banner_serial = #{banner_serial}
+ 	</update>
+ 	
+ 	<update id = "updateBanner2" parameterType="banners">
+ 		update BANNER
+ 		set
+ 		banner_title = #{banner_title},
+ 		banner_contents = #{banner_contents},
+ 		banner_subcontents = #{banner_subcontents}
+ 		where banner_serial = #{banner_serial}
+ 	</update>
+ </mapper>

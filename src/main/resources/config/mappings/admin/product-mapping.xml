@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- ㅡ*.ㅡmapping.xml 만들때 이거 가져가서 사용하세요 -->
+<mapper namespace="RegistDAO">
+
+	<!-- 상품조회 -->
+	<select id="getGoodsList" resultType="regist">
+		SELECT (ROW_NUMBER()
+		OVER(ORDER by F.CATEGORY_FIRST_SERIAL,S.CATEGORY_SECOND_SERIAL,
+		T.CATEGORY_THIRD_SERIAL)) AS
+		ROWNUM,
+		GD.goods_detail_serial,
+		GD.category_first_serial, F.category_first_name,
+		GD.category_second_serial, S.category_second_name
+		,
+		GD.category_third_serial, T.category_third_name
+		,
+		GD.category_goods_serial, G.category_goods_name,
+		GD.goods_detail_price, GD.goods_detail_stock_quantity,
+		GD.goods_detail_promotion_serial,
+		GD.goods_detail_status,
+		GD.goods_detail_discountrate,
+		G.category_goods_brand
+		FROM
+		GOODS_DETAIL GD
+		LEFT OUTER JOIN CATEGORY_FIRST F on GD.category_first_serial =
+		F.category_first_serial
+		LEFT OUTER JOIN CATEGORY_SECOND S ON
+		GD.category_second_serial =
+		S.category_second_serial
+		LEFT OUTER JOIN
+		CATEGORY_THIRD T ON GD.category_third_serial =
+		T.category_third_serial
+		LEFT OUTER JOIN CATEGORY_GOODS G ON
+		GD.category_goods_serial =
+		G.category_goods_serial
+	</select>
+
+	<!-- 상품 삭제 -->
+	<delete id="deleteGoods" parameterType="regist">
+		DELETE FROM
+		CATEGORY_GOODS WHERE category_goods_serial =
+		#{category_goods_serial};
+	</delete>
+
+	<!-- 상품 수정 -->
+	<update id="updateGoods" parameterType="regist">
+		UPDATE CATEGORY_GOODS SET
+		CATEGORY_GOODS_BRAND  = #{category_goods_brand},
+		CATEGORY_GOODS_NAME = #{category_goods_name},
+		CATEGORY_GOODS_DELIVERY = #{category_goods_delivery},
+		CATEGORY_GOODS_COUNT = #{category_goods_count},
+		CATEGORY_GOODS_DETAIL = #{category_goods_detail},
+		CATEGORY_GOODS_INFO = #{category_goods_info},
+		CATEGORY_GOODS_MAIN_IMG = #{category_goods_main_img},
+		CATEGORY_GOODS_THUM_IMG = #{category_goods_thum_img}
+		WHERE
+		category_goods_serial=#{category_goods_serial};
+	</update>
+	<update id="updateGoodsDetail" parameterType="regist">
+		UPDATE GOODS_DETAIL SET
+		GOODS_DETAIL_PRICE = #{goods_detail_price},
+		GOODS_DETAIL_STATUS = #{goods_detail_status},
+		GOODS_DETAIL_DISCOUNTRATE = #{goods_detail_discountrate}
+		WHERE
+		category_goods_serial=#{category_goods_serial};
+	</update>
+	
+	<!-- 상품 등록 -->
+	<insert id="insertGoods" parameterType="product" useGeneratedKeys="true" keyProperty="category_goods_serial">
+	 	 INSERT INTO CATEGORY_GOODS (
+	 	 category_goods_brand,
+	 	 category_goods_name,
+	 	 category_goods_delivery,
+	 	 category_goods_point,
+	 	 category_goods_count,
+	 	 category_goods_detail,
+	 	 category_goods_info,
+	 	 category_goods_main_img,
+	 	 category_goods_thum_img,
+	 	 category_first_serial,
+	 	 category_second_serial,
+	 	 category_third_serial)
+	 	 VALUES (
+	 	 #{category_goods_brand}, 
+	 	 #{category_goods_name},
+	 	 #{category_goods_delivery},
+	 	 #{category_goods_point},
+	 	 #{category_goods_count},
+	 	 #{category_goods_detail},
+	 	 #{category_goods_info},
+	 	 #{category_goods_main_img},
+	 	 #{category_goods_thum_img},
+	 	 #{category_first_serial},
+	 	 #{category_second_serial},
+	 	 #{category_third_serial});
+ 	</insert>
+ 	<insert id="insertGoodsDetail" parameterType="product">	 	 	
+		INSERT INTO GOODS_DETAIL (
+		goods_detail_price,
+		goods_detail_stock_quantity,
+		goods_detail_status,
+		goods_detail_discountrate,
+		category_first_serial,
+	 	category_second_serial,
+	 	category_third_serial,
+	 	category_goods_serial,
+	 	goods_detail_serial
+	 	)values(
+	 	#{goods_detail_price},
+	 	#{goods_detail_stock_quantity},
+	 	#{goods_detail_status},
+	 	#{goods_detail_discountrate},
+	 	#{category_first_serial},
+	 	#{category_second_serial},
+	 	#{category_third_serial},
+	 	#{category_goods_serial},
+	 	#{category_goods_serial}
+	 	)
+ 	</insert>
+ 	<insert id="insertGoodsStock" parameterType="product">	 	 	
+		INSERT INTO GOODS_STOCK (
+		category_goods_serial,
+		goods_stock_receiving_date,
+		goods_stock_serial,
+		goods_stock_stock_quantity
+	 	)values(
+	 	#{category_goods_serial},
+	 	now(),
+	 	#{category_goods_serial},
+	 	#{goods_detail_stock_quantity}
+	 	)
+ 	</insert>
+
+	<!-- 관리자 1차 카테고리 -->
+	<select id="getCategoryFirstList" resultType="categoryFirst">
+		SELECT * FROM CATEGORY_FIRST
+	</select>
+
+	<select id="getCategoryFirst" resultType="categoryFirst"
+		parameterType="categoryFirst">
+		SELECT * FROM CATEGORY_FIRST WHERE CATEGORY_FIRST_SERIAL
+		= #{category_first_serial}
+	</select>
+
+	<!-- 관리자 2차 카테고리 -->
+	<select id="getCategorySecondList" resultType="categorySecond">
+		SELECT A.CATEGORY_FIRST_SERIAL, A.CATEGORY_FIRST_NAME, 
+		B.CATEGORY_SECOND_SERIAL, B.CATEGORY_SECOND_NAME
+		FROM CATEGORY_FIRST A
+		JOIN CATEGORY_SECOND B
+		ON A.CATEGORY_FIRST_SERIAL = B.CATEGORY_SECOND_NO;
+	</select>
+	
+	<select id="getCategorySecond" resultType="categorySecond" parameterType="categorySecond">
+ 	 	SELECT * FROM CATEGORY_SECOND WHERE CATEGORY_SECOND_SERIAL 
+ 	 	= #{category_second_serial}
+ 	</select>
+ 	
+ 	<!-- 관리자 3차 카테고리 -->
+ 	<select id="getCategoryThirdList" resultType="categoryThird">
+		SELECT B.CATEGORY_SECOND_SERIAL, B.CATEGORY_SECOND_NAME, 
+		C.CATEGORY_THIRD_SERIAL, C.CATEGORY_THIRD_NAME
+		FROM CATEGORY_SECOND B
+		JOIN CATEGORY_THIRD C
+		ON B.CATEGORY_SECOND_SERIAL = C.CATEGORY_SECOND_SERIAL;
+ 	</select>
+ 	
+ 	<select id="getCategoryThird" resultType="categoryThird" parameterType="categoryThird">
+ 	 	SELECT * FROM CATEGORY_THIRD WHERE CATEGORY_THIRD_SERIAL 
+ 	 	= #{category_third_serial}
+ 	</select>
+ 	
+ 	<select id="getProduct" resultType="product"
+		parameterType="product">
+		SELECT * FROM CATEGORY_GOODS 
+		WHERE category_goods_serial=#{category_goods_serial};
+	</select>
+ 	<select id="getProductDetail" resultType="product"
+		parameterType="product">
+		SELECT * FROM
+		(SELECT first.*, second.GOODS_DETAIL_SERIAL, second.goods_detail_price,
+		second.GOODS_DETAIL_DISCOUNTRATE,
+		second.GOODS_DETAIL_STATUS,
+		second.GOODS_DETAIL_STOCK_QUANTITY,second.goods_detail_promotion_serial,
+		(second.goods_detail_price*(((100-(second.goods_detail_DISCOUNTRATE+(coalesce(NULLIF(second.goods_detail_promotion_serial,0),0)*10))
+		)/100.0))) as goods_last_price
+		FROM CATEGORY_GOODS as first JOIN GOODS_DETAIL as second ON
+		first.CATEGORY_GOODS_SERIAL=second.CATEGORY_GOODS_SERIAL) as PRODUCT
+		WHERE 1=1
+		AND PRODUCT.category_goods_serial=#{category_goods_serial}
+	</select>
+</mapper>

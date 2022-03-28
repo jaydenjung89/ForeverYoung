@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- ㅡ*.ㅡmapping.xml 만들때 이거 가져가서 사용하세요 -->
+<mapper namespace="AdminDAO">
+	<!-- list 가져오기 -->
+	<select id="getNoticeList" resultType="adminNotice">
+		select notice_serial,
+		notice_id, notice_title, notice_date, notice_hit
+		from notice
+		order by
+		notice_serial desc
+	</select>
+
+	<!-- 공지사항 삭제 -->
+	<delete id="deleteNotice" parameterType="adminNotice">
+		DELETE FROM
+		notice WHERE
+		notice_serial =
+		#{notice_serial};
+	</delete>
+
+	<!-- notice Detail 읽어오기 -->
+	<select id="getNotice" resultType="adminNotice">
+		select * from notice
+		where notice_serial = #{notice_serial}
+	</select>
+	
+	<!-- insertNotice -->
+	<insert id="insertNotice" parameterType="adminNotice">
+		INSERT INTO notice (
+		notice_id,
+		notice_title,
+		notice_content,
+		notice_date,
+		notice_hit
+		)VALUES (
+		#{notice_id},
+		#{notice_title},
+		#{notice_content},
+		now(),
+		0)
+	</insert>
+	<!-- update -->
+	<update id="updateNotice" parameterType="adminNotice">
+		UPDATE notice SET
+		notice_id = #{notice_id},
+		notice_title = #{notice_title},
+		notice_content = #{notice_content}
+		WHERE
+		notice_serial=#{notice_serial};
+	</update>
+</mapper>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="orderListDAO">
+	<select id="orderlist" resultType="orderListVO">
+		SELECT * FROM fyproject.ORDER AS O JOIN CATEGORY_GOODS AS C
+		ON O.MASTER_GOODS_SERIAL=C.CATEGORY_GOODS_SERIAL
+		WHERE O.USER_ID=#{user_id} ORDER BY O.ORDER_SERIAL DESC 
+	</select>
+	<select id="order_detaillist" resultType="orderListVO">
+		SELECT * FROM
+       CATEGORY_GOODS as C JOIN GOODS_DETAIL as G
+       ON 
+       C.category_goods_serial = G.category_goods_serial
+       JOIN
+       ORDER_DETAILS as OD
+       ON
+       C.category_goods_serial = OD.category_goods_serial
+       JOIN fyproject.ORDER as O
+       ON O.order_merchant_serial = OD.order_merchant_serial
+       WHERE
+       OD.order_merchant_serial = #{order_merchant_serial}
+	</select>
+	<select id="shipping" resultType="shippingVO">
+		SELECT * FROM SHIPPING_INFO WHERE ORDER_MERCHANT_SERIAL=#{order_merchant_serial}
+	</select>
+	<select id="getBoardListCnt" resultType="int">
+		SELECT COUNT(*) AS LISTCNT FROM fyproject.ORDER AS O JOIN CATEGORY_GOODS AS C
+		ON O.MASTER_GOODS_SERIAL=C.CATEGORY_GOODS_SERIAL
+	</select>
+	<select id="oldPrice" resultType="int">
+		SELECT SUM(ORDER_GOODS_PRICE) AS DP FROM ORDER_DETAILS WHERE ORDER_MERCHANT_SERIAL=#{order_merchant_serial}
+	</select>
+	<select id="dcPrice" resultType="int">
+		SELECT SUM(ORDER_GOODS_PRICE) AS DP FROM ORDER_DETAILS WHERE ORDER_MERCHANT_SERIAL=#{order_merchant_serial}
+	</select>
+	<select id="point" resultType="int">
+		SELECT ORDER_POINT FROM fyproject.ORDER WHERE ORDER_MERCHANT_SERIAL=#{order_merchant_serial}
+	</select>
+	<select id="orderTime" resultType="orderListVO">
+		SELECT * FROM fyproject.ORDER WHERE ORDER_MERCHANT_SERIAL=#{order_merchant_serial}
+	</select>
+	<!-- 주문완료-> 결제 취소 -->
+    <update id="order_status_update">
+       UPDATE fyproject.ORDER SET ORDER_DELIVERY_STATUS='결제취소'
+       WHERE order_merchant_serial=#{order_merchant_serial}
+    </update>
+</mapper>

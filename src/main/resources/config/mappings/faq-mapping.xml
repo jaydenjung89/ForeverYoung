@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- ㅡ*.ㅡmapping.xml 만들때 이거 가져가서 사용하세요 -->
+ <mapper namespace="faqDAO">
+ 	<!-- faq 질문 리스트 뽑아오기  -->
+ 	<select id="getFAQList" resultType="faq" parameterType="faq">
+ 		SELECT * FROM FAQ 
+ 		ORDER BY FAQ_SERIAL_NUM ASC
+ 		LIMIT #{startList},#{listSize}
+ 	</select>
+ 	
+ 	<!-- 상세글 불러오기 -->
+ 	<select id="getFAQ" resultType="faq" parameterType="faq">
+ 	SELECT * FROM FAQ WHERE FAQ_SERIAL_NUM = #{FAQ_SERIAL_NUM}
+ 	</select>
+ 	
+ 	<!-- 게시물 총 개수 -->
+ 	<select id="getFaqListCnt" parameterType="faq" resultType="int">
+ 		SELECT count(*) FROM FAQ
+ 		
+ 	</select>
+ </mapper>

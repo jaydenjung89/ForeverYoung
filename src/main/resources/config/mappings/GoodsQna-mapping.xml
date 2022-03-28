@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="GoodsQnaDAO">
+ 	<select id="getQnaCount" resultType="String">
+ 		SELECT COUNT(*) FROM QNA_GOODS WHERE CATEGORY_GOODS_SERIAL=#{value}
+ 	</select>
+ 	
+ 	<select id="getItemPage" resultType="itemPage" parameterType="itemPage">
+ 		SELECT A.CATEGORY_FIRST_SERIAL, A.CATEGORY_SECOND_SERIAL, A.CATEGORY_THIRD_SERIAL, A.CATEGORY_GOODS_SERIAL, A.CATEGORY_GOODS_NAME,
+ 		A.CATEGORY_GOODS_THUM_IMG, FROM CATEGORY_GOODS AS A INNER JOIN QNA_GOODS AS B ON A.CATEGORY_GOODS_SERIAL=B.CATEGORY_GOODS_SERIAL
+ 		WHERE A.CATEGORY_GOODS_SERIAL=#{category_goods_serial}
+ 	</select>
+ 	
+ 	<select id="getQnaList1" resultType="forever.young.user.vo.GoodsQnaVO" parameterType="forever.young.user.vo.GoodsQnaVO">
+ 		SELECT * FROM QNA_GOODS as QG JOIN CATEGORY_GOODS as C
+ 		ON QG.category_goods_serial = C.category_goods_serial
+ 		WHERE USER_ID = #{user_id} ORDER BY QNA_GOODS_SERIAL DESC limit 10 offset #{start}
+ 	</select>
+ 	
+ 	<select id="getQnaList" resultType="forever.young.user.vo.GoodsQnaVO" parameterType="forever.young.user.vo.GoodsQnaVO">
+ 		SELECT * FROM QNA_GOODS 
+ 		WHERE category_goods_serial = #{category_goods_serial} ORDER BY QNA_GOODS_SERIAL DESC limit 10 offset #{start}
+ 	</select>
+ 	
+ 	<select id="GoodsQnaUserList" resultType="forever.young.user.vo.GoodsQnaVO" parameterType="forever.young.user.vo.GoodsQnaVO">
+ 		SELECT * FROM QNA_GOODS WHERE USER_ID=#{user_id} AND CATEGORY_GOODS_SERIAL=#{category_goods_serial}  ORDER BY QNA_GOODS_SERIAL DESC
+ 	</select>
+ 	
+ 	<insert id="insertGoodsQna">
+ 		INSERT INTO QNA_GOODS VALUES (default, #{user_id}, null,
+ 		#{category_first_serial}, #{category_second_serial}, #{category_third_serial}, #{category_goods_serial},
+ 		null, #{qna_goods_content}, now(), 0, #{qna_goods_lock}, null, null, #{qna_goods_name}, #{qna_goods_thum_img})
+ 	</insert>
+ 	<delete id="deleteGoodsQna">
+ 		DELETE FROM QNA_GOODS WHERE QNA_GOODS_SERIAL=#{qna_goods_serial}
+ 	</delete>
+ 	<select id="getGoodsQnaContent" resultType="forever.young.user.vo.GoodsQnaVO" parameterType="forever.young.user.vo.GoodsQnaVO">
+ 		SELECT * FROM QNA_GOODS WHERE QNA_GOODS_SERIAL=#{qna_goods_serial}
+ 	</select>
+ 	<update id="updateGoodsQna">
+ 		UPDATE QNA_GOODS SET QNA_GOODS_TITLE=#{qna_goods_title},
+ 		QNA_GOODS_CONTENT=#{qna_goods_content}, QNA_GOODS_DATE=now(),
+ 		QNA_GOODS_LOCK=#{qna_goods_lock}
+ 		WHERE QNA_GOODS_SERIAL=#{qna_goods_serial}
+ 	</update>
+ 	<select id="getGoodsImage" resultType="String">
+ 		SELECT CATEGORY_GOODS_THUM_IMG FROM CATEGORY_GOODS WHERE CATEGORY_GOODS_SERIAL=#{value};
+ 	</select>
+ </mapper>

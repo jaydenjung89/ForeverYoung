@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="CategoryDAO">
+ 	<select id="getCategoryFirst" resultType="categoryFirst">
+ 		SELECT * FROM CATEGORY_FIRST ORDER BY CATEGORY_FIRST_SERIAL ASC 
+ 	</select>
+ 	<select id="getCategorySecond" resultType="categorySecond" parameterType="categoryFirst">
+ 		SELECT * FROM CATEGORY_SECOND WHERE CATEGORY_SECOND_NO=#{category_first_serial} ORDER BY CATEGORY_SECOND_SERIAL ASC
+ 	</select>
+ 	<select id="getCategoryThird" resultType="categoryThird" parameterType="categorySecond">
+ 		SELECT * FROM CATEGORY_THIRD WHERE CATEGORY_THIRD_NO=#{category_second_serial} AND CATEGORY_THIRD_FIRST_NO=#{category_first_serial} ORDER BY CATEGORY_THIRD_SERIAL ASC
+ 	</select>
+ 	<select id="getCategoryRoot" resultType="categoryFirst" parameterType="product">
+ 		SELECT * FROM CATEGORY_FIRST WHERE CATEGORY_FIRST_SERIAL=#{category_first_serial}
+ 	</select>
+ 	<select id="getCategorySubRoot" resultType="categorySecond" parameterType="product">
+ 		SELECT * FROM CATEGORY_SECOND WHERE CATEGORY_SECOND_SERIAL=#{category_second_serial}
+ 	</select>
+ 	<select id="getCategoryProductList" resultType="product" parameterType="product">
+ 	  SELECT * FROM
+      (SELECT first.*, second.GOODS_DETAIL_SERIAL,
+      second.GOODS_DETAIL_PRICE,
+      second.GOODS_DETAIL_DISCOUNTRATE,
+      second.GOODS_DETAIL_STATUS, second.GOODS_DETAIL_STOCK_QUANTITY,
+      second.GOODS_DETAIL_PROMOTION_SERIAL,
+      (second.GOODS_DETAIL_PRICE*(((100-(second.GOODS_DETAIL_DISCOUNTRATE+(coalesce(NULLIF(second.GOODS_DETAIL_PROMOTION_SERIAL,0),0)*10))
+      )/100.0))) AS goods_last_price FROM CATEGORY_GOODS AS first JOIN
+      GOODS_DETAIL as second ON
+      first.CATEGORY_GOODS_SERIAL=second.CATEGORY_GOODS_SERIAL) AS PRODUCT
+      WHERE 1=1
+      <if test="category_first_serial !=null">
+         AND PRODUCT.CATEGORY_FIRST_SERIAL=#{category_first_serial}
+      </if>
+      <if test="category_second_serial !=null">
+         AND
+         PRODUCT.CATEGORY_SECOND_SERIAL=#{category_second_serial}
+      </if>
+      <if test="category_third_serial !=null">
+         AND PRODUCT.CATEGORY_THIRD_SERIAL=#{category_third_serial}
+      </if>
+      AND PRODUCT.GOODS_DETAIL_STATUS=1
+      <if test='sort=="0"'>
+         ORDER BY PRODUCT.CATEGORY_GOODS_COUNT DESC
+      </if>
+      <if test='sort=="1"'>
+         ORDER BY category_goods_serial DESC
+      </if>
+      <if test='sort=="2"'>
+         ORDER BY PRODUCT.GOODS_LAST_PRICE ASC
+      </if>
+      <if test='sort=="3"'>
+         ORDER BY PRODUCT.GOODS_LAST_PRICE DESC
+      </if>
+   </select>
+   <select id="getRankingProduct" resultType="product" parameterType="product">
+      SELECT * FROM
+      (SELECT first.*, 
+      second.GOODS_DETAIL_SERIAL,
+      second.GOODS_DETAIL_PRICE,
+      second.GOODS_DETAIL_DISCOUNTRATE,
+      second.GOODS_DETAIL_STATUS, 
+      second.GOODS_DETAIL_STOCK_QUANTITY,
+      second.GOODS_DETAIL_PROMOTION_SERIAL,
+      (second.GOODS_DETAIL_PRICE*(((100-(second.GOODS_DETAIL_DISCOUNTRATE+(coalesce(NULLIF(second.GOODS_DETAIL_PROMOTION_SERIAL,0),0)*10))
+      )/100.0))) AS goods_last_price 
+      FROM CATEGORY_GOODS AS first 
+      JOIN GOODS_DETAIL as second 
+      ON first.CATEGORY_GOODS_SERIAL=second.CATEGORY_GOODS_SERIAL) AS PRODUCT
+      ORDER BY CATEGORY_GOODS_COUNT DESC
+      
+   </select>
+   <select id="getBrandNewProduct" resultType="product" parameterType="product">
+      SELECT * FROM
+      (SELECT first.*, 
+      second.GOODS_DETAIL_SERIAL,
+      second.GOODS_DETAIL_PRICE,
+      second.GOODS_DETAIL_DISCOUNTRATE,
+      second.GOODS_DETAIL_STATUS, 
+      second.GOODS_DETAIL_STOCK_QUANTITY,
+      second.GOODS_DETAIL_PROMOTION_SERIAL,
+      (second.GOODS_DETAIL_PRICE*(((100-(second.GOODS_DETAIL_DISCOUNTRATE+(coalesce(NULLIF(second.GOODS_DETAIL_PROMOTION_SERIAL,0),0)*10))
+      )/100.0))) AS goods_last_price 
+      FROM CATEGORY_GOODS AS first 
+      JOIN GOODS_DETAIL as second 
+      ON first.CATEGORY_GOODS_SERIAL=second.CATEGORY_GOODS_SERIAL) AS PRODUCT
+      ORDER BY category_goods_serial DESC
+   </select>
+   <select id="getOhTeukProduct" resultType="product" parameterType="product">
+      SELECT * FROM
+      (SELECT first.*,
+      second.GOODS_DETAIL_SERIAL,
+      second.GOODS_DETAIL_PRICE,
+      second.GOODS_DETAIL_DISCOUNTRATE,
+      second.GOODS_DETAIL_STATUS,
+      second.GOODS_DETAIL_STOCK_QUANTITY,
+      second.GOODS_DETAIL_PROMOTION_SERIAL,
+      (second.GOODS_DETAIL_PRICE*(((100-(second.GOODS_DETAIL_DISCOUNTRATE+(coalesce(NULLIF(second.GOODS_DETAIL_PROMOTION_SERIAL,0),0)*10))
+      )/100.0))) AS goods_last_price 
+      FROM CATEGORY_GOODS AS first 
+      JOIN GOODS_DETAIL as second 
+      ON first.CATEGORY_GOODS_SERIAL=second.CATEGORY_GOODS_SERIAL) AS PRODUCT
+      WHERE GOODS_DETAIL_DISCOUNTRATE >= 40
+   </select>
+   
+   <select id="getSaleProduct" resultType="product" parameterType="product">
+      SELECT * FROM
+      (SELECT first.*, second.GOODS_DETAIL_SERIAL,
+      second.GOODS_DETAIL_PRICE,
+      second.GOODS_DETAIL_DISCOUNTRATE,
+      second.GOODS_DETAIL_STATUS, second.GOODS_DETAIL_STOCK_QUANTITY,
+      second.GOODS_DETAIL_PROMOTION_SERIAL,
+      (second.GOODS_DETAIL_PRICE*(((100-(second.GOODS_DETAIL_DISCOUNTRATE+(coalesce(NULLIF(second.GOODS_DETAIL_PROMOTION_SERIAL,0),0)*10))
+      )/100.0))) AS goods_last_price FROM CATEGORY_GOODS AS first JOIN
+      GOODS_DETAIL as second ON
+      first.CATEGORY_GOODS_SERIAL=second.CATEGORY_GOODS_SERIAL) AS PRODUCT
+      WHERE 1=1
+      <if test="category_first_serial !=null">
+         AND PRODUCT.CATEGORY_FIRST_SERIAL=#{category_first_serial}
+      </if>
+      <if test="category_second_serial !=null">
+         AND
+         PRODUCT.CATEGORY_SECOND_SERIAL=#{category_second_serial}
+      </if>
+      <if test="category_third_serial !=null">
+         AND PRODUCT.CATEGORY_THIRD_SERIAL=#{category_third_serial}
+      </if>
+      AND PRODUCT.GOODS_DETAIL_STATUS=1
+      <if test='sort=="0"'>
+         ORDER BY PRODUCT.CATEGORY_GOODS_COUNT DESC
+      </if>
+      <if test='sort=="1"'>
+         ORDER BY category_goods_serial DESC
+      </if>
+      <if test='sort=="2"'>
+         ORDER BY PRODUCT.GOODS_LAST_PRICE ASC
+      </if>
+      <if test='sort=="3"'>
+         ORDER BY PRODUCT.GOODS_LAST_PRICE DESC
+      </if>
+   </select>
+ 	<select id="getCartItem" resultType="product" parameterType="forever.young.user.vo.CartVO">
+ 		SELECT * FROM 
+ 		(SELECT first.*, second.GOODS_DETAIL_SERIAL, second.GOODS_DETAIL_PRICE, second.GOODS_DETAIL_DISCOUNTRATE,
+ 		second.GOODS_DETAIL_STATUS, second.GOODS_DETAIL_STOCK_QUANTITY, second.GOODS_DETAIL_PROMOTION_SERIAL,
+ 		(second.GOODS_DETAIL_PRICE*(((100-(second.GOODS_DETAIL_DISCOUNTRATE+(coalesce(NULLIF(second.GOODS_DETAIL_PROMOTION_SERIAL,0),0)*10))
+ 		)/100.0))) AS goods_last_price FROM CATEGORY_GOODS AS first JOIN GOODS_DETAIL as second ON
+ 		first.CATEGORY_GOODS_SERIAL=second.CATEGORY_GOODS_SERIAL) AS PRODUCT WHERE 1=1
+ 		AND PRODUCT.CATEGORY_GOODS_SERIAL=#{category_goods_serial} ORDER BY PRODUCT.CATEGORY_GOODS_SERIAL
+ 	</select>
+ 	<insert id="insertCartItem" parameterType="forever.young.user.vo.CartVO">
+ 		INSERT INTO GOODS_CART VALUES(default,#{category_goods_serial},#{goods_cart_count}, false, #{user_id})
+ 	</insert>
+ 	<select id="getCartList" resultType="forever.young.user.vo.CartVO" parameterType="String">
+ 		SELECT * FROM GOODS_CART WHERE USER_ID=#{value} ORDER BY GOODS_CART_SERIAL ASC
+ 	</select>
+ 	<update id="updateCartItem" parameterType="forever.young.user.vo.CartVO">
+ 		UPDATE GOODS_CART SET GOODS_CART_COUNT=#{goods_cart_count} WHERE CATEGORY_GOODS_SERIAL=#{category_goods_serial}
+ 	</update>
+ 	<delete id="deleteCartItem" parameterType="forever.young.user.vo.CartVO">
+ 		DELETE FROM GOODS_CART WHERE CATEGORY_GOODS_SERIAL=#{category_goods_serial}
+ 	</delete>
+ 	<update id="AllCheckItem">
+ 		UPDATE GOODS_CART SET GOODS_CART_STATUS=#{goods_cart_status} WHERE USER_ID=#{user_id}
+ 	</update>
+ 	<update id="updateCheckStatus">
+ 		UPDATE GOODS_CART SET GOODS_CART_STATUS=#{goods_cart_status} WHERE USER_ID=#{user_id}
+ 		AND CATEGORY_GOODS_SERIAL=#{category_goods_serial}
+ 	</update>
+ 	<select id="getPurchaseGoods" resultType="forever.young.user.vo.CartVO">
+ 		SELECT * FROM GOODS_CART WHERE USER_ID=#{value} AND GOODS_CART_STATUS=TRUE ORDER BY GOODS_CART_SERIAL ASC
+ 	</select>
+ 	<select id="getStock" resultType="product">
+ 		SELECT * FROM GOODS_DETAIL WHERE CATEGORY_GOODS_SERIAL=#{category_goods_serial} AND GOODS_DETAIL_STATUS=1
+ 	</select>
+ 	 <!-- 검색어 기능 -->
+   <sql id="criteria">
+      <if test="searchKeyword != null">
+         where (PRODUCT.category_goods_name LIKE concat('%', #{searchKeyword}, '%'))
+      </if>
+   </sql>
+   <select id="getSearchList" resultType="product">
+      SELECT * FROM
+      (SELECT first.*, second.GOODS_DETAIL_SERIAL, second.goods_detail_price,
+      second.GOODS_DETAIL_DISCOUNTRATE,
+      second.GOODS_DETAIL_STATUS,
+      second.GOODS_DETAIL_STOCK_QUANTITY,second.goods_detail_promotion_serial,
+      (second.goods_detail_price*(((100-(second.goods_detail_DISCOUNTRATE+(coalesce(NULLIF(second.goods_detail_promotion_serial,0),0)*10))
+      )/100.0))) as goods_last_price
+      FROM CATEGORY_GOODS as first JOIN GOODS_DETAIL as second ON
+      first.CATEGORY_GOODS_SERIAL=second.CATEGORY_GOODS_SERIAL) as PRODUCT
+      <include refid="criteria"></include>
+      AND PRODUCT.GOODS_DETAIL_STATUS=1
+      ORDER BY PRODUCT.category_goods_serial
+   </select>
+   
+ </mapper>

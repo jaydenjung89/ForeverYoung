@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- ㅡ*.ㅡmapping.xml 만들때 이거 가져가서 사용하세요 -->
+ 
+ <mapper namespace="AdminSalesDAO">
+ 
+ 	<!-- 오늘매출 -->
+ 	<select id = "getTodaySales" resultType = "sales" parameterType = "sales">
+ 		<![CDATA[
+	 		SELECT DATE(`ORDER_DATE`) AS `DATE`, FORMAT(sum(`ORDER_GOODS_PRICE`), 0) AS 'PRICE1' FROM fyproject.ORDER 
+			WHERE DATE(`ORDER_DATE`) >= STR_TO_DATE(CURDATE(), '%Y-%m-%d') AND DATE(`ORDER_DATE`) <= STR_TO_DATE(CURDATE(), '%Y-%m-%d')
+	        AND ORDER_DELIVERY_STATUS = '결제완료'
+			GROUP BY `DATE`
+		]]>
+ 	</select>
+ 	
+ 	<!-- 상품별 매출 -->
+ 	<select id = "getSales" resultType = "sales" parameterType = "sales">
+		SELECT ORDER_DATE AS 'DATE1', CATEGORY_FIRST_NAME, CATEGORY_SECOND_NAME, CATEGORY_THIRD_NAME, 
+		CATEGORY_GOODS_BRAND, CATEGORY_GOODS_NAME, D.ORDER_GOODS_PRICE, D.ORDER_GOODS_COUNT,
+        D.ORDER_GOODS_PRICE * D.ORDER_GOODS_COUNT AS 'PRICE'
+		FROM CATEGORY_GOODS AS A
+		INNER JOIN GOODS_DETAIL AS B
+		ON A.CATEGORY_GOODS_SERIAL = B.CATEGORY_GOODS_SERIAL
+		INNER JOIN ORDER_DETAILS AS C
+		ON C.CATEGORY_GOODS_SERIAL = B.CATEGORY_GOODS_SERIAL
+		INNER JOIN fyproject.ORDER AS D
+		ON D.USER_ID = C.USER_ID
+		INNER JOIN CATEGORY_FIRST AS E
+		ON A.CATEGORY_FIRST_SERIAL = E.CATEGORY_FIRST_SERIAL
+		INNER JOIN CATEGORY_SECOND AS F
+		ON A.CATEGORY_SECOND_SERIAL = F.CATEGORY_SECOND_SERIAL
+		INNER JOIN CATEGORY_THIRD AS G
+		ON A.CATEGORY_THIRD_SERIAL = G.CATEGORY_THIRD_SERIAL
+		WHERE C.ORDER_MERCHANT_SERIAL = D.ORDER_MERCHANT_SERIAL
+		GROUP BY DATE1, CATEGORY_FIRST_NAME, CATEGORY_SECOND_NAME, CATEGORY_THIRD_NAME, CATEGORY_GOODS_BRAND, CATEGORY_GOODS_NAME
+		ORDER BY DATE1
+ 	</select>
+ 	
+ 	<!-- 월매출 -->
+ 	<select id = "getMonthSales" resultType = "sales" parameterType = "sales">
+	 	SELECT MONTH(`ORDER_DATE`) AS `MONTH1`, sum(`ORDER_GOODS_PRICE`) AS 'PRICE', FORMAT(sum(`ORDER_GOODS_PRICE`), 0) AS 'PRICE1'
+		FROM fyproject.ORDER WHERE ORDER_DELIVERY_STATUS = '결제완료' GROUP BY `MONTH1` ORDER BY MONTH1    
+	</select>
+	
+	<!-- 일매출 -->
+	<select id = "getDaySales" resultType = "sales" parameterType = "sales">
+		<![CDATA[ 
+			SELECT date_format(`ORDER_DATE`, '%m-%d') AS `DATE1`,
+			sum(`ORDER_GOODS_PRICE`) AS 'PRICE'
+			FROM fyproject.ORDER
+			WHERE DATE(`ORDER_DATE`) <= STR_TO_DATE(CURDATE(), '%Y-%m-%d') AND ORDER_DELIVERY_STATUS = '결제완료'
+			GROUP BY `DATE1`
+			ORDER BY DATE1 LIMIT 0,7
+		]]>
+	</select>
+	
+ </mapper>
