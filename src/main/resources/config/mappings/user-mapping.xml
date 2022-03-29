@@ -75,4 +75,8 @@
  		SELECT * FROM USER_SHIPPING_LIST WHERE user_id=#{user_id}
  	</select>
  	
+ 	<insert id="userDetail" parameterType="userDetails">
+ 		INSERT INTO user_details (user_serial, user_id, user_membership_name, user_last_login, user_point, User_status, user_total_purchase)
+ 		VALUES(default, #{user_id},'BABY OLIVE', now(), 10000,#{user_status}, #{user_total_purchase})
+ 	</insert>
  </mapper>

@@ -409,7 +409,7 @@
 			</c:if>
 		</div>
 	</form>
-	<form action="paymentPage.do" method="get" class="order_form"></form>
+	<form action="paymentPage.do" method="post" class="order_form"></form>
 	<!-- //Contents -->
 </div>
 <!-- //Container -->

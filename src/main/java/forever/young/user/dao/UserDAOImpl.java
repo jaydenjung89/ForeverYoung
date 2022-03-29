@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import forever.young.user.vo.EmailSendVO;
+import forever.young.user.vo.UserDetailVO;
 import forever.young.user.vo.UserVO;
 import forever.young.user.vo.User_shipping_listVO;
 
@@ -74,6 +75,11 @@ public class UserDAOImpl implements UserDAO {
 		public List<User_shipping_listVO> shipping(String user_id) {
 			// TODO Auto-generated method stub
 			return sqlSession.selectList("UserDAO.getUserShipping", user_id);
+		}
+		@Override
+		public void insertUserDetail(UserDetailVO userVo) {
+			sqlSession.insert("UserDAO.userDetail", userVo);
+			
 		}
 
 }

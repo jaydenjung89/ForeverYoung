@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.web.bind.support.SessionStatus;
 
 import forever.young.user.vo.EmailSendVO;
+import forever.young.user.vo.UserDetailVO;
 import forever.young.user.vo.UserVO;
 import forever.young.user.vo.User_shipping_listVO;
 
@@ -39,4 +40,5 @@ public interface UserService {
 	   String pwFind(UserVO userVo);
 	
 	   List<User_shipping_listVO> shipping(String user_id);
+	   public void insertUserDetail(UserDetailVO userVo);
 }

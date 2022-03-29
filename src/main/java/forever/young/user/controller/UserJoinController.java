@@ -11,6 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import forever.young.sms.MessageService;
 import forever.young.user.service.UserService;
+import forever.young.user.vo.UserDetailVO;
 import forever.young.user.vo.UserVO;
 
 @Controller
@@ -31,11 +32,12 @@ public class UserJoinController {
 	}
 	//회원가입 처리
 	@RequestMapping(value="joinProc.do", method=RequestMethod.POST)
-	public String registerPOST(UserVO userVo, RedirectAttributes redirectAttributes)throws Exception{
+	public String registerPOST(UserVO userVo,UserDetailVO details, RedirectAttributes redirectAttributes)throws Exception{
 		System.out.println("회원가입에 들어옴");
 		String hashedPw=BCrypt.hashpw(userVo.getUser_password(), BCrypt.gensalt());
 		userVo.setUser_password(hashedPw);
 		userService.register(userVo);
+		userService.insertUserDetail(details);
 		redirectAttributes.addFlashAttribute("msg", "REGISTERED");
 		
 		

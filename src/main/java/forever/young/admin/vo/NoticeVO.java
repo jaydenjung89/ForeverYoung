@@ -3,9 +3,6 @@ package forever.young.admin.vo;
 
 import java.util.Date;
 
-import lombok.Data;
-
-@Data
 public class NoticeVO {
 	private int notice_serial;
 	private String notice_id;  

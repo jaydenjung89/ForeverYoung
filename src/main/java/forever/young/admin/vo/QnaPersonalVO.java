@@ -2,9 +2,7 @@ package forever.young.admin.vo;
 
 import java.util.Date;
 
-import lombok.Data;
 
-@Data
 public class QnaPersonalVO {
 	private int rownum;
 
@@ -24,6 +22,7 @@ public class QnaPersonalVO {
 	private String qna_personal_answer_title;
 	private String qna_personal_image1;
 	public int getRownum() {
+	
 		return rownum;
 	}
 	public void setRownum(int rownum) {

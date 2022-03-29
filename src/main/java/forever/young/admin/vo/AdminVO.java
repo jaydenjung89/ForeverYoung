@@ -1,8 +1,6 @@
 package forever.young.admin.vo;
 
-import lombok.Data;
 
-@Data
 public class AdminVO {
 	private String rownum;
 	private String admin_id;

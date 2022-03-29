@@ -1,8 +1,6 @@
 package forever.young.admin.vo;
 
-import lombok.Data;
 
-@Data
 public class AdminUserVO {
 	private int rownum;
 	private int user_serial;
