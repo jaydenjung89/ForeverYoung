@@ -9,6 +9,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import forever.young.user.dao.UserDAO;
 import forever.young.user.vo.EmailSendVO;
+import forever.young.user.vo.UserDetailVO;
 import forever.young.user.vo.UserVO;
 import forever.young.user.vo.User_shipping_listVO;
 
@@ -106,6 +107,11 @@ public class UserServiceImpl implements UserService {
 	public List<User_shipping_listVO> shipping(String user_id) {
 		// TODO Auto-generated method stub
 		return user.shipping(user_id);
+	}
+	@Override
+	public void insertUserDetail(UserDetailVO userVo) {
+		// TODO Auto-generated method stub
+		user.insertUserDetail(userVo);
 	}
 
 	

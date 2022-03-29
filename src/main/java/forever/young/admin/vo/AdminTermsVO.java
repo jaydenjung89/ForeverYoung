@@ -2,9 +2,7 @@ package forever.young.admin.vo;
 
 import java.util.Date;
 
-import lombok.Data;
 
-@Data
 public class AdminTermsVO {
 	
 	private int ROWNUM;

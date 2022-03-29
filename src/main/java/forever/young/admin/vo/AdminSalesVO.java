@@ -2,9 +2,7 @@ package forever.young.admin.vo;
 
 import java.sql.Date;
 
-import lombok.Data;
 
-@Data
 public class AdminSalesVO {
 	
 	private Date DATE;

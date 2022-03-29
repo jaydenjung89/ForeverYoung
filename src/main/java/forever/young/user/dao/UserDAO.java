@@ -3,6 +3,7 @@ package forever.young.user.dao;
 import java.util.List;
 
 import forever.young.user.vo.EmailSendVO;
+import forever.young.user.vo.UserDetailVO;
 import forever.young.user.vo.UserVO;
 import forever.young.user.vo.User_shipping_listVO;
 
@@ -30,4 +31,5 @@ public interface UserDAO {
 	 public String pwFind(UserVO user);
 	 public String idFind(UserVO user);
 	 public List<User_shipping_listVO> shipping(String user_id);
+	 public void insertUserDetail(UserDetailVO user);
 }
