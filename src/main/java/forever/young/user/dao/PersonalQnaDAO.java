@@ -42,4 +42,9 @@ public class PersonalQnaDAO {
 	public int getBoardListCnt() {
 		return sqlSession.selectOne("PersonalQnaDAO.getBoardListCnt");
 	}
+	
+//	마이페이지
+	public List<PersonalQnaVO> PersonalQnaList1(PersonalQnaVO vo){
+		return sqlSession.selectList("PersonalQnaDAO.getPersonalQnaList1", vo);
+	}
 }

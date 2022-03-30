@@ -16,4 +16,7 @@ public interface PersonalQnaService {
 	List<PersonalQnaVO> getPersonalQnaList(PersonalQnaVO vo);
 	public int getBoardListCnt();
 	List<PersonalQnaVO> getBoard_personalList(Pagination pagination, String user_id);
+	
+	//마이페이지
+	List<PersonalQnaVO> getPersonalQnaList1(PersonalQnaVO vo);
 }

@@ -57,5 +57,12 @@ public class PersonalQnaServiceImpl implements PersonalQnaService {
 		System.out.println(pagination.getListSize());
 		return personalqnaDAO.getBoard_personalList(pagination, user_id);
 	}
+	
+	//마이페이지
+	@Override
+	public List<PersonalQnaVO> getPersonalQnaList1(PersonalQnaVO vo) {
+		// TODO Auto-generated method stub
+		return personalqnaDAO.PersonalQnaList1(vo);
+	}
 
 }

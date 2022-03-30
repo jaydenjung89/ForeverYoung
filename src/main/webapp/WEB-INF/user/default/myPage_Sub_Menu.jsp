@@ -47,10 +47,10 @@
 					<a href = "#" mymenuid="0300" data-ref-linkurl = "#" data-attr = "마이페이지^메뉴^기프트카드">기프트카드</a>
 				</li>
 				 -->
-				
+				<!-- 
 				<li class = "subMenu">
 					<a href = "#" mymenuid="0301" data-ref-linkurl = "#" data-attr = "마이페이지^메뉴^CJ ONE 포인트">CJ ONE포인트</a>
-				</li>
+				</li> -->
 				
 				<!-- 
 				<li class = "subMenu">
