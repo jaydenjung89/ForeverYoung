@@ -18,6 +18,31 @@
 </head>
 
 <script type="text/javascript">
+
+function div_show(){
+	$("div.layer layer_agreement");		//팝업 보여지는 div 
+	$("#pop_cont").show();				//팝업 div 보여지기
+	$("#dim").css("display","block"); 	//뒷배경
+	$("body").css("overflow","hidden"); //스크롤
+}
+function div_hide(){
+	$("#pop_cont").hide();
+	$("body").css("overflow","auto");
+	$("#dim").css("display","none");
+}
+
+function div_show1(){
+	$("div.layer layer_agreement");		//팝업 보여지는 div 
+	$("#pop_cont1").show();				//팝업 div 보여지기
+	$("#dim").css("display","block"); 	//뒷배경
+	$("body").css("overflow","hidden"); //스크롤
+}
+function div_hide1(){
+	$("#pop_cont1").hide();
+	$("body").css("overflow","auto");
+	$("#dim").css("display","none");
+}
+
 function zip(){
 	var myAddress;
 	var myZipcode;
@@ -480,158 +505,120 @@ function smsResponse(){
 									</tr> -->
 
 
-										<!-- 약관동의 시작 -->
-                              <tr class="reg_agree">
-                                 <th>이용약관동의 <span class="ico">*<span
-                                       class="screen_out">필수항목</span></span>
-                                 </th>
+									<!-- 약관동의 시작 -->
+										<tr class="reg_agree">
+											<th>이용약관동의 <span class="ico">*<span
+													class="screen_out">필수항목</span></span>
+											</th>
 
-                                 <td>
+											<td>
+												<div class="check_view">
+													<label class="check_agree label_all_check label_block" for="check_all">
+														<input type="checkbox" id="check_all"> <span class="ico"></span>전체 동의합니다.
+													</label>
+													
+													<label class="check_agree label_block" for="check_y1">
+														<input type="checkbox" id="check_y1" name="check_y1" class="normal" value=>
+														<span class="ico"></span>이용약관 동의<span class="sub">(필수)</span>
+														<a href="javascript:div_show()" id="viewterms1" style="color: rgb(63, 186, 72); float: right">약관보기</a>
+													</label>
+													
+													<label class="check_agree label_block" for="check_y2">
+														<input type="checkbox" id="check_y2" name="check_y2" class="normal" value=>
+														<span class="ico"></span>개인정보 수집, 이용 동의<span class="sub">(필수)</span>
+														<a href="javascript:div_show1()" id="viewterms2" style="color: rgb(63, 186, 72); float: right">약관보기</a>
+													</label>
+													
+													<label class="check_agree label_block" for="check_y3">
+														<input type="checkbox" id="check_y3" name="check_y3" class="normal" value=>
+														<span class="ico"></span>본인은 만 14세 이상입니다.<span class="sub">(필수)</span>
+													</label>
+												</div>
+												
+												
+												<!-- 첫번째 약관보기 클릭했을때 -->
+												<div class="layer layer_agreement" id="pop_cont" style="display: none; margin-top: -299px;">
+													<div class="inner_layer">
+														<h4 class="tit_layer">
+															이용약관 동의<span class="sub">(필수)</span>
+														</h4>
+														<div id="serviceView" class="box_tbl">
+															<div class="box_type">
+																<!-- <h3 class="box_tit">
+																	<a class="btn_view" href="#none">총칙</a>
+																</h3> -->
+																<div class="box_view">
+																	<div class="txt_view">제1조(목적)
+ 이 약관은 포에버영 회사(전자상거래 사업자)가 운영하는 포에버영 사이버 포에버영(이하 “포에버영”이라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버 포에버영과 이용자의 권리?의무 및 책임사항을 규정함을 목적으로 합니다.
+  
+ ※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
+  
+ 제2조(정의)
+ ①“포에버영” 이란 포에버영 회사가 재화 또는 용역(이하 “재화등”이라 함)을 이용자에게 제공하기 위하여 컴퓨터등 정보통신설비를 이용하여 재화등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이버포에버영을 운영하는 사업자의 의미로도 사용합니다.
+  
+ ②“이용자”란 “포에버영”에 접속하여 이 약관에 따라 “포에버영”이 제공하는 서비스를 받는 회원 및 비회원을 말합니다.
+  
+ ③ ‘회원’이라 함은 “포에버영”에 개인정보를 제공하여 회원등록을 한 자로서, “포에버영”의 정보를 지속적으로 제공받으며, “포에버영”이 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다.
+  
+ ④ ‘비회원’이라 함은 회원에 가입하지 않고 “포에버영”이 제공하는 서비스를 이용하는 자를 말합니다.</div>
+																</div>
+															</div>
+														</div>
 
-                                    <div class="check_view">
-                                       <label class="check_agree label_all_check label_block" for="check_all">
-                                          <input type="checkbox" id="check_all">
-                                          <span class="ico"></span>전체 동의합니다.
-                                       </label>
-                                       
-                                       <label class="check_agree label_block" for="check_y1">
-                                          <input type="checkbox" id="check_y1" name="check_y1" class="normal" value=>
-                                          <span class="ico"></span>이용약관 동의<span class="sub">(필수)</span>
-                                       </label>
-                                       
-                                       <label class="check_agree label_block" for="check_y2">
-                                          <input type="checkbox" id="check_y2" name="check_y2" class="normal" value=>
-                                          <span class="ico"></span>개인정보 수집·이용 동의 <span class="sub">(필수)</span>
-                                       </label>
-                                       
-                                       <label class=" check_agree label_block" for="check_n1">
-                                          <input type="checkbox" id="check_n1" name="check_n1" class="normal" value=>
-                                          <span class="ico"></span>본인은 만14세 이상입니다. <span class="sub">(선택)</span>
-                                       </label>
-                                    </div>
-                                    
-                                                                                                                                       
-                                    <%-- <!-- 첫번째 약관(필수) -->
-                                    <div class="check_view">
-                                       <label class="check_agree label_block">
-                                          <input type="checkbox" value="1" id="check_1" class="normal">
-                                          <span class="ico"></span>이용약관 동의 <span class="sub">(필수)</span>
-                                       </label>
-                                       <a href="#none" class="link btn_link btn_agreement">약관보기</a>
-                                    </div>
-                                    <!-- 첫번째 약관(필수) 끝 -->
-                                    
-                                    <!-- 첫번째 약관(필수) 약관보기 클릭했을때 -->
-                                    <div class="layer layer_agreement">
-                                       <div class="inner_layer">
-                                       
-                                          <h4 class="tit_layer">
-                                             이용약관<span class="sub">(필수)</span>
-                                          </h4>                                          
-                                          <div id="serviceView" class="box_tbl">                                          
-                                             <div class="box_type">
-                                                <h3 class="box_tit">
-                                                   <a class="btn_view" href="#none">총칙</a>
-                                                </h3>
-                                                <div class="box_view">
-                                                   <div class="txt_view">
-                                                      1조 제1조(목적)<br> 이 약관은 주식회사 컬리 회사(전자상거래 사업자)가 운영하는
-                                                      인터넷사이트 마켓컬리(이하 "컬리"라 한다)에서 제공하는 전자상거래 관련 서비스(이하 "서비스"라
-                                                      한다)를 이용함에 있어 컬리와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.<br>
-                                                      *PC통신, 스마트폰 앱, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한
-                                                      준용합니다. <br>
-                                                   </div>
-                                                </div>
-                                             </div>
+														<button type="button" class="btn_ok" onclick="javascript:div_hide();">확인</button>
+														<button type="button" class="btn_close">
+															<span class="screen_out">레이어 닫기</span>
+														</button>
+													</div>
+												</div>
+												
+												
+												<!-- 두번째 약관보기 클릭했을때 -->
+												<div class="layer layer_essential" id="pop_cont1" style="display: none; margin-top: -299px;">
+													<div class="inner_layer">
+														<div class="in_layer">
+															<h4 class="tit_layer">
+																개인정보 수집, 이용 동의<span class="sub">(필수)</span>
+															</h4>
+															<div id="serviceView" class="box_tbl">
+															<div class="box_type">
+																<!-- <h3 class="box_tit">
+																	<a class="btn_view" href="#none">총칙</a>
+																</h3> -->
+																<div class="box_view">
+																	<div class="txt_view">이용자가 제공한 모든 정보는 다음의 목적을 위해 활용하며, 하기 목적 이외의 용도로는 사용되지 않습니다.
+ ① 개인정보 수집 항목 및 수집·이용 목적
+  가) 수집 항목 (필수항목)
+ - 성명(국문), 주민등록번호, 주소, 전화번호(자택, 휴대전화), 사진, 이메일, 나이, 재학정보, 병역사항,
+ 외국어 점수, 가족관계, 재산정도, 수상내역, 사회활동, 타 장학금 수혜현황, 요식업 종사 현황 등 지원
+ 신청서에 기재된 정보 또는 신청자가 제공한 정보
+  나) 수집 및 이용 목적
+ - 포에버영 연락 및 자격확인
+ - 포에버영 자원관리
+  ② 개인정보 보유 및 이용기간
+  - 수집·이용 동의일로부터 개인정보의 수집·이용목적을 달성할 때까지
+  ③ 동의거부관리
+  - 귀하께서는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실 권리가 있습니다. 다만,
+ 귀하가 개인정보의 수집/이용에 동의를 거부하시는 경우에 불이익이 발생할 수 있음을 알려드립니다.</div>
+																</div>
+															</div>
+															</div>
+															
+														</div>
+														<button type="button" class="btn_ok" onclick="javascript:div_hide1();">
+															<span class="txt_type">확인</span>
+														</button>
+														<button type="button" class="btn_close">
+															<span class="screen_out">레이어 닫기</span>
+														</button>
+													</div>
+													<button type="button" class="btn_close">
+														<span class="screen_out">레이어 닫기</span>
+													</button>
+												</div>
 
-                                             <div class="box_type">
-                                                <h3 class="box_tit">
-                                                   <a class="btn_view" href="#none">회사의 서비스</a>
-                                                </h3>
-                                                <div class="box_view">
-                                                   <div class="txt_view">
-                                                      5조 제5조(서비스의 중단)<br> ① "컬리"는 컴퓨터 등 정보통신설비의 보수점검/교체
-                                                      및 고장, 통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수
-                                                      있습니다.<br> ② "컬리"는 제1항의 사유로 서비스의 제공이 일시적으로 중단됨으로
-                                                      인하여 이용자 또는 제3자가 입은 손해에 대하여 배상합니다. 단, "컬리"가 고의 또는 과실이
-                                                      없음을 입증하는 경우에는 그러하지 아니합니다.<br> ③ 사업종목의 전환, 사업의 포기,
-                                                      업체 간의 통합 등의 이유로 서비스를 제공할 수 없게 되는 경우에는 "컬리"는 제8조에 정한
-                                                      방법으로 이용자에게 통지하고 당초 "컬리"에서 제시한 조건에 따라 소비자에게 보상합니다. 다만,
-                                                      "컬리"가 보상기준 등을 고지하지 아니한 경우에는 이용자들의 마일리지 또는 적립금 등을
-                                                      "컬리"에서 통용되는 통화가치에 상응하는 현물 또는 현금으로 이용자에게 지급합니다.
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-
-                                          <button type="button" class="btn_ok">확인</button>
-                                          <button type="button" class="btn_close">
-                                             <span class="screen_out">레이어 닫기</span>
-                                          </button>
-                                       </div>
-                                    </div>
-                                    <!-- 첫번째 약관(필수) 약관보기 클릭했을때 끝 -->
-
-                                    <!-- 두번째 약관(선택) -->
-                                    <div class="check_view">
-                                        <label class="check_agree label_block">
-                                          <input type="checkbox" value="2" id="check_2" class="normal">
-                                          <span class="ico"></span>개인정보 수집·이용 동의 <span class="sub">(선택)</span>
-                                       </label>
-                                       <a href="#none" class="link btn_link btn_choice">약관보기</a>
-                                    </div>
-                                    <!-- 두번째 약관(선택) 끝 -->
-                                    
-                                    <!-- 두번째 약관(선택) 약관보기 클릭했을때 -->
-                                    <div class="layer layer_choice">
-                                       <div class="inner_layer">
-                                          <div class="in_layer">
-                                             <h4 class="tit_layer">
-                                                개인정보 수집·이용 동의 <span class="sub">(선택)</span>
-                                             </h4>
-                                             <div class="box_tbl">
-                                                <table cellpadding="0" cellspacing="0" width="100%">
-                                                   <caption class="screen_out">개인정보의 수집 및 이용목적</caption>
-                                                   <thead>
-                                                      <tr>
-                                                         <th scope="row" class="tit1">수집 목적</th>
-                                                         <th scope="row" class="tit2">수집 항목</th>
-                                                         <th scope="row" class="tit3">보유 기간</th>
-                                                      </tr>
-                                                   </thead>
-                                                   <tbody>
-                                                      <tr>
-                                                         <td>맞춤형 회원 서비스 제공</td>
-                                                         <td>성별, 생년월일</td>
-                                                         <td class="emph">회원 탈퇴<br> 즉시 파기
-                                                         </td>
-                                                      </tr>
-                                                   </tbody>
-                                                </table>
-                                             </div>
-                                             <p class="txt_service">동의를 거부하시는 경우에도 서비스는 이용하실 수
-                                                있습니다.</p>
-                                          </div>
-                                          <button type="button" class="btn_ok">
-                                             <span class="txt_type">확인</span>
-                                          </button>
-                                          <button type="button" class="btn_close">
-                                             <span class="screen_out">레이어 닫기</span>
-                                          </button>
-                                       </div>
-                                    </div>
-                                    <!-- 두번째 약관(선택) 약관보기 클릭했을때 끝 -->
-                                    
-                                    <!-- 세번째 약관(필수) -->
-                                    <div class="check_view">
-                                       <label class=" check_agree label_block">
-                                          <input type="checkbox" value="3" id="check_3" class="normal">
-                                          <span class="ico"></span>본인은 만14세 이상입니다. <span class="sub">(필수)</span>
-                                       </label>
-                                    </div>
-                                    <!-- 세번째 약관(필수) 끝 --> --%>
-                                 </td>
-                              </tr>
+											</td>
+										</tr>
 									</tbody>
 								</table>
 								<div id="formSubmit" class="form_footer">
