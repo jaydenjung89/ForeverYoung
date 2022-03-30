@@ -40,7 +40,6 @@
 					<a href="notice.do">공지사항</a>
 				</li>			
 			</ul>
-		<%--<fieldset class="search-period mgT30">총 게시글 수 :${pagination.listCnt} / 총 페이지 수 : ${pagination.pageCnt} / 총 블럭 수 : ${pagination.rangeSize }</fieldset>  --%>
 		<form action="onqwrite.do" method="post">
 			<input type="hidden" name="deletePersonalQna" value="delete"/>
 			<table class="xans-board-listheader" width="100%" style="table-layout:fixed;">

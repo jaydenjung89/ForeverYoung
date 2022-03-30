@@ -104,53 +104,60 @@ public class CartController {
 		}
 		return "myPage/getCart2";
 	}
-	@SuppressWarnings("unchecked")
-	@RequestMapping(value="cartInput.do", produces="html/text; charset=utf-8")
-	@ResponseBody
-	public String cartInput(HttpServletRequest request, CartVO cartVO) {
-		HttpSession session=request.getSession();
-		boolean overlap=false;
-		
-		if(!cartService.isStock(cartVO))
-			return "재고가 부족합니다.";
-		
-		if(session.getAttribute("userId")==null) {
-			if(session.getAttribute("cartList")==null) {
-				session.setAttribute("cartList", new ArrayList<CartVO>());
-			}
-			ArrayList<CartVO> cartList=(ArrayList<CartVO>)session.getAttribute("cartList");
-			for(CartVO cartItem:cartList) {
-				if(cartItem.getCategory_goods_serial()==cartVO.getCategory_goods_serial()) {
-					CartVO checkStock=new CartVO();
-					checkStock.setCategory_goods_serial(cartItem.getCategory_goods_serial());
-					checkStock.setGoods_cart_count(cartItem.getGoods_cart_count()+cartVO.getGoods_cart_count());
-					
-					if(!cartService.isStock(checkStock)) {
-						return "재고가 부족합니다.";
-					}
-					cartItem.setGoods_cart_count(cartItem.getGoods_cart_count()+cartVO.getGoods_cart_count());
-					overlap=true;
-					break;
-				}
-			}
-			if(!overlap)cartList.add(cartVO);
-			session.setAttribute("cartList", cartList);
-		}else {
-			CartVO item=new CartVO();
-			List<CartVO> cartList=cartService.getCartList((String)session.getAttribute("userId"));
-			try {
-				overlap=cartService.overlapCartItem(cartList, cartVO);
-			}catch(IllegalArgumentException e) {
-				return "재고가 부족합니다.";
-			}
-			if(!overlap) {
-				item=cartVO;
-				item.setUser_id((String)session.getAttribute("userId"));
-				cartService.insertCartItem(item);
-			}
-		}
-		return "good";
-	}
+	
+	   @SuppressWarnings("unchecked")
+	   @RequestMapping(value="cartInput.do", produces="html/text; charset=utf-8")
+	   @ResponseBody
+	   public String cartInput(HttpServletRequest request, CartVO cartVO) {
+	      HttpSession session=request.getSession();
+	      boolean overlap=false;
+	      int result = 0;
+	      
+	      if(!cartService.isStock(cartVO))
+	         return "재고가 부족합니다.";
+	      
+	      if(session.getAttribute("userId")==null) {
+	         
+	         if(session.getAttribute("cartList")==null) {
+	            session.setAttribute("cartList", new ArrayList<CartVO>());
+	         }
+	         ArrayList<CartVO> cartList=(ArrayList<CartVO>)session.getAttribute("cartList");
+	         for(CartVO cartItem:cartList) {
+	            if(cartItem.getCategory_goods_serial()==cartVO.getCategory_goods_serial()) {
+	               CartVO checkStock=new CartVO();
+	               checkStock.setCategory_goods_serial(cartItem.getCategory_goods_serial());
+	               checkStock.setGoods_cart_count(cartItem.getGoods_cart_count()+cartVO.getGoods_cart_count());
+	               
+	               if(!cartService.isStock(checkStock)) {
+	                  return "재고가 부족합니다.";
+	               }
+	               cartItem.setGoods_cart_count(cartItem.getGoods_cart_count()+cartVO.getGoods_cart_count());
+	               overlap=true;
+	               break;
+	            }
+	         }
+	         if(!overlap)cartList.add(cartVO);
+	         session.setAttribute("cartList", cartList);
+	      }else {
+	         
+	         
+	         CartVO item=new CartVO();
+	         List<CartVO> cartList=cartService.getCartList((String)session.getAttribute("userId"));
+	         try {
+	            overlap=cartService.overlapCartItem(cartList, cartVO);
+	         }catch(IllegalArgumentException e) {
+	            return "재고가 부족합니다.";
+	         }
+	         if(!overlap) {
+	            item=cartVO;
+	            item.setUser_id((String)session.getAttribute("userId"));
+	            cartService.insertCartItem(item);
+	            result = 1;
+	         }
+	      }
+	      return String.valueOf(result);
+	   }
+	   
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value="cartUpdateCount.do", produces="html/text; charset=utf-8")
 	@ResponseBody

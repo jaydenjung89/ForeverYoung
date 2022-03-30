@@ -690,7 +690,7 @@ button, input[type=submit] {
 												</div>
 										</div>
 							
-										<form id="reviewForm" action="reviewProc.do" method="post">
+										<form id="reviewForm" action="reviewProc.do" method="post" enctype = "multipart/form-data">
 											<%-- 로그인한 사용자가 해당상품을 구매했는지 안했는지가 중요 --%>
 											<input type="hidden" name="user_id" value="${goods.user_id }" >
 											<c:if test="${goods != null }">

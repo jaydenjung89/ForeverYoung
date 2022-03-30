@@ -56,10 +56,10 @@ public class PaymentController {
 	private MembershipService membershipService;
 	
 	private IamportClient api;
-	 public PaymentController() {
-	      this.api=new IamportClient("",
-	            "");
-	   }
+    public PaymentController() {
+         this.api=new IamportClient("#",
+               "#");
+      }
 
 	 @RequestMapping("iamport.do")
 	   @ResponseBody
