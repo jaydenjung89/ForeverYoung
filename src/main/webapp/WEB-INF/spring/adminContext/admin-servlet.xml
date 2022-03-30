@@ -17,7 +17,11 @@
 	</bean>
 	
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="maxUploadSize" value="200000000" />
+   		<!-- 파일의 용량을 제한 없이 업로드 -->
+		<property name="maxUploadSize" value="-1" />
+		
+		<!-- 디스크에 임시 파일 생성하기 전에  메모리에 보관되는 크기
+		280MB 까지 업로드 허용하도록 설정됨 그 이상은 maxInMemorySize 늘려주면 됨. (maxInMemorySize : 377759039)-->
 		<property name="maxInMemorySize" value="200000000" />
 	</bean>
 	
