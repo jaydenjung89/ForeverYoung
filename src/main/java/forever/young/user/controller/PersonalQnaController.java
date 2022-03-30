@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
 
+import forever.young.admin.vo.AdminBannerVO;
 import forever.young.user.service.GoodsQnaService;
 import forever.young.user.service.PersonalQnaService;
 import forever.young.user.vo.Pagination;
@@ -109,15 +110,90 @@ public class PersonalQnaController {
 	
 	//1:1 문의 수정 기능
 	@RequestMapping(value="updatePersonalQna.do")
-	public String updatePostPersonalQna(PersonalQnaVO vo) {
-		personalqnaService.updatePersonalQna(vo);
+	public String updatePostPersonalQna(PersonalQnaVO vo, MultipartFile uploadFile) {
+		
+		if(uploadFile.getSize() != 0) {
+			//교체하고 싶은 이미지가 있을 경우 0이 아니므로 s3에 있는 이미지를 삭제
+			PersonalQnaVO qnavo = personalqnaService.getPersonalQna(vo);
+			String deleteKey = qnavo.getQna_personal_image1().substring(49);
+			awsS3.delete(deleteKey);
+			
+			//새로운 이미지를 s3에 등록
+			try {
+				String key = "personalQna/"+uploadFile.getOriginalFilename();
+				InputStream is = uploadFile.getInputStream();
+				String contentType = uploadFile.getContentType();
+				long contentLength = uploadFile.getSize();
+				awsS3.upload(is, key, contentType, contentLength);
+				
+				vo.setQna_personal_image1(url + key);
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+			
+			//교체하고싶은 이미지가 있을 경우 이미지를 먼저 지우고
+			//새로운 이미지를 등록한 후에 새로운 이미지 경로를 포함하여 db에 저장
+//			int success = 0;
+//			success = personalqnaService.updatePersonalQna(vo);
+//			
+//			if(success != 0) {
+//				return "redirect:oneqmain.do";
+//			}else {
+//				return "redirect:oneqmain.do";
+//			}
+			personalqnaService.updatePersonalQna(vo);
+		}
+		
 		return "redirect:oneqmain.do";
+	
+//		return "redirect:oneqmain.do";
 	}
 	
 	//1:1 문의 삭제 기능
 	@RequestMapping(value="deletePersonalQna.do")
-	public String deletePersonalQnaPOST(PersonalQnaVO vo) {
-		personalqnaService.deletePersonalQna(vo);
+	public String deletePersonalQnaPOST(PersonalQnaVO vo, MultipartFile uploadFile, @RequestParam(required = false, defaultValue = "1") int page, @RequestParam(required = false, defaultValue = "1") int range, HttpServletRequest request) {
+		
+		boolean result = false;
+		
+		int listCnt=personalqnaService.getBoardListCnt();
+		
+		HttpSession session=request.getSession();
+		String user_id=((String)session.getAttribute("userId"));
+		Pagination pagination=new Pagination();
+		
+		pagination.pageInfo(page, range, listCnt);
+		
+		//1. db에서 삭제하고싶은 데이터를 가져온다.
+		PersonalQnaVO qnavo = personalqnaService.getPersonalQna(vo);
+		
+		//2. 데이터에서 파일 경로를 delete의 경로에 담아버린다.
+		String deletePath = qnavo.getQna_personal_image1();
+		
+		//3. deletePath에 있는 데이터와 db에 있는 모든 경로와 비교해서 일치하는 경로를 삭제
+		List<PersonalQnaVO> qnaList = personalqnaService.getBoard_personalList(pagination, user_id);
+		
+		for(PersonalQnaVO qna : qnaList) {
+			System.out.println("bann : " + qna.getQna_personal_image1());
+			System.out.println("deletepath : " + deletePath);
+			
+			if(qna.getQna_personal_image1().equals(deletePath)) {
+				personalqnaService.deletePersonalQna(vo);
+				result = true;
+				
+				break;
+			}
+		}
+		
+		if(!result) {
+			String deleteKey = qnavo.getQna_personal_image1().substring(49);
+			awsS3.delete(deleteKey);
+			
+			personalqnaService.deletePersonalQna(vo);
+			
+		}
+		
+		
+//		personalqnaService.deletePersonalQna(vo);
 		return "redirect:oneqmain.do";
 	}
 }
