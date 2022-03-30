@@ -7,7 +7,13 @@ public class AdminUserVO {
 	private String user_id;
 	private String user_name;
 	private String user_phone;
-	private String user_grade;
+	private String user_membership_name;
+	public String getUser_membership_name() {
+		return user_membership_name;
+	}
+	public void setUser_membership_name(String user_membership_name) {
+		this.user_membership_name = user_membership_name;
+	}
 	private String user_last_login;
 	private String user_point;
 	private int user_total_purchase;
@@ -42,12 +48,6 @@ public class AdminUserVO {
 	public void setUser_phone(String user_phone) {
 		this.user_phone = user_phone;
 	}
-	public String getUser_grade() {
-		return user_grade;
-	}
-	public void setUser_grade(String user_grade) {
-		this.user_grade = user_grade;
-	}
 	public String getUser_last_login() {
 		return user_last_login;
 	}
@@ -75,9 +75,9 @@ public class AdminUserVO {
 	@Override
 	public String toString() {
 		return "AdminUserVO [rownum=" + rownum + ", user_serial=" + user_serial + ", user_id=" + user_id
-				+ ", user_name=" + user_name + ", user_phone=" + user_phone + ", user_grade=" + user_grade
-				+ ", user_last_login=" + user_last_login + ", user_point=" + user_point + ", user_total_purchase="
-				+ user_total_purchase + ", user_status=" + user_status + "]";
+				+ ", user_name=" + user_name + ", user_phone=" + user_phone + ", user_membership_name="
+				+ user_membership_name + ", user_last_login=" + user_last_login + ", user_point=" + user_point
+				+ ", user_total_purchase=" + user_total_purchase + ", user_status=" + user_status + "]";
 	}
 	
 }

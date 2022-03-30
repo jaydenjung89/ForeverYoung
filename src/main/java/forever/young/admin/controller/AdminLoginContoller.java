@@ -1,5 +1,7 @@
 package forever.young.admin.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,7 +29,26 @@ public class AdminLoginContoller {
 	}
 	//관리자 메인페이지
 	@RequestMapping("main_dashboard.mdo")
-	public String main() {
+	public String main(Model model, AdminSalesVO adminsalesvo) {
+		// 당일매출 구하기
+		model.addAttribute("getTodaySales", adminsalesservice.getTodaySales(adminsalesvo));
+
+		// 엑셀용 상품별 판매현황 구하기
+		model.addAttribute("salesList", adminsalesservice.getSales(adminsalesvo));
+		
+
+		// 월별 매출현황구하기
+		model.addAttribute("monthSalesList", adminsalesservice.getMonthSales(adminsalesvo));
+		for (int i = 0; i < adminsalesservice.getMonthSales(adminsalesvo).size(); i++) {
+			model.addAttribute("monthprice" + i, adminsalesservice.getMonthSales(adminsalesvo).get(i).getPRICE());
+			model.addAttribute("monthprice1" + i, adminsalesservice.getMonthSales(adminsalesvo).get(i).getPRICE1());
+		}
+		
+		// 일별 매출현황구하기
+		for (int i = 0; i < adminsalesservice.getDaySales(adminsalesvo).size(); i++) {
+			model.addAttribute("day" + i, adminsalesservice.getDaySales(adminsalesvo).get(i).getDATE1());
+			model.addAttribute("dayprice" + i, adminsalesservice.getDaySales(adminsalesvo).get(i).getPRICE());
+		}
 		return "dashboard/main_dashboard";
 	}
 	
@@ -59,7 +80,7 @@ public class AdminLoginContoller {
 
 	// 관리자 로그인처리
 	@RequestMapping("loginProc.mdo")
-	public String adminJoin(AdminVO admin, Model model, AdminSalesVO adminsalesvo) {
+	public String adminJoin(AdminVO admin, Model model, AdminSalesVO adminsalesvo, HttpSession httpSession) {
 		AdminVO adminInfo = adminService.getAdmin(admin);
 		System.out.println(adminInfo);
 		String inputPw = admin.getAdmin_pw();

@@ -143,8 +143,7 @@ to {
 									<td>${admin.admin_phone }</td>
 									<td>${admin.admin_address1 }</td>
 									<td>${admin.admin_address2 }</td>
-									<td><input type="hidden" value="${user.user_serial }"
-										name="user_serial" id="user_serial"><input
+									<td><input
 										type="button" value="삭제"
 										onclick="javascirpt:delete_check('deleteAdmin.mdo?admin_id=${admin.admin_id}')" />
 									</td>
