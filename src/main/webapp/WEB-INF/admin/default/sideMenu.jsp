@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<input type="hidden" value="${adminId }" />
 	<ul
 		class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
 		id="accordionSidebar">
@@ -27,6 +28,7 @@
 		<hr class="sidebar-divider my-0">
 
 		<!-- Nav Item - Dashboard -->
+		
 		<li class="nav-item active"><a class="nav-link" href="main_dashboard.mdo">
 				<i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span>
 		</a></li>

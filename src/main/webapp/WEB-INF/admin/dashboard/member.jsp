@@ -113,7 +113,7 @@ to {
 								<th scope="col">회원등급</th>
 								<th scope="col">최근로그인</th>
 								<th scope="col">포인트</th>
-								<th scope="col">총구매횟수</th>
+								<th scope="col">총구매금액</th>
 								<th scope="col">회원삭제</th>
 							</tr>
 						</thead>
@@ -126,7 +126,7 @@ to {
 								<th scope="col">회원등급</th>
 								<th scope="col">최근로그인</th>
 								<th scope="col">포인트</th>
-								<th scope="col">총구매횟수</th>
+								<th scope="col">총구매금액</th>
 								<th scope="col">회원삭제</th>
 							</tr>
 						</tfoot>
@@ -137,7 +137,7 @@ to {
 									<td>${user.user_id }</td>
 									<td>${user.user_name }</td>
 									<td>${user.user_phone }</td>
-									<td>${user.user_grade }</td>
+									<td>${user.user_membership_name }</td>
 									<td>${user.user_last_login }</td>
 									<td>${user.user_point }</td>
 									<td>${user.user_total_purchase }</td>

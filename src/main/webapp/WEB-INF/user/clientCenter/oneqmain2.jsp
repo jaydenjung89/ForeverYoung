@@ -71,13 +71,13 @@
 					<td width="12%">${personalqna.user_id}</td>
 					<td width="12%"><fmt:formatDate value="${personalqna.qna_personal_date}" pattern="yyyy-MM-dd"/></td> 
 				</tr>
-				
+				<%-- 
 				<tr>
 					<td align="center" colspan="3" class="sub" style="align:center; display:none; width:100%;"> ${personalqna.qna_personal_content}
 						<input type="button" class="btnRed" value="삭제" onclick="location.href='deletePersonalQna.do?qna_personal_serial=${personalqna.qna_personal_serial}'"style="align:center; line-height: 24px; width: 70px;">
 						<input type="button" class="btnGreen" value="수정" onclick="location.href='updatePersonalQna.do?qna_personal_serial=${personalqna.qna_personal_serial}'"style="align:center; line-height: 24px; width: 70px;">
 					</td>
-				</tr>
+				</tr> --%>
 				<tr class="menu"></tr>
 			
 			</table>

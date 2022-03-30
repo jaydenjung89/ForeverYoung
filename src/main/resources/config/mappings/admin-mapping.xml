@@ -22,7 +22,7 @@
 	<select id="getUserlist" resultType="adminUser">
 		select
 		(ROW_NUMBER() OVER(Order by B.user_serial)) AS ROWNUM,
-		B.user_serial, A.user_id, A.user_name, A.user_phone,
+		B.user_serial, A.user_id, A.user_name, A.user_phone, B.user_membership_name,
 		B.user_last_login, B.user_point,
 		B.user_status, B.user_total_purchase
 		FROM user A
