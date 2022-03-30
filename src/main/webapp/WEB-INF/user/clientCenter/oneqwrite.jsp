@@ -25,6 +25,12 @@
 		}
 	}
 </script>
+
+<style>
+img{
+	width : 100%;
+}
+</style>
 <body>
 	<jsp:include page="../default/header.jsp"></jsp:include>
 	<div id="Container">
@@ -138,26 +144,36 @@
 						<!-- 문의유형 1,2차를 모두 선택해야 입력 활성화 됨 -->
 						<tr class="textarea">
 							<th scope="col"><label for="InputTextarea">내용</label></th>
-							<td><c:if test="${getPersonalQna==null}">
+							<td>
+								<c:if test="${getPersonalQna==null}">
 									<textarea id="InputTextarea" name="qna_personal_content"
 										cols="3" rows="1" placeholder="문의내용을 입력해주세요.(2000자 이내)"
 										style="width: 98%; height: 280px;"></textarea>
-								</c:if> <c:if test="${getPersonalQna!=null}">
+								</c:if>
+								<c:if test="${getPersonalQna!=null}">
 									<textarea id="InputTextarea" name="qna_personal_content"
 										cols="3" rows="1" placeholder="문의내용을 입력해주세요.(2000자 이내)"
 										style="width: 98%; height: 280px;">${getPersonalQna.qna_personal_content}</textarea>
-								</c:if> <!-- 첨부파일 올리기 --> <label for="inputFile"> <!-- <button type="button" name = "uploadFile" id="btnFile" class="file">첨부파일</button> -->
+
+										<img src = "${getPersonalQna.qna_personal_image1 }" >
+								</c:if>
+								
+								<!-- 첨부파일 올리기 -->
+								<label for="inputFile"> 
+									<!-- <button type="button" name = "uploadFile" id="btnFile" class="file">첨부파일</button> -->
 									<input type="file" name="uploadFile" value="첨부파일" />
-							</label> <input type="file" id="inputFile" name="uploadFile"
-								class="btnFileAdd" value="첨부파일" title="첨부파일 선택"
-								style="display: none;"> <!-- <input type="file" id="inputFile" name="cnslFile" class="btnFileAdd" value="첨부파일" title="첨부파일 선택" style="display: none;"> -->
+								</label>
+								
+								<input type="file" id="inputFile" name="uploadFile" class="btnFileAdd" value="첨부파일" title="첨부파일 선택" style="display: none;"> <!-- <input type="file" id="inputFile" name="cnslFile" class="btnFileAdd" value="첨부파일" title="첨부파일 선택" style="display: none;"> -->
 								<input type="hidden" name="fileName" id="cnslFileName" value="">
 								<span id="fileName" class="file" style="display: none;"><span></span>
 									<!-- 첨부파일 삭제버튼 -->
 									<button type="button" id="btnFileDelete" class="ButtonDelete">삭제</button></span>
-								<span class="txt">5MB 이하의 이미지 파일 (JPG, PNG, GIF) 1개를 첨부하실
-									수 있습니다.</span></td>
+								<span class="txt">5MB 이하의 이미지 파일 (JPG, PNG, GIF) 1개를 첨부하실 수 있습니다.</span>
+							</td>
 						</tr>
+						
+						
 						<!-- 답변내용 -->
 						<c:if test="${getPersonalQna.qna_personal_answer_date==null}">
 							

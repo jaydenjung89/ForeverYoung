@@ -23,16 +23,16 @@
  </resultMap>
  	
  	<insert id="insertPersonalQna" parameterType="personalQna">
- 		insert into qna_personal (user_id, user_name,qna_personal_serial, qna_personal_category, qna_personal_title, qna_personal_content, qna_personal_phone, qna_personal_email, qna_personal_date, qna_personal_hit) values( #{user_id}, #{user_name}, #{qna_personal_serial}, #{qna_personal_category}, #{qna_personal_title}, #{qna_personal_content}, #{qna_personal_phone}, #{qna_personal_email}, now(), #{qna_personal_hit})
+ 		insert into qna_personal (user_id, user_name,qna_personal_serial, qna_personal_category, qna_personal_title, qna_personal_content, qna_personal_phone, qna_personal_email, qna_personal_date, qna_personal_hit, qna_personal_image1) values( #{user_id}, #{user_name}, #{qna_personal_serial}, #{qna_personal_category}, #{qna_personal_title}, #{qna_personal_content}, #{qna_personal_phone}, #{qna_personal_email}, now(), #{qna_personal_hit}, #{qna_personal_image1})
  	</insert>
  	
  	<update id="updatePersonalQna" parameterType="personalQna">
  		update qna_personal set qna_personal_title=#{qna_personal_title},
  		qna_personal_content=#{qna_personal_content},
  		qna_personal_date=now(),
- 		qna_personal_category=#{qna_personal_category}
+ 		qna_personal_category=#{qna_personal_category},
+ 		qna_personal_image1 = #{qna_personal_image1}
  		where qna_personal_serial=#{qna_personal_serial}
- 		
  	</update>
  	
  	<delete id="deletePersonalQna" parameterType="personalQna">

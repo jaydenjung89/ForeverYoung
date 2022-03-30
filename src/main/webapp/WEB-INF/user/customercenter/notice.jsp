@@ -226,7 +226,7 @@ a {
 														<td width="50" nowrap align="center"><c:out value="${board.notice_serial }"></c:out> </td>
 														<!-- 제목 -->
 														<td style="padding-left:10px;text-align:left; color:##9bce26">
-															<a href="notice_detail.do">
+															<a href="notice_detail.do?notice_serial=${board.notice_serial }">
 																<b><c:out value="${board.notice_title }"></c:out></b>
 															</a>
 															<b> </b>

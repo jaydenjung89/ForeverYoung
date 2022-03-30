@@ -185,53 +185,7 @@
 							<input type="hidden" id="cjMemberDscntAmt" value="0">
 							<input type="hidden" id="cjDscntAmt" value="0">
 							<p class="infoTxt01" id="chg_txt" style="display:none;">현재 판매종료/일시품절 상품은 교환처리가 불가합니다.</p>
-							<h3 class="sub-title3">
-								취소사유 선택
-							</h3>
-							<table class="board-write-2s view">
-								<caption></caption>
-								<colgroup>
-									<col style="width:25%;">
-									<col style="width:75%;">
-								</colgroup>
-								<tbody>
-									<tr class="addr">
-										<th scope="row">
-											<label for="NameBank">사유</label>
-										</th>
-										<td class="star">
-											<%--<select name="clmCausCd" id="clm-caus-cd" onchange="" title="사유를 선택해주세요." style="width:200px;">
-												<option value="" selected="selected">사유를 선택해주세요</option>
-												<option value="212" data-show-caus-cont="N">고객단순변심</option>
-												<option value="219" data-show-caus-cont="N">주문오류</option>
-												<option value="201" data-show-caus-cont="N">배송지연</option>
-												<option value="221" data-show-caus-cont="Y">직접입력</option>											
-											</select>
-											 --%>
-											<div class="textarea" id="clm-caus-cont-area">
-												<textarea name="clmCausCont" id="clmCausCont" class="mgT10"  cols="5" rows="1" placeholder="내용을 입력하세요.상품파손.오배송 사유의 경우 첨부파일을 꼭 등록해주세요." style="width:95%;height:70px;"></textarea>
-											</div>
-											<div class="filebox" style="display:none">
-												<p class="btn">
-													<label for="inputFile">
-														<button type="button" class="addFile" id="btnFile">첨부파일</button>
-													</label>
-													<input type="file" id="inputFile" name="cnslFile" class="btnFileAdd" value="첨부파일" title="첨부파일 선택" style="display:none;">
-												</p>
-												<p class="area_file" style="display:none">
-													<span id="fileName" class="ifile"><span alt=""></span> 
-														<!-- 
-														<button type="button" id="btnFileDelete" class="ButtonDelete">삭제</button>
-														-->
-														<a href="javascript:;" id="btnFileDelete" class="del">X</a>
-													</span>
-												</p>
-												<p class="stxt">5MB 이하의 이미지 파일 (JPG, PNG, GIF) 1개를 첨부하실 수 있습니다.</p>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+							
 							<h3 class="sub-title3">환불내역</h3>
 							<div class="price-conts" id="refund-list">
 								<ul class="list">
