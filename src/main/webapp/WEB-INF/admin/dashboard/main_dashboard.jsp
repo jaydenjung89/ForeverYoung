@@ -450,7 +450,7 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: [String("${day0}"), String("${day1}"), String("${day2}"), String("${day3}"), String("${day4}"), String("${day5}"), String("${day6}")],
+    labels: [String("${day6}"), String("${day5}"), String("${day4}"), String("${day3}"), String("${day2}"), String("${day1}"), String("${day0}")],
     datasets: [{
       label: "Earnings",
       lineTension: 0.3,
@@ -464,7 +464,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [${dayprice0}, ${dayprice1}, ${dayprice2},${dayprice3},${dayprice4},${dayprice5},${dayprice6}],
+      data: [${dayprice6}, ${dayprice5}, ${dayprice4},${dayprice3},${dayprice2},${dayprice1},${dayprice0}],
     }],
   },
   options: {
