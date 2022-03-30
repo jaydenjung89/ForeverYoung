@@ -1413,22 +1413,23 @@ function popLayer(){
     var serial = parseInt($(".option_add_area .cont_area").find("input.hserial").val());
     var count = $(".option_add_area .cont_area").find("span.option_cnt_box").find("#cartCnt").val();
 
-   $.ajax({
-       url: "cartInput.do",
-       type: "post",
-       data : {"category_goods_serial" : serial, "goods_cart_count" : count},
-       dataType: "text",
-       success : function(res){
-                if(res!= "good"){
-                  alert(res);
-                }else{
-                 $("#basketOption").css("display", "block");   
-                }
-       },
-       error : function() {
-          alert("카트 담기 실패");
-       }
-    });
+    $.ajax({
+        url: "cartInput.do",
+        type: "post",
+        data : {"category_goods_serial" : serial, "goods_cart_count" : count},
+        dataType: "text",
+        success : function(result){
+                 if(result != "1"){
+                   alert("로그인해주세요!");
+                   location.href="login.do"
+                 }else{
+                  $("#basketOption").css("display", "block");   
+                 }
+        },
+        error : function() {
+           alert("카트 담기 실패");
+        }
+     });
 };
 
 
