@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
@@ -124,29 +126,40 @@
 								</li>
 							</ul>
 						</a>
+					<!-- 	
 						<div class = "title-area mgT15">
 							<h2 class = "tit">좋아요</h2>
-							<!-- 마이쇼핑 - 좋아요 페이지로 이동 -->
+							마이쇼핑 - 좋아요 페이지로 이동
 							<a class = "btnMore" id = "wishListMore" href = "#">더보기</a>
 						</div>
-						<!-- 좋아요 상품 목록 -->
+						
+						좋아요 상품 목록
 						<div class = "list-four">
-							<!-- 상품 3개 list-three, 상품 4개 list-four -->
+							상품 3개 list-three, 상품 4개 list-four
 							<ul class = "cate_prd_list">
 								<li class = "nodata">좋아요 상품이 없습니다.</li>
 							</ul>
 						</div>
+						 -->
+						
 						<div class = "area-over" id = "cousel">
 							<div class = "left">
 								<div class = "title-area">
 									<h2 class = "tit">1:1문의내역</h2>
 									<a class = "btnMore" id = "qnaListMore" href = "oneqmain.do">더보기</a>
 								</div>
+								
+								
 								<div class = "list-customer">
 									<ul>
-										<li class = "nodata">최근 1개월간 문의하신 내용이 없습니다.</li>
+										<!-- <li class = "nodata">최근 1개월간 문의하신 내용이 없습니다.</li> -->
+										<li class = "nodata">
+											최근 1개월간 문의하신 내용이 없습니다.
+										</li>
 									</ul>
 								</div>
+								
+								
 							</div>
 							<div class = "right" id = "goodsQna">
 								<div class = "title-area">
@@ -154,11 +167,31 @@
 									<!-- 마이활동 - 상품Q&A내역 -->
 									<a class = "btnMore" id = "goodsQnsListMore" href = "goodsQnaPage.do">더보기</a>
 								</div>
+								
+								
 								<div class = "list-customer">
 									<ul>
-										<li class = "nodata">최근 1개월간 문의하신 내용이 없습니다.</li>
+										<!-- <li class = "nodata">최근 1개월간 문의하신 내용이 없습니다.</li> -->
+									<c:if test="${vo1  == null}">
+										<li class = "nodata">
+											최근 1개월간 문의하신 내용이 없습니다.
+										</li>
+									</c:if>
+									<c:if test="${vo1 != null }">
+										<c:forEach var="vo1" items="${vo1 }">
+										<li class="open">
+											<p class="stit">
+												<strong>${vo1.qna_goods_answer }</strong>
+												<a href="#" >${vo1.qna_goods_title }</a>
+												<span class="data"><fmt:formatDate value="${vo1.qna_goods_date }" pattern="yyyy-MM-dd"/></span>
+											</p>
+										</li>
+										</c:forEach>
+									</c:if>
 									</ul>
 								</div>
+								
+								
 							</div>
 						</div>
 					</div>

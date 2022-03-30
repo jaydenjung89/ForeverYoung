@@ -2,6 +2,8 @@ package forever.young.user.controller;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 
+import java.util.List;
+
 import javax.mail.MessagingException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
@@ -26,8 +28,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import forever.young.email.Email;
 import forever.young.email.EmailSender;
+import forever.young.user.service.GoodsQnaService;
 import forever.young.user.service.OrderService;
 import forever.young.user.service.UserService;
+import forever.young.user.vo.GoodsQnaVO;
 import forever.young.user.vo.UserVO;
 
 @Controller
@@ -37,14 +41,21 @@ public class UserLoginController {
 
 	@Autowired
 	private UserService userService;
+	
 	@Autowired
-	   private Email email;
-	   @Autowired
-	   private EmailSender emailSender;
-	   @Autowired
-	   private BCryptPasswordEncoder bcryptPasswordEncoder;
-	   @Autowired
-	   private OrderService orderService;
+	private Email email;
+	
+	@Autowired
+	private EmailSender emailSender;
+	
+	@Autowired
+	private BCryptPasswordEncoder bcryptPasswordEncoder;
+	
+	@Autowired
+	private OrderService orderService;
+	
+	@Autowired
+	private GoodsQnaService goodsService;
 	
 	//로그인 페이지
 	@RequestMapping(value="login.do", method=RequestMethod.GET)
@@ -102,10 +113,16 @@ public class UserLoginController {
 
 	//마이페이지 페이지
 	@RequestMapping(value="MyPageMain.do", method=RequestMethod.GET)
-	public String myPageGET(@ModelAttribute("user") UserVO userVo, Model model) {
+	public String myPageGET(@ModelAttribute("user") UserVO userVo, Model model, GoodsQnaVO vo) {
 		//System.out.println("마이페이지 입장");
 		model.addAttribute("userPoint", orderService.getUserDetails(userVo.getUser_id()).getUser_point());
 		model.addAttribute("userMember", orderService.getUserDetails(userVo.getUser_id()).getUser_membership_name());
+		
+		//마이페이지 상품 리스트 
+		List<GoodsQnaVO> vo1 =  goodsService.getGoodsQnaList2(vo);
+		model.addAttribute("vo1", vo1);
+		System.out.println(vo1);
+		
 		return "myPage/MyPageMain";
 		
 	}

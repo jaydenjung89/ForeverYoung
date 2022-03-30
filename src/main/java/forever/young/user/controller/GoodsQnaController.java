@@ -34,6 +34,7 @@ public class GoodsQnaController {
 		
 		return "myPage/goodsqna";
 	}
+	
 	@RequestMapping("goodsQna.do")
 	public String getList(HttpServletRequest request, GoodsQnaVO vo, Model model) {
 		
@@ -46,6 +47,7 @@ public class GoodsQnaController {
 		model.addAttribute("goodsqnaboard", boardList);
 		return "product/goodsqnawrite";
 	}
+	
 	@RequestMapping("insertGoodsQna.do")
 		public String insertGoodsQna(GoodsQnaVO vo, RedirectAttributes redirect) {
 			goodsqnaService.insertGoodsQna(vo);
@@ -55,6 +57,7 @@ public class GoodsQnaController {
 			redirect.addAttribute("category_goods_serial", vo.getCategory_goods_serial());
 			return "redirect:itemPage.do";
 		}
+	
 	@RequestMapping("deleteGoodsQna.do")
 	public String deleteGoodsQna(GoodsQnaVO vo, RedirectAttributes redirect) {
 		goodsqnaService.deleteGoodsQna(vo);
@@ -69,6 +72,7 @@ public class GoodsQnaController {
 		}
 	
 	}
+	
 	@RequestMapping("updateGoodsQna.do")
 	public String updateGoodsQna(GoodsQnaVO vo, RedirectAttributes redirect) {
 		goodsqnaService.updateGoodsQna(vo);

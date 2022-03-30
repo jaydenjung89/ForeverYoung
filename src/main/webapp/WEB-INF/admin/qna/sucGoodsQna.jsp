@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
@@ -146,7 +147,7 @@ to {
 													<td>${ListSuc.category_goods_name }</td>
 													<td style = "width : 5%;">${ListSuc.user_id}</td>
 													<td>${ListSuc.qna_goods_title}</td>
-													<td>${ListSuc.qna_goods_content }</td>
+													<td>${fn:replace(ListSuc.qna_goods_content ,"ln","<br>")}</td>
 													<td><fmt:formatDate value="${ListSuc.qna_goods_date}" pattern="yyyy-MM-dd"/></td>
 													<td>
 														<input type="button" value="답변확인"  class="btn btn-success" onclick="location.href='checkAnswer.mdo?qna_goods_serial=${ListSuc.qna_goods_serial}'" />

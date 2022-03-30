@@ -30,4 +30,5 @@ public interface ReviewService {
 	public Integer reviewCount(String user_id);
 	
 	String getReviewCount(int goodsSerial);
+	public List<ReviewVO> getReviewDel(ReviewVO vo);
 }

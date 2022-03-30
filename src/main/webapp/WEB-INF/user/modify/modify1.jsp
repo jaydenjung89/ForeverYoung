@@ -39,7 +39,7 @@ function formCheck(){
 			<div class="loginArea new login">
 				<div class="loginTit">
 					<h2>개인 정보 수정</h2>
-					<p>회원 정보 수정을 위해 아이디와 비밀번호를 입력 해 주세요.</p>
+					<p>회원 정보 수정을 위해 아이디와 비밀번호를 입력해주세요.</p>
 				</div>
 				<form id="formLogin" name="confirmForm" action="modify2.do" method="post">
 					<input type="hidden" id="bSId" name="bSId" value="" /> <input

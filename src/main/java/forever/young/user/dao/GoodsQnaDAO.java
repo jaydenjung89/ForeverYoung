@@ -49,4 +49,9 @@ public class GoodsQnaDAO {
 		return sqlSession.selectList("GoodsQnaDAO.getQnaList1", vo);
 	}
 	
+//	마이페이지 상품 굿즈 페이지 
+	public List<GoodsQnaVO> getGoodsQnaList2(GoodsQnaVO vo){
+      return sqlSession.selectList("GoodsQnaDAO.getQnaList2", vo);
+   }
+	
 }

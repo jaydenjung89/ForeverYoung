@@ -32,6 +32,7 @@ public class Board_noticeController {
    public String noticeDetail(HttpServletRequest request, Board_noticeVO vo, Model model) throws Exception {
       //가져올 게시글의 번호 
       String num = request.getParameter("notice_serial");
+      
       //조회수 1증가시키고 상세내용 보여줘야함
       board_noticeService.updateHit(Integer.parseInt(num));
       

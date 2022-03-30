@@ -72,4 +72,10 @@ public class GoodsQnaServiceImpl implements GoodsQnaService {
 		return goodsqnaDao.getGoodsQnaList1(vo);
 	}
 
+	//마이페이지 상품 리스트
+	@Override
+	   public List<GoodsQnaVO> getGoodsQnaList2(GoodsQnaVO vo) {
+	      // TODO Auto-generated method stub
+	      return goodsqnaDao.getGoodsQnaList2(vo);
+	   }
 }

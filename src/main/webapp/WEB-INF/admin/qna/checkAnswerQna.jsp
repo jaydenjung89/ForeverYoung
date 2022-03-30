@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
@@ -160,7 +161,7 @@ to {
 													<label>Write Answer</label>
 												</th>
 												<td>
-													<textarea class = "form-control" name="qna_goods_answer">${qnaone.qna_goods_answer}</textarea>
+													<textarea class = "form-control" name="qna_goods_answer">${fn:replace(qnaone.qna_goods_answer,"ln","<br>")}</textarea>
 												</td>
 											</tr>
 	           							</table>

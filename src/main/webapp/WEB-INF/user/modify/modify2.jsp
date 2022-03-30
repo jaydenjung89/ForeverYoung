@@ -172,32 +172,32 @@ function formUpdateSubmit(){
 												</p>
 											</td>
 										</tr>
+										
+										
 
-										<%--<!--  주소 입력란 -->
+										<!--  주소 입력란 -->
 										<tr>
-											<th>주소 <span class="ico">*<span
-													class="screen_out">필수항목</span></span>
+											<th>
+												주소 
+												<span class="ico">
+													*
+													<span class="screen_out">필수항목</span>
+												</span>
 											</th>
 
-											<td class="field_address"><input type="hidden"
-												name="zonecode" id="zonecode" size="5" value=""> <input
-												type="hidden" name="zipcode[]" id="zipcode0" size="3"
-												value=""> <input type="hidden" name="zipcode[]"
-												id="zipcode1" size="3" value=""> <input
-												type="hidden" name="deliPoli" id="deliPoli" size="1"
-												value=""> <input type="hidden" id="baseAddressType"
-												name="base_address_type" value="">
+											<td class="field_address">
+												<input type="hidden" name="zonecode" id="zonecode" size="5" value="">
+												<input type="hidden" name="zipcode[]" id="zipcode0" size="3" value="">
+												<input type="hidden" name="zipcode[]" id="zipcode1" size="3" value="">
+												<input type="hidden" name="deliPoli" id="deliPoli" size="1" value="">
+												<input type="hidden" id="baseAddressType" name="base_address_type" value="">
 
 												<div id="selectAddress">
-													<input type="text" name="user_address1" id="addr" value=""
-														readonly="readonly" label="주소"> <input
-														type="hidden" name="address" id="address" value=""
-														required="" readonly="readonly" label="주소"> <input
-														type="hidden" name="road_address" id="road_address"
-														required="" value="" label="주소">
+													<input type="text" name="user_address1" id="addr" value="" readonly="readonly" label="주소">
+													<input type="hidden" name="address" id="address" value="" required="" readonly="readonly" label="주소">
+													<input type="hidden" name="road_address" id="road_address" required="" value="" label="주소">
 												</div>
-												<div id="addressSearch" class="search"
-													onclick="execution_daum_address()">
+												<div id="addressSearch" class="search" onclick="execution_daum_address()">
 													<span id="addressNo" class="address_no" data-text="재검색">주소검색</span>
 												</div>
 
@@ -206,18 +206,20 @@ function formUpdateSubmit(){
 														value="" class="byteTotext" placeholder="나머지 주소를 입력해주세요">
 													<p id="delivery"></p>
 												</div>
+												
 												<p class="txt_guide">
-													<span class="txt txt_case1">배송지에 따라 상품 정보가 달라질 수
-														있습니다.</span>
-												</p></td>
+													<span class="txt txt_case1">
+														배송지에 따라 상품 정보가 달라질 수 있습니다.
+													</span>
+												</p>
+											</td>
 										</tr>
 										<tr>
 											<th></th>
 											<td>
 												<div class="hid">
-													우편번호&nbsp;&nbsp; <input id="zip" type="text"
-														name="user_zipcode" maxlength="6" value=""
-														readonly="readonly" />
+													우편번호&nbsp;&nbsp;
+													<input id="zip" type="text" name="user_zipcode" maxlength="6" value="${user.user_zipcode }" readonly="readonly" />
 												</div>
 											</td>
 
@@ -227,8 +229,7 @@ function formUpdateSubmit(){
 											<td>
 												<div class="hid">
 													주소&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													<input id="addr1" type="text" name="user_address1" value=""
-														readonly="readonly" />
+													<input id="addr1" type="text" name="user_address1" value="${user.user_address1 }" readonly="readonly" />
 												</div>
 											</td>
 										</tr>
@@ -236,12 +237,12 @@ function formUpdateSubmit(){
 											<th></th>
 											<td>
 												<div class="hid">
-													상세주소&nbsp;&nbsp; <input id="addr2" type="text"
-														name="user_address2" value="" readonly="readonly" />
+													상세주소&nbsp;&nbsp;
+													<input id="addr2" type="text" name="user_address2" value="${user.user_address2 }" readonly="readonly" />
 												</div>
 											</td>
-										</tr> --%>
-
+										</tr>
+										<!--  //주소 입력란 -->
 
 
 
