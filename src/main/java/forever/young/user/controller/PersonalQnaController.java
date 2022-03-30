@@ -81,26 +81,13 @@ public class PersonalQnaController {
 		
 		try {
 			String key = "personalQna/"+uploadFile.getOriginalFilename();
-			
-			System.out.println("key : " + key);
-			
 			InputStream is = uploadFile.getInputStream();
-			
-			System.out.println(is);
-			
 			String contentType = uploadFile.getContentType();
-			
-			System.out.println(contentType);
-			
 			long contentLength = uploadFile.getSize();
-			
-			System.out.println(contentLength);
 			
 			awsS3.upload(is, key, contentType, contentLength);
 			
 			vo.setQna_personal_image1(url + key);
-			
-			System.out.println(vo.getQna_personal_image1());
 			
 			personalqnaService.insertPersonalQna(vo);
 			

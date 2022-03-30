@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -32,7 +33,9 @@ import forever.young.user.service.GoodsQnaService;
 import forever.young.user.service.OrderService;
 import forever.young.user.service.PersonalQnaService;
 import forever.young.user.service.UserService;
+import forever.young.user.service.User_order_listService;
 import forever.young.user.vo.GoodsQnaVO;
+import forever.young.user.vo.Pagination;
 import forever.young.user.vo.PersonalQnaVO;
 import forever.young.user.vo.UserVO;
 
@@ -61,6 +64,9 @@ public class UserLoginController {
 	
 	@Autowired
 	private PersonalQnaService personalqnaService;
+	
+	@Autowired
+   private User_order_listService user_order_listService;
 	
 	//로그인 페이지
 	@RequestMapping(value="login.do", method=RequestMethod.GET)
@@ -118,13 +124,22 @@ public class UserLoginController {
 
 	//마이페이지 페이지
 	@RequestMapping(value="MyPageMain.do", method=RequestMethod.GET)
-	public String myPageGET(@ModelAttribute("user") UserVO userVo, Model model, GoodsQnaVO vo,PersonalQnaVO vo2,HttpSession session) {
+	public String myPageGET(@ModelAttribute("user") UserVO userVo, Model model, GoodsQnaVO vo,PersonalQnaVO vo2,HttpSession session, @RequestParam(required=false, defaultValue="1") int page
+	         , @RequestParam(required=false, defaultValue="1") int range) throws Exception {
 		//System.out.println("마이페이지 입장");
 		String userId = (String) session.getAttribute("userId");
 		vo.setUser_id(userId);
 		vo2.setUser_id(userId);
+		
+		int listCnt=user_order_listService.getBoardListCnt();
+	      
+	    Pagination pagination = new Pagination();
+	      
+	    pagination.pageInfo(page, range, listCnt);
+	      
 		model.addAttribute("userPoint", orderService.getUserDetails(userVo.getUser_id()).getUser_point());
 		model.addAttribute("userMember", orderService.getUserDetails(userVo.getUser_id()).getUser_membership_name());
+		model.addAttribute("order", user_order_listService.getBoard(userId, pagination));
 		
 		//마이페이지 상품 리스트 
 		List<GoodsQnaVO> vo1 =  goodsService.getGoodsQnaList1(vo);

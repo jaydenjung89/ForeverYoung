@@ -17,6 +17,12 @@
 <link rel="stylesheet" type="text/css"
    href="${path }/css/jquery.mCustomScrollbar.css" />
 <link rel="stylesheet" type="text/css" href="${path }/css/pickup.css" />
+
+<style>
+.mypage-step li.on em {
+	color: #9bce26;
+}
+</style>
 </head>
 <body>
 	
@@ -105,23 +111,23 @@
 						<a href = "#" onclick="location.href='ShoppingBasket.jsp'" style = "cursor:pointer;" class = "order_view" data-attr = "마이페이지^주문배송조회^요약건수">
 							<ul class = "mypage-step">
 								<li>
-									<em>N</em>
+									<em>0</em>
 									<span>주문접수</span>
 								</li>
 								<li>
-									<em>N</em>
+									<em>0</em>
 									<span>결제완료</span>
 								</li>
 								<li>
-									<em>N</em>
+									<em>0</em>
 									<span>상품준비중</span>
 								</li>
 								<li>
-									<em>N</em>
+									<em>0</em>
 									<span>배송중</span>
 								</li>
-								<li>
-									<em>N</em>
+								<li class = "on">
+									<em>${fn:length(order) }</em>
 									<span>배송완료</span>
 								</li>
 							</ul>
@@ -152,30 +158,39 @@
 								
 								<div class = "list-customer">
 									<ul>
-										<c:if test="${vo3  == null}">
-										<li class = "nodata">
-											최근 1개월간 문의하신 내용이 없습니다.
-										</li>
-									</c:if>
-									<c:if test="${vo3 != null }">
-										<c:forEach var="vo3" items="${vo3 }">
-										<li class="open">
-											<p class="stit">
-												<strong>
-													<c:if test="${vo3.qna_personal_answer_date==null}">
-							                           <span class = "qna_flag">답변대기</span>
-							                        </c:if>
-							                        <c:if test="${vo3.qna_personal_answer_date!=null}">
-							                           <span class = "qna_flag complete">답변완료</span>
-							                        </c:if>
-												</strong>
-												<a href="#" >${vo3.qna_personal_title }</a>
-												<span class="data"><fmt:formatDate value="${vo3.qna_personal_answer_date }" pattern="yyyy-MM-dd"/></span>
-											</p>
-										</li>
-										</c:forEach>
-									</c:if>
-									</ul>
+	                                    <!-- <li class = "nodata">최근 1개월간 문의하신 내용이 없습니다.</li> -->
+	                                 <c:if test="${vo3  == null}">
+	                                    <li class = "nodata">
+	                                       최근 1개월간 문의하신 내용이 없습니다.
+	                                    </li>
+	                                 </c:if>
+	                                 <c:if test="${vo3 != null }">
+	                                    <c:forEach var="vo3" items="${vo3 }">
+	                                       <c:if test="${vo3.qna_personal_answer_date==null}">
+	                                          <li class="">
+	                                             <p class="stit">
+	                                                <strong>
+	                                                   <span class = "qna_flag">답변대기</span>
+	                                                </strong>
+	                                                <a href="updatePersonalQnaPage.do?qna_personal_serial=${vo3.qna_personal_serial}">${vo3.qna_personal_title }</a>
+	                                                <span class="data"><fmt:formatDate value="${vo3.qna_personal_date }" pattern="yyyy-MM-dd"/></span>
+	                                             </p>
+	                                          </li>
+	                                       </c:if>
+	                                 <c:if test="${vo3.qna_personal_answer_date!=null}">
+	                                    <li class="open">
+	                                       <p class="stit">
+	                                          <strong>
+	                                             <span class = "qna_flag complete">답변완료</span>
+	                                          </strong>
+	                                          <a href="updatePersonalQnaPage.do?qna_personal_serial=${vo3.qna_personal_serial}">${vo3.qna_personal_title }</a>
+	                                          <span class="data"><fmt:formatDate value="${vo3.qna_personal_date }" pattern="yyyy-MM-dd"/></span>
+	                                       </p>
+	                                    </li>
+	                                 </c:if>
+	                                    </c:forEach>
+	                                 </c:if>
+	                                 </ul>
 								</div>
 								
 								
@@ -190,34 +205,40 @@
 								
 								<div class = "list-customer">
 									<ul>
-										<!-- <li class = "nodata">최근 1개월간 문의하신 내용이 없습니다.</li> -->
-									<c:if test="${vo1  == null}">
-										<li class = "nodata">
-											최근 1개월간 문의하신 내용이 없습니다.
-										</li>
-									</c:if>
-									<c:if test="${vo1 != null }">
-										<c:forEach var="vo1" items="${vo1 }">
-										<li class="open">
-											<p class="stit">
-												<strong>
-													<c:if test="${vo1.qna_goods_answer_date==null}">
-							                           <span class = "qna_flag">답변대기</span>
-							                        </c:if>
-							                        <c:if test="${vo1.qna_goods_answer_date!=null}">
-							                           <span class = "qna_flag complete">답변완료</span>
-							                        </c:if>
-												</strong>
-												<a href="#" >${vo1.qna_goods_answer }</a>
-												<span class="data"><fmt:formatDate value="${vo1.qna_goods_answer_date }" pattern="yyyy-MM-dd"/></span>
-											</p>
-										</li>
-										</c:forEach>
-									</c:if>
-									</ul>
+		                              <!-- <li class = "nodata">최근 1개월간 문의하신 내용이 없습니다.</li> -->
+		                           <c:if test="${vo1  == null}">
+		                              <li class = "nodata">
+		                                 최근 1개월간 문의하신 내용이 없습니다.
+		                              </li>
+		                           </c:if>
+		                           <c:if test="${vo1 != null }">
+		                              <c:forEach var="vo1" items="${vo1 }">
+		                                 <c:if test="${vo1.qna_goods_answer_date==null}">
+		                                    <li class="">
+		                                       <p class="stit">
+		                                          <strong>
+		                                          	<span class = "qna_flag">답변대기</span>
+		                                          </strong>
+		                                          <a href="goodsQnaPage.do">${vo1.qna_goods_answer }</a>
+		                                          <span class="data"><fmt:formatDate value="${vo1.qna_goods_date }" pattern="yyyy-MM-dd"/></span>
+		                                       </p>
+		                                    </li>
+		                                 </c:if>
+		                           <c:if test="${vo1.qna_goods_date!=null}">
+		                              <li class="open">
+		                                 <p class="stit">
+		                                    <strong>
+		                                    	<span class = "qna_flag complete">답변완료</span>
+		                                    </strong>
+		                                    <a href="goodsQnaPage.do">${vo1.qna_goods_answer }</a>
+		                                    <span class="data"><fmt:formatDate value="${vo1.qna_goods_date }" pattern="yyyy-MM-dd"/></span>
+		                                 </p>
+		                              </li>
+		                           </c:if>
+		                              </c:forEach>
+		                           </c:if>
+		                           </ul>
 								</div>
-								
-								
 							</div>
 						</div>
 					</div>

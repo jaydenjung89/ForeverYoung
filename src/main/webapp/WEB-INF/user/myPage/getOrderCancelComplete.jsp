@@ -36,9 +36,9 @@
 							</div>
 							<p class = "txt">
 								<!-- 등급변경시 바꿔줘야함 -->
-								현재 등급
+								${userMember }
 								<!-- 기본정보페이지의 이름에서 가져오는걸로 추정됨. -->
-								<strong class = "name">${loginUser.user_name }</strong>
+								<strong class = "name">${userName }</strong>
 								님 반갑습니다.
 							</p>
 							<ul class = "mem_opt">
@@ -56,9 +56,9 @@
 							<ul class = "infor clrfix" id = "pointInfo">
 								<!-- 마이페이지의 CJONE포인트 페이지로 이동 -->
 								<li id = "cjOnePoingInfo" onclick = "#">
-									<span class = "tit">CJ ONE 포인트</span>
+									<span class = "tit">FY ONE 포인트</span>
 									<a class = "num" href = "#">
-										N
+										${userPoint }
 										<em class = "unit">P</em>
 									</a>
 								</li>
@@ -66,7 +66,7 @@
 								<li id = "couponList" onclick = "#">
 									<span class = "tit">쿠폰</span>
 									<a class = "num" href = "#" data-attr = "마이페이지^쿠폰^쿠폰함이동">
-										N
+										0
 										<em class = "unit">개</em>
 									</a>
 								</li>

@@ -80,6 +80,14 @@ public class User_order_listController {
 	   public String orderCancelSubmit(HttpServletRequest request, HttpSession session, ShippingVO svo, User_order_listVO vo, Model model) {
 //	       vo.setOrder_delivery_status("취소완료");
 //	       String status = vo.getOrder_delivery_status();
+		   String user_id=(String)session.getAttribute("userId");
+		   model.addAttribute("shipping", user_order_listService.getShipping(svo));
+	         model.addAttribute("detail", user_order_listService.getDetail(vo));
+	         model.addAttribute("point", user_order_listService.point(svo.getOrder_merchant_serial()));
+	         model.addAttribute("orderTime", user_order_listService.getDate(vo));
+	         model.addAttribute("userPoint", orderService.getUserDetails(user_id).getUser_point());
+	 		model.addAttribute("userMember", orderService.getUserDetails(user_id).getUser_membership_name());
+		   
 	      int success = 0;
 	       success = user_order_listService.updateStatusOrder(vo);
 
