@@ -57,7 +57,7 @@
 		<!-- 사이드바 배너관리 -->
          <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-            <i class="fas fa-fw fa-wrench"></i> <span>배너관리</span>
+            <i class="fas fa-fw fa-cog"></i> <span>배너관리</span>
          </a>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                <div class="bg-white py-2 collapse-inner rounded">
@@ -89,7 +89,7 @@
 		
          <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-            <i class="fas fa-fw fa-folder"></i> <span>리뷰관리 & QnA관리</span>
+            <i class="fas fa-fw fa-cog"></i> <span>리뷰관리 & QnA관리</span>
          </a>
             <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionSidebar">
                <div class="bg-white py-2 collapse-inner rounded">
@@ -119,7 +119,7 @@
 		<!— 사이드바 주문관리 —>
          <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-            <i class="fas fa-fw fa-folder"></i> <span>주문관리</span>
+            <i class="fas fa-fw fa-cog"></i> <span>주문관리</span>
          </a>
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                <div class="bg-white py-2 collapse-inner rounded">
@@ -132,7 +132,7 @@
          <!-- 사이드바 약관관리 -->
          <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i> <span>약관관리</span>
+            <i class="fas fa-fw fa-cog"></i> <span>약관관리</span>
          </a>
             <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                <div class="bg-white py-2 collapse-inner rounded">
