@@ -47,12 +47,12 @@
 	<!-- 일매출 -->
 	<select id = "getDaySales" resultType = "sales" parameterType = "sales">
 		<![CDATA[ 
-			SELECT date_format(`ORDER_DATE`, '%m-%d') AS `DATE1`,
-			sum(`ORDER_GOODS_PRICE`) AS 'PRICE'
+			SELECT date_format(`ORDER_DATE`, '%m-%d') AS 'DATE1',
+			sum(ORDER_GOODS_COUNT*ORDER_GOODS_PRICE) AS 'PRICE'
 			FROM fyproject.ORDER
 			WHERE DATE(`ORDER_DATE`) <= STR_TO_DATE(CURDATE(), '%Y-%m-%d') AND ORDER_DELIVERY_STATUS = '결제완료'
-			GROUP BY `DATE1`
-			ORDER BY DATE1 LIMIT 0,7
+			GROUP BY DATE1
+			ORDER BY DATE1 DESC LIMIT 0,7
 		]]>
 	</select>
 	
