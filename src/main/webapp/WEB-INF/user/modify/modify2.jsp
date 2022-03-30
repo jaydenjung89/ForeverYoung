@@ -6,6 +6,7 @@
 <html>
 <head>
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <meta charset="UTF-8">
 <title>modify2</title>
 <link rel="stylesheet" type="text/css" href="${path }/css/join.css" />
@@ -23,22 +24,21 @@ function formUpdateSubmit(){
 	$("#totalbirth").val(year+mon+day);
 	
 	
-	
-	/* if(document.frmMember.user_password.value==""){
+	if(document.frmMember.user_new_pw.value==""){
 		alert("비밀번호를 입력하세요.");
-		document.frmMember.user_password.focus();
+		document.frmMember.user_new_pw.focus();
 		return;
 	}
 	
-	if(document.frmMember.user_password2.value==""){
+	if(document.frmMember.user_new_pw_check.value==""){
 		alert("비밀번호 확인을 입력하세요.");
-		document.frmMember.user_password2.focus();
+		document.frmMember.user_new_pw_check.focus();
 		return;
 	}
 	
-	if(document.frmMember.user_password.value != document.frmMember.user_password2.value){
+	if(document.frmMember.user_new_pw.value != document.frmMember.user_new_pw_check.value){
 		alert("비밀번호가 일치하지 않습니다.");
-		document.frmMember.user_password2.focus();
+		document.frmMember.user_new_pw_check.focus();
 		return;
 	}
 	
@@ -58,16 +58,32 @@ function formUpdateSubmit(){
 		alert("전화번호를 입력하세요.");
 		document.frmMember.user_phone.focus();
 		return;
-	} */
+	} 
 	
 	
 	
 	document.frmMember.submit();
 } 
 
-
 </script>
 
+<script>
+function zip(){
+	   var myAddress;
+	   var myAddress2;
+	   var myZipcode;
+	   new daum.Postcode({
+	      oncomplete:function(data){
+	         myAddress=data.address;
+	         myAddress2=data.address2;
+	         myZipcode=data.zonecode;
+	         $(".user_zipcode").val(myZipcode);
+	         $(".user_address1").val(myAddress);
+	         $(".user_address2").val(myAddress2);
+	      }
+	   }).open();
+	}
+</script>
 
 <body class="member-join" oncontextmenu="return false" ondragstart="return false" onselectstart="return !disableSelection" style="">
 	<jsp:include page="../default/header.jsp"></jsp:include>
@@ -81,7 +97,7 @@ function formUpdateSubmit(){
 					
 					<div class="page_aticle">
 						<div class="type_form member_join ">
-							<form id="form" name="frmMember" action="updateProc.do" method="post" onsubmit="formJoinSubmit()" novalidate="">
+							<form id="form" name="frmMember" action="updateProc.do" method="post" onsubmit="formUpdateSubmit()" novalidate="">
 								<input type="hidden" name="mode" value="joinMember">
 								<input type="hidden" name="check_mobile" value="">
 								<input type="hidden" name="auth_finish_code" value="">
@@ -197,7 +213,7 @@ function formUpdateSubmit(){
 													<input type="hidden" name="address" id="address" value="" required="" readonly="readonly" label="주소">
 													<input type="hidden" name="road_address" id="road_address" required="" value="" label="주소">
 												</div>
-												<div id="addressSearch" class="search" onclick="execution_daum_address()">
+												<div id="addressSearch" class="search" onclick="zip()">
 													<span id="addressNo" class="address_no" data-text="재검색">주소검색</span>
 												</div>
 
@@ -219,7 +235,7 @@ function formUpdateSubmit(){
 											<td>
 												<div class="hid">
 													우편번호&nbsp;&nbsp;
-													<input id="zip" type="text" name="user_zipcode" maxlength="6" value="${user.user_zipcode }" readonly="readonly" />
+													<input id="user_zipcode" type="text" class = "user_zipcode" name="user_zipcode" maxlength="6" value="${userData.user_zipcode }"  />
 												</div>
 											</td>
 
@@ -229,7 +245,7 @@ function formUpdateSubmit(){
 											<td>
 												<div class="hid">
 													주소&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													<input id="addr1" type="text" name="user_address1" value="${user.user_address1 }" readonly="readonly" />
+													<input id="user_address1" type="text" class = "user_address1" name="user_address1" value="${userData.user_address1 }"/>
 												</div>
 											</td>
 										</tr>
@@ -238,7 +254,7 @@ function formUpdateSubmit(){
 											<td>
 												<div class="hid">
 													상세주소&nbsp;&nbsp;
-													<input id="addr2" type="text" name="user_address2" value="${user.user_address2 }" readonly="readonly" />
+													<input id="user_address2" type="text" class = "user_address2" name="user_address2" value="${userData.user_address2 }" />
 												</div>
 											</td>
 										</tr>
@@ -251,10 +267,10 @@ function formUpdateSubmit(){
 											<th>성별</th>
 											<td>
 												<label class="">
-													<input type="radio" name="user_gender" value="1"><span class="ico"></span>남자
+													<input type="radio" name="user_gender" value="1"<c:if test="${userData.user_gender eq 'true' }">checked</c:if>><span class="ico"></span>남자
 												</label>
 												<label class="">
-													<input type="radio" name="user_gender" value="0"><span class="ico"></span>여자
+													<input type="radio" name="user_gender" value="0"<c:if test="${userData.user_gender eq 'false' }">checked</c:if>><span class="ico"></span>여자
 												</label>																																								
 											</td>
 										</tr>
@@ -267,15 +283,15 @@ function formUpdateSubmit(){
 												<div class="birth_day">
 													<!--  년도 입력 부분 -->
 													<input type="text" name="birth_year" id="birth_year"
-														pattern="[0-9]*" value="${user.user_year}" label="생년월일" size="4"
+														pattern="[0-9]*" value="${userData.user_year}" label="생년월일" size="4"
 														maxlength="4" placeholder="YYYY"> <span	class="bar"></span>
 													<!--  월 입력 부분 -->
 													<input type="text" name="birth[]" id="birth_month"
-														pattern="[0-9]*" value="${user.user_month }" label="생년월일" size="2"
+														pattern="[0-9]*" value="${userData.user_month }" label="생년월일" size="2"
 														maxlength="2" placeholder="MM"> <span class="bar"></span>
 													<!--  일 입력 부분 -->
 													<input type="text" name="birth[]" id="birth_day"
-														pattern="[0-9]*" value="${user.user_day }" label="생년월일" size="2"
+														pattern="[0-9]*" value="${userData.user_day }" label="생년월일" size="2"
 														maxlength="2" placeholder="DD"> <input id="totalbirth" type="hidden" name="user_birth" />
 												</div>
 

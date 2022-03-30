@@ -587,7 +587,7 @@ $(document).ready(function(){
 
 						<!-- 적용중인 이벤트 모음 -->
 						<p class="prd_flag">			
-							<span class="icon_flag sale">세일</span>
+							<span class="icon_flag sale">세일</span>&nbsp;&nbsp;&nbsp;현재<script id="_wauf0z">var _wau = _wau || []; _wau.push(["dynamic", "0s8n8ragwn", "f0z", "ffffff000000", "small"]);</script><script async src="//waust.at/d.js"></script> 명이 보고 있습니다.
 						</p>
 						<!-- 배송정보와 결제혜택 -->
 						<div class="prd_more_info">

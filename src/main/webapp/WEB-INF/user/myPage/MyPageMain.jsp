@@ -152,10 +152,29 @@
 								
 								<div class = "list-customer">
 									<ul>
-										<!-- <li class = "nodata">최근 1개월간 문의하신 내용이 없습니다.</li> -->
+										<c:if test="${vo3  == null}">
 										<li class = "nodata">
 											최근 1개월간 문의하신 내용이 없습니다.
 										</li>
+									</c:if>
+									<c:if test="${vo3 != null }">
+										<c:forEach var="vo3" items="${vo3 }">
+										<li class="open">
+											<p class="stit">
+												<strong>
+													<c:if test="${vo3.qna_personal_answer_date==null}">
+							                           <span class = "qna_flag">답변대기</span>
+							                        </c:if>
+							                        <c:if test="${vo3.qna_personal_answer_date!=null}">
+							                           <span class = "qna_flag complete">답변완료</span>
+							                        </c:if>
+												</strong>
+												<a href="#" >${vo3.qna_personal_title }</a>
+												<span class="data"><fmt:formatDate value="${vo3.qna_personal_answer_date }" pattern="yyyy-MM-dd"/></span>
+											</p>
+										</li>
+										</c:forEach>
+									</c:if>
 									</ul>
 								</div>
 								
@@ -181,9 +200,16 @@
 										<c:forEach var="vo1" items="${vo1 }">
 										<li class="open">
 											<p class="stit">
-												<strong>${vo1.qna_goods_answer }</strong>
-												<a href="#" >${vo1.qna_goods_title }</a>
-												<span class="data"><fmt:formatDate value="${vo1.qna_goods_date }" pattern="yyyy-MM-dd"/></span>
+												<strong>
+													<c:if test="${vo1.qna_goods_answer_date==null}">
+							                           <span class = "qna_flag">답변대기</span>
+							                        </c:if>
+							                        <c:if test="${vo1.qna_goods_answer_date!=null}">
+							                           <span class = "qna_flag complete">답변완료</span>
+							                        </c:if>
+												</strong>
+												<a href="#" >${vo1.qna_goods_answer }</a>
+												<span class="data"><fmt:formatDate value="${vo1.qna_goods_answer_date }" pattern="yyyy-MM-dd"/></span>
 											</p>
 										</li>
 										</c:forEach>

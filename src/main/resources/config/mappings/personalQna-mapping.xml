@@ -47,6 +47,14 @@
  		select * from qna_personal where user_id=#{user_id} 
  	</select>
  	
+ 	<!-- 마이페이지 1:1 문의 -->
+ 	<select id="getPersonalQnaList1" resultType="personalQna">
+ 		select * from qna_personal
+ 		where user_id=#{user_id}
+ 		order by qna_personal_serial limit 5
+ 	</select>
+ 	<!--// 마이페이지 1:1 문의 -->
+ 	
  	<select id="getPersonalQna" resultType="personalQna" parameterType="personalQna">
  		select * from qna_personal where qna_personal_serial=#{qna_personal_serial}
  	</select>
