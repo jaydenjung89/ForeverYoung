@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import forever.young.admin.service.AdminService;
 import forever.young.admin.vo.AdminBannerVO;
+import s3.AwsS3;
 
 @Controller
 public class AdminBannerController {
@@ -21,8 +22,8 @@ public class AdminBannerController {
 	private AdminService service;
 
 	//DB
-	//@Autowired
-	//private AwsS3 awsS3;
+	@Autowired
+	private AwsS3 awsS3;
 	
 	//배너 리스트
 	@RequestMapping("/admin_bannerList.mdo")
@@ -45,12 +46,11 @@ public class AdminBannerController {
 			InputStream is = uploadFile.getInputStream();
 			String contentType = uploadFile.getContentType();
 			long contentLength = uploadFile.getSize();
-			//awsS3.upload(is, key, contentType, contentLength);
+			awsS3.upload(is, key, contentType, contentLength);
 			
 			banner.setBanner_filepath(url + key);
 			service.insertBanner(banner);
 		}catch(IOException e) {
-			
 			e.printStackTrace();
 		}
 		return "redirect:admin_bannerList.mdo";
@@ -73,10 +73,8 @@ public class AdminBannerController {
 		//1. db에서 삭제하고싶은 데이터를 가져온다.
 		AdminBannerVO bannerVO = service.getBanner(banner);
 		
-		
 		//2. 데이터에서 파일 경로를 delete의 경로에 담아버린다.
 		String deletePath = bannerVO.getBanner_filepath();
-		
 		
 		//3. deletePath에 있는 데이터와 db에 있는 모든 경로와 비교해서 일치하는 경로를 삭제
 		List<AdminBannerVO> bannerList = service.getBannerList();
@@ -89,17 +87,15 @@ public class AdminBannerController {
 				success = service.deleteBanner(banner);
 				result = true;
 				
-				
 				break;
 			}
 		}
 		
 		if(!result) {
 			String deleteKey = bannerVO.getBanner_filepath().substring(49);
-			//awsS3.delete(deleteKey);
+			awsS3.delete(deleteKey);
 			
 			success = service.deleteBanner(banner);
-			
 			
 			if(success != 0) {
 				return "redirect:admin_bannerList.mdo";
@@ -122,7 +118,7 @@ public class AdminBannerController {
 			//교체하고 싶은 이미지가 있을 경우 0이 아니므로 s3에 있는 이미지를 삭제
 			AdminBannerVO bannerVO = service.getBanner(banner);
 			String deleteKey = bannerVO.getBanner_filepath().substring(49);
-		//	awsS3.delete(deleteKey);
+			awsS3.delete(deleteKey);
 			
 			//새로운 이미지를 s3에 등록
 			try {
@@ -130,9 +126,7 @@ public class AdminBannerController {
 				InputStream is = uploadFile.getInputStream();
 				String contentType = uploadFile.getContentType();
 				long contentLength = uploadFile.getSize();
-			//	awsS3.upload(is, key, contentType, contentLength);
-				
-				
+				awsS3.upload(is, key, contentType, contentLength);
 				
 				banner.setBanner_filepath(url + key);
 			}catch(IOException e) {

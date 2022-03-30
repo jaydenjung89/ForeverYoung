@@ -935,7 +935,7 @@ $(document).ready(function(){
 
 							</div>
 							<br>
-							<div>
+							<!-- <div>
 								<p>
 									<strong>[오늘드림 배송]</strong>
 								</p>
@@ -963,7 +963,7 @@ $(document).ready(function(){
 										</p>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</dd>
 					</dl>
 
@@ -1015,7 +1015,7 @@ $(document).ready(function(){
 					</dl>
 				</div>
 			
-		 <div class="tabConts prd_detail_cont show" id="gdasContentsArea">
+		 <div class="tabConts prd_detail_cont" id="gdasContentsArea">
             <div class="xans-element- xans-product xans-product-additional detail_board  ">
                <div class="board">
                   <span class="line"></span>
@@ -1167,12 +1167,13 @@ $(document).ready(function(){
 
          </script>
                   </form>
-                  <p class="btnArea after">
-                     <%--<a href="#none" onclick="popup_register()>"> --%>
+                  
+                  <%-- <p class="btnArea after">
+                     <a href="#none" onclick="popup_register()>">
                      <a onclick="location.href='reviewWrite.do?category_goods_serial=${getItemPage.category_goods_serial}'">
                         <span class="bhs_button" style="line-height:30px; width:130px;">후기쓰기</span>
                      </a>
-                  </p>
+                  </p> --%>
                   
                </div>
             </div>
@@ -1334,8 +1335,10 @@ $(document).ready(function(){
 								</div>
 								<c:if test="${goodsqnalist.qna_goods_answer_date !=null }">
 								<div class="tx_answer">
+									<%pageContext.setAttribute("newLineChar", "\n"); %>
 									<span class="ico_qna answer">답변</span>
-										${fn:replace(goodsqnalist.qna_goods_answer,"ln","<br>")}
+										<%-- ${fn:replace(goodsqnalist.qna_goods_answer,"ln","<br>")} --%>
+										${fn:replace(goodsqnalist.qna_goods_answer,newLineChar,"<br/>")}
 									<div style="margin-top:30px;">
 										<span>※답변 내용은 각 브랜드사에서 작성되며, 올리브영의 서비스/정책과 상이할 수 있는 점 안내드립니다.</span>
 									</div>

@@ -80,6 +80,12 @@ public class ReviewServiceImpl implements ReviewService {
 		return reviewDAO.getReviewCount(goodsSerial);
 	}
 
+	@Override
+	public List<ReviewVO> getReviewDel(ReviewVO vo) {
+		// TODO Auto-generated method stub
+		return reviewDAO.getReviewDel(vo);
+	}
+
 	
 
 

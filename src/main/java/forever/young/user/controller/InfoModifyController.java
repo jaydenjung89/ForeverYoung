@@ -1,5 +1,7 @@
 package forever.young.user.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Controller;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 import forever.young.user.service.InfoModifyService;
+import forever.young.user.service.OrderService;
 import forever.young.user.service.UserService;
 import forever.young.user.vo.UserVO;
 
@@ -17,7 +20,11 @@ import forever.young.user.vo.UserVO;
 @SessionAttributes("user")
 public class InfoModifyController {
 	@Autowired
+	private OrderService orderService;
+	
+	@Autowired
 	private InfoModifyService infoModifyService;
+	
 	@Autowired
 	private UserService userService;
 	
@@ -27,6 +34,7 @@ public class InfoModifyController {
 				
 		return "modify/modify1";
 	}
+	
 	//회원수정 메인페이지
 	@RequestMapping(value="modify2.do", method=RequestMethod.POST)
 	public String modify2PagePOST(UserVO userVo, Model model) {
@@ -46,6 +54,7 @@ public class InfoModifyController {
 			return "modify/modify2";
 		}
 	}
+	
 	//회원수정
 	@RequestMapping("updateProc.do")
 	public String updateProc(UserVO userVo, Model model) {
@@ -63,11 +72,16 @@ public class InfoModifyController {
 					
 		return "modify/preUserDelete";
 	}
+	
 	private UserVO userVO;
 	//회원탈퇴 메인페이지
 		@RequestMapping(value="deleteProc.do", method=RequestMethod.POST)
-		public String userDeletePagePOST(UserVO userVo, Model model) {
+		public String userDeletePagePOST(UserVO userVo, Model model, HttpSession session) {
+			String user_id=(String)session.getAttribute("userId");
 			userVO = infoModifyService.getUserData(userVo);
+			
+			model.addAttribute("userPoint", orderService.getUserDetails(user_id).getUser_point());
+		    model.addAttribute("userMember", orderService.getUserDetails(user_id).getUser_membership_name());
 					
 			if(userVO==null || !BCrypt.checkpw(userVo.getUser_password(), userVO.getUser_password())) {
 				System.out.println("확인 실패");
@@ -76,9 +90,11 @@ public class InfoModifyController {
 				//model.addAttribute("userData", userVO);
 				System.out.println("확인 성공");
 				System.out.println(userVO.toString());
+				
 				return "modify/userDelete";
 			}
 		}
+		
 	//회원탈퇴
 	@RequestMapping("userDelete.do")
 	public String deleteUser(UserVO userVo, SessionStatus sessionStatus, Model model) {

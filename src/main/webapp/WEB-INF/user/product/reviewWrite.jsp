@@ -624,6 +624,18 @@ button, input[type=submit] {
 }
 
 </style>
+
+<style>
+.photoZone {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+</style>
+
 </head>
 <jsp:include page="../default/header.jsp" />
 <body>
@@ -749,7 +761,7 @@ button, input[type=submit] {
 															<div class="field_cmt">
 																<textarea id="fieldCmt" name="review_content" cols="100" rows="10" placeholder="자세한 후기는 다른 고객의 구매에 많은 도움이 되며, 오해의 소지가 있는 내용을 작성시 검토 후 비공개 조치될 수 있습니다. 반품/환불 문의는 1:1문의로 가능합니다.">${update.review_content }</textarea>
 																<p class="txt_count">
-																	<span class="num">0</span>자 /최소 10자
+																	<%-- <span class="num">0</span>자 /최소 10자--%>
 																</p>
 															</div>
 														</td>
@@ -759,16 +771,16 @@ button, input[type=submit] {
 														<td>
 															<div class="photo_add">
 																<div class="inner_photo">
-																	<div class="item_photo" id="photoZone" style="display:block;"><img src="${update.review_image_main }"></div>
+																	<div class="item_photo" id="photoZone" style="display:block;"><img style = "width : 50px;" src="${update.review_image_main }"></div>
 																	<span class="" id="thisPoto"></span>
 																</div>
 																<label for="image"></label>
-																<input type="file" name="image" class="btn_upload" onchange="setThumbnail(event)">
+																<input type="file" name="uploadFile" class="btn_upload" onchange="setThumbnail(event)">
 															</div>
 															
 															<div class="file_count">
 																<p class="txt_count">
-																	<span class="num">0</span>장 / 최대 8장
+																	<%-- <span class="num">0</span>장 / 최대 8장--%>
 																</p>
 															</div>
 															<p class="photo_notice">구매한 상품이 아니거나 캡쳐 사진을 첨부할 경우, 통보없이 삭제 및 적립 혜택이 취소됩니다.</p> 
@@ -832,6 +844,18 @@ button, input[type=submit] {
 		
 	});
 	
+	</script>
+	<script>
+	function setThumbnail(event) {
+		var reader = new FileReader();
+		reader.onload = function(event) {
+			var img = document.createElement("img");
+			img.setAttribute("src", event.target.result);
+			document.querySelector("div.photoZone").appendChild(img);
+		};
+		reader.readAsDataURL(event.target.files[0]);
+	}		
+
 	</script>
 </body>
 

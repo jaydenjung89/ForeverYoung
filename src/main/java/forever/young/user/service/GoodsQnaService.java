@@ -24,4 +24,7 @@ public interface GoodsQnaService {
 	public String getQnaCount(int serial);
 	public List<GoodsQnaVO> getGoodsQnaList1(GoodsQnaVO vo);
 	
+	//마이페이지 상품 리스트
+	public List<GoodsQnaVO> getGoodsQnaList2(GoodsQnaVO vo);
+	
 }

@@ -90,6 +90,14 @@
 		WHERE category_goods_serial = #{value}
 	</select>
 	<!-- 제품 페이지용 리뷰리스트 -->
+	<select id="reviewForDelete" resultType="forever.young.user.vo.ReviewVO">
+	    SELECT * 
+		FROM REVIEW AS R
+		LEFT JOIN CATEGORY_GOODS AS C
+		ON R.category_goods_serial = C.category_goods_serial
+		WHERE user_id = #{user_id}
+		ORDER BY review_serial
+	</select>
 	
 	
 	

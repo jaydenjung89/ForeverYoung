@@ -45,6 +45,11 @@
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
 	</bean>
+	
+	<!-- awsS3 설정 -->
+	<bean id = "awsS3" class = "s3.AwsS3" scope = "singleton">
+		<constructor-arg ref = "sqlSessionTemplate"></constructor-arg>
+	</bean>
 	 
 	
 </beans>

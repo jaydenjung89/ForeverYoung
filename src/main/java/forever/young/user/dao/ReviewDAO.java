@@ -68,4 +68,8 @@ public class ReviewDAO {
 		System.out.println("----> MyBatis로 리뷰 삭제 과정 처리");
 		return sqlSession.delete("reviewDAO.reviewDelete", review_serial);
 	}
+	//리뷰삭제위해 가져온 데이터
+	public List<ReviewVO> getReviewDel(ReviewVO vo) {
+		return sqlSession.selectList("reviewDAO.reviewForDelete", vo);
+	}
 }

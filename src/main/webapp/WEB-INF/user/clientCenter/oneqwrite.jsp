@@ -44,7 +44,7 @@ function deleteconfirm(){
 			</ul>
 
 			<!-- 등록 게시판 -->
-			<form name="insert" id="cnslRegForm" action="insertPersonalQna.do" method="POST">
+			<form name="insert" id="cnslRegForm" action="insertPersonalQna.do" method="POST" enctype = "multipart/form-data">
 				<input type="hidden" name="user_id" value="${user.user_id}">
 				<input type="hidden" name="user_name" value="${user.user_name}">
 				<c:if test="${getPersonalQna !=null }">
@@ -139,10 +139,12 @@ function deleteconfirm(){
 						</c:if>	
 							<!-- 첨부파일 올리기 -->
 							<label for="inputFile">
-								<button type="button" id="btnFile" class="file">첨부파일</button>
+								<!-- <button type="button" name = "uploadFile" id="btnFile" class="file">첨부파일</button> -->
+								<input type = "file" name = "uploadFile" value = "첨부파일" />
 							</label> 
 							
-							<input type="file" id="inputFile" name="cnslFile" class="btnFileAdd" value="첨부파일" title="첨부파일 선택" style="display: none;">
+							<input type="file" id="inputFile" name="uploadFile" class="btnFileAdd" value="첨부파일" title="첨부파일 선택" style="display: none;">
+							<!-- <input type="file" id="inputFile" name="cnslFile" class="btnFileAdd" value="첨부파일" title="첨부파일 선택" style="display: none;"> -->
 							<input type="hidden" name="fileName" id="cnslFileName" value="">
 							<span id="fileName" class="file" style="display: none;"><span></span>
 								<!-- 첨부파일 삭제버튼 -->

@@ -19,6 +19,14 @@
  		WHERE USER_ID = #{user_id} ORDER BY QNA_GOODS_SERIAL DESC limit 10 offset #{start}
  	</select>
  	
+ 	<!-- 마이페이지 상품 리스트 -->
+ 	<select id="getQnaList2" resultType="forever.young.user.vo.GoodsQnaVO" parameterType="forever.young.user.vo.GoodsQnaVO">
+       SELECT * FROM QNA_GOODS as QG JOIN CATEGORY_GOODS as C
+       ON QG.category_goods_serial = C.category_goods_serial
+       WHERE USER_ID = #{user_id} ORDER BY QNA_GOODS_SERIAL DESC limit 5
+    </select>
+    <!-- 마이페이지 상품 리스트 -->
+ 	
  	<select id="getQnaList" resultType="forever.young.user.vo.GoodsQnaVO" parameterType="forever.young.user.vo.GoodsQnaVO">
  		SELECT * FROM QNA_GOODS 
  		WHERE category_goods_serial = #{category_goods_serial} ORDER BY QNA_GOODS_SERIAL DESC limit 10 offset #{start}
