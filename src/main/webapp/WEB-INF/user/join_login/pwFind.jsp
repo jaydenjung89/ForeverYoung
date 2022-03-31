@@ -10,6 +10,7 @@
 <meta charset="UTF-8">
 <title>비밀번호 찾기</title>
 <link rel="stylesheet" type="text/css" href="${path }/css/join.css" />
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 <style>
 .loginArea .write_form {
 	padding-top: 36px
@@ -94,6 +95,15 @@
 .btn_type1.btn_disabled .txt_type {
 	opacity: .8
 }
+.btnGreen1{
+    width: 80% !important;
+
+}
+button {
+    border: 0;
+    vertical-align: top;
+    color: #666;
+}
 </style>
 </head>
 <body>
@@ -146,10 +156,13 @@
 								</div>
 								<div class="write_form find_View">
 									<form name="certForm" method="post" action="">
-										<img class="thumb" src="foreveryoung2/images/img_pw_find_email.png" alt="이메일 찾기">
+										
 										<p class="desc">이메일 확인 후 비밀번호를 재설정해주세요!</p>
 										<p class="info">비밀번호는 입력하신 ${userEmail}로 이메일로 전송됩니다.</p>
-										<a href="login.do" class="btnGreen"><span class="txt_type">로그인</span></a>
+										<div class="btnArea">
+		                                 <button type="button" class="btnGreen btnGreen1"  onclick="location.href='login.do'"
+		                                    data-attr='로그인^로그인^로그인'>로그인하기</button>
+		                              </div>
 									</form>
 								</div>
 							</div>
