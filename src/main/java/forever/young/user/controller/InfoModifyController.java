@@ -108,6 +108,6 @@ public class InfoModifyController {
 		System.out.println(userVO.toString());
 		userService.logout(sessionStatus);
 		System.out.println("È¸¿øÅ»Åð ¼º°ø");
-		return "main/main";
+		return "redirect:main.do";
 	}
 }
