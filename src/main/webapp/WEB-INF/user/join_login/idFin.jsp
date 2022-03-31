@@ -10,6 +10,7 @@
 <meta charset="UTF-8">
 <title>회원가입</title>
 <link rel="stylesheet" type="text/css" href="${path }/css/join.css" />
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 <style>
 .loginArea .write_form {
 	padding-top: 36px
@@ -93,6 +94,16 @@
 
 .btn_type1.btn_disabled .txt_type {
 	opacity: .8
+}
+
+.btnGreen1{
+    width: 80% !important;
+
+}
+button {
+    border: 0;
+    vertical-align: top;
+    color: #666;
 }
 </style>
 </head>
@@ -186,7 +197,10 @@
 							<c:if test="${fn:length(findId)<4 }">
 									<p class="info">아이디 : ${fn:substring(findId,0,fn:length(findId)/2) }***</p>
 							</c:if>
-							<a href="login.do" class="btn_type1"><span class="txt_type">로그인 하기</span></a>
+							<div class="btnArea">
+		                     <button type="button" class="btnGreen btnGreen1"  onclick="location.href='login.do'"
+		                        data-attr='로그인^로그인^로그인'>로그인하기</button>
+		                     </div>
 						</div>
 						
 					</div>
@@ -202,7 +216,10 @@
 						</div>
 						<div class="write_form find_view">
 							<p class="desc">고객님꼐서 입력하신 정보가 <br>정확한지 확인 후 다시 시도해주세요.</p>
-							<a href="idFind.do" class="btn_type1"><span class="txt_type">아이디 다시 찾기</span></a>
+							<div class="btnArea">
+		                     <button type="button" class="btnGreen btnGreen1" onclick="location.href='idFind.do'"
+		                        data-attr='로그인^로그인^로그인'>아이디 다시 찾기</button>
+		                     </div>
 						</div>
 					</div>
 				</c:if>
