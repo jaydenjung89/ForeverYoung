@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="${path }/css/global.css" />
 <link rel="stylesheet" type="text/css" href="${path }/css/jquery.mCustomScrollbar.css" />
 <link rel="stylesheet" type="text/css" href="${path }/css/pickup.css" />
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 </head>
 <script type="text/javascript">
 function deleteconfirm(){

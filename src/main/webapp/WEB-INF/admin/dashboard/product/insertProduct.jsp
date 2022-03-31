@@ -26,6 +26,7 @@
 
 <!-- Custom styles for this template-->
 <link href="${path}/css2/sb-admin-2.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 <script type="text/javascript">
 function formGoodsSubmit() {
 	/* if(document.goodsForm.category_goods_name.value==""){

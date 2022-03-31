@@ -17,6 +17,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${path }/css/jquery.mCustomScrollbar.css" />
 <link rel="stylesheet" type="text/css" href="${path }/css/pickup.css" />
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {

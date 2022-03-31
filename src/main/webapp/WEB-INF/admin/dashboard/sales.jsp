@@ -14,6 +14,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Favicons -->
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 <link rel="apple-touch-icon"
 	href="/docs/5.1/assets/img/favicons/apple-touch-icon.png"
 	sizes="180x180">

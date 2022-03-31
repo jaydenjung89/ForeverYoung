@@ -15,6 +15,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${path }/css/jquery.mCustomScrollbar.css" />
 <link rel="stylesheet" type="text/css" href="${path }/css/pickup.css" />
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 <script type="text/javascript">
 //로그인버튼 클릭이벤트
 function adminLoginSubmit(){
