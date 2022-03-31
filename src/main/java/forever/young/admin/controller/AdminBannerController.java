@@ -26,20 +26,20 @@ public class AdminBannerController {
 	private AwsS3 awsS3;
 	
 	//배너 리스트
-	@RequestMapping("/admin_bannerList.mdo")
+	@RequestMapping("admin_bannerList.mdo")
 	public String adminBannerList(Model model) throws Exception {
 		model.addAttribute("bannerList", service.getBannerList());
 		return "banner/admin_bannerList";
 	}
 	
 	//관리자 배너 등록페이지
-	@RequestMapping("/admin_bannerWrite.mdo")
+	@RequestMapping("admin_bannerWrite.mdo")
 	public String adminBannerWrite()throws Exception {
 		return "banner/admin_bannerWrite";
 	}
 	
 	//관리자 배너 제출페이지
-	@RequestMapping("/admin_bannerInsert.mdo")
+	@RequestMapping("admin_bannerInsert.mdo")
 	public String adminBannerInsert(MultipartFile uploadFile, AdminBannerVO banner) throws Exception {
 		try {
 			String key = "banner/"+uploadFile.getOriginalFilename();
@@ -65,7 +65,7 @@ public class AdminBannerController {
 	}
 	
 	//관리자 배너 삭제페이지
-	@RequestMapping("/admin_bannerDelete.mdo")
+	@RequestMapping("admin_bannerDelete.mdo")
 	public String adminBannerDelete(AdminBannerVO banner) throws Exception {
 		boolean result = false;
 		int success = 0;
@@ -112,7 +112,7 @@ public class AdminBannerController {
 	}
 	
 	//관리자 배너 수정
-	@RequestMapping("/admin_bannerUpdate.mdo")
+	@RequestMapping("admin_bannerUpdate.mdo")
 	public String adminBannerUpdate(MultipartFile uploadFile,AdminBannerVO banner) throws Exception {
 		if(uploadFile.getSize() != 0) {
 			//교체하고 싶은 이미지가 있을 경우 0이 아니므로 s3에 있는 이미지를 삭제

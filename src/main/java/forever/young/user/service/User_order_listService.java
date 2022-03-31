@@ -16,4 +16,7 @@ public interface User_order_listService {
 	public int point(String order_merchant_serial);
 	User_order_listVO getDate(User_order_listVO vo);
 	public int updateStatusOrder(User_order_listVO vo);
+	
+	List<User_order_listVO> getCacelList(String user_id, Pagination pagination)throws Exception;
+   public int getCacelBoardListCnt() throws Exception;
 }

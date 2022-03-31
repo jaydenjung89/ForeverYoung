@@ -102,7 +102,7 @@ img{
 	           	<div class = "card shadow mb-4">
 	           		<div class = "card-header py-3">
 	           			<h3 class = "m-0 font-weight-bold text-primay" style = "margin-top : 20px;">Banner List</h3>
-	           			<a href="/foreveryoung/admin_bannerWrite.mdo" class = "text-success" style = "float : right;">banner 등록</a>
+	           			<a href="admin_bannerWrite.mdo" class = "text-success" style = "float : right;">banner 등록</a>
 	           		</div>
 	           		<div class = "card-body">
 	           			<div class = "table-responsive">
