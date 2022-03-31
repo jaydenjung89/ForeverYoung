@@ -35,13 +35,13 @@
 			페이지 이동은 js.............?...
 			-->
 			<ul class="comm5sTabs tabN3" data-ref-selected>
-				<li data-ref-dispcatno="900000100100001" class="on">
+				<li data-ref-dispcatno="900000100100001">
 					<!--  ::before -->
 					<button type="button" title="선택됨"
 						onclick="location.href='ranking.do'"
 						style="cursor: pointer;">판매랭킹</button>
 				</li>
-				<li data-ref-dispcatno="900000100100002">
+				<li data-ref-dispcatno="900000100100002" class="on">
 					<button type="button"
 						onclick="location.href='reviewbest.do'"
 						style="cursor: pointer;">리뷰 베스트</button>
