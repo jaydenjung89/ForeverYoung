@@ -42,4 +42,11 @@ public class User_order_listDAO {
 	public int updateStatusOrder(User_order_listVO vo) {
 	       return sqlSession.update("orderListDAO.order_status_update", vo);
 	   }
+	
+	public List<User_order_listVO> getCacelBoard(String user_id, Pagination pagination)throws Exception{
+      return sqlSession.selectList("orderListDAO.geCancelList", user_id);
+   }
+   public int getCacelBoardListCnt() throws Exception{
+      return sqlSession.selectOne("orderListDAO.getCacelListCnt");
+   }
 }

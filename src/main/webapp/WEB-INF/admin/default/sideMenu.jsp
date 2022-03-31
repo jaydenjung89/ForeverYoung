@@ -62,8 +62,8 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                <div class="bg-white py-2 collapse-inner rounded">
                   <h6 class="collapse-header">배너관리</h6>
-                  <a class="collapse-item" href="/foreveryoung/admin_bannerList.mdo">배너목록</a>
-                  <a class="collapse-item" href="/foreveryoung/admin_bannerWrite.mdo">배너등록</a>
+                  <a class="collapse-item" href="admin_bannerList.mdo">배너목록</a>
+                  <a class="collapse-item" href="admin_bannerWrite.mdo">배너등록</a>
                </div>
             </div>
          </li>
@@ -116,7 +116,7 @@
 				</div>
 			</div></li>
 			
-		<!— 사이드바 주문관리 —>
+		
          <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-cog"></i> <span>주문관리</span>

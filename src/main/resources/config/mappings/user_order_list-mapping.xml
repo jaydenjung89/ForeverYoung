@@ -46,4 +46,18 @@
        UPDATE fyproject.ORDER SET ORDER_DELIVERY_STATUS='결제취소'
        WHERE order_merchant_serial=#{order_merchant_serial}
     </update>
+    
+    <!-- 주문취소한 상품들 리스트로 가져오기 -->
+    <select id="geCancelList" resultType="orderListVO">
+       SELECT * FROM fyproject.ORDER AS O JOIN CATEGORY_GOODS AS C
+      ON O.MASTER_GOODS_SERIAL=C.CATEGORY_GOODS_SERIAL
+      WHERE O.USER_ID=#{user_id} AND ORDER_DELIVERY_STATUS='결제취소'
+      ORDER BY O.ORDER_SERIAL DESC
+    </select>
+    
+    <select id="getCacelListCnt" resultType="int">
+      SELECT COUNT(*) AS LISTCNT FROM fyproject.ORDER AS O JOIN CATEGORY_GOODS AS C
+      ON O.MASTER_GOODS_SERIAL=C.CATEGORY_GOODS_SERIAL
+      WHERE ORDER_DELIVERY_STATUS='결제취소'
+   </select>
 </mapper>

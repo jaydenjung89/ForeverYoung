@@ -59,4 +59,16 @@ public class User_order_listServiceImpl implements User_order_listService {
 	   
 	   return user_order_listDAO.updateStatusOrder(vo);
 	}
+	
+	@Override
+   public List<User_order_listVO> getCacelList(String user_id, Pagination pagination) throws Exception {
+      // TODO Auto-generated method stub
+      return user_order_listDAO.getCacelBoard(user_id, pagination);
+   }
+
+   @Override
+   public int getCacelBoardListCnt() throws Exception {
+      // TODO Auto-generated method stub
+      return user_order_listDAO.getCacelBoardListCnt();
+   }
 }
