@@ -220,10 +220,18 @@
 				<div class="align_sort">
 				
 					<ul>
+					<c:if test="${thirdSerial == null }">
+						<li><a href="categoryItemPage2.do?category_first_serial=${firstSerial}&category_second_serial=${secondSerial}&sort=0" data-prdSoting="01">판매수량순</a></li>
+						<li><a href="categoryItemPage2.do?category_first_serial=${firstSerial}&category_second_serial=${secondSerial}&sort=1" data-prdSoting="02">최근등록순</a></li>
+						<li><a href="categoryItemPage2.do?category_first_serial=${firstSerial}&category_second_serial=${secondSerial}&sort=2" data-prdSoting="06">낮은 가격순</a></li>
+						<li><a href="categoryItemPage2.do?category_first_serial=${firstSerial}&category_second_serial=${secondSerial}&sort=3" data-prdSoting="05">높은 가격순</a></li>		
+					</c:if>
+					<c:if test="${thirdSerial != null }">
 						<li><a href="categoryItemPage2.do?category_first_serial=${firstSerial}&category_second_serial=${secondSerial}&category_third_serial=${thirdSerial}&sort=0" data-prdSoting="01">판매수량순</a></li>
 						<li><a href="categoryItemPage2.do?category_first_serial=${firstSerial}&category_second_serial=${secondSerial}&category_third_serial=${thirdSerial}&sort=1" data-prdSoting="02">최근등록순</a></li>
 						<li><a href="categoryItemPage2.do?category_first_serial=${firstSerial}&category_second_serial=${secondSerial}&category_third_serial=${thirdSerial}&sort=2" data-prdSoting="06">낮은 가격순</a></li>
 						<li><a href="categoryItemPage2.do?category_first_serial=${firstSerial}&category_second_serial=${secondSerial}&category_third_serial=${thirdSerial}&sort=3" data-prdSoting="05">높은 가격순</a></li>
+					</c:if>
 					</ul>
 				</div>
 
