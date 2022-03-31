@@ -114,5 +114,9 @@ public class UserServiceImpl implements UserService {
 		user.insertUserDetail(userVo);
 	}
 
-	
+	@Override
+	   public List<UserVO> getTotal(UserVO userVo) {
+	      // TODO Auto-generated method stub
+	      return user.getTotalUser(userVo);
+	   }
 }

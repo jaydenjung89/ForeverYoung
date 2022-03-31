@@ -38,19 +38,26 @@ public class PersonalQnaController {
 	
 	@RequestMapping("oneqmain.do")
 	public String clientCenter1(Model model, @RequestParam(required = false, defaultValue = "1") int page, @RequestParam(required = false, defaultValue = "1") int range, HttpServletRequest request) {
-		int listCnt=personalqnaService.getBoardListCnt();
-		
-		HttpSession session=request.getSession();
-		String user_id=((String)session.getAttribute("userId"));
-		Pagination pagination=new Pagination();
-		
-		pagination.pageInfo(page, range, listCnt);
-		
-		model.addAttribute("pagination", pagination);
-		model.addAttribute("board", personalqnaService.getBoard_personalList(pagination, user_id));
-
-		return "clientCenter/oneqmain2";
+		HttpSession session = request.getSession();
+		if(session.getAttribute("userId") == null) {
+			System.out.println("로그인페이지로 이동");
+			return "join_login/login";
+		}else {
+         
+			int listCnt=personalqnaService.getBoardListCnt();
+			session=request.getSession();
+			String user_id=((String)session.getAttribute("userId"));
+			Pagination pagination=new Pagination();
+         
+			pagination.pageInfo(page, range, listCnt);
+         
+			model.addAttribute("pagination", pagination);
+			model.addAttribute("board", personalqnaService.getBoard_personalList(pagination, user_id));
+			System.out.println(pagination.getStartList());
+			return "clientCenter/oneqmain2";
+		}
 	}
+
 	//1:1문의 게시판 페이지
 //	@RequestMapping("oneqmain.do")
 //	public String getList(HttpServletRequest request, PersonalQnaVO vo, Model model) {

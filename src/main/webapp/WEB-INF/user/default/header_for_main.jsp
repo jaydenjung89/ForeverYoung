@@ -461,7 +461,7 @@ $(document).ready(function(){
 				<li class="order"><a href="order.do">주문배송</a></li>
 				<!-- 주문배송 페이지 연결 -->
 				</c:if>
-				<li class="customer"><a href="oneqmain.do">고객센터</a></li>
+				<li class="customer"><a href="FAQ.do">고객센터</a></li>
 				<!-- 고객센터 페이지 연결 -->
 				<li class="store"><a href="#">매장안내</a></li>
 				<!-- 매장안내 페이지 연결 -->

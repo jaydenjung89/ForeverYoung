@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -73,25 +74,62 @@ public class UserLoginController {
 	public String loginGET(@ModelAttribute("userVo") UserVO userVo) {
 		return "join_login/login";
 	}
+	
+//	
+//	//로그인 처리
+//	@RequestMapping(value="loginProc.do", method=RequestMethod.POST)
+//	public String loginPOST(UserVO userVO, HttpSession httpSession, Model model, RedirectAttributes redirect) throws Exception{
+//		UserVO userVo=userService.login(userVO);
+//		if(userVo==null || !BCrypt.checkpw(userVO.getUser_password(), userVo.getUser_password())) {
+//			System.out.println("로그인 실패");
+//			return "join_login/login";
+//		}else {
+//			model.addAttribute("user", userVo);
+//			model.addAttribute("user1",userVo);
+//			model.addAttribute("userId", userVO.getUser_id());
+//			model.addAttribute("userName", userVo.getUser_name());
+//			model.addAttribute("userPoint", orderService.getUserDetails(userVO.getUser_id()).getUser_point());
+//			model.addAttribute("userMember", orderService.getUserDetails(userVO.getUser_id()).getUser_membership_name());
+//			System.out.println("로그인 성공");
+//			redirectedUrl("#");
+//			return "redirect:main.do";
+//		}
+//	}
+//	
+	
 	//로그인 처리
-	@RequestMapping(value="loginProc.do", method=RequestMethod.POST)
-	public String loginPOST(UserVO userVO, HttpSession httpSession, Model model, RedirectAttributes redirect) throws Exception{
-		UserVO userVo=userService.login(userVO);
-		if(userVo==null || !BCrypt.checkpw(userVO.getUser_password(), userVo.getUser_password())) {
-			System.out.println("로그인 실패");
-			return "join_login/login";
-		}else {
-			model.addAttribute("user", userVo);
-			model.addAttribute("user1",userVo);
-			model.addAttribute("userId", userVO.getUser_id());
-			model.addAttribute("userName", userVo.getUser_name());
-			model.addAttribute("userPoint", orderService.getUserDetails(userVO.getUser_id()).getUser_point());
-			model.addAttribute("userMember", orderService.getUserDetails(userVO.getUser_id()).getUser_membership_name());
-			System.out.println("로그인 성공");
-			redirectedUrl("#");
-			return "redirect:main.do";
-		}
-	}
+   @RequestMapping(value="loginProc.do", method=RequestMethod.POST,produces="html/text; charset=utf-8")
+   @ResponseBody
+   public String loginPOST(UserVO userVO, HttpSession httpSession, HttpServletRequest request,Model model, RedirectAttributes redirect) throws Exception{
+      String userID = request.getParameter("userid");
+      userVO.setUser_id(userID);
+      List<UserVO> getUser = userService.getTotal(userVO);
+      String a = "";
+      for(int i =0; i < getUser.size(); i++){
+         
+         if(userID .equals(getUser.get(i).getUser_id()) ) {
+            UserVO userVo=userService.login(userVO);
+            model.addAttribute("user", userVo);
+            model.addAttribute("user1",userVo);
+            //model.addAttribute("userId", userVO.getUser_id());
+            model.addAttribute("userId", userVo.getUser_id());
+            model.addAttribute("userName", userVo.getUser_name());
+            model.addAttribute("userPoint", orderService.getUserDetails(userVO.getUser_id()).getUser_point());
+            model.addAttribute("userMember", orderService.getUserDetails(userVO.getUser_id()).getUser_membership_name());
+            System.out.println("로그인 성공");
+            a = "true";
+            System.out.println(a);
+            break;
+         }else {
+
+            a ="false";
+            
+            
+         }
+      }
+      return a;
+   }
+	
 	//로그아웃 처리
 	@RequestMapping("logoutProc.do")
 	public String logout(SessionStatus sessionStatus, RedirectAttributes redirect) {

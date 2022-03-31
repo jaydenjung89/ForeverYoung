@@ -16,6 +16,7 @@
    href="${path }/css/jquery.mCustomScrollbar.css" />
 <link rel="stylesheet" type="text/css" href="${path }/css/pickup.css" />
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript">
 Kakao.init('67055c8929df758b1f3f3de481c22151');
 console.log(Kakao.isInitialized());
@@ -45,6 +46,35 @@ function KakaoLogin(){
    });
 }
 </script>
+
+<script>
+$(document).ready(function(){
+   
+   $('.btnGreen').on('click',function(){
+      var userid = $("#loginId").val();
+      var userPw = $("#password").val();
+      
+      $.ajax({
+         type: "POST",
+         url : "loginProc.do",
+         data : {
+         "userid" : userid , "userPw": userPw},
+         success : function(data){
+            if(data == "false") {
+               alert("아이디 혹은 비밀번호를 확인해주세요!");
+                location.href="login.do";
+
+            }else if(data=="true"){
+               location.href="main.do";
+            }
+         }
+      });   
+   
+   });   
+   
+});
+</script>
+
 <style>
 .btn_kakao {
    border: 1px solid;
@@ -123,9 +153,9 @@ function KakaoLogin(){
                      </div>
 						</div>
 						<div class="btnArea">
-							<button type="submit" class="btnGreen" onclick=""
-								data-attr='로그인^로그인^로그인'>로그인</button>
-						</div>
+	                     <button type="button" class="btnGreen" 
+	                        data-attr='로그인^로그인^로그인'>로그인</button>
+	                  </div>
 
 						<!-- 카카오 로그인 -->
                   <div class="fast_login clrfix">

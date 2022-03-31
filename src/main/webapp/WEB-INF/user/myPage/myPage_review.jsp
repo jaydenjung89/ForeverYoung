@@ -25,7 +25,7 @@
 				<div class = "mypage-head rate_04">
 					<h1 class = "tit">
 						<!-- 마이페이지 메인페이지로 이동 -->
-						<a href = "#">마이페이지</a>
+						<a href = "MyPageMain.do">마이페이지</a>
 					</h1>
 					<div class = "grd-box">
 						<div class = "info_user clrfix">
@@ -44,11 +44,11 @@
 							<ul class = "mem_opt">
 								<!-- 멤버십 페이지로 이동 -->
 								<li id = "membershipBenefit">
-									<a href = "#" onclick = "#">멤버십라운지</a>
+									<a href = "membership.do" onclick = "#">멤버십라운지</a>
 								</li>
 								<!-- 나의 프로필 페이지로 이동 -->
 								<li id = "profileModify">
-									<a href = "#" onclick = "#">나의 프로필</a>
+									<a href = "MyProfile.do" onclick = "#">나의 프로필</a>
 								</li>
 							</ul>
 						</div>

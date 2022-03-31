@@ -36,7 +36,16 @@
  		</if>
  		user_gender=#{user_gender},
   		<if test="user_birth !='' and user_birth !=null">
- 		user_birth=#{user_birth}
+ 		user_birth=#{user_birth},
+ 		</if>
+ 		<if test="user_zipcode !='' and user_zipcode != null">
+ 			user_zipcode = #{user_zipcode},
+ 		</if>
+ 		<if test="user_address1 != '' and user_address1 != null">
+ 			user_address1 = #{user_address1},
+ 		</if>
+ 		<if test="user_address1 != '' and user_address2 != null">
+ 			user_address2 = #{user_address2}
  		</if>
  		where user_id=#{user_id}
  	</update>
@@ -49,6 +58,10 @@
  	 <select id="idFind" resultType="String">
        SELECT user_id FROM user WHERE user_name = #{user_name} AND user_email = #{user_email}
     </select>
+    
+    <select id="getTotaluser" resultType="user">
+      SELECT * FROM user
+   </select>
     
     <!-- 이메일 키값 받아오기 -->
     <select id="getEmailKey">

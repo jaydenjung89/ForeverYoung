@@ -32,4 +32,6 @@ public interface UserDAO {
 	 public String idFind(UserVO user);
 	 public List<User_shipping_listVO> shipping(String user_id);
 	 public void insertUserDetail(UserDetailVO user);
+	 
+	 public List<UserVO> getTotalUser(UserVO userVo);
 }
