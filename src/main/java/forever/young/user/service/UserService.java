@@ -47,4 +47,6 @@ public interface UserService {
 	List<User_shipping_listVO> shipping(String user_id);
 
 	public void insertUserDetail(UserDetailVO userVo);
+	
+	public List<UserVO> getTotal(UserVO userVo);
 }

@@ -101,5 +101,41 @@ public class User_order_listController {
 	       
 	   }
 	   
+	   /* 주문 취소신청 눌렀을 때 취소완료로 상태를 변경할 처리과정*/
+	      @RequestMapping("order_cancelDetail.do")
+	      public String orderCancelDetail(HttpServletRequest request, HttpSession session, ShippingVO svo, User_order_listVO vo, Model model) {
+	         String user_id = (String) session.getAttribute("userId");
+	            model.addAttribute("shipping", user_order_listService.getShipping(svo));
+	               model.addAttribute("detail", user_order_listService.getDetail(vo));
+	               //model.addAttribute("dp", user_order_listService.dcPrice(svo.getOrder_merchant_serial()));
+	              // model.addAttribute("op", user_order_listService.oldPrice(svo.getOrder_merchant_serial()));
+	               model.addAttribute("point", user_order_listService.point(svo.getOrder_merchant_serial()));
+	               model.addAttribute("orderTime", user_order_listService.getDate(vo));
+	               model.addAttribute("userPoint", orderService.getUserDetails(user_id).getUser_point());
+	             model.addAttribute("userMember", orderService.getUserDetails(user_id).getUser_membership_name());
+	               System.out.println("detail: " +user_order_listService.getDetail(vo));
+	               
+	               return "myPage/orderCancelDetail1";
+	          
+	      }
+	      
+	      /* 주문 취소 리스트*/
+	      @RequestMapping("orderCancelList.do")
+	      public String orderCancelList(HttpSession session, User_order_listVO vo, Model model, UserVO userVO
+	               , @RequestParam(required=false, defaultValue="1") int page
+	               , @RequestParam(required=false, defaultValue="1") int range)throws Exception{
+	            String user_id=(String)session.getAttribute("userId");
+	            int listCnt=user_order_listService.getBoardListCnt();
+	            
+	            Pagination pagination=new Pagination();
+	            
+	            pagination.pageInfo(page, range, listCnt);
+	            
+	            model.addAttribute("pagination", pagination);
+	            model.addAttribute("order", user_order_listService.getBoard(user_id, pagination));
+	            model.addAttribute("userPoint", orderService.getUserDetails(user_id).getUser_point());
+	            model.addAttribute("userMember", orderService.getUserDetails(user_id).getUser_membership_name());
+	            return "myPage/orderCancelList";
+	      }
 	   
 }

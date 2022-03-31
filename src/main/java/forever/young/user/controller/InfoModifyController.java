@@ -63,7 +63,10 @@ public class InfoModifyController {
 		//System.out.println("회원업데이트 입장");
 		//System.out.println(userVo.toString());
 		userVo.setUser_password(BCrypt.hashpw(userVo.getUser_new_pw(), BCrypt.gensalt()));
+		
 		infoModifyService.updateUser(userVo);
+		
+		
 		System.out.println("회원정보 수정 성공");
 		return "redirect:MyPageMain.do";
 	}

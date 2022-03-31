@@ -25,7 +25,7 @@
 		<div class = "mypage-head rate_04">
 					<h1 class = "tit">
 						<!-- 마이페이지 메인페이지로 이동 -->
-						<a href = "#">마이페이지</a>
+						<a href = "MyPageMain.do">마이페이지</a>
 					</h1>
 					<div class = "grd-box">
 						<div class = "info_user clrfix">
@@ -38,17 +38,17 @@
 								<!-- 등급변경시 바꿔줘야함 -->
 								${userMember }
 								<!-- 기본정보페이지의 이름에서 가져오는걸로 추정됨. -->
-								<strong class = "name">${userName }</strong>
+								<strong class = "name">${user.user_name }</strong>
 								님 반갑습니다.
 							</p>
 							<ul class = "mem_opt">
 								<!-- 멤버십 페이지로 이동 -->
 								<li id = "membershipBenefit">
-									<a href = "#" onclick = "#">멤버십라운지</a>
+									<a href = "membership.do" onclick = "#">멤버십라운지</a>
 								</li>
 								<!-- 나의 프로필 페이지로 이동 -->
 								<li id = "profileModify">
-									<a href = "#" onclick = "#">나의 프로필</a>
+									<a href = "MyProfile.do" onclick = "#">나의 프로필</a>
 								</li>
 							</ul>
 						</div>

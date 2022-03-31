@@ -1147,12 +1147,12 @@ $(document).ready(function(){
                               ${fn:replace(review.review_content,"ln","<br>")} 
                               
                            </div>
-                           <div class="goods-review-grp-btn">
+                           <!-- <div class="goods-review-grp-btn">
                               <button type="button" class="styled-button review-like-btn" data-sno="2078259" onclick="review_like('20782595', $(this));">
                                  도움이 돼요
                                  <span class="num">1</span>
                               </button>
-                           </div>
+                           </div> -->
                         </div>
                      </div>
                      </c:forEach>
@@ -1178,12 +1178,13 @@ $(document).ready(function(){
                </div>
             </div>
             
-            <!-- 리뷰 페이징 처리 영역 -->
+           <!-- 
+           리뷰 페이징 처리 영역
             <div class="board_pg_area">
                <a href="#goods-review" class="layout-pagination-button layout-pagination-prev-page" onclick="javascript:reviewPaging(-1);">이전페이지로 가기</a>
                <a href="#goods-review" class="layout-pagination-button layout-pagination-next-page" onclick="javascript:reviewPaging(1);">다음페이지로 가기</a>
             </div>
-      
+       -->
          </div>
           <!--// 리뷰탭 수정 부분 -->
 

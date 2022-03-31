@@ -23,7 +23,7 @@
 				<div class = "mypage-head rate_04">
 					<h1 class = "tit">
 						<!-- 마이페이지 메인페이지로 이동 -->
-						<a href = "#">마이페이지</a>
+						<a href = "MyPageMain.do">마이페이지</a>
 					</h1>
 					<div class = "grd-box">
 						<div class = "info_user clrfix">

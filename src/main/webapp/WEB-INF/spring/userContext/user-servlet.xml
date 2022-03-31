@@ -49,6 +49,24 @@
 	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
 	<bean id="loginInterceptor" class="forever.young.interceptor.LoginInterceptor"/>
 	<mvc:interceptors>
+      <!--<mvc:interceptor>
+         <mvc:mapping path="/foreveryoung/getCart.do" />
+         <bean id="cartInterceptor" class="forever.young.interceptor.CartInterceptor" />
+      </mvc:interceptor>
+   -->
+
+      <!--<mvc:interceptor>
+         <mvc:mapping path="/foreveryoung/getOrderList.do" />
+         <bean id="orderInterceptor" class="forever.young.interceptor.OrderDelInterceptor" />
+      </mvc:interceptor>
+   -->
+      <mvc:interceptor>
+         <mvc:mapping path="oneqmain.do" />
+         <bean id="personalQnaInterceptor" class="forever.young.interceptor.PersonalQnaInterceptor" />
+      </mvc:interceptor>
+   </mvc:interceptors>
+   
+	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="main"/>
 			

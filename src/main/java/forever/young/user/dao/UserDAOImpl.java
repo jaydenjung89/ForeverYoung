@@ -81,5 +81,11 @@ public class UserDAOImpl implements UserDAO {
 			sqlSession.insert("UserDAO.userDetail", userVo);
 			
 		}
+		
+		@Override
+	      public List<UserVO> getTotalUser(UserVO userVo) {
+	         // TODO Auto-generated method stub
+	         return sqlSession.selectList("UserDAO.getTotaluser");
+	      }
 
 }

@@ -326,8 +326,49 @@
 								<em></em>
 							</p>
 						</div>
+						<h3 class="sub-title3">환불내역</h3>
+						<div class="price-conts twoType">
+							<ul class="list lineBzero">
+								<li>
+									<dl>
+										<dt>취소 금액 </dt>
+										<dd>
+											<fmt:formatNumber value="${detail[0].order_goods_price }" pattern="#,### " />
+											<em>원</em>
+										</dd>
+									</dl>
+									<ul>
+										<li>
+											<span class="txt">취소 상품금액</span>
+											<span class="won">
+												<fmt:formatNumber value="${detail[0].order_goods_price }" pattern="#,### " />
+												<em>원</em>
+											</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<dl>
+										<dt>포인트 및 기타결제 반환 </dt>
+										<dd>
+											0
+											<em>원</em>
+										</dd>
+									</dl>
+									<ul> </ul>
+								</li>
+							</ul>
+							<div class="price-sum">
+								<div>
+									<button type="button" class="ButtonBasic" onclick="mypage.orderDetail.showRefundInfoPop('Y2203269793171'); return false;">환불이력</button>
+									<strong>환불금액</strong>
+									<span><fmt:formatNumber value="${detail[0].order_goods_price }" pattern="#,### " /><em>원</em></span>
+								</div>
+								<span class="txt">KAKAOPAY 취소</span>
+							</div>
+						</div>
 						<div class="area1sButton mgT40">
-							<a href="order.do" class="btnGray">목록</a>
+							<a href="orderCancelList.do" class="btnGray">목록</a>
 						</div>
 					</form>
 				</div> 

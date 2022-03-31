@@ -19,7 +19,7 @@
 					<a href = "order.do" mymenuid="0101" data-ref-linkurl="#" data-attr = "마이페이지^메뉴^주문/배송 조회">주문/배송조회</a>
 				</li>
 				<li class = "subMenu">
-					<a href = "#" mymenuid = "0102" data-ref-linkurl = "#" data-attr = "마이페이지^메뉴^취소/반품/교환 내역">취소/반품/교환 내역</a>
+					<a href = "orderCancelList.do" mymenuid = "0102" data-ref-linkurl = "#" data-attr = "마이페이지^메뉴^취소/반품/교환 내역">취소/반품/교환 내역</a>
 				</li>
 				<!-- 
 				거래증빙서류 기능 구현 안할거임
