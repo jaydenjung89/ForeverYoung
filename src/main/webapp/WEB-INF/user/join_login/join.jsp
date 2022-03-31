@@ -362,7 +362,7 @@ function smsResponse(){
                                           name="mobile[]" id="mobile2" value="2222" required=""
                                           fld_esssential="" option="regNum" label="휴대폰">
 
-                                       <button id="btn_cert" class="btn default disabled"
+                                       <button id="btn_cert" class="btn default enabled"
                                           onclick="smsResponse()" type="button">인증번호 받기</button>
                                     </div>
 

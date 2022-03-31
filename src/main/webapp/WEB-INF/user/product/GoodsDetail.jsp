@@ -94,11 +94,9 @@ function div_show(){
 	$("div.popup-contents");
 	$("#pop_cont").show();
 	$("#dim").css("display","block");
-	$("body").css("overflow","hidden");
 }
 function div_hide(){
 	$("#pop_cont").hide();
-	$("body").css("overflow","auto");
 	$("#dim").css("display","none");
 }
 function pop_hide(){
