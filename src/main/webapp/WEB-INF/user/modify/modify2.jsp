@@ -10,6 +10,7 @@
 <meta charset="UTF-8">
 <title>modify2</title>
 <link rel="stylesheet" type="text/css" href="${path }/css/join.css" />
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 </head>
 
 <script type="text/javascript">

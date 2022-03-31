@@ -27,7 +27,7 @@
 	crossorigin="anonymous"></script>
 <!-- Custom styles for this template-->
 <link href="${path}/css2/sb-admin-2.min.css" rel="stylesheet">
-
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 <style type="text/css">/* Chart.js */
 @
 keyframes chartjs-render-animation {

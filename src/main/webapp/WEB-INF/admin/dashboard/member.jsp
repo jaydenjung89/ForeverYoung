@@ -14,7 +14,7 @@
 <meta name="author" content="">
 
 <title>ForeverYoung - Admin_Dashboard</title>
-
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 <!-- Custom fonts for this template-->
 <link href="${path}/vendor/fontawesome-free/css/all.min.css"
 	rel="stylesheet" type="text/css">

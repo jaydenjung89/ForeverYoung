@@ -18,6 +18,7 @@
 <link rel="stylesheet" type="text/css" href="${path }/css/global.css" />
 <link rel="stylesheet" type="text/css" href="${path }/css/jquery.mCustomScrollbar.css" />
 <link rel="stylesheet" type="text/css" href="${path }/css/pickup.css" />
+<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
 <!-- jQuery -->
  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
  <!-- iamport.payment.js -->
