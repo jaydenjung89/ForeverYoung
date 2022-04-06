@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import forever.young.admin.vo.AdminSalesVO;
+import forever.young.admin.vo.DateVO;
 
 @Repository
 public class AdminSalesDAO {
@@ -33,5 +34,14 @@ public class AdminSalesDAO {
 	public List<AdminSalesVO> getMonthSales(AdminSalesVO adminsalesvo) {
 		return sqlSession.selectList("AdminSalesDAO.getMonthSales");
 	}
-	
+
+	// 기간별 매출
+	public List<AdminSalesVO> getDateSales(DateVO vo) {
+		return sqlSession.selectList("AdminSalesDAO.getDateSales",vo);
+	}
+
+	// 1차카테고리별 매출
+	public List<AdminSalesVO> getCateSales(AdminSalesVO adminsalesvo) {
+		return sqlSession.selectList("AdminSalesDAO.getCateSales");
+	}
 }
