@@ -24,5 +24,25 @@
 		280MB 까지 업로드 허용하도록 설정됨 그 이상은 maxInMemorySize 늘려주면 됨. (maxInMemorySize : 377759039)-->
 		<property name="maxInMemorySize" value="200000000" />
 	</bean>
-	
+	<!-- 이메일 인증 -->
+    <bean id="mailSender" class ="org.springframework.mail.javamail.JavaMailSenderImpl" >
+      <property name="host" value="smtp.gmail.com" />
+      <property name="port" value="587" />
+      <property name="defaultEncoding" value="utf-8"/>
+      <property name="username" value="kkmm0298@gmail.com" />
+      <property name="password" value="apcgvuskcxokixkv" />
+      <property name="javaMailProperties" >
+         <props>
+           <prop key="mail.transport.protocol">smtp</prop>  
+            <prop key="mail.smtp.auth">true</prop>
+            <prop key="mail.smtp.starttls.enable">true</prop>
+            <prop key="mail.debug">true</prop>
+            <prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
+         <prop key="mail.smtp.ssl.protocols">TLSv1.2</prop>
+         </props>
+      </property>
+   </bean>
+   <!-- 이메일 인증 -->
+   <bean id="email" class="forever.young.email.Email" />
+    <bean id="emailSender" class="forever.young.email.EmailSender" />
 </beans>

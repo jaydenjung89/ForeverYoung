@@ -40,7 +40,14 @@ public interface AdminService {
 
 	// 회원 삭제
 	int deleteUser(AdminUserVO user);
-
+	
+	public int updateUser(AdminUserVO user);
+	
+	//public String getMail(AdminUserVO user);
+	//회원 정지 이메일보내기
+	public AdminUserVO getUserInfo(AdminUserVO user);
+	public String getMail(AdminUserVO user);
+	public int getUserStatus(AdminUserVO user);
 	// =======================1:1문의==============================
 	// 1:1문의 답변대기 리스트
 	List<QnaPersonalVO> getQnaPersonalList(QnaPersonalVO qna);

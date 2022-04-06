@@ -76,7 +76,30 @@ to {
 	left: 0;
 	top: 0
 }
-
+.btn-danger {
+    
+    
+    background-image: linear-gradient(to bottom,#d9534f 0,#c12e2a 100%);
+    
+    background-repeat: repeat-x;
+    border-color: #b92c28;
+}
+.btn-danger, .btn-default, .btn-info, .btn-primary, .btn-success, .btn-warning {
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 20%);
+    
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
+}
+ .btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    
+}
 </style>
 </head>
 
@@ -114,7 +137,8 @@ to {
 								<th scope="col">최근로그인</th>
 								<th scope="col">포인트</th>
 								<th scope="col">총구매금액</th>
-								<th scope="col">회원삭제</th>
+								<th scope="col">회원상태</th>
+								<th scope="col">정지/활성화</th>
 							</tr>
 						</thead>
 						<tfoot>
@@ -127,11 +151,12 @@ to {
 								<th scope="col">최근로그인</th>
 								<th scope="col">포인트</th>
 								<th scope="col">총구매금액</th>
-								<th scope="col">회원삭제</th>
+								<th scope="col">회원상태</th>
+								<th scope="col">정지/활성화</th>
 							</tr>
 						</tfoot>
 						<tbody>
-							<c:forEach var="user" items="${userList }">
+							<c:forEach var="user" items="${userList }" varStatus="i">
 								<tr>
 									<td>${user.rownum }</td>
 									<td>${user.user_id }</td>
@@ -141,10 +166,25 @@ to {
 									<td>${user.user_last_login }</td>
 									<td>${user.user_point }</td>
 									<td>${user.user_total_purchase }</td>
-									<td><input type="hidden" value="${user.user_serial }"
-										name="user_serial" id="user_serial"><input
-										type="button" value="삭제"
-										onclick="javascirpt:delete_check('deleteUser.mdo?user_id=${user.user_id}')" />
+									<c:if test="${user.user_status==0}">
+									<td id="0">정상</td>
+									</c:if>
+									<c:if test="${user.user_status==1}">
+									<td id="1">정지</td>
+									</c:if>
+									<td><input type="hidden" value="${user.user_serial }" name="user_serial" id="user_serial">
+										<input type="hidden" value="${user.user_id }" name="user_id" id="user_id">
+										<c:if test="${user.user_status==0 }">
+											
+											<button type="button" class="btn btn-sm btn-danger" id="user_status" value="${user.user_status }" >정지</button>
+										</c:if>
+										
+										
+										<c:if test="${user.user_status==1 }">
+										
+										<button type="button" class="btn btn-sm btn-success" id="user_status" value="0" >활성화</button>
+										</c:if>
+										<%-- <input type="button" value="삭제" onclick="javascirpt:delete_check('deleteUser.mdo?user_id=${user.user_id}')" /> --%>
 									</td>
 								</tr>
 							</c:forEach>
@@ -216,6 +256,53 @@ to {
 			</div>
 		</div>
 	</div>
-
+<script type="text/javascript">
+$(function(){
+	$(document).on('click', '.btn.btn-sm.btn-danger, .btn.btn-sm.btn-success', function(){
+			var id = $(this).parent().siblings('td').eq(1).text();
+			var status = $(this).parent().siblings('td').eq(8).attr('id');
+			
+		    if(confirm('회원의 상태를 수정하시겠습니까?')) {
+		    	if(status == 0) {
+		    		status = 1;
+		    		$.ajax({
+						type:"POST",
+						url:"updateUser.mdo",
+						dataType : "json",
+						data : {"user_id" : id, "user_status" : status},
+						success: function(result) {
+							if(result != 0){
+								alert("회원 상태 변경을 성공하였습니다.")
+								location.reload();
+							}else {
+								alert("회원 상태 변경을 실패했습니다.")
+								location.reload();
+							}
+						}
+					})
+		    	}else if(status ==1){
+		    		status = 0;
+		    		$.ajax({
+						type:"POST",
+						url:"updateUser.mdo",
+						dataType : "json",
+						data : {"user_id" : id, "user_status" : status},
+						success: function(result) {
+							if(result != 0){
+								alert("회원 상태 변경을 성공하였습니다.")
+								location.reload();
+							}else {
+								alert("회원 상태 변경을 실패했습니다.")
+								location.reload();
+							}
+						}
+					})
+		    	}
+		    	
+			
+			} 
+	})
+});
+</script>
 </body>
 </html>

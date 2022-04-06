@@ -7,6 +7,8 @@ public class AdminUserVO {
 	private String user_id;
 	private String user_name;
 	private String user_phone;
+	private String user_email;
+	
 	private String user_membership_name;
 	public String getUser_membership_name() {
 		return user_membership_name;
@@ -18,6 +20,13 @@ public class AdminUserVO {
 	private String user_point;
 	private int user_total_purchase;
 	private int user_status;
+	
+	public String getUser_email() {
+		return user_email;
+	}
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
+	}
 	public int getRownum() {
 		return rownum;
 	}
