@@ -62,7 +62,27 @@ public class AdminDAO {
 	public int deleteUser(AdminUserVO user) {
 		return sqlSession.delete("AdminDAO.deleteUser", user);
 	}
+	//유저 수정
+		public int updateUser(AdminUserVO user) {
+			return sqlSession.update("AdminDAO.updateUser", user);
+		}
+//	//유저 메일 보내기
+//		public String getMail(AdminUserVO user) {
+//			return sqlSession.selectOne("AdminDAO.getMail", user);
+//		}
 
+	//유저 정보 가져오기
+	public AdminUserVO getUserInfo(AdminUserVO user) {
+		return sqlSession.selectOne("AdminDAO.getUserInfo", user);
+	}
+	//유저 메일 보내기
+	public String getMail(AdminUserVO user) {
+		return sqlSession.selectOne("AdminDAO.getMail", user);
+	}
+	//유저 상태 가져오기
+	public int getUserStatus(AdminUserVO user) {
+		return sqlSession.selectOne("AdminDAO.getUserStatus", user);
+	}
 	// ==========================1:1문의=============================
 	// 1:1문의 답변 대기 리스트
 	public List<QnaPersonalVO> getQnaPersonalList(QnaPersonalVO qna) {

@@ -18,7 +18,26 @@
 		SELECT (ROW_NUMBER() OVER(Order by admin_position DESC)) AS ROWNUM ,* FROM
 		ADMIN
 	</select> -->
-
+	<!-- 회원 수정 -->
+   <update id="updateUser" parameterType="user">
+       UPDATE user_details 
+       SET USER_STATUS = #{user_status}
+       WHERE USER_ID=#{user_id}
+    </update>
+     <select id="getMail" resultType="String">
+       SELECT user_email 
+       FROM user 
+       WHERE  user_id = #{user_id} 
+     </select> 
+     	<select id="getUserInfo" resultType="user">
+       SELECT * FROM user_details WHERE user_id = #{user_id}
+    </select>
+    <select id="getUserStatus" resultType="int">
+    	SELECT user_status
+    	FROM user_details
+    	WHERE user_id= #{user_id}
+    </select>
+    
 	<select id="getUserlist" resultType="adminUser">
 		select
 		(ROW_NUMBER() OVER(Order by B.user_serial)) AS ROWNUM,
@@ -50,7 +69,8 @@
  	<delete id="deleteAdmin" parameterType="admin">
  		delete from admin where admin_id = #{admin_id}
  	</delete>
-
+ 	
+ 	 
 	<!-- <update id="update" parameterType="admin">
 		UPDATE
 		ADMIN
