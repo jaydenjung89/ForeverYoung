@@ -23,7 +23,9 @@
 <link
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
 	rel="stylesheet">
-<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
+<link rel="shortcut icon"
+	href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico"
+	type="image/x-icon" />
 <!-- Custom styles for this template-->
 <link href="${path}/css2/sb-admin-2.min.css" rel="stylesheet">
 <style type="text/css">/* Chart.js */
@@ -72,7 +74,21 @@ to {
 }
 </style>
 </head>
-
+<script>
+function smsResponse(){
+	   alert("답변등록문자를 발송했습니다.");
+	   var phone = document.subForm.qna_personal_phone.value;
+	   $.ajax({
+	      url:"smsResponse.mdo?qna_personal_phone="+phone,
+	      datatype:"json",
+	      success:function(res){
+	         const data = JSON.parse(res);
+	         /* $("#checkNum").val(data.checkNum);
+	         $(".phoneHid").attr("class","addressShow"); */
+	      }
+	   });
+	}
+</script>
 <body id="page-top">
 
 	<!-- Page Wrapper -->
@@ -161,6 +177,7 @@ to {
 						<!-- 메인작업 -->
 						<form action="admin_qnaPersonalUpdate.mdo" method="POST"
 							id="subForm" class="subForm" name="subForm">
+							<input type="hidden" name="qna_personal_phone" id="qna_personal_phone" value="${qnaPersonal.qna_personal_phone }" />
 							<table class="type02">
 								<tr>
 									<th scope="row" style="margin-right: 100px">제목</th>
@@ -172,19 +189,22 @@ to {
 								</tr>
 								<tr style="margin-right: 100px">
 									<th scope="row">답변내용</th>
-									<td colspan="3">
-									<textarea name="qna_personal_answer" style="width: 500px" rows="10%">${qnaPersonal.qna_personal_answer }</textarea>
-									
+									<td colspan="3"><textarea name="qna_personal_answer"
+											style="width: 500px" rows="10%">${qnaPersonal.qna_personal_answer }</textarea>
+
 									</td>
 								</tr>
 							</table>
+
 							<input type="hidden" name="qna_personal_serial"
 								id="qna_personal_serial"
 								value="${qnaPersonal.qna_personal_serial }"> <input
 								type="hidden" name="order_details_order_serial"
 								value="${qnaPersonal.order_details_order_serial}"
 								id="order_details_order_serial"> <input type="submit"
-								value="답변 등록하기" style="margin-left: 10px" />
+								value="답변 등록하기" onclick="smsResponse()"
+								style="margin-left: 10px" />
+
 							<c:if test="${qnaPersonal.qna_personal_category == '환불문의'}">
 								<input type="button" value="환불요청 처리" id="refund" />
 							</c:if>

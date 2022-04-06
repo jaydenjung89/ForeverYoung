@@ -137,7 +137,7 @@ function formJoinSubmit(){
 	   if(document.frmMember.okCerCheck.value=="불가능"){
 	      alert("문자 인증을 해주세요.");
 	      return;
-	   } 
+     }
 	   if(document.frmMember.user_zipcode.value==""){
 	      alert("주소를 입력하세요.");
 	      document.frmMember.user_zipcode.focus();
