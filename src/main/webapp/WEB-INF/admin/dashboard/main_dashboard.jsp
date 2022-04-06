@@ -16,9 +16,13 @@
 
 <title>매출현황</title>
 
-<link rel="shortcut icon" href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico" type="image/x-icon" />
+<link rel="shortcut icon"
+	href="https://fyawsbucket.s3.ap-northeast-2.amazonaws.com/favicon_logo.ico"
+	type="image/x-icon" />
 <!-- Custom styles for this template-->
 <link href="${path}/css2/sb-admin-2.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 <style type="text/css">/* Chart.js */
 /* @ */
 /* keyframes chartjs-render-animation {
@@ -137,7 +141,7 @@ $(document).ready(function(){
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- 월 매출 -->
 						<div class="col-xl-3 col-md-6 mb-4">
 							<div class="card border-left-primary shadow h-100 py-2">
@@ -160,7 +164,7 @@ $(document).ready(function(){
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- 연 매출 -->
 						<div class="col-xl-3 col-md-6 mb-4">
 							<div class="card border-left-primary shadow h-100 py-2">
@@ -174,7 +178,8 @@ $(document).ready(function(){
 												<c:set var="total" value="${total + monthSalesList.PRICE}" />
 											</c:forEach>
 											<div class="h5 mb-0 font-weight-bold text-gray-800">
-											<fmt:formatNumber var="tot" value="${total}" maxFractionDigits="3"/>
+												<fmt:formatNumber var="tot" value="${total}"
+													maxFractionDigits="3" />
 												<c:out value="${tot}"></c:out>
 												원
 											</div>
@@ -242,18 +247,18 @@ $(document).ready(function(){
 																	</tr>
 																</thead>
 																<tbody style="font-size: 12px;">
-																	<c:forEach var="salesList" items="${salesList}"
+																	<c:forEach var="ExcelList" items="${ExcelList}"
 																		varStatus="status">
 																		<tr>
-																			<td style="margin: auto">${salesList.DATE1 }</td>
-																			<td style="margin: auto">${salesList.CATEGORY_FIRST_NAME }</td>
-																			<td style="margin: auto">${salesList.CATEGORY_SECOND_NAME }</td>
-																			<td style="margin: auto">${salesList.CATEGORY_THIRD_NAME }</td>
-																			<td style="margin: auto">${salesList.CATEGORY_GOODS_BRAND }</td>
-																			<td style="margin: auto">${salesList.CATEGORY_GOODS_NAME }</td>
-																			<td style="margin: auto">${salesList.ORDER_GOODS_PRICE }원</td>
-																			<td style="margin: auto">${salesList.ORDER_GOODS_COUNT }건</td>
-																			<td style="margin: auto">${salesList.PRICE }원</td>
+																			<td style="margin: auto">${ExcelList.DATE1 }</td>
+																			<td style="margin: auto">${ExcelList.CATEGORY_FIRST_NAME }</td>
+																			<td style="margin: auto">${ExcelList.CATEGORY_SECOND_NAME }</td>
+																			<td style="margin: auto">${ExcelList.CATEGORY_THIRD_NAME }</td>
+																			<td style="margin: auto">${ExcelList.CATEGORY_GOODS_BRAND }</td>
+																			<td style="margin: auto">${ExcelList.CATEGORY_GOODS_NAME }</td>
+																			<td style="margin: auto">${ExcelList.ORDER_GOODS_PRICE }원</td>
+																			<td style="margin: auto">${ExcelList.ORDER_GOODS_COUNT }건</td>
+																			<td style="margin: auto">${ExcelList.PRICE }원</td>
 																		</tr>
 																	</c:forEach>
 																</tbody>
@@ -328,37 +333,96 @@ $(document).ready(function(){
 								</div>
 							</div>
 						</div>
-
-
-
-
 					</div>
 
+					<!-- Content Row -->
+					<div class="row">
+
+						<div class="col-xl-4 col-lg-4">
+							<div class="card shadow mb-4">
+								<!-- Card Header - Dropdown -->
+								<div class="card-header py-3">
+									<h6 class="m-0 font-weight-bold text-primary">Donut Chart</h6>
+								</div>
+
+								<!-- Card Body -->
+								<div class="card-body">
+									<div class="chart-pie pt-4">
+										<div class="chartjs-size-monitor">
+											<div class="chartjs-size-monitor-expand">
+												<div class=""></div>
+											</div>
+											<div class="chartjs-size-monitor-shrink">
+												<div class=""></div>
+											</div>
+										</div>
+										<canvas id="myPieChart" width="484" height="253"
+											style="display: block; width: 484px; height: 253px;"
+											class="chartjs-render-monitor"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-8 col-lg-4">
+							<p>조회기간:
+	    						<input type="text" id="datepicker1" > ~
+	    						<input type="text" id="datepicker2" >						
+								<button id="dateSend" onclick="javascript:popLayer();">검색</button>
+							</p>
+							
+							<div class="table-responsive">
+								<table class="table table-striped table-sm" id="dateSalesList"
+									style="text-align: center" >
+									<thead>
+										<tr>
+											<th scope="col">주문날짜</th>
+											<th scope="col">대분류</th>
+											<th scope="col">브랜드</th>
+											<th scope="col">상품명</th>
+											<th scope="col">매출</th>
+										</tr>
+									</thead>
+									<tbody id="thisTbody">										
+										<c:forEach var="salesList" items="${salesList}">
+											<tr>
+												<td>${salesList.DATE1 }</td>
+												<td>${salesList.CATEGORY_FIRST_NAME }</td>
+												<td>${salesList.CATEGORY_GOODS_BRAND }</td>
+												<td>${salesList.CATEGORY_GOODS_NAME }</td>
+												<td>${salesList.PRICE }</td>
+											</tr>
+										</c:forEach>										
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+
+					</div>
+					<!-- /.container-fluid -->
+
 				</div>
-				<!-- /.container-fluid -->
+				<!-- End of Main Content -->
+
+				<jsp:include page="../default/footer.jsp"></jsp:include>
 
 			</div>
-			<!-- End of Main Content -->
-
-			<jsp:include page="../default/footer.jsp"></jsp:include>
+			<!-- End of Content Wrapper -->
 
 		</div>
-		<!-- End of Content Wrapper -->
+		<!-- End of Page Wrapper -->
 
-	</div>
-	<!-- End of Page Wrapper -->
+		<script src="${path}/vendor/jquery/jquery.min.js"></script>
+		<script src="${path}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="${path}/vendor/jquery-easing/jquery.easing.min.js"></script>
+		<script src="${path}/js2/sb-admin-2.min.js"></script>
+		<script src="${path}/vendor/chart.js/Chart.min.js"></script>
+		<script src="${path}/js2/demo/chart-pie-demo.js"></script>
+		<script src="${path}/js2/demo/chart-area-demo.js"></script>
+		<%-- <script src="${path}/js2/demo/chart-bar-demo.js"></script> --%>
 
-
-	<script src="${path}/vendor/jquery/jquery.min.js"></script>
-	<script src="${path}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="${path}/vendor/jquery-easing/jquery.easing.min.js"></script>
-	<script src="${path}/js2/sb-admin-2.min.js"></script>
-	<script src="${path}/vendor/chart.js/Chart.min.js"></script>
-	<script src="${path}/js2/demo/chart-pie-demo.js"></script>
-	<script src="${path}/js2/demo/chart-area-demo.js"></script>
-	<%-- <script src="${path}/js2/demo/chart-bar-demo.js"></script> --%>
-
-	<script type="text/javascript">
+		<script type="text/javascript">
 var ctx = document.getElementById("myBarChart");
 var myBarChart = new Chart(ctx, {
   type: 'bar',
@@ -534,7 +598,84 @@ var myLineChart = new Chart(ctx, {
   }
 });
 
+//Pie Chart Example
+var ctx = document.getElementById("myPieChart");
+var myPieChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+	    labels: [String("${CateName0}"), String("${CateName1}"), String("${CateName2}"), String("${CateName3}")],
+	    datasets: [{
+	      data: [${CatePrice0}, ${CatePrice1}, ${CatePrice2}, ${CatePrice3}],
+      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+      hoverBorderColor: "rgba(234, 236, 244, 1)",
+    }],
+  },
+  options: {
+    maintainAspectRatio: false,
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      caretPadding: 10,
+    },
+    legend: {
+      display: false
+    },
+    cutoutPercentage: 80,
+  },
+});
+
+$(function() {
+    $("#datepicker1, #datepicker2").datepicker({
+        dateFormat: 'yy-mm-dd'
+    });
+    
+    $("#dateSend").on('click', function(){
+        const startDate = $("#datepicker1").val()
+        const endDate = $("#datepicker2").val()
+        
+        if(startDate != '' && endDate != ''){        
+        	location.href="main_dashboardDate.mdo?start_date="+startDate+"&end_date="+endDate;
+        } else{
+        	alert("날짜를 다시 입력해주세요")
+        }
+        
+        console.log("startDate : "+ startDate)
+        console.log("startDate : "+ endDate)
+        
+        const dateVO = {
+        	"START":startDate,
+        	"END":endDate
+        }            	
+    })
+    
+     $("#dateSend2").on('click', function(){
+        const startDate = $("#datepicker1").val()
+        const endDate = $("#datepicker2").val()
+              
+        location.href="DateExcel.mdo?start_date="+startDate+"&end_date="+endDate;
+        
+        const dateVO = {
+        	"START":startDate,
+        	"END":endDate
+        }
+     })
+});
+
+
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			crossorigin="anonymous"></script>
+
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <link rel="stylesheet" href="/resources/demos/style.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 </html>

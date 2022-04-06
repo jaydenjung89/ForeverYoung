@@ -7,13 +7,14 @@ import org.springframework.stereotype.Service;
 
 import forever.young.admin.dao.AdminSalesDAO;
 import forever.young.admin.vo.AdminSalesVO;
+import forever.young.admin.vo.DateVO;
 
 @Service
 public class AdminSalesServiceImpl implements AdminSalesService {
 
 	@Autowired
 	private AdminSalesDAO adminsalesdao;
-	
+
 	@Override
 	public List<AdminSalesVO> getTodaySales(AdminSalesVO adminsalesvo) {
 		return adminsalesdao.getTodaySales(adminsalesvo);
@@ -33,9 +34,14 @@ public class AdminSalesServiceImpl implements AdminSalesService {
 	public List<AdminSalesVO> getMonthSales(AdminSalesVO adminsalesvo) {
 		return adminsalesdao.getMonthSales(adminsalesvo);
 	}
+
+	@Override
+	public List<AdminSalesVO> getDateSales(DateVO vo) {
+		return adminsalesdao.getDateSales(vo);
+	}
 	
+	@Override
+	public List<AdminSalesVO> getCateSales(AdminSalesVO adminsalesvo) {
+		return adminsalesdao.getCateSales(adminsalesvo);
+	}
 }
-
-
-
-
