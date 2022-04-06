@@ -61,6 +61,30 @@ public class AdminServiceImpl implements AdminService {
 	public int deleteUser(AdminUserVO user) {
 		return adminDao.deleteUser(user);
 	}
+	//회원 수정
+		@Override
+		public int updateUser(AdminUserVO user) {
+			return adminDao.updateUser(user);
+		}
+	//회원 메일 보내기
+//		@Override
+//		public String getMail(AdminUserVO user) {
+//			return adminDao.getMail(user);
+//		}
+		@Override
+		public AdminUserVO getUserInfo(AdminUserVO user) {
+			// TODO Auto-generated method stub
+			return adminDao.getUserInfo(user);
+		}
+		@Override
+		public String getMail(AdminUserVO user) {
+			return adminDao.getMail(user);
+		}
+		@Override
+		public int getUserStatus(AdminUserVO user) {
+			// TODO Auto-generated method stub
+			return adminDao.getUserStatus(user);
+		}
 
 	// =====================1:1문의=========================
 	// 관리자 -1:1 문의 답변 대기 리스트
@@ -331,4 +355,7 @@ public class AdminServiceImpl implements AdminService {
 			// TODO Auto-generated method stub
 			return adminDao.updateBanner2(banner);
 		}
+
+		
+		
 }

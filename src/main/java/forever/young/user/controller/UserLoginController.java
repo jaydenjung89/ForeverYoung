@@ -274,9 +274,9 @@ public class UserLoginController {
 	   public String pwFind(UserVO user, Model model, HttpServletRequest request) {
 	      //비밀번호를 변경할 사람 이메일 뽑아오기
 		   String id = user.getUser_id();
-		   System.out.println("id: " + id);
+		  System.out.println("id: " + id);
 	      String getUserEmail = userService.pwFind(user);
-	      System.out.println("getUserEmail :" + getUserEmail);
+	     System.out.println("email: " + getUserEmail);
 	      //getUserEmail이 있어!
 	      if(getUserEmail != null) {
 	         UserVO userInfo = userService.getUserInfo(user.getUser_id());

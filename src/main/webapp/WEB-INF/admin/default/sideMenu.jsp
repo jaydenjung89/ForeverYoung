@@ -129,6 +129,7 @@
                </div>
             </div>
          </li>
+         
          <!-- 사이드바 약관관리 -->
          <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
@@ -143,7 +144,7 @@
                </div>
             </div>
          </li>
-
+			
 		<!-- Divider -->
 		<hr class="sidebar-divider">
 
