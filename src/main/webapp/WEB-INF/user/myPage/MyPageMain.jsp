@@ -219,7 +219,7 @@
 		                                          <strong>
 		                                          	<span class = "qna_flag">답변대기</span>
 		                                          </strong>
-		                                          <a href="goodsQnaPage.do">${vo1.qna_goods_answer }</a>
+		                                          <a href="goodsQnaPage.do">${vo1.qna_goods_content }</a>
 		                                          <span class="data"><fmt:formatDate value="${vo1.qna_goods_date }" pattern="yyyy-MM-dd"/></span>
 		                                       </p>
 		                                    </li>
